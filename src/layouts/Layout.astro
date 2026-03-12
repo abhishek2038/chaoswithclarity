@@ -2,20 +2,71 @@
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  type?: string;
 }
-const { title, description = "Poetry, soul work, and founder clarity by Abby Jain." } = Astro.props;
+const {
+  title,
+  description = "Poetry, soul work, and founder clarity by Abby Jain. A poet-CFO writing about money, mortality, and the strange gift of being alive.",
+  image = "https://chaoswithclarity.com/og-image.jpg",
+  type = "website",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, "https://chaoswithclarity.com");
+const fullTitle = title.includes("Chaos With Clarity") ? title : `${title} | Chaos With Clarity`;
 ---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{title}</title>
+  <title>{fullTitle}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={type} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={image} />
+  <meta property="og:site_name" content="Chaos With Clarity" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image} />
+  <meta name="twitter:creator" content="@iamabbyjain" />
+
+  <!-- Additional SEO -->
+  <meta name="author" content="Abby Jain" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="poetry, soul work, founder clarity, CFO, Abby Jain, chaos with clarity, meditative poetry, India, startup finance, spiritual writing" />
+  <meta name="theme-color" content="#f3e8d8" />
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abby Jain",
+    "url": "https://chaoswithclarity.com",
+    "sameAs": [
+      "https://instagram.com/iamabbyjain",
+      "https://youtube.com/@iamabbyjain"
+    ],
+    "description": description,
+    "jobTitle": "Poet · Fractional CFO · Soul Worker",
+    "knowsAbout": ["Poetry", "Finance", "Soul Work", "Meditation", "Startup Finance"]
+  })} />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
@@ -101,14 +152,35 @@ const { title, description = "Poetry, soul work, and founder clarity by Abby Jai
       margin: 1.5rem auto;
     }
 
-    @media (max-width: 768px) { nav { padding: 1.2rem 1.5rem; } .nav-links { gap: 1.5rem; } }
-    @media (max-width: 560px) { .nav-links { display: none; } }
+    /* Global mobile helpers */
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { gap: 1.5rem; }
+      footer { padding: 2.5rem 1.5rem; }
+    }
+    @media (max-width: 560px) {
+      .nav-links { display: none; }
+      .footer-links { flex-direction: column; gap: 1rem; align-items: center; }
+    }
+
+    /* Sections with fixed padding — mobile override */
+    @media (max-width: 640px) {
+      [style*="padding:9rem 3rem"],
+      [style*="padding:10rem 3rem"],
+      [style*="padding:5rem 3rem"],
+      [style*="padding:5.5rem 3rem"],
+      [style*="padding:4rem 3rem"],
+      [style*="padding:0 3rem"] {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+      }
+    }
   </style>
 </head>
 <body>
   <nav id="site-nav">
-    <a href="/" class="nav-logo">Chaos<span>·</span>Clarity</a>
-    <ul class="nav-links">
+    <a href="/" class="nav-logo" aria-label="Chaos With Clarity — Home">Chaos<span>·</span>Clarity</a>
+    <ul class="nav-links" role="navigation" aria-label="Main navigation">
       <li><a href="/">Home</a></li>
       <li><a href="/writings">Writings</a></li>
       <li><a href="/offerings">Offerings</a></li>
@@ -117,8 +189,8 @@ const { title, description = "Poetry, soul work, and founder clarity by Abby Jai
     </ul>
   </nav>
 
-  <div id="poem-modal" role="dialog">
-    <button class="poem-modal-close" id="close-poem-modal"><i class="ph ph-x"></i></button>
+  <div id="poem-modal" role="dialog" aria-modal="true" aria-label="Poem reader">
+    <button class="poem-modal-close" id="close-poem-modal" aria-label="Close poem"><i class="ph ph-x"></i></button>
     <div class="poem-modal-inner">
       <p style="font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:#5a5048;margin-bottom:1.5rem;">← All Poems</p>
       <h2 id="modal-poem-title" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:2.2rem;color:#f0e4d0;margin-bottom:0.5rem;font-weight:500;letter-spacing:0.01em;"></h2>
@@ -133,11 +205,10 @@ const { title, description = "Poetry, soul work, and founder clarity by Abby Jai
   <footer>
     <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#3a3028;font-size:1rem;margin-bottom:0.5rem;">chaos with clarity</p>
     <div class="footer-divider"></div>
-    <p style="font-size:0.7rem;letter-spacing:0.1em;color:#3a3028;">© 2026 Chaos With Clarity</p>
+    <p style="font-size:0.7rem;letter-spacing:0.1em;color:#3a3028;">© 2026 Chaos With Clarity · Abby Jain</p>
     <div class="footer-links">
-      <a href="https://instagram.com/iamabbyjain" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://instagram.com/iamabbyjain" target="_blank" rel="noopener">iamabbyjain · Finance</a>
+      <a href="https://instagram.com/iamabbyjain" target="_blank" rel="noopener" aria-label="Instagram @iamabbyjain">@iamabbyjain</a>
+      <a href="https://youtube.com/@iamabbyjain" target="_blank" rel="noopener" aria-label="YouTube @iamabbyjain">YouTube</a>
     </div>
   </footer>
 

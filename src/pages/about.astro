@@ -21,13 +21,17 @@ import Layout from '../layouts/Layout.astro';
       <!-- Photo -->
       <div style="display:flex;flex-direction:column;border-right:1px solid var(--border);">
         <div style="aspect-ratio:4/5;background:var(--olive-dark);overflow:hidden;position:relative;">
-          <img
-            src="/images/abby-mountains.heic"
-            alt="Abby sitting on a hill with mountains behind her"
-            style="width:100%;height:100%;object-fit:cover;object-position:center top;"
-            onerror="this.style.display='none'"
-          />
-          <!-- Fallback if HEIC not supported -->
+          <picture>
+            <source srcset="/images/abby-mountains.jpg" type="image/jpeg" />
+            <source srcset="/images/abby-mountains.heic" type="image/heic" />
+            <img
+              src="/images/abby-mountains.jpg"
+              alt="Abby sitting on a hill with mountains behind her"
+              style="width:100%;height:100%;object-fit:cover;object-position:center top;"
+              onerror="this.style.display='none'"
+            />
+          </picture>
+          <!-- Fallback gradient shown when no image -->
           <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--olive-dark),var(--olive-mid));z-index:-1;">
             <i class="ph ph-mountains" style="font-size:5rem;color:var(--olive-light);opacity:0.5;margin-bottom:1rem;"></i>
             <p style="color:var(--text-dim-dark);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;">Abby in the mountains</p>
@@ -91,12 +95,16 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </div>
       <div style="border-left:1px solid var(--border);overflow:hidden;min-height:20rem;background:var(--olive-dark);position:relative;">
-        <img
-          src="/images/abby-photo.heic"
-          alt="Abby"
-          style="width:100%;height:100%;object-fit:cover;"
-          onerror="this.style.display='none'"
-        />
+        <picture style="width:100%;height:100%;display:block;">
+          <source srcset="/images/abby-photo.jpg" type="image/jpeg" />
+          <source srcset="/images/abby-photo.heic" type="image/heic" />
+          <img
+            src="/images/abby-photo.jpg"
+            alt="Abby"
+            style="width:100%;height:100%;object-fit:cover;"
+            onerror="this.style.display='none'"
+          />
+        </picture>
         <div style="position:absolute;inset:0;background:linear-gradient(160deg,var(--olive-dark),var(--olive-deep));z-index:-1;display:flex;align-items:center;justify-content:center;">
           <i class="ph ph-user-circle" style="font-size:6rem;color:var(--olive-mid);opacity:0.4;"></i>
         </div>

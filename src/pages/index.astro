@@ -8,10 +8,16 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- ══ HERO ══════════════════════════════════════════════ -->
   <section style="min-height:100svh;background:var(--olive-deep);display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 5rem;position:relative;overflow:hidden;">
+    <!-- background video -->
+    <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.28;">
+      <source src="/images/abby-video.mp4" type="video/mp4" />
+    </video>
+    <!-- dark overlay so text stays readable -->
+    <div style="position:absolute;inset:0;background:var(--olive-deep);opacity:0.68;z-index:1;pointer-events:none;"></div>
     <!-- background texture lines -->
-    <div style="position:absolute;inset:0;opacity:0.04;background:repeating-linear-gradient(0deg,transparent,transparent 80px,#fff 80px,#fff 81px);pointer-events:none;"></div>
+    <div style="position:absolute;inset:0;opacity:0.04;background:repeating-linear-gradient(0deg,transparent,transparent 80px,#fff 80px,#fff 81px);pointer-events:none;z-index:2;"></div>
 
-    <div style="max-width:72rem;margin:0 auto;width:100%;position:relative;">
+    <div style="max-width:72rem;margin:0 auto;width:100%;position:relative;z-index:3;">
       <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-light);margin-bottom:2rem;font-weight:600;">Chaos With Clarity</p>
 
       <h1 style="font-family:'Fraunces',serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:800;color:var(--text-on-dark);letter-spacing:-0.03em;line-height:0.92;margin-bottom:2.5rem;">

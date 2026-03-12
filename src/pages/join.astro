@@ -22,11 +22,18 @@ import Layout from '../layouts/Layout.astro';
       No spam. No "daily grind" tips. Just honest notes.
     </p>
 
-    <!-- Email form -->
-    <form style="display:flex;flex-direction:column;gap:0.6rem;width:100%;max-width:22rem;" action="#" method="post">
+    <!-- Email form — powered by Kit (kit.com) -->
+    <!-- TODO: Replace YOUR_FORM_ID below with your actual Kit form ID -->
+    <!-- Get it from: kit.com → Forms → your form → Settings → copy the ID from the embed URL -->
+    <form
+      style="display:flex;flex-direction:column;gap:0.6rem;width:100%;max-width:22rem;"
+      action="https://app.kit.com/forms/YOUR_FORM_ID/subscriptions"
+      method="post"
+      data-sv-form="YOUR_FORM_ID"
+    >
       <input
         type="email"
-        name="email"
+        name="email_address"
         placeholder="your@email.com"
         required
         style="background:var(--olive-dark);border:1px solid var(--border-dark);color:var(--text-on-dark);font-size:0.92rem;padding:1rem 1.1rem;font-family:'DM Sans',sans-serif;font-weight:400;outline:none;width:100%;transition:border-color 0.2s;"

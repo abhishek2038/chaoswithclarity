@@ -4,85 +4,136 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Chaos With Clarity | Poems + Founder Soul Work">
 
   <!-- HERO -->
-  <section style="min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:9rem 3rem 5rem;position:relative;overflow:hidden;background:#f5ede2;">
+  <section style="min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:9rem 3rem 5rem;position:relative;overflow:hidden;background:#f3e8d8;">
 
-    <div style="position:absolute;right:-6vw;top:10%;width:clamp(200px,38vw,520px);height:clamp(200px,38vw,520px);border-radius:50%;background:#d4965a;opacity:0.1;pointer-events:none;"></div>
+    <!-- Decorative circle — amber-olive blend -->
+    <div style="position:absolute;right:-5vw;top:8%;width:clamp(220px,40vw,540px);height:clamp(220px,40vw,540px);border-radius:50%;background:linear-gradient(135deg,#c17f3a,#5d6b45);opacity:0.07;pointer-events:none;"></div>
+    <!-- Thin vertical line left decoration -->
+    <div style="position:absolute;left:3rem;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,#cec5ad 20%,#cec5ad 80%,transparent);opacity:0.5;"></div>
 
     <div style="max-width:72rem;margin:0 auto;width:100%;position:relative;">
 
-      <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:2.5rem;font-weight:400;">Poetry · Soul Work · Finance</p>
+      <p style="font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:3rem;font-weight:400;">Poetry · Soul Work · Finance</p>
 
-      <h1 style="margin-bottom:2.5rem;line-height:0.88;">
-        <span style="display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:700;color:#1a1612;letter-spacing:-0.03em;">Chaos</span>
-        <span style="display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.5rem,3.5vw,3rem);font-weight:400;font-style:italic;color:#b5763a;padding-left:clamp(1rem,2.5vw,2.5rem);line-height:1.4;">With</span>
-        <span style="display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:700;color:#1a1612;letter-spacing:-0.03em;">Clarity</span>
+      <h1 style="margin-bottom:2.75rem;line-height:0.88;">
+        <span style="display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(4rem,10vw,9rem);font-weight:600;color:#1a1612;letter-spacing:-0.02em;">Chaos</span>
+        <span style="display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.6rem,3.8vw,3.2rem);font-weight:400;font-style:italic;color:#c17f3a;padding-left:clamp(1rem,3vw,3rem);line-height:1.5;">With</span>
+        <span style="display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(4rem,10vw,9rem);font-weight:600;color:#1a1612;letter-spacing:-0.02em;">Clarity</span>
       </h1>
 
-      <p style="color:#7a6f63;font-size:clamp(0.9rem,1.6vw,1rem);max-width:32rem;line-height:2;margin-bottom:2.75rem;font-weight:300;">
+      <p style="color:#7a7260;font-size:clamp(0.88rem,1.5vw,0.98rem);max-width:30rem;line-height:2.1;margin-bottom:3rem;font-weight:300;border-left:2px solid #cec5ad;padding-left:1.25rem;">
         I am a poet who does founder numbers.<br/>
         A CFO who writes about death and freedom.<br/>
         This is where my soul work lives.
       </p>
 
       <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
-        <a href="/writings" style="display:inline-block;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:#1a1612;text-decoration:none;border-bottom:1px solid #1a1612;padding-bottom:2px;font-weight:400;transition:color 0.2s;">Read Poems</a>
-        <a href="https://calendly.com" target="_blank" rel="noopener" style="display:inline-block;background:#b5763a;color:#f5ede2;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.85rem 1.75rem;text-decoration:none;font-weight:400;transition:background 0.2s;">Book Soul + Strategy</a>
+        <a href="/writings" style="display:inline-block;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:#1a1612;text-decoration:none;border-bottom:1px solid #1a1612;padding-bottom:3px;font-weight:400;transition:color 0.2s;">Read Poems</a>
+        <a href="https://calendly.com" target="_blank" rel="noopener" style="display:inline-block;background:#c17f3a;color:#f3e8d8;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.9rem 1.9rem;text-decoration:none;font-weight:400;transition:background 0.2s;">Book Soul + Strategy</a>
       </div>
 
     </div>
   </section>
 
-  <!-- BELOW HERO -->
+  <!-- BELOW HERO GRID -->
   <section style="max-width:72rem;margin:0 auto;padding:4rem 3rem 6rem;">
-    <div style="display:grid;grid-template-columns:3fr 2fr;border:1px solid #d9cfc0;" class="home-grid">
+    <div style="display:grid;grid-template-columns:3fr 2fr;border:1px solid #cec5ad;" class="home-grid">
 
       <!-- Latest Poem -->
-      <div style="padding:3rem;border-right:1px solid #d9cfc0;"
-           data-title="[Poem Title]"
-           data-date="[Date]"
-           data-poem="[Paste your full poem here]"
-           data-reflection="[Your reflection here]">
-        <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:1.5rem;font-weight:400;">Latest Poem</p>
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#1a1612;line-height:1.2;margin-bottom:1.5rem;font-weight:500;">[Poem Title]</h3>
-        <p style="font-family:'Playfair Display',serif;font-style:italic;color:#7a6f63;font-size:1rem;line-height:2.1;border-left:2px solid #d4965a;padding-left:1.5rem;margin-bottom:2.5rem;">
-          ← Paste the first 4 lines of your poem here →
+      <div style="padding:3rem;border-right:1px solid #cec5ad;"
+           data-poem-card
+           data-title="Unstruck Silence (Anhat Nad)"
+           data-date="March 2026"
+           data-poem="There is a sound
+that was never struck —
+no string plucked, no drum hit,
+no throat opened to release it.
+
+It was here before you arrived.
+It is here after the last thought
+you'll ever think
+dissolves.
+
+You have heard it in the space
+between two breaths —
+not the inhale,
+not the exhale,
+but the pause that holds both,
+the way a door frame holds
+a house.
+
+You have heard it in the room
+after crying stops,
+when the chest finally unclenches
+and something older than grief
+comes through.
+
+The mystics called it Anahata —
+unstruck.
+The thing that hums
+without cause,
+loves without reason,
+stays without being asked.
+
+You think you have to earn stillness.
+You think silence is the reward
+for surviving.
+
+But it is not earned.
+It is only uncovered —
+the way snow uncovers
+ground
+by melting."
+           data-reflection="Anhat Nad is a concept from Indian classical music and tantra — the sound that was never struck. The Anahata chakra, or heart center, is said to resonate with this unstruck sound. I wrote this after a long meditation session where I kept waiting for something to happen. Nothing did. And then I realized — that was it.">
+        <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:1.5rem;font-weight:400;">Latest Poem</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.75rem;color:#1a1612;line-height:1.15;margin-bottom:1.5rem;font-weight:500;letter-spacing:0.01em;">Unstruck Silence<br/><span style="font-style:italic;font-weight:400;font-size:1.25rem;color:#7a7260;">(Anhat Nad)</span></h3>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.1rem;line-height:2.2;border-left:2px solid #c17f3a;padding-left:1.5rem;margin-bottom:2.5rem;">
+          There is a sound<br/>
+          that was never struck —<br/>
+          no string plucked, no drum hit,<br/>
+          no throat opened to release it.
         </p>
-        <button data-open-poem style="background:none;border:none;cursor:pointer;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:#b5763a;font-family:'Inter',sans-serif;padding:0;display:flex;align-items:center;gap:0.5rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
+        <button data-open-poem style="background:none;border:none;cursor:pointer;font-size:0.66rem;letter-spacing:0.22em;text-transform:uppercase;color:#c17f3a;font-family:'Inter',sans-serif;padding:0;display:flex;align-items:center;gap:0.5rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
           Read full <i class="ph ph-arrow-right"></i>
         </button>
       </div>
 
       <!-- Right column -->
       <div style="display:flex;flex-direction:column;">
-        <div style="padding:2.25rem 2.5rem;border-bottom:1px solid #d9cfc0;background:#ede1d2;flex:1;">
-          <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:1rem;font-weight:400;">1:1 Offering</p>
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#1a1612;margin-bottom:0.6rem;font-weight:500;">Soul + Strategy</h3>
-          <p style="color:#7a6f63;font-size:0.85rem;line-height:1.8;margin-bottom:1rem;">For founders who are financially sharp but emotionally lost. 90 minutes of clarity.</p>
-          <p style="color:#b5763a;font-size:0.85rem;margin-bottom:1.5rem;font-weight:300;">₹15,000 · 90 mins</p>
-          <a href="https://calendly.com" target="_blank" rel="noopener" style="display:inline-block;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:#b5763a;text-decoration:none;border:1px solid #b5763a;padding:0.6rem 1.1rem;font-weight:400;transition:background 0.2s;">Book a Call</a>
+
+        <!-- Soul + Strategy -->
+        <div style="padding:2.25rem 2.5rem;border-bottom:1px solid #cec5ad;background:#e8dcc8;flex:1;">
+          <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:1rem;font-weight:400;">1:1 Offering</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#1a1612;margin-bottom:0.6rem;font-weight:500;letter-spacing:0.01em;">Soul + Strategy</h3>
+          <p style="color:#7a7260;font-size:0.85rem;line-height:1.85;margin-bottom:1rem;">For founders who are financially sharp but emotionally lost. 90 minutes of clarity.</p>
+          <p style="color:#c17f3a;font-size:0.85rem;margin-bottom:1.5rem;font-weight:300;">₹15,000 · 90 mins</p>
+          <a href="https://calendly.com" target="_blank" rel="noopener" style="display:inline-block;font-size:0.63rem;letter-spacing:0.18em;text-transform:uppercase;color:#c17f3a;text-decoration:none;border:1px solid #c17f3a;padding:0.6rem 1.1rem;font-weight:400;transition:background 0.2s;">Book a Call</a>
         </div>
+
+        <!-- Newsletter -->
         <div style="padding:2.25rem 2.5rem;flex:1;">
-          <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:1rem;font-weight:400;">Letters</p>
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#1a1612;margin-bottom:0.6rem;font-weight:500;">Join the Chaos</h3>
-          <p style="color:#7a6f63;font-size:0.85rem;line-height:1.8;margin-bottom:1.5rem;">Poems and reflections sent to your inbox. No noise. Just soul work.</p>
+          <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:1rem;font-weight:400;">Letters</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#1a1612;margin-bottom:0.6rem;font-weight:500;letter-spacing:0.01em;">Join the Chaos</h3>
+          <p style="color:#7a7260;font-size:0.85rem;line-height:1.85;margin-bottom:1.5rem;">Poems and reflections sent to your inbox. No noise. Just soul work.</p>
           <form action="/join" style="display:flex;flex-direction:column;gap:0.5rem;">
-            <input type="email" placeholder="your@email.com" style="background:#f5ede2;border:1px solid #d9cfc0;color:#1a1612;font-size:0.85rem;padding:0.7rem 0.9rem;width:100%;outline:none;font-family:'Inter',sans-serif;font-weight:300;" />
-            <button type="submit" style="background:#b5763a;color:#f5ede2;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.75rem;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:400;">Send Me Poems</button>
+            <input type="email" placeholder="your@email.com" style="background:#f3e8d8;border:1px solid #cec5ad;color:#1a1612;font-size:0.85rem;padding:0.75rem 0.9rem;width:100%;outline:none;font-family:'Inter',sans-serif;font-weight:300;" />
+            <button type="submit" style="background:#c17f3a;color:#f3e8d8;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.8rem;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:400;">Send Me Poems</button>
           </form>
         </div>
-      </div>
 
+      </div>
     </div>
   </section>
 
   <!-- ABOUT STRIP -->
   <section style="max-width:72rem;margin:0 auto;padding:0 3rem 7rem;">
-    <div style="background:#ede1d2;border:1px solid #d9cfc0;padding:3rem 3.5rem;">
-      <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:1.5rem;font-weight:400;">Who writes here</p>
-      <p style="font-family:'Playfair Display',serif;font-size:clamp(1.2rem,2.5vw,1.75rem);color:#1a1612;line-height:1.6;font-weight:500;margin-bottom:2rem;">
+    <div style="background:#e8dcc8;border:1px solid #cec5ad;padding:3rem 3.5rem;position:relative;overflow:hidden;">
+      <div style="position:absolute;right:-2rem;top:-2rem;width:10rem;height:10rem;border-radius:50%;border:1px solid #cec5ad;opacity:0.4;"></div>
+      <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:1.5rem;font-weight:400;">Who writes here</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.8vw,2rem);color:#1a1612;line-height:1.6;font-weight:500;margin-bottom:2rem;font-style:italic;">
         "Spreadsheets couldn't answer the chest ache.<br/>So I write."
       </p>
-      <a href="/about" style="display:inline-block;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:#7a6f63;text-decoration:none;border:1px solid #d9cfc0;padding:0.65rem 1.25rem;font-weight:400;transition:border-color 0.2s;">About Abby →</a>
+      <a href="/about" style="display:inline-block;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#7a7260;text-decoration:none;border:1px solid #cec5ad;padding:0.65rem 1.25rem;font-weight:400;">About Abby →</a>
     </div>
   </section>
 

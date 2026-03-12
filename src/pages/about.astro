@@ -1,124 +1,117 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-
 <Layout title="About Abby | Chaos With Clarity" description="9 years finance: EY to fractional CFO. Poet, founder, and soul worker.">
 
-  <!-- PAGE HEADER -->
-  <div class="pt-32 pb-12 px-6 max-w-6xl mx-auto">
-    <div class="w-px h-12 bg-cwc-border mb-8"></div>
-    <p class="text-xs tracking-widest uppercase text-cwc-muted mb-3">The Person</p>
-    <h1 class="font-serif text-4xl md:text-6xl text-cwc-text">About Abby</h1>
-  </div>
+  <!-- HEADER -->
+  <section style="padding:10rem 3rem 5rem;background:#e8dcc8;border-bottom:1px solid #cec5ad;">
+    <div style="max-width:72rem;margin:0 auto;">
+      <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:1.5rem;font-weight:400;">The Person</p>
+      <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:600;color:#1a1612;letter-spacing:-0.02em;line-height:0.9;">About Abby</h1>
+    </div>
+  </section>
 
-  <div class="max-w-6xl mx-auto px-6 pb-24">
-
-    <!-- ABOUT GRID -->
-    <div class="grid md:grid-cols-2 gap-px bg-cwc-border mb-20 reveal">
+  <!-- MAIN ABOUT GRID -->
+  <section style="max-width:72rem;margin:0 auto;padding:5rem 3rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid #cec5ad;" class="about-grid">
 
       <!-- Photo col -->
-      <div class="bg-cwc-surface flex flex-col">
-        <!-- Replace with your actual photo -->
-        <div class="aspect-[4/5] bg-cwc-surface-2 flex items-center justify-center border-b border-cwc-border">
-          <div class="text-center">
-            <i class="ph ph-user-circle text-6xl text-cwc-border"></i>
-            <p class="text-cwc-muted/40 text-xs mt-3">Your photo here<br/>images/about.jpg</p>
+      <div style="display:flex;flex-direction:column;border-right:1px solid #cec5ad;">
+        <div style="aspect-ratio:4/5;background:#e8dcc8;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #cec5ad;position:relative;overflow:hidden;">
+          <div style="text-align:center;">
+            <i class="ph ph-user-circle" style="font-size:5rem;color:#cec5ad;display:block;margin-bottom:0.75rem;"></i>
+            <p style="color:#b8ae9a;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;">Your photo here</p>
           </div>
         </div>
-        <div class="p-8">
-          <blockquote class="font-serif italic text-cwc-muted text-lg leading-relaxed">
+        <div style="padding:2.5rem 3rem;">
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.3rem;line-height:1.8;">
             "Spreadsheets couldn't answer the chest ache. So I write."
-          </blockquote>
+          </p>
         </div>
       </div>
 
       <!-- Text col -->
-      <div class="bg-cwc-bg p-8 md:p-12 flex flex-col justify-center gap-6">
-        <div class="flex flex-col gap-4 text-cwc-muted leading-relaxed">
-          <p class="font-serif text-xl text-cwc-text">
-            9 years in finance: EY to fractional CFO for founders.
-          </p>
-          <p>Spreadsheets couldn't answer the chest ache.</p>
-          <p>So I write: money as fuel, death as teacher, freedom as breath.</p>
-          <p>
-            <strong class="text-cwc-text font-medium">Chaos With Clarity</strong>
-            = numbers + soul + raw.
-          </p>
-          <p>Not therapy. Not coaching. A mirror. A pause.</p>
-          <p>
-            If you're a founder caught between ambition and peace —
-            if the numbers are good but something still feels wrong —
-            let's talk.
-          </p>
+      <div style="padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;gap:1.25rem;">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#1a1612;font-weight:500;line-height:1.4;letter-spacing:0.01em;">
+          9 years in finance: EY to fractional CFO for founders.
+        </p>
+        <p style="color:#7a7260;font-size:0.92rem;line-height:2;">Spreadsheets couldn't answer the chest ache.</p>
+        <p style="color:#7a7260;font-size:0.92rem;line-height:2;">So I write: money as fuel, death as teacher, freedom as breath.</p>
+        <p style="color:#7a7260;font-size:0.92rem;line-height:2;"><strong style="color:#1a1612;font-weight:500;">Chaos With Clarity</strong> = numbers + soul + raw.</p>
+        <p style="color:#7a7260;font-size:0.92rem;line-height:2;">Not therapy. Not coaching. A mirror. A pause.</p>
+        <p style="color:#7a7260;font-size:0.92rem;line-height:2;">If you're a founder caught between ambition and peace — if the numbers are good but something still feels wrong — let's talk.</p>
+
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#c17f3a;font-size:1.2rem;margin-top:0.5rem;">– Abby</p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem;">
+          <a href="/offerings" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;background:#c17f3a;color:#f3e8d8;padding:0.8rem 1.75rem;text-decoration:none;font-weight:400;">Work with Me</a>
+          <a href="/writings" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;border:1px solid #cec5ad;color:#7a7260;padding:0.8rem 1.75rem;text-decoration:none;font-weight:400;">Read My Poems</a>
         </div>
 
-        <p class="font-serif italic text-cwc-accent text-lg">– Abby</p>
-
-        <div class="flex flex-wrap gap-3 mt-2">
-          <a href="/offerings"
-             class="text-xs tracking-widest uppercase bg-cwc-accent text-cwc-bg px-6 py-2.5 hover:bg-cwc-accent-dark transition-colors">
-            Work with Me
-          </a>
-          <a href="/writings"
-             class="text-xs tracking-widest uppercase border border-cwc-border text-cwc-muted px-6 py-2.5 hover:border-cwc-accent hover:text-cwc-accent transition-all duration-200">
-            Read My Poems
-          </a>
-        </div>
-
-        <p class="text-cwc-muted/50 text-xs mt-2">
+        <p style="font-size:0.78rem;color:#b8ae9a;margin-top:0.5rem;">
           Looking for the CFO work?
-          <a href="https://abbyjain.com" target="_blank" rel="noopener" class="text-cwc-accent/70 hover:text-cwc-accent transition-colors ml-1">
-            abbyjain.com ↗
-          </a>
+          <a href="https://abbyjain.com" target="_blank" rel="noopener" style="color:#c17f3a;text-decoration:none;margin-left:0.3rem;">abbyjain.com ↗</a>
         </p>
       </div>
 
     </div>
+  </section>
 
-    <!-- LONGER STORY -->
-    <div class="max-w-2xl mx-auto reveal">
-      <div class="flex items-center gap-4 mb-10">
-        <div class="w-2 h-2 rounded-full bg-cwc-accent"></div>
-        <h2 class="font-serif italic text-cwc-muted text-xl">The longer story</h2>
-        <div class="flex-1 h-px bg-cwc-border"></div>
+  <!-- LONGER STORY -->
+  <section style="max-width:72rem;margin:0 auto;padding:0 3rem 6rem;">
+    <div style="max-width:46rem;margin:0 auto;">
+
+      <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:3rem;">
+        <div style="width:8px;height:8px;border-radius:50%;background:#5d6b45;flex-shrink:0;"></div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.4rem;font-weight:400;">The longer story</h2>
+        <div style="flex:1;height:1px;background:#cec5ad;"></div>
       </div>
 
-      <div class="flex flex-col gap-6 text-cwc-muted leading-relaxed">
-        <p>
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+        <p style="color:#7a7260;font-size:0.93rem;line-height:2.1;">
           I started writing because the spreadsheets stopped making sense.
           Not financially — the numbers were always there. But existentially.
           You can model a company's runway to the day. You cannot model
           why you lie awake at 2am wondering if any of it means anything.
         </p>
-        <p>
+        <p style="color:#7a7260;font-size:0.93rem;line-height:2.1;">
           Nine years of finance — from audit rooms at EY to sitting across
           from founders who had everything and felt nothing — taught me one thing:
           clarity without depth is just noise with good formatting.
         </p>
-        <p>
+        <p style="color:#7a7260;font-size:0.93rem;line-height:2.1;">
           The poems started in a notebook. Then they started helping people.
           Not because they had answers, but because they named things that
           people had been carrying silently.
         </p>
-        <p>
+        <p style="color:#7a7260;font-size:0.93rem;line-height:2.1;">
           Chaos With Clarity is where I bring both sides together.
           The CFO who can read your runway and the poet who can sit with
           what the runway is actually for.
         </p>
-        <p>
+        <p style="color:#7a7260;font-size:0.93rem;line-height:2.1;">
           If that's the conversation you've been looking for — you're in the right place.
         </p>
       </div>
-    </div>
 
-    <!-- JOIN STRIP -->
-    <div class="border-t border-cwc-border mt-20 pt-12 flex flex-col md:flex-row items-center justify-between gap-6 reveal">
-      <p class="font-serif italic text-cwc-muted">Poems. Reflections. Circles. Inbox only.</p>
-      <a href="/join"
-         class="text-xs tracking-widest uppercase bg-cwc-accent text-cwc-bg px-8 py-3 hover:bg-cwc-accent-dark transition-colors whitespace-nowrap">
-        Join the Chaos
-      </a>
     </div>
+  </section>
 
-  </div>
+  <!-- JOIN STRIP -->
+  <section style="max-width:72rem;margin:0 auto;padding:0 3rem 7rem;">
+    <div style="border-top:1px solid #cec5ad;padding-top:3rem;display:flex;flex-direction:column;gap:1rem;" class="join-strip">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;">
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.2rem;">Poems. Reflections. Circles. Inbox only.</p>
+        <a href="/join" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;background:#c17f3a;color:#f3e8d8;padding:0.85rem 2rem;text-decoration:none;font-weight:400;white-space:nowrap;">Join the Chaos</a>
+      </div>
+    </div>
+  </section>
+
 </Layout>
+
+<style>
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr !important; }
+    .about-grid > div:first-child { border-right: none !important; border-bottom: 1px solid #cec5ad; }
+  }
+</style>

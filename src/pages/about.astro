@@ -7,10 +7,10 @@ import Layout from '../layouts/Layout.astro';
 >
 
   <!-- HEADER -->
-  <section style="padding:10rem 3rem 6rem;background:var(--olive-deep);border-bottom:1px solid var(--border-dark);">
+  <section style="padding:10rem 3rem 6rem;background:var(--bg-alt);border-bottom:1px solid var(--border);">
     <div style="max-width:72rem;margin:0 auto;">
-      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-light);margin-bottom:1.5rem;font-weight:600;">The Person</p>
-      <h1 style="font-family:'Fraunces',serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:800;color:var(--text-on-dark);letter-spacing:-0.03em;line-height:0.9;">About<br/>Abby</h1>
+      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1.5rem;font-weight:600;">The Person</p>
+      <h1 style="font-family:'Fraunces',serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:800;color:var(--text);letter-spacing:-0.03em;line-height:0.9;">About<br/>Abby</h1>
     </div>
   </section>
 
@@ -49,7 +49,7 @@ import Layout from '../layouts/Layout.astro';
         <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:var(--text);line-height:1.3;">
           I create short philosophical essays, poems, and experiments in living with less noise and more awareness.
         </h2>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2;">I'm not a guru, therapist, or productivity coach. I'm just someone who has spent a lot of time lost in my own head — and decided to turn that chaos into something useful.</p>
+        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2;">I'm not a guru, therapist, or productivity coach. I'm just someone who has spent a lot of time lost in my own head, and decided to turn that chaos into something useful.</p>
         <p style="color:var(--text-muted);font-size:0.95rem;line-height:2;">Online, you'll find thoughts about ego, minimalism, technology, attention, and the strange project of being human in 2026. Offline, I'm usually reading, walking, or staring at mountains trying to make sense of things.</p>
 
         <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--olive-accent);font-size:1.15rem;font-weight:600;">– Abby</p>
@@ -78,10 +78,10 @@ import Layout from '../layouts/Layout.astro';
           <div style="flex:1;height:1px;background:var(--border);"></div>
         </div>
         <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
-          I started writing because the spreadsheets stopped making sense. Not financially — the numbers were always there. But existentially. You can model a company's runway to the day. You cannot model why you lie awake at 2am wondering if any of it means anything.
+          I started writing because the spreadsheets stopped making sense. Not financially. The numbers were always there. But existentially. You can model a company's runway to the day. You cannot model why you lie awake at 2am wondering if any of it means anything.
         </p>
         <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
-          Nine years of finance — from audit rooms at EY to sitting across from founders who had everything and felt nothing — taught me one thing: clarity without depth is just noise with good formatting.
+          Nine years of finance, from audit rooms at EY to sitting across from founders who had everything and felt nothing, taught me one thing: clarity without depth is just noise with good formatting.
         </p>
         <div style="border-left:3px solid var(--olive-accent);padding-left:1.5rem;margin:0.5rem 0;">
           <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text);font-size:1.05rem;line-height:1.9;">
@@ -91,7 +91,7 @@ import Layout from '../layouts/Layout.astro';
           </p>
         </div>
         <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
-          If that's the conversation you've been looking for — you're in the right place.
+          If that's the conversation you've been looking for, you're in the right place.
         </p>
       </div>
       <div style="border-left:1px solid var(--border);overflow:hidden;min-height:20rem;background:var(--olive-dark);position:relative;">
@@ -120,13 +120,13 @@ import Layout from '../layouts/Layout.astro';
         <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-light);margin-bottom:1.75rem;font-weight:600;">How to use this space</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:1.5rem;">
           {[
-            "Start with whatever line makes you feel something — not what sounds \"important\".",
+            "Start with whatever line makes you feel something, not what sounds \"important\".",
             "Save pieces that bother you a little. They usually have something to show you.",
             "Share posts with people you wish you could have deeper conversations with.",
             "Come back when life feels loud and you need language for what you're feeling."
           ].map(tip => (
             <li style="display:flex;gap:1rem;align-items:flex-start;">
-              <span style="color:var(--olive-light);font-family:'Fraunces',serif;font-size:1.1rem;margin-top:0.1rem;flex-shrink:0;font-weight:700;">—</span>
+              <span style="color:var(--olive-accent);font-family:'Fraunces',serif;font-size:1.1rem;margin-top:0.1rem;flex-shrink:0;font-weight:700;">·</span>
               <p style="color:var(--text-dim-dark);font-size:0.9rem;line-height:1.9;">{tip}</p>
             </li>
           ))}

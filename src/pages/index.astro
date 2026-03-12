@@ -7,39 +7,37 @@ import Layout from '../layouts/Layout.astro';
 >
 
   <!-- ══ HERO ══════════════════════════════════════════════ -->
-  <section style="min-height:100svh;background:var(--olive-deep);display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 5rem;position:relative;overflow:hidden;">
-    <!-- background video -->
-    <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.28;">
+  <section style="min-height:100svh;background:var(--bg);display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 5rem;position:relative;overflow:hidden;">
+    <!-- background video — loops first 5 sec via JS below -->
+    <video id="hero-vid" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.18;">
       <source src="/images/abby-video.mp4" type="video/mp4" />
     </video>
-    <!-- dark overlay so text stays readable -->
-    <div style="position:absolute;inset:0;background:var(--olive-deep);opacity:0.68;z-index:1;pointer-events:none;"></div>
-    <!-- background texture lines -->
-    <div style="position:absolute;inset:0;opacity:0.04;background:repeating-linear-gradient(0deg,transparent,transparent 80px,#fff 80px,#fff 81px);pointer-events:none;z-index:2;"></div>
+    <!-- warm cream overlay so text stays crisp -->
+    <div style="position:absolute;inset:0;background:var(--bg);opacity:0.72;z-index:1;pointer-events:none;"></div>
 
-    <div style="max-width:72rem;margin:0 auto;width:100%;position:relative;z-index:3;">
-      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-light);margin-bottom:2rem;font-weight:600;">Chaos With Clarity</p>
+    <div style="max-width:72rem;margin:0 auto;width:100%;position:relative;z-index:2;">
+      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:2rem;font-weight:600;">Essays · Poetry · Inner Work</p>
 
-      <h1 style="font-family:'Fraunces',serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:800;color:var(--text-on-dark);letter-spacing:-0.03em;line-height:0.92;margin-bottom:2.5rem;">
-        Short,<br/>
-        <span style="color:var(--olive-light);font-style:italic;">honest</span><br/>
-        ideas.
+      <h1 style="font-family:'Fraunces',serif;letter-spacing:-0.03em;line-height:0.9;margin-bottom:2.5rem;">
+        <span style="display:block;font-size:clamp(4rem,10vw,9rem);font-weight:800;color:var(--text);">Chaos</span>
+        <span style="display:block;font-size:clamp(1.6rem,3.8vw,3.4rem);font-weight:400;font-style:italic;color:var(--olive-accent);padding-left:clamp(1rem,3vw,3rem);line-height:1.5;">With</span>
+        <span style="display:block;font-size:clamp(4rem,10vw,9rem);font-weight:800;color:var(--text);">Clarity</span>
       </h1>
 
-      <p style="color:var(--text-dim-dark);font-size:clamp(1rem,2vw,1.2rem);line-height:1.9;max-width:38rem;margin-bottom:3rem;font-weight:300;">
-        On ego, experience, and being fully alive —<br/>
-        for people who think too much and feel even more.
+      <p style="color:var(--text-muted);font-size:clamp(0.95rem,1.8vw,1.1rem);line-height:2.1;max-width:36rem;margin-bottom:3rem;font-weight:300;border-left:2px solid var(--border);padding-left:1.25rem;">
+        Short, honest ideas about ego, experience, and being fully alive.<br/>
+        <em style="color:var(--olive-accent);font-style:italic;">For people who think too much and feel even more.</em>
       </p>
 
       <div style="display:flex;flex-wrap:wrap;gap:1rem;">
         <a href="/writings" style="display:inline-block;background:var(--olive-accent);color:var(--text-on-dark);font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;font-weight:600;transition:background 0.2s;" onmouseover="this.style.background='var(--olive-bright)'" onmouseout="this.style.background='var(--olive-accent)'">Read the Writing</a>
-        <a href="/join" style="display:inline-block;border:1px solid var(--olive-mid);color:var(--text-dim-dark);font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--olive-light)';this.style.color='var(--text-on-dark)'" onmouseout="this.style.borderColor='var(--olive-mid)';this.style.color='var(--text-dim-dark)'">Get the Letters</a>
+        <a href="/join" style="display:inline-block;border:1px solid var(--border);color:var(--text-muted);font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--olive-accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">Get the Letters</a>
       </div>
     </div>
   </section>
 
   <!-- ══ THIS SPACE IS FOR YOU ══════════════════════════════ -->
-  <section style="max-width:72rem;margin:0 auto;padding:6rem 3rem;">
+  <section style="max-width:72rem;margin:0 auto;padding:6rem 3rem;background:var(--bg-alt);">
     <div style="display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;" class="for-you-grid">
       <div style="position:sticky;top:7rem;">
         <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1rem;font-weight:600;">This space is for you if</p>
@@ -47,7 +45,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div style="display:flex;flex-direction:column;gap:0;">
         {[
-          ["You're doing well on paper, but something still feels off.", "You've built the life — but you're not sure it's yours."],
+          ["You're doing well on paper, but something still feels off.", "You've built the life, but you're not sure it's yours."],
           ["You're exhausted by the performance of having it together.", "You'd rather feel real than feel impressive."],
           ["You want words that don't try to fix you.", "Just something honest in an inbox full of noise."],
           ["You're asking questions that no productivity hack can answer.", "What are we actually optimising for?"]
@@ -56,32 +54,6 @@ import Layout from '../layouts/Layout.astro';
             <p style="font-size:1rem;color:var(--text);font-weight:500;margin-bottom:0.4rem;">{line1}</p>
             <p style="font-size:0.95rem;color:var(--text-muted);">{line2}</p>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ ESSAYS ════════════════════════════════════════════ -->
-  <section style="background:var(--olive-deep);padding:6rem 3rem;">
-    <div style="max-width:72rem;margin:0 auto;">
-      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem;">
-        <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--text-on-dark);">Essays</h2>
-        <a href="/writings" style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive-light);text-decoration:none;font-weight:500;">All writing →</a>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--border-dark);" class="essay-home-grid">
-        {[
-          {tag:"Attention & Technology", title:"Who Owns You?", blurb:"How our gadgets, purchases, and rewards slowly start controlling our thoughts, time, and emotions."},
-          {tag:"AI & Human Experience", title:"We Were Never Meant for Intelligence", blurb:"Why AI is not the real threat — the danger is humans forgetting our edge was experience, not efficiency."},
-          {tag:"Reality & Perception", title:"Choosing Reality Over Symbols", blurb:"How we mistake words and labels for the real thing, and what it means to actually live your own experience."},
-          {tag:"Books & Mind", title:"When Reading Rewires You", blurb:"How books quietly change the way you see people and yourself long after you close the last page."},
-        ].map((e,i) => (
-          <article style={`padding:2.5rem;${i<2?'border-bottom:1px solid var(--border-dark);':''}${i%2===0?'border-right:1px solid var(--border-dark);':''}`}>
-            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive-light);margin-bottom:1rem;font-weight:600;">{e.tag}</p>
-            <h3 style="font-family:'Fraunces',serif;font-size:1.4rem;font-weight:700;color:var(--text-on-dark);margin-bottom:0.75rem;line-height:1.2;">{e.title}</h3>
-            <p style="color:var(--text-dim-dark);font-size:0.9rem;line-height:1.8;margin-bottom:1.25rem;">{e.blurb}</p>
-            <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive-mid);font-weight:600;">Coming soon</span>
-          </article>
         ))}
       </div>
     </div>
@@ -156,7 +128,7 @@ by melting."
           <p style="font-family:'Fraunces',serif;font-size:1.4rem;font-weight:500;color:var(--text);line-height:1.5;margin-bottom:1.25rem;">
             "Spreadsheets couldn't answer the chest ache. So I write."
           </p>
-          <p style="font-size:0.92rem;color:var(--text-muted);line-height:1.9;">Nine years of finance — from EY audit rooms to sitting across from founders who had everything and felt nothing — taught me one thing: clarity without depth is just noise with good formatting.</p>
+          <p style="font-size:0.92rem;color:var(--text-muted);line-height:1.9;">Nine years of finance, from EY audit rooms to sitting across from founders who had everything and felt nothing, taught me one thing: clarity without depth is just noise with good formatting.</p>
         </div>
         <div>
           <a href="/about" style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;border:1px solid var(--border);padding:0.75rem 1.75rem;display:inline-block;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--olive-accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">About Abby →</a>
@@ -166,13 +138,13 @@ by melting."
   </section>
 
   <!-- ══ NEWSLETTER CTA ══════════════════════════════════════ -->
-  <section style="background:var(--olive-dark);padding:6rem 3rem;">
+  <section style="background:#dde8c8;padding:6rem 3rem;border-top:1px solid #c8d8b0;border-bottom:1px solid #c8d8b0;">
     <div style="max-width:50rem;margin:0 auto;text-align:center;">
-      <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-light);margin-bottom:1.5rem;font-weight:600;">The Letters</p>
-      <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:var(--text-on-dark);line-height:1.05;margin-bottom:1.5rem;">
-        Honest notes from<br/><em style="font-weight:400;color:var(--olive-light);">the middle of it all.</em>
+      <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-mid);margin-bottom:1.5rem;font-weight:600;">The Letters</p>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:var(--olive-deep);line-height:1.05;margin-bottom:1.5rem;">
+        Honest notes from<br/><em style="font-weight:400;color:var(--olive-mid);">the middle of it all.</em>
       </h2>
-      <p style="color:var(--text-dim-dark);font-size:0.95rem;line-height:1.9;max-width:36rem;margin:0 auto 2.5rem;font-weight:300;">
+      <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.9;max-width:36rem;margin:0 auto 2.5rem;font-weight:300;">
         Thoughts I don't share on Instagram or YouTube. Drafts, behind-the-scenes process, questions I'm still figuring out. No spam. No "daily grind" tips. Just honest notes.
       </p>
       <a href="/join" style="display:inline-block;background:var(--olive-accent);color:var(--text-on-dark);font-size:0.76rem;letter-spacing:0.18em;text-transform:uppercase;padding:1.1rem 2.5rem;text-decoration:none;font-weight:600;transition:background 0.2s;" onmouseover="this.style.background='var(--olive-bright)'" onmouseout="this.style.background='var(--olive-accent)'">Get the Letters</a>
@@ -183,10 +155,8 @@ by melting."
 
 <style>
   @media (max-width: 768px) {
-    .for-you-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+    .for-you-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; background: var(--bg-alt) !important; }
     .for-you-grid > div:first-child { position: static !important; }
-    .essay-home-grid { grid-template-columns: 1fr !important; }
-    .essay-home-grid article { border-right: none !important; border-bottom: 1px solid var(--border-dark) !important; }
     .poem-home-grid { grid-template-columns: 1fr !important; }
     .poem-home-grid > article { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
   }
@@ -194,3 +164,13 @@ by melting."
     section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
   }
 </style>
+
+<script>
+  // Loop only the first 5 seconds of the hero video
+  const vid = document.getElementById('hero-vid');
+  if (vid) {
+    vid.addEventListener('timeupdate', () => {
+      if (vid.currentTime >= 5) vid.currentTime = 0;
+    });
+  }
+</script>

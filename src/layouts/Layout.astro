@@ -92,43 +92,43 @@ const {
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: var(--olive-deep);
-      border-bottom: 1px solid var(--olive-mid);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
       padding: 0 3rem; height: 4.25rem;
       display: flex; align-items: center; justify-content: space-between;
     }
     .nav-logo {
       font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 700;
-      color: var(--text-on-dark); text-decoration: none; letter-spacing: -0.01em;
+      color: var(--text); text-decoration: none; letter-spacing: -0.01em;
     }
     .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
     .nav-links a {
       font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--text-dim-dark); text-decoration: none; font-weight: 500;
+      color: var(--text-muted); text-decoration: none; font-weight: 500;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--text-on-dark); }
+    .nav-links a:hover { color: var(--text); }
     .nav-cta {
       background: var(--olive-accent) !important;
       color: var(--text-on-dark) !important;
       padding: 0.55rem 1.3rem; font-weight: 600 !important;
       transition: background 0.2s !important;
     }
-    .nav-cta:hover { background: var(--olive-bright) !important; }
+    .nav-cta:hover { background: var(--olive-bright) !important; color: var(--text-on-dark) !important; }
 
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
       cursor: pointer; padding: 4px; background: none; border: none;
     }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-on-dark); }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); }
 
     @media (max-width: 768px) {
       nav { padding: 0 1.5rem; }
       .nav-links {
         display: none; position: absolute; top: 4.25rem; left: 0; right: 0;
-        background: var(--olive-deep); flex-direction: column;
+        background: var(--bg); flex-direction: column;
         align-items: flex-start; padding: 1.5rem 2rem;
-        border-top: 1px solid var(--olive-mid); gap: 1.25rem;
+        border-top: 1px solid var(--border); gap: 1.25rem;
       }
       .nav-links.open { display: flex; }
       .hamburger { display: flex; }

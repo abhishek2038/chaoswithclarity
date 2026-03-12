@@ -7,42 +7,17 @@ import Layout from '../layouts/Layout.astro';
 >
 
   <!-- HEADER -->
-  <section style="padding:10rem 3rem 6rem;background:var(--olive-deep);border-bottom:1px solid var(--border-dark);">
+  <section style="padding:10rem 3rem 6rem;background:var(--bg-alt);border-bottom:1px solid var(--border);">
     <div style="max-width:72rem;margin:0 auto;">
-      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-light);margin-bottom:1.5rem;font-weight:600;">All Writings</p>
-      <h1 style="font-family:'Fraunces',serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:800;color:var(--text-on-dark);letter-spacing:-0.03em;line-height:0.9;">Essays<br/>&amp; Poems</h1>
-      <p style="color:var(--text-dim-dark);font-size:0.95rem;margin-top:2rem;max-width:38rem;line-height:1.9;font-weight:300;">
+      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1.5rem;font-weight:600;">All Writings</p>
+      <h1 style="font-family:'Fraunces',serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:800;color:var(--text);letter-spacing:-0.03em;line-height:0.9;">Essays<br/>&amp; Poems</h1>
+      <p style="color:var(--text-muted);font-size:0.95rem;margin-top:2rem;max-width:38rem;line-height:1.9;font-weight:300;">
         Ideas that stay with you the next time you're scrolling at 2am, or wondering why you still feel restless even when everything looks fine on paper.
       </p>
     </div>
   </section>
 
   <div style="max-width:72rem;margin:0 auto;padding:5rem 3rem 7rem;" class="writings-wrap">
-
-    <!-- ══ ESSAYS ══ -->
-    <section style="margin-bottom:5rem;">
-      <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2.5rem;">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--olive-accent);flex-shrink:0;"></div>
-        <h2 style="font-family:'Fraunces',serif;color:var(--olive-accent);font-size:1.4rem;font-weight:700;letter-spacing:0.01em;">Essays</h2>
-        <div style="flex:1;height:1px;background:var(--border);"></div>
-      </div>
-
-      <div class="essay-grid" style="display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--border);">
-        {[
-          {tag:"Attention & Technology", title:"Who Owns You?", blurb:"How our gadgets, purchases, and \"rewards\" slowly start controlling our thoughts, time, and emotions — and how to take your attention back."},
-          {tag:"AI & Human Experience", title:"We Were Never Meant for Intelligence", blurb:"Why AI is not the real threat — the real danger is humans forgetting that our edge was experience, not efficiency."},
-          {tag:"Reality & Perception", title:"Choosing Reality Over Symbols", blurb:"How we mistake words, labels, and spoilers for the real thing, and what it means to actually live your own experience."},
-          {tag:"Books & Mind", title:"When Reading Rewires You", blurb:"How books quietly change the way you see situations, people, and yourself long after you close the last page."},
-        ].map((e,i) => (
-          <article style={`padding:2.5rem;${i<2?'border-bottom:1px solid var(--border);':''}${i%2===0?'border-right:1px solid var(--border);':''}display:flex;flex-direction:column;gap:1rem;`}>
-            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive-accent);font-weight:600;">{e.tag}</p>
-            <h3 style="font-family:'Fraunces',serif;font-size:1.5rem;color:var(--text);font-weight:700;line-height:1.2;">{e.title}</h3>
-            <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;flex:1;">{e.blurb}</p>
-            <span style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">Coming soon</span>
-          </article>
-        ))}
-      </div>
-    </section>
 
     <!-- ══ FREEDOM & OBSERVER ══ -->
     <section style="margin-bottom:5rem;">
@@ -253,63 +228,6 @@ I am the oneness which in its eternity is all delighted!"
           <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);font-weight:600;display:flex;align-items:center;gap:0.4rem;">Read <i class="ph ph-arrow-right"></i></span>
         </article>
 
-      </div>
-    </section>
-
-    <!-- ══ LOVE & LETTING GO (placeholder) ══ -->
-    <section style="margin-bottom:5rem;">
-      <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2.5rem;">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--text-faint);flex-shrink:0;"></div>
-        <h2 style="font-family:'Fraunces',serif;color:var(--text-faint);font-size:1.4rem;font-weight:700;">Love &amp; Letting Go</h2>
-        <div style="flex:1;height:1px;background:var(--border);"></div>
-      </div>
-      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);">
-        {[0,1,2].map((_, i) => (
-          <article style={`padding:2rem;${i<2?'border-right:1px solid var(--border);':''}display:flex;flex-direction:column;gap:1rem;background:var(--bg-card);`}>
-            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">[Date]</p>
-            <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--border);font-weight:700;">[Poem Title]</h3>
-            <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--border);font-size:0.97rem;line-height:2;flex:1;border-left:2px solid var(--border);padding-left:1.25rem;">← Add first 4 lines here →</p>
-            <span style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">Add poem</span>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <!-- ══ NATURE & TRAVEL (placeholder) ══ -->
-    <section style="margin-bottom:5rem;">
-      <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2.5rem;">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--olive-accent);flex-shrink:0;"></div>
-        <h2 style="font-family:'Fraunces',serif;color:var(--olive-accent);font-size:1.4rem;font-weight:700;">Nature &amp; Travel</h2>
-        <div style="flex:1;height:1px;background:var(--border);"></div>
-      </div>
-      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);">
-        {[0,1,2].map((_, i) => (
-          <article style={`padding:2rem;${i<2?'border-right:1px solid var(--border);':''}display:flex;flex-direction:column;gap:1rem;background:var(--bg-card);`}>
-            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">[Date]</p>
-            <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--border);font-weight:700;">[Poem Title]</h3>
-            <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--border);font-size:0.97rem;line-height:2;flex:1;border-left:2px solid var(--border);padding-left:1.25rem;">← Add first 4 lines here →</p>
-            <span style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">Add poem</span>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <!-- ══ MONEY & WORK (placeholder) ══ -->
-    <section style="margin-bottom:5rem;">
-      <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2.5rem;">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0;"></div>
-        <h2 style="font-family:'Fraunces',serif;color:var(--gold);font-size:1.4rem;font-weight:700;">Money &amp; Work</h2>
-        <div style="flex:1;height:1px;background:var(--border);"></div>
-      </div>
-      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);">
-        {[0,1,2].map((_, i) => (
-          <article style={`padding:2rem;${i<2?'border-right:1px solid var(--border);':''}display:flex;flex-direction:column;gap:1rem;background:var(--bg-card);`}>
-            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">[Date]</p>
-            <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--border);font-weight:700;">[Poem Title]</h3>
-            <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--border);font-size:0.97rem;line-height:2;flex:1;border-left:2px solid var(--border);padding-left:1.25rem;">← Add first 4 lines here →</p>
-            <span style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">Add poem</span>
-          </article>
-        ))}
       </div>
     </section>
 

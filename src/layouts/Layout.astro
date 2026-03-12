@@ -54,32 +54,32 @@ const {
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* Foundations — ink black, like canvas soaked in night */
-      --olive-deep:   #06050a;
-      --olive-dark:   #0e0c14;
-      --olive-mid:    #1a1826;
+      /* Forest — deep, earthy foundations */
+      --olive-deep:   #152820;
+      --olive-dark:   #1c3828;
+      --olive-mid:    #2e4e3c;
 
-      /* Accent — antique gold, the only light in the dark */
-      --olive-accent: #b8881e;
-      --olive-bright: #d4a432;
-      --olive-light:  #7a5c14;
+      /* Accent — warm coral/salmon, bold and artistic */
+      --olive-accent: #c4513a;
+      --olive-bright: #d46040;
+      --olive-light:  #e09070;
 
-      /* Backgrounds — depths of ink */
-      --bg:           #0c0b10;
-      --bg-alt:       #14121c;
-      --bg-card:      #1e1c2a;
+      /* Backgrounds — warm linen, like aged paper */
+      --bg:           #f5ece0;
+      --bg-alt:       #ede3d4;
+      --bg-card:      #fdf8f2;
 
-      /* Typography — warm parchment on dark */
-      --text:         #e4ddd0;
-      --text-muted:   #98907c;
-      --text-faint:   #5e5448;
-      --text-on-dark: #e4ddd0;
-      --text-dim-dark:#c0a878;
+      /* Typography — warm near-black on light, cream on dark */
+      --text:         #180e0a;
+      --text-muted:   #7c6858;
+      --text-faint:   #b8a898;
+      --text-on-dark: #f5ece0;
+      --text-dim-dark:#d4b8a0;
 
       /* Structure */
-      --gold:         #b8881e;
-      --border:       #242232;
-      --border-dark:  #14121c;
+      --gold:         #c4513a;
+      --border:       #ddd0c0;
+      --border-dark:  #2a3e30;
     }
 
     html { scroll-behavior: smooth; }
@@ -143,7 +143,7 @@ const {
     /* POEM MODAL */
     #poem-modal {
       display: none; position: fixed; inset: 0; z-index: 1000;
-      background: rgba(6,5,10,0.92); backdrop-filter: blur(8px);
+      background: rgba(21,40,32,0.93); backdrop-filter: blur(8px);
       align-items: center; justify-content: center; padding: 2rem;
     }
     #poem-modal.open { display: flex; }

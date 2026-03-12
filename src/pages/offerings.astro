@@ -1,164 +1,94 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
+<Layout title="Offerings | Chaos With Clarity">
 
-<Layout title="Offerings | Chaos With Clarity" description="Three ways to work with Abby — Soul + Strategy, Chaos Circles, and Letters from Chaos.">
-
-  <!-- PAGE HEADER -->
-  <div style="background: var(--bg-alt); border-bottom: 1px solid var(--border); padding-top: 9rem; padding-bottom: 4.5rem;">
-    <div style="max-width: 72rem; margin: 0 auto; padding: 0 2rem;">
-      <p class="eyebrow" style="margin-bottom: 1.5rem;">Work Together</p>
-      <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 700; color: var(--text); letter-spacing: -0.03em; line-height: 0.9;">
-        Offerings
-      </h1>
-      <p style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 1.1rem; color: var(--muted); margin-top: 1.25rem;">
-        Three ways to work with Abby.
-      </p>
+  <!-- HEADER -->
+  <section style="padding:10rem 3rem 5rem;background:#ede1d2;border-bottom:1px solid #d9cfc0;">
+    <div style="max-width:72rem;margin:0 auto;">
+      <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:1.5rem;font-weight:400;">Work with me</p>
+      <h1 style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(3rem,7vw,6rem);font-weight:700;color:#1a1612;letter-spacing:-0.03em;line-height:0.9;">Offerings</h1>
     </div>
-  </div>
+  </section>
 
-
-  <!-- 01 · SOUL + STRATEGY -->
-  <div style="max-width: 72rem; margin: 0 auto; padding: 5rem 2rem;">
-
-    <!-- Section number header -->
-    <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 3.5rem;">
-      <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 3.5rem; color: var(--border); line-height: 1; flex-shrink: 0; font-weight: 700;">01</span>
-      <div style="height: 1px; flex: 1; background: var(--border);"></div>
-    </div>
-
-    <div class="soul-grid reveal">
-
-      <!-- Left: info -->
+  <!-- 01 SOUL + STRATEGY -->
+  <section style="max-width:72rem;margin:0 auto;padding:5rem 3rem;">
+    <div style="display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:start;" class="offering-grid">
       <div>
-        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.25rem; color: var(--text); font-weight: 700; line-height: 1.1; margin-bottom: 0.5rem;">Soul + Strategy</h2>
-        <p style="font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 2.25rem;">For founders &amp; professionals</p>
-        <p style="color: var(--muted); font-size: 0.94rem; line-height: 1.9; margin-bottom: 2.5rem;">
-          You've built something real. The numbers are there — or close enough. But something inside is off. This isn't coaching. This isn't therapy. It's a mirror.
+        <p style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,4rem);color:#d9cfc0;font-weight:700;margin-bottom:1.5rem;line-height:1;">01</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.5rem);color:#1a1612;font-weight:500;margin-bottom:1.5rem;line-height:1.2;">Soul + Strategy</h2>
+        <p style="color:#7a6f63;font-size:0.95rem;line-height:2;margin-bottom:2rem;max-width:36rem;">
+          For founders who are financially sharp but emotionally lost. You've built something real — the numbers are there, or close enough. But something inside is off. This isn't coaching. This isn't therapy. It's a mirror. 90 minutes to see what's actually going on.
         </p>
-        <ul style="list-style: none; margin: 0 0 3rem; display: flex; flex-direction: column; gap: 0.9rem;">
-          {['Runway + pricing clarity', 'Emotional patterns blocking growth', 'Lifestyle design that actually fits you', 'One-on-one, held with full presence'].map(item => (
-            <li style="display: flex; gap: 1rem; align-items: flex-start; font-size: 0.9rem; color: var(--text);">
-              <span style="color: var(--sage); flex-shrink: 0; margin-top: 0.1em;">—</span>
-              <span>{item}</span>
-            </li>
-          ))}
+        <ul style="list-style:none;margin-bottom:2.5rem;">
+          <li style="font-size:0.85rem;color:#7a6f63;padding:0.5rem 0;border-bottom:1px solid #d9cfc0;display:flex;align-items:center;gap:0.75rem;"><span style="color:#b5763a;">—</span> Finance + inner pattern work</li>
+          <li style="font-size:0.85rem;color:#7a6f63;padding:0.5rem 0;border-bottom:1px solid #d9cfc0;display:flex;align-items:center;gap:0.75rem;"><span style="color:#b5763a;">—</span> Lifestyle design that actually fits you</li>
+          <li style="font-size:0.85rem;color:#7a6f63;padding:0.5rem 0;display:flex;align-items:center;gap:0.75rem;"><span style="color:#b5763a;">—</span> One-on-one, held with full presence</li>
         </ul>
-        <a href="https://calendly.com" target="_blank" rel="noopener" class="btn btn-fill">Book a Call</a>
-        <p style="color: var(--dim); font-size: 0.7rem; font-style: italic; margin-top: 0.75rem;">Replace with your Calendly link</p>
+        <a href="https://calendly.com" target="_blank" rel="noopener" style="display:inline-block;background:#b5763a;color:#f5ede2;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.9rem 2rem;text-decoration:none;font-weight:400;">Book a Call</a>
+        <p style="font-size:0.75rem;color:#d9cfc0;margin-top:0.75rem;">Replace with your Calendly link above</p>
       </div>
-
-      <!-- Right: price panel -->
-      <div style="background: var(--bg-alt); border: 1px solid var(--border); padding: 3rem 2.5rem; display: flex; flex-direction: column; gap: 1.75rem; align-self: start;">
-        <p class="eyebrow">Investment</p>
-        <p style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(3rem, 5.5vw, 4.75rem); color: var(--accent); line-height: 1; letter-spacing: -0.02em; font-weight: 700;">₹15,000</p>
-        <div style="height: 1px; background: var(--border);"></div>
-        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
-          <p style="font-size: 0.83rem; color: var(--muted);">90 minutes, one on one</p>
-          <p style="font-size: 0.83rem; color: var(--muted);">Held with full presence</p>
-          <p style="font-size: 0.83rem; color: var(--muted);">No scripts. Just truth.</p>
+      <div style="background:#ede1d2;border:1px solid #d9cfc0;padding:2.5rem;position:sticky;top:8rem;">
+        <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:1rem;font-weight:400;">Investment</p>
+        <p style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);color:#b5763a;font-weight:700;line-height:1;margin-bottom:0.5rem;">₹15,000</p>
+        <p style="font-size:0.85rem;color:#7a6f63;margin-bottom:2rem;">Single session · 90 minutes</p>
+        <div style="border-top:1px solid #d9cfc0;padding-top:1.5rem;">
+          <p style="font-size:0.8rem;color:#7a6f63;line-height:1.8;">Includes pre-session reflection, the 90-minute call, and a written summary of what surfaced.</p>
         </div>
       </div>
-
     </div>
-  </div>
+  </section>
 
-
-  <!-- DIVIDER -->
-  <div style="max-width: 72rem; margin: 0 auto; padding: 0 2rem;">
-    <div style="height: 1px; background: var(--border);"></div>
-  </div>
-
+  <div style="max-width:72rem;margin:0 auto;padding:0 3rem;border-top:1px solid #d9cfc0;"></div>
 
   <!-- 02 + 03 -->
-  <div style="max-width: 72rem; margin: 0 auto; padding: 5rem 2rem;">
-    <div class="pair-grid" style="border: 1px solid var(--border);">
+  <section style="max-width:72rem;margin:0 auto;padding:5rem 3rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #d9cfc0;" class="pair-grid">
 
-      <!-- Chaos Circles -->
-      <div class="pair-left reveal" style="padding: 3rem; border-right: 1px solid var(--border);">
-        <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.5rem; color: var(--border); line-height: 1; display: block; margin-bottom: 2rem; font-weight: 700;">02</span>
-        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.75rem; color: var(--text); font-weight: 600; margin-bottom: 0.35rem;">Chaos Circles</h2>
-        <p style="font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;">6 people · 6 weeks</p>
-        <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.25rem; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; font-weight: 600;">₹8,000</p>
-        <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 2rem;">per person</p>
-        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.85; margin-bottom: 2rem;">
-          Six people who are done pretending everything is fine. Six weeks of poems, questions, and the kind of honesty that only happens in small rooms.
-        </p>
-        <ul style="list-style: none; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.6rem;">
-          {['Weekly poems + guided reflection', 'Money & soul conversations', 'Intimate small group', 'A container for real things'].map(item => (
-            <li style="font-size: 0.85rem; color: var(--muted); display: flex; gap: 0.75rem; align-items: flex-start;">
-              <span style="color: var(--sage); flex-shrink: 0;">—</span>
-              <span>{item}</span>
-            </li>
-          ))}
+      <!-- 02 Chaos Circles -->
+      <div style="padding:3rem;border-right:1px solid #d9cfc0;">
+        <p style="font-family:'Playfair Display',serif;font-size:2.5rem;color:#d9cfc0;font-weight:700;margin-bottom:1.25rem;line-height:1;">02</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#1a1612;font-weight:500;margin-bottom:1rem;line-height:1.2;">Chaos Circles</h2>
+        <p style="color:#7a6f63;font-size:0.85rem;line-height:1.9;margin-bottom:1.5rem;">Six people who are done pretending everything is fine. Six weeks of poems, questions, and the kind of honesty that only happens in small rooms. No fixing. Just witnessing.</p>
+        <ul style="list-style:none;margin-bottom:1.5rem;">
+          <li style="font-size:0.82rem;color:#7a6f63;padding:0.4rem 0;display:flex;gap:0.6rem;"><span style="color:#b5763a;">—</span> Intimate small group</li>
+          <li style="font-size:0.82rem;color:#7a6f63;padding:0.4rem 0;display:flex;gap:0.6rem;"><span style="color:#b5763a;">—</span> A container for real things</li>
         </ul>
-        <p style="color: var(--muted); font-size: 0.8rem; margin-bottom: 2rem;">
-          Next circle: <span style="color: var(--text); font-weight: 400;">March 2026</span>
-        </p>
-        <a href="https://typeform.com" target="_blank" rel="noopener" class="btn btn-outline">Join Waitlist</a>
-        <p style="color: var(--dim); font-size: 0.7rem; font-style: italic; margin-top: 0.75rem;">Replace with your Typeform link</p>
+        <p style="font-size:0.82rem;color:#1a1612;margin-bottom:1.5rem;font-weight:400;">Next circle: <strong>March 2026</strong></p>
+        <a href="https://typeform.com" target="_blank" rel="noopener" style="display:inline-block;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:#b5763a;text-decoration:none;border:1px solid #b5763a;padding:0.65rem 1.25rem;font-weight:400;">Join Waitlist</a>
+        <p style="font-size:0.72rem;color:#d9cfc0;margin-top:0.6rem;">Typeform waitlist link goes here</p>
       </div>
 
-      <!-- Letters from Chaos -->
-      <div class="reveal" style="padding: 3rem;">
-        <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.5rem; color: var(--border); line-height: 1; display: block; margin-bottom: 2rem; font-weight: 700;">03</span>
-        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.75rem; color: var(--text); font-weight: 600; margin-bottom: 0.35rem;">Letters from Chaos</h2>
-        <p style="font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;">Curated poems · digital download</p>
-        <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.25rem; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; font-weight: 600;">₹999</p>
-        <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 2rem;">one-time</p>
-        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.85; margin-bottom: 2rem;">
-          A curated collection of poems from three years of writing — on money, mortality, love, and the strange gift of being alive.
-        </p>
-        <ul style="list-style: none; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.6rem;">
-          {['30+ pages of poetry', 'My personal reflections on each poem', 'Designed for slow, repeated reading', 'Your pocket poet for uncertain days'].map(item => (
-            <li style="font-size: 0.85rem; color: var(--muted); display: flex; gap: 0.75rem; align-items: flex-start;">
-              <span style="color: var(--dim); flex-shrink: 0;">—</span>
-              <span>{item}</span>
-            </li>
-          ))}
+      <!-- 03 Letters from the Edge -->
+      <div style="padding:3rem;">
+        <p style="font-family:'Playfair Display',serif;font-size:2.5rem;color:#d9cfc0;font-weight:700;margin-bottom:1.25rem;line-height:1;">03</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#1a1612;font-weight:500;margin-bottom:1rem;line-height:1.2;">Letters from the Edge</h2>
+        <p style="color:#7a6f63;font-size:0.85rem;line-height:1.9;margin-bottom:1.5rem;">A curated collection of poems from three years of writing — on money, mortality, love, and the strange gift of being alive. Something to return to when the noise gets loud.</p>
+        <ul style="list-style:none;margin-bottom:1.5rem;">
+          <li style="font-size:0.82rem;color:#7a6f63;padding:0.4rem 0;display:flex;gap:0.6rem;"><span style="color:#b5763a;">—</span> Designed for slow, repeated reading</li>
+          <li style="font-size:0.82rem;color:#7a6f63;padding:0.4rem 0;display:flex;gap:0.6rem;"><span style="color:#b5763a;">—</span> Your pocket poet for uncertain days</li>
         </ul>
-        <a href="https://buy.stripe.com" target="_blank" rel="noopener" class="btn btn-ghost">Buy Now</a>
-        <p style="color: var(--dim); font-size: 0.7rem; font-style: italic; margin-top: 0.75rem;">Replace with your Stripe link</p>
+        <a href="https://stripe.com" target="_blank" rel="noopener" style="display:inline-block;background:#b5763a;color:#f5ede2;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;font-weight:400;">Buy Now</a>
+        <p style="font-size:0.72rem;color:#d9cfc0;margin-top:0.6rem;">Stripe payment link goes here</p>
       </div>
 
     </div>
-  </div>
-
-
-  <!-- DIVIDER -->
-  <div style="max-width: 72rem; margin: 0 auto; padding: 0 2rem;">
-    <div style="height: 1px; background: var(--border);"></div>
-  </div>
-
+  </section>
 
   <!-- TESTIMONIAL + CTA -->
-  <div class="reveal" style="max-width: 48rem; margin: 0 auto; padding: 5rem 2rem 7rem; text-align: center;">
-    <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; font-style: italic; color: var(--muted); line-height: 1.65; margin-bottom: 1rem;">
-      "Abby's poems land like quiet thunder."
-    </p>
-    <cite style="font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--dim); font-style: normal;">— A reader</cite>
-    <div style="margin-top: 3.5rem;">
-      <p style="color: var(--muted); font-size: 0.88rem; margin-bottom: 1.75rem;">Not sure which is right for you?</p>
-      <a href="/about" class="btn btn-ghost">Read About Abby →</a>
-    </div>
-  </div>
+  <section style="max-width:72rem;margin:0 auto;padding:0 3rem 7rem;text-align:center;">
+    <p style="font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.5vw,1.5rem);color:#1a1612;font-style:italic;line-height:1.7;margin-bottom:0.75rem;">"Abby's poems land like quiet thunder."</p>
+    <p style="font-size:0.75rem;color:#7a6f63;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:3rem;">— A reader</p>
+    <p style="font-size:0.85rem;color:#7a6f63;margin-bottom:1.5rem;">Not sure which is right for you?</p>
+    <a href="/about" style="display:inline-block;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:#7a6f63;text-decoration:none;border:1px solid #d9cfc0;padding:0.75rem 1.5rem;font-weight:400;">Read About Abby →</a>
+  </section>
 
 </Layout>
 
 <style>
-  .soul-grid {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 4rem;
-    align-items: start;
-  }
-  .pair-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
   @media (max-width: 768px) {
-    .soul-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .pair-grid { grid-template-columns: 1fr; }
-    .pair-left { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+    .offering-grid { grid-template-columns: 1fr !important; }
+    .pair-grid { grid-template-columns: 1fr !important; }
+    .pair-grid > div:first-child { border-right: none !important; border-bottom: 1px solid #d9cfc0; }
   }
 </style>

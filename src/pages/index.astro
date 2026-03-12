@@ -1,90 +1,73 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-
 <Layout title="Chaos With Clarity | Poems + Founder Soul Work">
 
-  <!-- ======= HERO ======= -->
-  <section style="min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 2rem 5rem; position: relative; overflow: hidden;">
+  <!-- HERO -->
+  <section style="min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:9rem 3rem 5rem;position:relative;overflow:hidden;background:#f5ede2;">
 
-    <!-- Decorative circle (background) -->
-    <div style="position: absolute; right: -8vw; top: 8%; width: clamp(220px, 40vw, 580px); height: clamp(220px, 40vw, 580px); border-radius: 50%; background: var(--accent-warm); opacity: 0.13; pointer-events: none;"></div>
-    <!-- Small dot -->
-    <div style="position: absolute; left: 5%; bottom: 20%; width: 60px; height: 60px; border-radius: 50%; border: 1.5px solid var(--border); pointer-events: none;"></div>
+    <div style="position:absolute;right:-6vw;top:10%;width:clamp(200px,38vw,520px);height:clamp(200px,38vw,520px);border-radius:50%;background:#d4965a;opacity:0.1;pointer-events:none;"></div>
 
-    <div style="max-width: 72rem; margin: 0 auto; width: 100%; position: relative;">
+    <div style="max-width:72rem;margin:0 auto;width:100%;position:relative;">
 
-      <p class="eyebrow" style="margin-bottom: 2.5rem;">Poetry · Soul Work · Finance</p>
+      <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:2.5rem;font-weight:400;">Poetry · Soul Work · Finance</p>
 
-      <h1 style="line-height: 0.87; margin-bottom: 2.75rem;">
-        <span style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(4rem, 9vw, 8rem); font-weight: 700; color: var(--text); letter-spacing: -0.03em;">Chaos</span>
-        <span style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.75rem, 4vw, 3.5rem); color: var(--accent); font-style: italic; font-weight: 400; padding-left: clamp(1rem, 3vw, 2.5rem); line-height: 1.3;">With</span>
-        <span style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(4rem, 9vw, 8rem); font-weight: 700; color: var(--text); letter-spacing: -0.03em;">Clarity</span>
+      <h1 style="margin-bottom:2.5rem;line-height:0.88;">
+        <span style="display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:700;color:#1a1612;letter-spacing:-0.03em;">Chaos</span>
+        <span style="display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.5rem,3.5vw,3rem);font-weight:400;font-style:italic;color:#b5763a;padding-left:clamp(1rem,2.5vw,2.5rem);line-height:1.4;">With</span>
+        <span style="display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:700;color:#1a1612;letter-spacing:-0.03em;">Clarity</span>
       </h1>
 
-      <p style="color: var(--muted); font-size: clamp(0.9rem, 1.8vw, 1.05rem); max-width: 34rem; line-height: 1.9; margin-bottom: 2.75rem; font-weight: 300;">
+      <p style="color:#7a6f63;font-size:clamp(0.9rem,1.6vw,1rem);max-width:32rem;line-height:2;margin-bottom:2.75rem;font-weight:300;">
         I am a poet who does founder numbers.<br/>
         A CFO who writes about death and freedom.<br/>
         This is where my soul work lives.
       </p>
 
-      <div style="display: flex; flex-wrap: wrap; gap: 0.875rem; align-items: center;">
-        <a href="/writings" class="btn btn-outline">Read Poems</a>
-        <a href="https://calendly.com" target="_blank" rel="noopener" class="btn btn-fill">Book Soul + Strategy</a>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
+        <a href="/writings" style="display:inline-block;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:#1a1612;text-decoration:none;border-bottom:1px solid #1a1612;padding-bottom:2px;font-weight:400;transition:color 0.2s;">Read Poems</a>
+        <a href="https://calendly.com" target="_blank" rel="noopener" style="display:inline-block;background:#b5763a;color:#f5ede2;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.85rem 1.75rem;text-decoration:none;font-weight:400;transition:background 0.2s;">Book Soul + Strategy</a>
       </div>
 
     </div>
   </section>
 
+  <!-- BELOW HERO -->
+  <section style="max-width:72rem;margin:0 auto;padding:4rem 3rem 6rem;">
+    <div style="display:grid;grid-template-columns:3fr 2fr;border:1px solid #d9cfc0;" class="home-grid">
 
-  <!-- ======= THREE BLOCKS ======= -->
-  <section style="max-width: 72rem; margin: 0 auto; padding: 0 2rem 7rem;">
-    <div class="home-blocks" style="border: 1px solid var(--border);">
-
-      <!-- Latest Poem (left, wider) -->
-      <div class="home-main"
-           style="padding: 3rem; border-right: 1px solid var(--border);"
-           data-title="[Poem Title Here]"
-           data-date="[Date Here]"
-           data-poem="[Paste full poem text here]"
+      <!-- Latest Poem -->
+      <div style="padding:3rem;border-right:1px solid #d9cfc0;"
+           data-title="[Poem Title]"
+           data-date="[Date]"
+           data-poem="[Paste your full poem here]"
            data-reflection="[Your reflection here]">
-        <p class="eyebrow" style="margin-bottom: 1.5rem;">Latest Poem</p>
-        <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; color: var(--text); line-height: 1.25; margin-bottom: 1.5rem; font-weight: 500;">[Poem Title]</h3>
-        <p style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--muted); font-size: 1rem; line-height: 2.1; border-left: 2px solid var(--accent-warm); padding-left: 1.5rem; margin-bottom: 2.25rem;">
+        <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:1.5rem;font-weight:400;">Latest Poem</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#1a1612;line-height:1.2;margin-bottom:1.5rem;font-weight:500;">[Poem Title]</h3>
+        <p style="font-family:'Playfair Display',serif;font-style:italic;color:#7a6f63;font-size:1rem;line-height:2.1;border-left:2px solid #d4965a;padding-left:1.5rem;margin-bottom:2.5rem;">
           ← Paste the first 4 lines of your poem here →
         </p>
-        <button data-open-poem style="background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.6rem; font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); font-family: Inter, sans-serif; padding: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.65'" onmouseout="this.style.opacity='1'">
+        <button data-open-poem style="background:none;border:none;cursor:pointer;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:#b5763a;font-family:'Inter',sans-serif;padding:0;display:flex;align-items:center;gap:0.5rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
           Read full <i class="ph ph-arrow-right"></i>
         </button>
       </div>
 
-      <!-- Right: Soul+Strategy + Join stacked -->
-      <div class="home-aside">
-        <!-- Soul + Strategy -->
-        <div class="reveal" style="padding: 2.25rem 2.5rem; border-bottom: 1px solid var(--border); flex: 1; background: var(--bg-alt);">
-          <p class="eyebrow" style="color: var(--sage); margin-bottom: 1rem;">1:1 Offering</p>
-          <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.25rem; color: var(--text); margin-bottom: 0.6rem;">Soul + Strategy</h3>
-          <p style="color: var(--muted); font-size: 0.86rem; line-height: 1.75; margin-bottom: 1rem;">
-            For founders who are financially sharp but emotionally lost. 90 minutes of clarity.
-          </p>
-          <p style="color: var(--accent); font-size: 0.85rem; margin-bottom: 1.5rem; font-weight: 300;">₹15,000 &nbsp;·&nbsp; 90 mins</p>
-          <a href="https://calendly.com" target="_blank" rel="noopener" class="btn btn-outline" style="font-size: 0.62rem; padding: 0.65rem 1.1rem;">Book a Call</a>
+      <!-- Right column -->
+      <div style="display:flex;flex-direction:column;">
+        <div style="padding:2.25rem 2.5rem;border-bottom:1px solid #d9cfc0;background:#ede1d2;flex:1;">
+          <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:1rem;font-weight:400;">1:1 Offering</p>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#1a1612;margin-bottom:0.6rem;font-weight:500;">Soul + Strategy</h3>
+          <p style="color:#7a6f63;font-size:0.85rem;line-height:1.8;margin-bottom:1rem;">For founders who are financially sharp but emotionally lost. 90 minutes of clarity.</p>
+          <p style="color:#b5763a;font-size:0.85rem;margin-bottom:1.5rem;font-weight:300;">₹15,000 · 90 mins</p>
+          <a href="https://calendly.com" target="_blank" rel="noopener" style="display:inline-block;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:#b5763a;text-decoration:none;border:1px solid #b5763a;padding:0.6rem 1.1rem;font-weight:400;transition:background 0.2s;">Book a Call</a>
         </div>
-
-        <!-- Join -->
-        <div class="reveal" style="padding: 2.25rem 2.5rem; flex: 1;">
-          <p class="eyebrow" style="margin-bottom: 1rem;">Letters</p>
-          <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.25rem; color: var(--text); margin-bottom: 0.6rem;">Join the Chaos</h3>
-          <p style="color: var(--muted); font-size: 0.86rem; line-height: 1.75; margin-bottom: 1.25rem;">
-            Poems and reflections sent to your inbox. No noise. Just soul work.
-          </p>
-          <form action="/join" style="display: flex; flex-direction: column; gap: 0.5rem;">
-            <input type="email" placeholder="your@email.com"
-              style="background: var(--bg); border: 1px solid var(--border); color: var(--text); font-size: 0.85rem; padding: 0.7rem 0.9rem; width: 100%; outline: none; font-family: Inter, sans-serif; font-weight: 300; transition: border-color 0.2s;"
-              onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'" />
-            <button type="submit" class="btn btn-fill" style="font-size: 0.62rem; padding: 0.65rem 1rem; width: 100%; cursor: pointer;">
-              Send Me Poems
-            </button>
+        <div style="padding:2.25rem 2.5rem;flex:1;">
+          <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:1rem;font-weight:400;">Letters</p>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#1a1612;margin-bottom:0.6rem;font-weight:500;">Join the Chaos</h3>
+          <p style="color:#7a6f63;font-size:0.85rem;line-height:1.8;margin-bottom:1.5rem;">Poems and reflections sent to your inbox. No noise. Just soul work.</p>
+          <form action="/join" style="display:flex;flex-direction:column;gap:0.5rem;">
+            <input type="email" placeholder="your@email.com" style="background:#f5ede2;border:1px solid #d9cfc0;color:#1a1612;font-size:0.85rem;padding:0.7rem 0.9rem;width:100%;outline:none;font-family:'Inter',sans-serif;font-weight:300;" />
+            <button type="submit" style="background:#b5763a;color:#f5ede2;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.75rem;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:400;">Send Me Poems</button>
           </form>
         </div>
       </div>
@@ -92,34 +75,21 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-
-  <!-- ======= ABOUT STRIP ======= -->
-  <section class="reveal" style="max-width: 72rem; margin: 0 auto; padding: 0 2rem 7rem;">
-    <div style="background: var(--bg-alt); border: 1px solid var(--border); padding: 3rem 3.5rem;">
-      <p class="eyebrow" style="margin-bottom: 1.5rem;">Who writes here</p>
-      <p style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.25rem, 3vw, 2rem); color: var(--text); line-height: 1.55; font-weight: 500; margin-bottom: 2rem;">
+  <!-- ABOUT STRIP -->
+  <section style="max-width:72rem;margin:0 auto;padding:0 3rem 7rem;">
+    <div style="background:#ede1d2;border:1px solid #d9cfc0;padding:3rem 3.5rem;">
+      <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6f63;margin-bottom:1.5rem;font-weight:400;">Who writes here</p>
+      <p style="font-family:'Playfair Display',serif;font-size:clamp(1.2rem,2.5vw,1.75rem);color:#1a1612;line-height:1.6;font-weight:500;margin-bottom:2rem;">
         "Spreadsheets couldn't answer the chest ache.<br/>So I write."
       </p>
-      <a href="/about" class="btn btn-ghost" style="font-size: 0.62rem; padding: 0.65rem 1.25rem;">About Abby →</a>
+      <a href="/about" style="display:inline-block;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:#7a6f63;text-decoration:none;border:1px solid #d9cfc0;padding:0.65rem 1.25rem;font-weight:400;transition:border-color 0.2s;">About Abby →</a>
     </div>
   </section>
 
 </Layout>
 
 <style>
-  .home-blocks {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    align-items: stretch;
-  }
-  .home-aside {
-    display: flex;
-    flex-direction: column;
-  }
-  .home-aside > div { flex: 1; }
-
   @media (max-width: 768px) {
-    .home-blocks { grid-template-columns: 1fr; }
-    .home-main { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+    .home-grid { grid-template-columns: 1fr !important; }
   }
 </style>

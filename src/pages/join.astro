@@ -3,100 +3,99 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout
   title="Get the Letters | Chaos With Clarity"
-  description="An occasional letter with thoughts AJ doesn't share on Instagram or YouTube — drafts, behind-the-scenes, and questions still being figured out."
+  description="An occasional letter with thoughts Abby doesn't share on Instagram or YouTube — drafts, behind-the-scenes, and questions still being figured out."
 >
 
   <!-- HERO -->
-  <section style="min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 3rem 5rem;position:relative;background:#f3e8d8;">
+  <section style="min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 3rem 5rem;position:relative;background:var(--olive-deep);">
+    <div style="width:1px;height:4rem;background:linear-gradient(to bottom,transparent,var(--olive-mid));margin-bottom:2.5rem;"></div>
 
-    <div style="width:1px;height:4rem;background:linear-gradient(to bottom,transparent,#cec5ad);margin-bottom:2.5rem;"></div>
+    <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-light);margin-bottom:1rem;font-weight:600;">Stay in the Clarity</p>
 
-    <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:1rem;font-weight:400;">Stay in the Clarity</p>
-    <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.75rem,7vw,6rem);font-weight:600;color:#1a1612;letter-spacing:-0.02em;margin-bottom:0.75rem;line-height:0.95;">Get the Letters</h1>
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#c17f3a;font-size:1.3rem;margin-bottom:2.5rem;letter-spacing:0.01em;">Honest notes from the middle of it all.</p>
+    <h1 style="font-family:'Fraunces',serif;font-size:clamp(3rem,8vw,7rem);font-weight:800;color:var(--text-on-dark);letter-spacing:-0.03em;margin-bottom:0.75rem;line-height:0.92;">Get the Letters</h1>
 
-    <p style="color:#7a7260;font-size:0.9rem;max-width:30rem;line-height:2.1;margin-bottom:3rem;font-weight:300;">
+    <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--olive-light);font-size:1.3rem;margin-bottom:2.5rem;letter-spacing:0.01em;font-weight:500;">Honest notes from the middle of it all.</p>
+
+    <p style="color:var(--text-dim-dark);font-size:0.95rem;max-width:30rem;line-height:2.1;margin-bottom:3rem;font-weight:300;">
       Thoughts I don't share on Instagram or YouTube.<br/>
       Drafts. Behind-the-scenes process. Questions I'm still figuring out.<br/>
       No spam. No "daily grind" tips. Just honest notes.
     </p>
 
-    <!-- Email form — Replace action with your Beehiiv embed URL -->
+    <!-- Email form -->
     <form style="display:flex;flex-direction:column;gap:0.6rem;width:100%;max-width:22rem;" action="#" method="post">
       <input
         type="email"
         name="email"
         placeholder="your@email.com"
         required
-        style="background:#e8dcc8;border:1px solid #cec5ad;color:#1a1612;font-size:0.88rem;padding:1rem 1.1rem;font-family:'Inter',sans-serif;font-weight:300;outline:none;width:100%;"
+        style="background:var(--olive-dark);border:1px solid var(--border-dark);color:var(--text-on-dark);font-size:0.92rem;padding:1rem 1.1rem;font-family:'DM Sans',sans-serif;font-weight:400;outline:none;width:100%;transition:border-color 0.2s;"
+        onfocus="this.style.borderColor='var(--olive-accent)'"
+        onblur="this.style.borderColor='var(--border-dark)'"
       />
       <button
         type="submit"
-        style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;background:#c17f3a;color:#f3e8d8;padding:1rem 1.5rem;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:400;"
+        style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--olive-accent);color:var(--text-on-dark);padding:1rem 1.5rem;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;transition:background 0.2s;"
+        onmouseover="this.style.background='var(--olive-bright)'"
+        onmouseout="this.style.background='var(--olive-accent)'"
       >
         Get the Letters
       </button>
     </form>
 
-    <p style="color:#b8ae9a;font-size:0.75rem;margin-top:1rem;letter-spacing:0.06em;">No spam. Ever. Unsubscribe any time.</p>
+    <p style="color:var(--text-dim-dark);font-size:0.78rem;margin-top:1rem;letter-spacing:0.06em;opacity:0.7;">No spam. Ever. Unsubscribe any time.</p>
 
-    <blockquote style="margin-top:4rem;border-top:1px solid #cec5ad;padding-top:2.5rem;max-width:30rem;">
-      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.2rem;line-height:1.8;">"Save pieces that bother you a little.<br/>They usually have something to show you."</p>
-      <p style="font-size:0.7rem;color:#b8ae9a;letter-spacing:0.1em;text-transform:uppercase;margin-top:0.75rem;">— AJ</p>
+    <blockquote style="margin-top:4rem;border-top:1px solid var(--border-dark);padding-top:2.5rem;max-width:30rem;">
+      <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-dim-dark);font-size:1.2rem;line-height:1.8;">"Save pieces that bother you a little.<br/>They usually have something to show you."</p>
+      <p style="font-size:0.7rem;color:var(--olive-light);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.75rem;font-weight:600;">— Abby</p>
     </blockquote>
 
-    <div style="width:1px;height:4rem;background:linear-gradient(to bottom,#cec5ad,transparent);margin-top:2.5rem;"></div>
+    <div style="width:1px;height:4rem;background:linear-gradient(to bottom,var(--olive-mid),transparent);margin-top:2.5rem;"></div>
   </section>
 
   <!-- WHAT ARRIVES -->
   <section style="max-width:72rem;margin:0 auto;padding:0 3rem 7rem;">
 
-    <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:3.5rem;">
-      <div style="flex:1;height:1px;background:#cec5ad;"></div>
-      <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#7a7260;padding:0 1rem;white-space:nowrap;">What arrives</p>
-      <div style="flex:1;height:1px;background:#cec5ad;"></div>
+    <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:3.5rem;margin-top:5rem;">
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--text-muted);padding:0 1rem;white-space:nowrap;font-weight:600;">What arrives</p>
+      <div style="flex:1;height:1px;background:var(--border);"></div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #cec5ad;margin-bottom:5rem;" class="what-grid">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);margin-bottom:5rem;" class="what-grid">
 
-      <div style="padding:2.5rem;border-right:1px solid #cec5ad;display:flex;flex-direction:column;gap:1rem;">
-        <i class="ph ph-pencil-line" style="font-size:2rem;color:#c17f3a;"></i>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#1a1612;font-weight:500;">Poems</h3>
-        <p style="color:#7a7260;font-size:0.85rem;line-height:1.9;">
-          New poems as they come — raw, unpolished, honest. The kind I'd share with a close friend over chai.
-        </p>
+      <div style="padding:2.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;">
+        <i class="ph ph-pencil-line" style="font-size:2rem;color:var(--olive-accent);"></i>
+        <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;">Poems</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;">New poems as they come — raw, unpolished, honest. The kind I'd share with a close friend over chai.</p>
       </div>
 
-      <div style="padding:2.5rem;border-right:1px solid #cec5ad;background:#e8dcc8;display:flex;flex-direction:column;gap:1rem;">
-        <i class="ph ph-notebook" style="font-size:2rem;color:#7a7260;"></i>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#1a1612;font-weight:500;">Essays & Drafts</h3>
-        <p style="color:#7a7260;font-size:0.85rem;line-height:1.9;">
-          Thoughts I'm still working through. Behind-the-scenes process. Questions I don't share anywhere else.
-        </p>
+      <div style="padding:2.5rem;border-right:1px solid var(--border);background:var(--bg-alt);display:flex;flex-direction:column;gap:1rem;">
+        <i class="ph ph-notebook" style="font-size:2rem;color:var(--text-muted);"></i>
+        <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;">Essays &amp; Drafts</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;">Thoughts I'm still working through. Behind-the-scenes process. Questions I don't share anywhere else.</p>
       </div>
 
       <div style="padding:2.5rem;display:flex;flex-direction:column;gap:1rem;">
-        <i class="ph ph-fire" style="font-size:2rem;color:#5d6b45;"></i>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#1a1612;font-weight:500;">Circles</h3>
-        <p style="color:#7a7260;font-size:0.85rem;line-height:1.9;">
-          Occasional invites to Chaos Circles — small group conversations for people who want to go deeper than surface.
-        </p>
+        <i class="ph ph-fire" style="font-size:2rem;color:var(--olive-bright);"></i>
+        <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;">Circles</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;">Occasional invites to Chaos Circles — small group conversations for people who want to go deeper than surface.</p>
       </div>
 
     </div>
 
     <!-- Poem preview -->
-    <div style="max-width:44rem;margin:0 auto;border:1px solid #cec5ad;padding:3rem 3.5rem;">
-      <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:0.75rem;font-weight:400;">A taste</p>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#1a1612;margin-bottom:0.4rem;font-weight:500;">Let Me Be Conscious</h3>
-      <p style="color:#b8ae9a;font-size:0.75rem;margin-bottom:1.75rem;letter-spacing:0.06em;">2025</p>
-      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.1rem;line-height:2.2;border-left:2px solid #cec5ad;padding-left:1.5rem;margin-bottom:1.75rem;">
+    <div style="max-width:44rem;margin:0 auto;border:1px solid var(--border);border-left:4px solid var(--olive-accent);padding:3rem 3.5rem;">
+      <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:0.75rem;font-weight:600;">A taste</p>
+      <h3 style="font-family:'Fraunces',serif;font-size:1.5rem;color:var(--text);margin-bottom:0.4rem;font-weight:700;">Let Me Be Conscious</h3>
+      <p style="color:var(--text-faint);font-size:0.75rem;margin-bottom:1.75rem;letter-spacing:0.06em;font-weight:600;">2025</p>
+      <div style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.05rem;line-height:2.2;margin-bottom:1.75rem;">
         <p>Let me breathe today, let me be conscious,</p>
         <p>Let me be free today, let me be outrageous,</p>
         <p>Let me feel the pain I keep hiding,</p>
         <p>Let me kiss a plant today I keep avoiding.</p>
       </div>
-      <a href="/writings" style="font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#c17f3a;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;">
+      <a href="/writings" style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive-accent);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;font-weight:600;">
         Read all writings <i class="ph ph-arrow-right"></i>
       </a>
     </div>
@@ -108,7 +107,10 @@ import Layout from '../layouts/Layout.astro';
 <style>
   @media (max-width: 768px) {
     .what-grid { grid-template-columns: 1fr !important; }
-    .what-grid > div { border-right: none !important; border-bottom: 1px solid #cec5ad; }
+    .what-grid > div { border-right: none !important; border-bottom: 1px solid var(--border); }
     .what-grid > div:last-child { border-bottom: none; }
+  }
+  @media (max-width: 480px) {
+    section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
   }
 </style>

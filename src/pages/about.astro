@@ -2,154 +2,150 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout
-  title="About AJ | Chaos With Clarity"
-  description="AJ is a writer, poet, and fractional CFO who turns the mess of everyday life into lines that make you pause, breathe, and see differently."
+  title="About Abby | Chaos With Clarity"
+  description="Abby is a writer, poet, and fractional CFO who turns the mess of everyday life into lines that make you pause, breathe, and see differently."
 >
 
   <!-- HEADER -->
-  <section style="padding:10rem 3rem 5rem;background:#e8dcc8;border-bottom:1px solid #cec5ad;">
+  <section style="padding:10rem 3rem 6rem;background:var(--olive-deep);border-bottom:1px solid var(--border-dark);">
     <div style="max-width:72rem;margin:0 auto;">
-      <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:1.5rem;font-weight:400;">The Person</p>
-      <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3rem,8vw,7rem);font-weight:600;color:#1a1612;letter-spacing:-0.02em;line-height:0.9;">About AJ</h1>
+      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-light);margin-bottom:1.5rem;font-weight:600;">The Person</p>
+      <h1 style="font-family:'Fraunces',serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:800;color:var(--text-on-dark);letter-spacing:-0.03em;line-height:0.9;">About<br/>Abby</h1>
     </div>
   </section>
 
   <!-- INTRO GRID -->
   <section style="max-width:72rem;margin:0 auto;padding:5rem 3rem;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid #cec5ad;" class="about-grid">
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;border:1px solid var(--border);" class="about-grid">
 
       <!-- Photo -->
-      <div style="display:flex;flex-direction:column;border-right:1px solid #cec5ad;">
-        <div style="aspect-ratio:4/5;background:#e8dcc8;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #cec5ad;">
-          <div style="text-align:center;">
-            <i class="ph ph-user-circle" style="font-size:5rem;color:#cec5ad;display:block;margin-bottom:0.75rem;"></i>
-            <p style="color:#b8ae9a;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;">Your photo here</p>
+      <div style="display:flex;flex-direction:column;border-right:1px solid var(--border);">
+        <div style="aspect-ratio:4/5;background:var(--olive-dark);overflow:hidden;position:relative;">
+          <img
+            src="/images/abby-mountains.heic"
+            alt="Abby sitting on a hill with mountains behind her"
+            style="width:100%;height:100%;object-fit:cover;object-position:center top;"
+            onerror="this.style.display='none'"
+          />
+          <!-- Fallback if HEIC not supported -->
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--olive-dark),var(--olive-mid));z-index:-1;">
+            <i class="ph ph-mountains" style="font-size:5rem;color:var(--olive-light);opacity:0.5;margin-bottom:1rem;"></i>
+            <p style="color:var(--text-dim-dark);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;">Abby in the mountains</p>
           </div>
         </div>
-        <div style="padding:2.5rem 3rem;">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.3rem;line-height:1.8;">
+        <div style="padding:2.5rem 3rem;background:var(--bg-alt);border-top:1px solid var(--border);">
+          <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.2rem;line-height:1.8;">
             "Spreadsheets couldn't answer the chest ache. So I write."
           </p>
         </div>
       </div>
 
       <!-- Intro text -->
-      <div style="padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;gap:1.25rem;">
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#1a1612;font-weight:500;line-height:1.5;letter-spacing:0.01em;">
+      <div style="padding:3.5rem;display:flex;flex-direction:column;justify-content:center;gap:1.5rem;">
+        <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:var(--text);line-height:1.3;">
           I create short philosophical essays, poems, and experiments in living with less noise and more awareness.
-        </p>
-        <p style="color:#7a7260;font-size:0.92rem;line-height:2;">I'm not a guru, therapist, or productivity coach. I'm just someone who has spent a lot of time lost in my own head — and decided to turn that chaos into something useful.</p>
-        <p style="color:#7a7260;font-size:0.92rem;line-height:2;">Online, you'll find thoughts about ego, minimalism, technology, attention, and the strange project of being human in 2026. Offline, I'm usually reading, walking, or staring at mountains trying to make sense of things.</p>
+        </h2>
+        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2;">I'm not a guru, therapist, or productivity coach. I'm just someone who has spent a lot of time lost in my own head — and decided to turn that chaos into something useful.</p>
+        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2;">Online, you'll find thoughts about ego, minimalism, technology, attention, and the strange project of being human in 2026. Offline, I'm usually reading, walking, or staring at mountains trying to make sense of things.</p>
 
-        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#c17f3a;font-size:1.2rem;margin-top:0.5rem;">– AJ</p>
+        <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--olive-accent);font-size:1.15rem;font-weight:600;">– Abby</p>
 
-        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem;">
-          <a href="/offerings" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;background:#c17f3a;color:#f3e8d8;padding:0.8rem 1.75rem;text-decoration:none;font-weight:400;">Work with Me</a>
-          <a href="/writings" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;border:1px solid #cec5ad;color:#7a7260;padding:0.8rem 1.75rem;text-decoration:none;font-weight:400;">Read the Writing</a>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.5rem;">
+          <a href="/offerings" style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;background:var(--olive-accent);color:var(--text-on-dark);padding:0.85rem 1.75rem;text-decoration:none;font-weight:600;transition:background 0.2s;" onmouseover="this.style.background='var(--olive-bright)'" onmouseout="this.style.background='var(--olive-accent)'">Work with Me</a>
+          <a href="/writings" style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid var(--border);color:var(--text-muted);padding:0.85rem 1.75rem;text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--olive-accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">Read the Writing</a>
         </div>
 
-        <p style="font-size:0.78rem;color:#b8ae9a;margin-top:0.5rem;">
+        <p style="font-size:0.8rem;color:var(--text-faint);">
           Looking for the CFO work?
-          <a href="https://abbyjain.com" target="_blank" rel="noopener" style="color:#c17f3a;text-decoration:none;margin-left:0.3rem;">abbyjain.com ↗</a>
+          <a href="https://abbyjain.com" target="_blank" rel="noopener" style="color:var(--olive-accent);text-decoration:none;margin-left:0.3rem;font-weight:500;">abbyjain.com ↗</a>
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- THE LONGER STORY -->
+  <!-- SECOND PHOTO (if available) -->
   <section style="max-width:72rem;margin:0 auto;padding:0 3rem 5rem;">
-    <div style="max-width:48rem;margin:0 auto;">
-
-      <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:3rem;">
-        <div style="width:8px;height:8px;border-radius:50%;background:#5d6b45;flex-shrink:0;"></div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.4rem;font-weight:400;">My story — the long version</h2>
-        <div style="flex:1;height:1px;background:#cec5ad;"></div>
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:1.5rem;">
-        <p style="color:#7a7260;font-size:0.93rem;line-height:2.1;">
-          I started writing because the spreadsheets stopped making sense.
-          Not financially — the numbers were always there. But existentially.
-          You can model a company's runway to the day. You cannot model
-          why you lie awake at 2am wondering if any of it means anything.
+    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:0;border:1px solid var(--border);" class="photo2-grid">
+      <div style="padding:3.5rem;background:var(--bg-alt);display:flex;flex-direction:column;gap:1.5rem;">
+        <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:0.5rem;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--olive-accent);flex-shrink:0;"></div>
+          <h2 style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.3rem;font-weight:500;">The longer story</h2>
+          <div style="flex:1;height:1px;background:var(--border);"></div>
+        </div>
+        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
+          I started writing because the spreadsheets stopped making sense. Not financially — the numbers were always there. But existentially. You can model a company's runway to the day. You cannot model why you lie awake at 2am wondering if any of it means anything.
         </p>
-        <p style="color:#7a7260;font-size:0.93rem;line-height:2.1;">
-          Nine years of finance — from audit rooms at EY to sitting across
-          from founders who had everything and felt nothing — taught me one thing:
-          clarity without depth is just noise with good formatting.
+        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
+          Nine years of finance — from audit rooms at EY to sitting across from founders who had everything and felt nothing — taught me one thing: clarity without depth is just noise with good formatting.
         </p>
-        <p style="color:#7a7260;font-size:0.93rem;line-height:2.1;">
-          The writing began as self-defence. The poems started in a notebook, in between models and board decks.
-          Then I shared a few lines and noticed something strange:
-          they started helping people. Not because they had answers, but because they named things
-          people had been carrying silently.
-        </p>
-        <p style="color:#7a7260;font-size:0.93rem;line-height:2.1;">
-          Chaos With Clarity is where I bring both sides together —
-          the CFO who can read your runway,
-          and the poet who can sit with what the runway is actually for.
-        </p>
-        <div style="border-left:2px solid #cec5ad;padding-left:1.5rem;margin:1rem 0;">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#1a1612;font-size:1.1rem;line-height:1.9;">
+        <div style="border-left:3px solid var(--olive-accent);padding-left:1.5rem;margin:0.5rem 0;">
+          <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text);font-size:1.05rem;line-height:1.9;">
             What are we really optimising for?<br/>
             What does "enough" look like beyond the spreadsheet?<br/>
             What's the cost of a life that looks successful but feels empty?
           </p>
         </div>
-        <p style="color:#7a7260;font-size:0.93rem;line-height:2.1;">
+        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
           If that's the conversation you've been looking for — you're in the right place.
         </p>
       </div>
-
+      <div style="border-left:1px solid var(--border);overflow:hidden;min-height:20rem;background:var(--olive-dark);position:relative;">
+        <img
+          src="/images/abby-photo.heic"
+          alt="Abby"
+          style="width:100%;height:100%;object-fit:cover;"
+          onerror="this.style.display='none'"
+        />
+        <div style="position:absolute;inset:0;background:linear-gradient(160deg,var(--olive-dark),var(--olive-deep));z-index:-1;display:flex;align-items:center;justify-content:center;">
+          <i class="ph ph-user-circle" style="font-size:6rem;color:var(--olive-mid);opacity:0.4;"></i>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- HOW TO USE THIS SPACE -->
+  <!-- HOW TO USE THIS SPACE + FIND ME -->
   <section style="max-width:72rem;margin:0 auto;padding:0 3rem 5rem;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #cec5ad;" class="use-grid">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);" class="use-grid">
 
-      <div style="padding:3rem;border-right:1px solid #cec5ad;background:#e8dcc8;">
-        <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:1.5rem;font-weight:400;">How to use this space</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:1.25rem;">
-          <li style="display:flex;gap:1rem;align-items:flex-start;">
-            <span style="color:#5d6b45;font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-top:0.1rem;flex-shrink:0;">—</span>
-            <p style="color:#7a7260;font-size:0.88rem;line-height:1.9;">Start with whatever line makes you feel something — not what sounds "important".</p>
-          </li>
-          <li style="display:flex;gap:1rem;align-items:flex-start;">
-            <span style="color:#5d6b45;font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-top:0.1rem;flex-shrink:0;">—</span>
-            <p style="color:#7a7260;font-size:0.88rem;line-height:1.9;">Save pieces that bother you a little; they usually have something to show you.</p>
-          </li>
-          <li style="display:flex;gap:1rem;align-items:flex-start;">
-            <span style="color:#5d6b45;font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-top:0.1rem;flex-shrink:0;">—</span>
-            <p style="color:#7a7260;font-size:0.88rem;line-height:1.9;">Share posts with people you wish you could have deeper conversations with.</p>
-          </li>
-          <li style="display:flex;gap:1rem;align-items:flex-start;">
-            <span style="color:#5d6b45;font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-top:0.1rem;flex-shrink:0;">—</span>
-            <p style="color:#7a7260;font-size:0.88rem;line-height:1.9;">Come back when life feels loud and you need language for what you're feeling.</p>
-          </li>
+      <div style="padding:3rem;border-right:1px solid var(--border);background:var(--olive-deep);">
+        <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-light);margin-bottom:1.75rem;font-weight:600;">How to use this space</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:1.5rem;">
+          {[
+            "Start with whatever line makes you feel something — not what sounds \"important\".",
+            "Save pieces that bother you a little. They usually have something to show you.",
+            "Share posts with people you wish you could have deeper conversations with.",
+            "Come back when life feels loud and you need language for what you're feeling."
+          ].map(tip => (
+            <li style="display:flex;gap:1rem;align-items:flex-start;">
+              <span style="color:var(--olive-light);font-family:'Fraunces',serif;font-size:1.1rem;margin-top:0.1rem;flex-shrink:0;font-weight:700;">—</span>
+              <p style="color:var(--text-dim-dark);font-size:0.9rem;line-height:1.9;">{tip}</p>
+            </li>
+          ))}
         </ul>
       </div>
 
       <div style="padding:3rem;">
-        <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:1.5rem;font-weight:400;">Find me here</p>
-        <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2.5rem;">
-          <a href="https://instagram.com/iamabbyjain" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;color:#1a1612;font-size:0.88rem;">
-            <i class="ph ph-instagram-logo" style="font-size:1.25rem;color:#c17f3a;"></i>
+        <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1.75rem;font-weight:600;">Find me here</p>
+        <div style="display:flex;flex-direction:column;gap:1.25rem;margin-bottom:2.5rem;">
+          <a href="https://instagram.com/iamabbyjain" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.875rem;text-decoration:none;color:var(--text);font-size:0.95rem;font-weight:500;">
+            <i class="ph ph-instagram-logo" style="font-size:1.35rem;color:var(--olive-accent);"></i>
             @iamabbyjain
           </a>
-          <a href="https://youtube.com/@iamabbyjain" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;color:#1a1612;font-size:0.88rem;">
-            <i class="ph ph-youtube-logo" style="font-size:1.25rem;color:#c17f3a;"></i>
+          <a href="https://youtube.com/@iamabbyjain" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.875rem;text-decoration:none;color:var(--text);font-size:0.95rem;font-weight:500;">
+            <i class="ph ph-youtube-logo" style="font-size:1.35rem;color:var(--olive-accent);"></i>
             YouTube @iamabbyjain
           </a>
-          <a href="https://abbyjain.com" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;color:#1a1612;font-size:0.88rem;">
-            <i class="ph ph-briefcase" style="font-size:1.25rem;color:#5d6b45;"></i>
+          <a href="https://abbyjain.com" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.875rem;text-decoration:none;color:var(--text);font-size:0.95rem;font-weight:500;">
+            <i class="ph ph-briefcase" style="font-size:1.35rem;color:var(--text-faint);"></i>
             abbyjain.com · CFO Work
           </a>
         </div>
-        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.05rem;line-height:1.8;border-top:1px solid #cec5ad;padding-top:1.5rem;">
-          "I'm usually reading, walking, or staring at mountains trying to make sense of things."
-        </p>
+        <div style="border-top:1px solid var(--border);padding-top:1.5rem;">
+          <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.05rem;line-height:1.8;">
+            "I'm usually reading, walking, or staring at mountains trying to make sense of things."
+          </p>
+        </div>
       </div>
 
     </div>
@@ -157,10 +153,10 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- JOIN STRIP -->
   <section style="max-width:72rem;margin:0 auto;padding:0 3rem 7rem;">
-    <div style="border-top:1px solid #cec5ad;padding-top:3rem;">
+    <div style="border-top:1px solid var(--border);padding-top:3rem;">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;">
-        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.2rem;">Poems. Essays. Reflections. Inbox only.</p>
-        <a href="/join" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;background:#c17f3a;color:#f3e8d8;padding:0.85rem 2rem;text-decoration:none;font-weight:400;white-space:nowrap;">Get the Letters</a>
+        <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.2rem;">Poems. Essays. Reflections. Inbox only.</p>
+        <a href="/join" style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--olive-accent);color:var(--text-on-dark);padding:0.9rem 2rem;text-decoration:none;font-weight:600;white-space:nowrap;transition:background 0.2s;" onmouseover="this.style.background='var(--olive-bright)'" onmouseout="this.style.background='var(--olive-accent)'">Get the Letters</a>
       </div>
     </div>
   </section>
@@ -168,10 +164,15 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .about-grid { grid-template-columns: 1fr !important; }
-    .about-grid > div:first-child { border-right: none !important; border-bottom: 1px solid #cec5ad; }
+    .about-grid > div:first-child { border-right: none !important; border-bottom: 1px solid var(--border); }
+    .photo2-grid { grid-template-columns: 1fr !important; }
+    .photo2-grid > div:last-child { min-height: 20rem !important; border-left: none !important; border-top: 1px solid var(--border); }
     .use-grid { grid-template-columns: 1fr !important; }
-    .use-grid > div:first-child { border-right: none !important; border-bottom: 1px solid #cec5ad; }
+    .use-grid > div:first-child { border-right: none !important; border-bottom: 1px solid var(--border); }
+  }
+  @media (max-width: 480px) {
+    section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
   }
 </style>

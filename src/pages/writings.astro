@@ -3,15 +3,15 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout
   title="Writings | Chaos With Clarity"
-  description="Essays and poems by AJ — on ego, experience, technology, love, and being fully alive. Grouped by type and theme."
+  description="Essays and poems by Abby — on ego, experience, technology, love, and being fully alive."
 >
 
   <!-- HEADER -->
-  <section style="padding:10rem 3rem 5rem;background:#e8dcc8;border-bottom:1px solid #cec5ad;">
+  <section style="padding:10rem 3rem 6rem;background:var(--olive-deep);border-bottom:1px solid var(--border-dark);">
     <div style="max-width:72rem;margin:0 auto;">
-      <p style="font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:#5d6b45;margin-bottom:1.5rem;font-weight:400;">All Writings</p>
-      <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3rem,8vw,7rem);font-weight:600;color:#1a1612;letter-spacing:-0.02em;line-height:0.9;">Essays &amp; Poems</h1>
-      <p style="color:#7a7260;font-size:0.88rem;margin-top:1.5rem;max-width:38rem;line-height:1.9;">
+      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-light);margin-bottom:1.5rem;font-weight:600;">All Writings</p>
+      <h1 style="font-family:'Fraunces',serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:800;color:var(--text-on-dark);letter-spacing:-0.03em;line-height:0.9;">Essays<br/>&amp; Poems</h1>
+      <p style="color:var(--text-dim-dark);font-size:0.95rem;margin-top:2rem;max-width:38rem;line-height:1.9;font-weight:300;">
         Ideas that stay with you the next time you're scrolling at 2am, or wondering why you still feel restless even when everything looks fine on paper.
       </p>
     </div>
@@ -22,55 +22,38 @@ import Layout from '../layouts/Layout.astro';
     <!-- ══ ESSAYS ══ -->
     <section style="margin-bottom:5rem;">
       <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2.5rem;">
-        <div style="width:8px;height:8px;border-radius:50%;background:#5d6b45;flex-shrink:0;"></div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#5d6b45;font-size:1.3rem;font-weight:400;letter-spacing:0.02em;">Essays</h2>
-        <div style="flex:1;height:1px;background:#cec5ad;"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:var(--olive-accent);flex-shrink:0;"></div>
+        <h2 style="font-family:'Fraunces',serif;color:var(--olive-accent);font-size:1.4rem;font-weight:700;letter-spacing:0.01em;">Essays</h2>
+        <div style="flex:1;height:1px;background:var(--border);"></div>
       </div>
 
-      <div class="essay-grid" style="display:grid;grid-template-columns:repeat(2,1fr);border:1px solid #cec5ad;">
-
-        <article style="padding:2.5rem;border-right:1px solid #cec5ad;border-bottom:1px solid #cec5ad;display:flex;flex-direction:column;gap:1rem;">
-          <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#5d6b45;">Attention & Technology</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#1a1612;font-weight:500;line-height:1.3;">Who Owns You?</h3>
-          <p style="color:#7a7260;font-size:0.88rem;line-height:1.9;flex:1;">How our gadgets, purchases, and "rewards" slowly start controlling our thoughts, time, and emotions — and how to take your attention back.</p>
-          <span style="font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#b8ae9a;">Coming soon</span>
-        </article>
-
-        <article style="padding:2.5rem;border-bottom:1px solid #cec5ad;display:flex;flex-direction:column;gap:1rem;">
-          <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#5d6b45;">AI & Human Experience</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#1a1612;font-weight:500;line-height:1.3;">We Were Never Meant for Intelligence</h3>
-          <p style="color:#7a7260;font-size:0.88rem;line-height:1.9;flex:1;">Why AI is not the real threat — the real danger is humans forgetting that our edge was experience, not efficiency.</p>
-          <span style="font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#b8ae9a;">Coming soon</span>
-        </article>
-
-        <article style="padding:2.5rem;border-right:1px solid #cec5ad;display:flex;flex-direction:column;gap:1rem;">
-          <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#5d6b45;">Reality & Perception</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#1a1612;font-weight:500;line-height:1.3;">Choosing Reality Over Symbols</h3>
-          <p style="color:#7a7260;font-size:0.88rem;line-height:1.9;flex:1;">How we mistake words, labels, and spoilers for the real thing, and what it means to actually live your own experience.</p>
-          <span style="font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#b8ae9a;">Coming soon</span>
-        </article>
-
-        <article style="padding:2.5rem;display:flex;flex-direction:column;gap:1rem;">
-          <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#5d6b45;">Books & Mind</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#1a1612;font-weight:500;line-height:1.3;">When Reading Rewires You</h3>
-          <p style="color:#7a7260;font-size:0.88rem;line-height:1.9;flex:1;">How books quietly change the way you see situations, people, and yourself long after you close the last page.</p>
-          <span style="font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#b8ae9a;">Coming soon</span>
-        </article>
-
+      <div class="essay-grid" style="display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--border);">
+        {[
+          {tag:"Attention & Technology", title:"Who Owns You?", blurb:"How our gadgets, purchases, and \"rewards\" slowly start controlling our thoughts, time, and emotions — and how to take your attention back."},
+          {tag:"AI & Human Experience", title:"We Were Never Meant for Intelligence", blurb:"Why AI is not the real threat — the real danger is humans forgetting that our edge was experience, not efficiency."},
+          {tag:"Reality & Perception", title:"Choosing Reality Over Symbols", blurb:"How we mistake words, labels, and spoilers for the real thing, and what it means to actually live your own experience."},
+          {tag:"Books & Mind", title:"When Reading Rewires You", blurb:"How books quietly change the way you see situations, people, and yourself long after you close the last page."},
+        ].map((e,i) => (
+          <article style={`padding:2.5rem;${i<2?'border-bottom:1px solid var(--border);':''}${i%2===0?'border-right:1px solid var(--border);':''}display:flex;flex-direction:column;gap:1rem;`}>
+            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive-accent);font-weight:600;">{e.tag}</p>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.5rem;color:var(--text);font-weight:700;line-height:1.2;">{e.title}</h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;flex:1;">{e.blurb}</p>
+            <span style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">Coming soon</span>
+          </article>
+        ))}
       </div>
     </section>
 
     <!-- ══ FREEDOM & OBSERVER ══ -->
     <section style="margin-bottom:5rem;">
       <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2.5rem;">
-        <div style="width:8px;height:8px;border-radius:50%;background:#c17f3a;flex-shrink:0;"></div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#c17f3a;font-size:1.3rem;font-weight:400;letter-spacing:0.02em;">Freedom &amp; Observer</h2>
-        <div style="flex:1;height:1px;background:#cec5ad;"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:var(--olive-bright);flex-shrink:0;"></div>
+        <h2 style="font-family:'Fraunces',serif;color:var(--olive-bright);font-size:1.4rem;font-weight:700;letter-spacing:0.01em;">Freedom &amp; Observer</h2>
+        <div style="flex:1;height:1px;background:var(--border);"></div>
       </div>
-      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #cec5ad;">
+      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);">
 
-        <!-- Unstruck Silence -->
-        <article style="padding:2rem;border-right:1px solid #cec5ad;display:flex;flex-direction:column;gap:1rem;"
+        <article style="padding:2rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;"
                  data-poem-card
                  data-title="Unstruck Silence (Anhat Nad)"
                  data-date="March 2026"
@@ -115,18 +98,15 @@ the way snow uncovers
 ground
 by melting."
                  data-reflection="Anhat Nad is a concept from Indian classical music and tantra — the sound that was never struck. The Anahata chakra, or heart center, is said to resonate with this unstruck sound. I wrote this after a long meditation session where I kept waiting for something to happen. Nothing did. And then I realized — that was it.">
-          <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#7a7260;">March 2026</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#1a1612;font-weight:500;line-height:1.3;">Unstruck Silence<br/><span style="font-style:italic;font-weight:400;font-size:1.05rem;color:#7a7260;">(Anhat Nad)</span></h3>
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1rem;line-height:2.1;flex:1;border-left:2px solid #c17f3a;padding-left:1.25rem;">
-            There is a sound<br/>that was never struck —<br/>no string plucked, no drum hit,<br/>no throat opened to release it.
-          </p>
-          <button data-open-poem style="background:none;border:none;cursor:pointer;font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#c17f3a;font-family:'Inter',sans-serif;padding:0;display:flex;align-items:center;gap:0.4rem;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
-            Read <i class="ph ph-arrow-right"></i>
-          </button>
+          <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">March 2026</p>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;line-height:1.2;">Unstruck Silence<br/><em style="font-style:italic;font-weight:400;font-size:0.95rem;color:var(--text-muted);">(Anhat Nad)</em></h3>
+          <div style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:0.97rem;line-height:2.1;flex:1;border-left:3px solid var(--olive-accent);padding-left:1.25rem;">
+            <p>There is a sound</p><p>that was never struck —</p><p>no string plucked, no drum hit,</p><p>no throat opened to release it.</p>
+          </div>
+          <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive-accent);font-weight:600;display:flex;align-items:center;gap:0.4rem;">Read <i class="ph ph-arrow-right"></i></span>
         </article>
 
-        <!-- Let the Body Sync -->
-        <article style="padding:2rem;border-right:1px solid #cec5ad;display:flex;flex-direction:column;gap:1rem;"
+        <article style="padding:2rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;"
                  data-poem-card
                  data-title="Let the Body Sync"
                  data-date="2025"
@@ -147,17 +127,14 @@ Knowing I always have grace,
 I move the earth and stars,
 When I am me and the cosmos just a macrocosm of my own heart."
                  data-reflection="This poem came from a morning when I was exhausted — not from doing too much, but from trying too hard to become something. The body knows things the mind refuses to accept. When I finally stopped striving and just breathed, everything settled.">
-          <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#7a7260;">2025</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#1a1612;font-weight:500;line-height:1.3;">Let the Body Sync</h3>
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1rem;line-height:2.1;flex:1;border-left:2px solid #c17f3a;padding-left:1.25rem;">
-            I take a few breaths,<br/>My heart ponders and wants rest,<br/>Not from the chase or grind,<br/>But to be still and just be kind.
-          </p>
-          <button data-open-poem style="background:none;border:none;cursor:pointer;font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#c17f3a;font-family:'Inter',sans-serif;padding:0;display:flex;align-items:center;gap:0.4rem;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
-            Read <i class="ph ph-arrow-right"></i>
-          </button>
+          <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">2025</p>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;line-height:1.2;">Let the Body Sync</h3>
+          <div style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:0.97rem;line-height:2.1;flex:1;border-left:3px solid var(--olive-accent);padding-left:1.25rem;">
+            <p>I take a few breaths,</p><p>My heart ponders and wants rest,</p><p>Not from the chase or grind,</p><p>But to be still and just be kind.</p>
+          </div>
+          <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive-accent);font-weight:600;display:flex;align-items:center;gap:0.4rem;">Read <i class="ph ph-arrow-right"></i></span>
         </article>
 
-        <!-- Let Me Be Conscious -->
         <article style="padding:2rem;display:flex;flex-direction:column;gap:1rem;"
                  data-poem-card
                  data-title="Let Me Be Conscious"
@@ -196,14 +173,12 @@ A journey to just be and shed what the world unto me has done,
 Let me breathe today, let me be conscious,
 Let me be free today, let me be outrageous!"
                  data-reflection="This is the poem I come back to when I start performing life instead of living it. There's a difference between having a life and feeling it. This is about choosing to feel it — even the uncomfortable parts, especially the uncomfortable parts.">
-          <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#7a7260;">2025</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#1a1612;font-weight:500;line-height:1.3;">Let Me Be Conscious</h3>
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1rem;line-height:2.1;flex:1;border-left:2px solid #c17f3a;padding-left:1.25rem;">
-            Let me breathe today, let me be conscious,<br/>Let me be free today, let me be outrageous,<br/>Let me feel the pain I keep hiding,<br/>Let me kiss a plant today I keep avoiding.
-          </p>
-          <button data-open-poem style="background:none;border:none;cursor:pointer;font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#c17f3a;font-family:'Inter',sans-serif;padding:0;display:flex;align-items:center;gap:0.4rem;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
-            Read <i class="ph ph-arrow-right"></i>
-          </button>
+          <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">2025</p>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;line-height:1.2;">Let Me Be Conscious</h3>
+          <div style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:0.97rem;line-height:2.1;flex:1;border-left:3px solid var(--olive-accent);padding-left:1.25rem;">
+            <p>Let me breathe today, let me be conscious,</p><p>Let me be free today, let me be outrageous,</p><p>Let me feel the pain I keep hiding,</p><p>Let me kiss a plant today I keep avoiding.</p>
+          </div>
+          <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive-accent);font-weight:600;display:flex;align-items:center;gap:0.4rem;">Read <i class="ph ph-arrow-right"></i></span>
         </article>
 
       </div>
@@ -212,14 +187,13 @@ Let me be free today, let me be outrageous!"
     <!-- ══ PAIN & GRIEF ══ -->
     <section style="margin-bottom:5rem;">
       <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2.5rem;">
-        <div style="width:8px;height:8px;border-radius:50%;background:#7a7260;flex-shrink:0;"></div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.3rem;font-weight:400;letter-spacing:0.02em;">Pain &amp; Grief</h2>
-        <div style="flex:1;height:1px;background:#cec5ad;"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:var(--text-muted);flex-shrink:0;"></div>
+        <h2 style="font-family:'Fraunces',serif;color:var(--text-muted);font-size:1.4rem;font-weight:700;">Pain &amp; Grief</h2>
+        <div style="flex:1;height:1px;background:var(--border);"></div>
       </div>
-      <div class="poem-grid-2" style="display:grid;grid-template-columns:repeat(2,1fr);border:1px solid #cec5ad;">
+      <div class="poem-grid-2" style="display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--border);">
 
-        <!-- The Walking Contradiction -->
-        <article style="padding:2rem;border-right:1px solid #cec5ad;display:flex;flex-direction:column;gap:1rem;"
+        <article style="padding:2rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;"
                  data-poem-card
                  data-title="The Walking Contradiction"
                  data-date="2025"
@@ -246,17 +220,14 @@ A story unfinished, a journey divine.
 I am something, a puzzle undone,
 A spark in the dark, a rising sun."
                  data-reflection="I wrote this when I was trying to explain myself to someone and realized — I can't. And that's okay. The contradiction is not a flaw. It's the whole point.">
-          <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#7a7260;">2025</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#1a1612;font-weight:500;line-height:1.3;">The Walking Contradiction</h3>
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1rem;line-height:2.1;flex:1;border-left:2px solid #7a7260;padding-left:1.25rem;">
-            I am not nice, but I am kind,<br/>I see and observe, even when I am blind.<br/>Blind to the way people act, but not the intent,<br/>A softness in the heart, but the capacity to mend.
-          </p>
-          <button data-open-poem style="background:none;border:none;cursor:pointer;font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#7a7260;font-family:'Inter',sans-serif;padding:0;display:flex;align-items:center;gap:0.4rem;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
-            Read <i class="ph ph-arrow-right"></i>
-          </button>
+          <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">2025</p>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;line-height:1.2;">The Walking Contradiction</h3>
+          <div style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:0.97rem;line-height:2.1;flex:1;border-left:3px solid var(--text-muted);padding-left:1.25rem;">
+            <p>I am not nice, but I am kind,</p><p>I see and observe, even when I am blind.</p><p>Blind to the way people act, but not the intent,</p><p>A softness in the heart, but the capacity to mend.</p>
+          </div>
+          <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);font-weight:600;display:flex;align-items:center;gap:0.4rem;">Read <i class="ph ph-arrow-right"></i></span>
         </article>
 
-        <!-- Nothing to Gain -->
         <article style="padding:2rem;display:flex;flex-direction:column;gap:1rem;"
                  data-poem-card
                  data-title="Nothing to Gain"
@@ -274,14 +245,12 @@ Now I am everything where there is nothing to gain,
 I have reached where it all started,
 I am the oneness which in its eternity is all delighted!"
                  data-reflection="This poem looks dark from the outside. But it's actually the most peaceful thing I've ever written. When you stop trying to get something out of life — not in defeat, but in acceptance — you become everything. That's the paradox of surrender.">
-          <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#7a7260;">2025</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#1a1612;font-weight:500;line-height:1.3;">Nothing to Gain</h3>
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1rem;line-height:2.1;flex:1;border-left:2px solid #7a7260;padding-left:1.25rem;">
-            People desire love, I want hate,<br/>People want happiness, I want sadness to be my mate,<br/>All the pain is temporary, suffering is my choice,<br/>The reason I am here will not suffice.
-          </p>
-          <button data-open-poem style="background:none;border:none;cursor:pointer;font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#7a7260;font-family:'Inter',sans-serif;padding:0;display:flex;align-items:center;gap:0.4rem;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
-            Read <i class="ph ph-arrow-right"></i>
-          </button>
+          <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">2025</p>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;line-height:1.2;">Nothing to Gain</h3>
+          <div style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:0.97rem;line-height:2.1;flex:1;border-left:3px solid var(--text-muted);padding-left:1.25rem;">
+            <p>People desire love, I want hate,</p><p>People want happiness, I want sadness to be my mate,</p><p>All the pain is temporary, suffering is my choice,</p><p>The reason I am here will not suffice.</p>
+          </div>
+          <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);font-weight:600;display:flex;align-items:center;gap:0.4rem;">Read <i class="ph ph-arrow-right"></i></span>
         </article>
 
       </div>
@@ -290,18 +259,17 @@ I am the oneness which in its eternity is all delighted!"
     <!-- ══ LOVE & LETTING GO (placeholder) ══ -->
     <section style="margin-bottom:5rem;">
       <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2.5rem;">
-        <div style="width:8px;height:8px;border-radius:50%;background:#c4a0a0;flex-shrink:0;"></div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#c4a0a0;font-size:1.3rem;font-weight:400;letter-spacing:0.02em;">Love &amp; Letting Go</h2>
-        <div style="flex:1;height:1px;background:#cec5ad;"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:var(--text-faint);flex-shrink:0;"></div>
+        <h2 style="font-family:'Fraunces',serif;color:var(--text-faint);font-size:1.4rem;font-weight:700;">Love &amp; Letting Go</h2>
+        <div style="flex:1;height:1px;background:var(--border);"></div>
       </div>
-      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #cec5ad;">
-        {[1,2,3].map((_, i) => (
-          <article style={`padding:2rem;${i < 2 ? 'border-right:1px solid #cec5ad;' : ''}display:flex;flex-direction:column;gap:1rem;background:#f9f4ed;`}
-                   data-poem-card data-title="" data-date="" data-poem="" data-reflection="">
-            <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#b8ae9a;">[Date]</p>
-            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#b8ae9a;font-weight:500;">[Poem Title]</h3>
-            <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#b8ae9a;font-size:1rem;line-height:2;flex:1;border-left:2px solid #ddd5be;padding-left:1.25rem;">← Add first 4 lines here →</p>
-            <span style="font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#b8ae9a;">Add poem</span>
+      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);">
+        {[0,1,2].map((_, i) => (
+          <article style={`padding:2rem;${i<2?'border-right:1px solid var(--border);':''}display:flex;flex-direction:column;gap:1rem;background:var(--bg-card);`}>
+            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">[Date]</p>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--border);font-weight:700;">[Poem Title]</h3>
+            <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--border);font-size:0.97rem;line-height:2;flex:1;border-left:2px solid var(--border);padding-left:1.25rem;">← Add first 4 lines here →</p>
+            <span style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">Add poem</span>
           </article>
         ))}
       </div>
@@ -310,18 +278,17 @@ I am the oneness which in its eternity is all delighted!"
     <!-- ══ NATURE & TRAVEL (placeholder) ══ -->
     <section style="margin-bottom:5rem;">
       <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2.5rem;">
-        <div style="width:8px;height:8px;border-radius:50%;background:#5d6b45;flex-shrink:0;"></div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#5d6b45;font-size:1.3rem;font-weight:400;letter-spacing:0.02em;">Nature &amp; Travel</h2>
-        <div style="flex:1;height:1px;background:#cec5ad;"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:var(--olive-accent);flex-shrink:0;"></div>
+        <h2 style="font-family:'Fraunces',serif;color:var(--olive-accent);font-size:1.4rem;font-weight:700;">Nature &amp; Travel</h2>
+        <div style="flex:1;height:1px;background:var(--border);"></div>
       </div>
-      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #cec5ad;">
-        {[1,2,3].map((_, i) => (
-          <article style={`padding:2rem;${i < 2 ? 'border-right:1px solid #cec5ad;' : ''}display:flex;flex-direction:column;gap:1rem;background:#f9f4ed;`}
-                   data-poem-card data-title="" data-date="" data-poem="" data-reflection="">
-            <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#b8ae9a;">[Date]</p>
-            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#b8ae9a;font-weight:500;">[Poem Title]</h3>
-            <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#b8ae9a;font-size:1rem;line-height:2;flex:1;border-left:2px solid #ddd5be;padding-left:1.25rem;">← Add first 4 lines here →</p>
-            <span style="font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#b8ae9a;">Add poem</span>
+      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);">
+        {[0,1,2].map((_, i) => (
+          <article style={`padding:2rem;${i<2?'border-right:1px solid var(--border);':''}display:flex;flex-direction:column;gap:1rem;background:var(--bg-card);`}>
+            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">[Date]</p>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--border);font-weight:700;">[Poem Title]</h3>
+            <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--border);font-size:0.97rem;line-height:2;flex:1;border-left:2px solid var(--border);padding-left:1.25rem;">← Add first 4 lines here →</p>
+            <span style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">Add poem</span>
           </article>
         ))}
       </div>
@@ -330,29 +297,28 @@ I am the oneness which in its eternity is all delighted!"
     <!-- ══ MONEY & WORK (placeholder) ══ -->
     <section style="margin-bottom:5rem;">
       <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2.5rem;">
-        <div style="width:8px;height:8px;border-radius:50%;background:#a89040;flex-shrink:0;"></div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#a89040;font-size:1.3rem;font-weight:400;letter-spacing:0.02em;">Money &amp; Work</h2>
-        <div style="flex:1;height:1px;background:#cec5ad;"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0;"></div>
+        <h2 style="font-family:'Fraunces',serif;color:var(--gold);font-size:1.4rem;font-weight:700;">Money &amp; Work</h2>
+        <div style="flex:1;height:1px;background:var(--border);"></div>
       </div>
-      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #cec5ad;">
-        {[1,2,3].map((_, i) => (
-          <article style={`padding:2rem;${i < 2 ? 'border-right:1px solid #cec5ad;' : ''}display:flex;flex-direction:column;gap:1rem;background:#f9f4ed;`}
-                   data-poem-card data-title="" data-date="" data-poem="" data-reflection="">
-            <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:#b8ae9a;">[Date]</p>
-            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#b8ae9a;font-weight:500;">[Poem Title]</h3>
-            <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#b8ae9a;font-size:1rem;line-height:2;flex:1;border-left:2px solid #ddd5be;padding-left:1.25rem;">← Add first 4 lines here →</p>
-            <span style="font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:#b8ae9a;">Add poem</span>
+      <div class="poem-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);">
+        {[0,1,2].map((_, i) => (
+          <article style={`padding:2rem;${i<2?'border-right:1px solid var(--border);':''}display:flex;flex-direction:column;gap:1rem;background:var(--bg-card);`}>
+            <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">[Date]</p>
+            <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--border);font-weight:700;">[Poem Title]</h3>
+            <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--border);font-size:0.97rem;line-height:2;flex:1;border-left:2px solid var(--border);padding-left:1.25rem;">← Add first 4 lines here →</p>
+            <span style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--border);font-weight:600;">Add poem</span>
           </article>
         ))}
       </div>
     </section>
 
     <!-- JOIN CTA -->
-    <div style="border-top:1px solid #cec5ad;padding-top:3.5rem;text-align:center;">
-      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#7a7260;font-size:1.2rem;margin-bottom:1.75rem;">
+    <div style="border-top:1px solid var(--border);padding-top:3.5rem;text-align:center;">
+      <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.2rem;margin-bottom:1.75rem;">
         These pieces arrive in your inbox. Occasional. Honest. Worth it.
       </p>
-      <a href="/join" style="display:inline-block;font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;background:#c17f3a;color:#f3e8d8;padding:0.9rem 2.25rem;text-decoration:none;font-weight:400;">Get the Letters →</a>
+      <a href="/join" style="display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--olive-accent);color:var(--text-on-dark);padding:0.95rem 2.5rem;text-decoration:none;font-weight:600;transition:background 0.2s;" onmouseover="this.style.background='var(--olive-bright)'" onmouseout="this.style.background='var(--olive-accent)'">Get the Letters →</a>
     </div>
 
   </div>
@@ -364,11 +330,11 @@ I am the oneness which in its eternity is all delighted!"
     .essay-grid { grid-template-columns: 1fr !important; }
     .essay-grid article { border-right: none !important; }
     .poem-grid-2 { grid-template-columns: 1fr !important; }
-    .poem-grid-2 > article:first-child { border-right: none !important; border-bottom: 1px solid #cec5ad; }
+    .poem-grid-2 > article:first-child { border-right: none !important; border-bottom: 1px solid var(--border); }
   }
   @media (max-width: 560px) {
     .poem-grid-3 { grid-template-columns: 1fr !important; }
-    .poem-grid-3 article { border-right: none !important; border-bottom: 1px solid #cec5ad; }
+    .poem-grid-3 article { border-right: none !important; border-bottom: 1px solid var(--border); }
     .poem-grid-3 article:last-child { border-bottom: none; }
     .writings-wrap { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
   }

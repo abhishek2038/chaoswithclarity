@@ -273,16 +273,36 @@ Life is beautiful, just need the right eyes!"
         <div style="flex:1;height:1px;background:var(--border);"></div>
         <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">Coming soon</span>
       </div>
-      <div class="essay-grid" style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);">
-        {[1,2,3].map((_, i) => (
-          <div style={`padding:2rem;display:flex;flex-direction:column;gap:1rem;${i<2?'border-right:1px solid var(--border);':''}`}>
-            <div style="height:0.65rem;background:var(--border);border-radius:2px;width:40%;"></div>
-            <div style="height:1.1rem;background:var(--border);border-radius:2px;width:75%;"></div>
-            <div style="height:0.8rem;background:var(--border);border-radius:2px;width:90%;"></div>
-            <div style="height:0.8rem;background:var(--border);border-radius:2px;width:60%;"></div>
-            <p style="font-size:0.72rem;color:var(--text-faint);font-style:italic;margin-top:auto;">Essay coming soon</p>
-          </div>
-        ))}
+      <div class="essay-grid" style="display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--border);">
+
+        <div style="padding:2.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;">
+          <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">Essay</p>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;color:var(--text);font-weight:700;line-height:1.2;">Who Owns You?</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;flex:1;">How our gadgets, purchases, and rewards slowly start controlling our thoughts, time, and emotions, and how to take your attention back.</p>
+          <span style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-faint);font-weight:600;font-style:italic;">Coming soon</span>
+        </div>
+
+        <div style="padding:2.5rem;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;">
+          <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">Essay</p>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;color:var(--text);font-weight:700;line-height:1.2;">We Were Never Meant for Intelligence</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;flex:1;">Why AI is not the real threat. The real danger is humans forgetting that our edge was experience, not efficiency.</p>
+          <span style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-faint);font-weight:600;font-style:italic;">Coming soon</span>
+        </div>
+
+        <div style="padding:2.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;">
+          <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">Essay</p>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;color:var(--text);font-weight:700;line-height:1.2;">Choosing Reality Over Symbols</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;flex:1;">How we mistake words, labels, and spoilers for the real thing, and what it means to actually live your own experience.</p>
+          <span style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-faint);font-weight:600;font-style:italic;">Coming soon</span>
+        </div>
+
+        <div style="padding:2.5rem;display:flex;flex-direction:column;gap:1rem;">
+          <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint);font-weight:600;">Essay</p>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;color:var(--text);font-weight:700;line-height:1.2;">When Reading Rewires You</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;flex:1;">How books quietly change the way you see situations, people, and yourself long after you close the last page.</p>
+          <span style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-faint);font-weight:600;font-style:italic;">Coming soon</span>
+        </div>
+
       </div>
     </section>
 
@@ -373,7 +393,7 @@ I am the oneness which in its eternity is all delighted!"
   @media (max-width: 900px) {
     .poem-grid-3 { grid-template-columns: 1fr 1fr !important; }
     .essay-grid { grid-template-columns: 1fr !important; }
-    .essay-grid article { border-right: none !important; }
+    .essay-grid > div { border-right: none !important; }
     .poem-grid-2 { grid-template-columns: 1fr !important; }
     .poem-grid-2 > article:first-child { border-right: none !important; border-bottom: 1px solid var(--border); }
   }

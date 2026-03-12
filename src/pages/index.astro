@@ -24,13 +24,18 @@ import Layout from '../layouts/Layout.astro';
         <span style="display:block;font-size:clamp(4rem,10vw,9rem);font-weight:800;color:var(--text);">Clarity</span>
       </h1>
 
-      <p style="color:var(--text-muted);font-size:clamp(0.95rem,1.8vw,1.1rem);line-height:2.1;max-width:36rem;margin-bottom:3rem;font-weight:300;border-left:2px solid var(--border);padding-left:1.25rem;">
+      <p style="color:var(--text-muted);font-size:clamp(0.95rem,1.8vw,1.1rem);line-height:2.1;max-width:36rem;margin-bottom:1.5rem;font-weight:300;border-left:2px solid var(--border);padding-left:1.25rem;">
         Short, honest ideas about ego, experience, and being fully alive.<br/>
         <em style="color:var(--olive-accent);font-style:italic;">For people who think too much and feel even more.</em>
       </p>
 
+      <p style="color:var(--text-muted);font-size:0.95rem;max-width:36rem;line-height:1.9;margin-bottom:3rem;font-weight:300;">
+        I'm Abby, a writer and creator who turns the mess of everyday life into lines that make you pause, breathe, and see differently. This is the calm corner of the internet where we slow down, question everything, and leave a little lighter than we arrived.
+      </p>
+
       <div style="display:flex;flex-wrap:wrap;gap:1rem;">
         <a href="/writings" style="display:inline-block;background:var(--olive-accent);color:var(--text-on-dark);font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;font-weight:600;transition:background 0.2s;" onmouseover="this.style.background='var(--olive-bright)'" onmouseout="this.style.background='var(--olive-accent)'">Read the Writing</a>
+        <a href="https://youtube.com/@iamabbyjain" target="_blank" rel="noopener" style="display:inline-block;border:1px solid var(--border);color:var(--text-muted);font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--olive-accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">Watch the Reels</a>
         <a href="/join" style="display:inline-block;border:1px solid var(--border);color:var(--text-muted);font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--olive-accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">Get the Letters</a>
       </div>
     </div>
@@ -45,14 +50,13 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div style="display:flex;flex-direction:column;gap:0;">
         {[
-          ["You're doing well on paper, but something still feels off.", "You've built the life, but you're not sure it's yours."],
-          ["You're exhausted by the performance of having it together.", "You'd rather feel real than feel impressive."],
-          ["You want words that don't try to fix you.", "Just something honest in an inbox full of noise."],
-          ["You're asking questions that no productivity hack can answer.", "What are we actually optimising for?"]
-        ].map(([line1, line2], i) => (
+          "You're tired of empty motivation and want depth without the jargon.",
+          "You overthink, feel a lot, and secretly like that about yourself.",
+          "You're curious about mindfulness, but allergic to perfectionism and spiritual performance.",
+          "You want to own fewer things, carry less ego, and experience more life."
+        ].map((line, i) => (
           <div style={`padding:2rem 0;border-bottom:1px solid var(--border);${i===0?'border-top:1px solid var(--border);':''}`}>
-            <p style="font-size:1rem;color:var(--text);font-weight:500;margin-bottom:0.4rem;">{line1}</p>
-            <p style="font-size:0.95rem;color:var(--text-muted);">{line2}</p>
+            <p style="font-size:1rem;color:var(--text);font-weight:500;line-height:1.65;">{line}</p>
           </div>
         ))}
       </div>

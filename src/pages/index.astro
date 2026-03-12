@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Chaos With Clarity | Poems + Founder Soul Work">
+
+  <!-- ======= HERO ======= -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16 relative overflow-hidden">
+
+    <!-- decorative grain overlay -->
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+         style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');">
+    </div>
+
+    <!-- thin line above -->
+    <div class="w-px h-16 bg-cwc-border mb-8"></div>
+
+    <p class="text-xs tracking-[0.3em] uppercase text-cwc-accent mb-6 font-light">Poetry · Soul Work · Finance</p>
+
+    <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-cwc-text leading-[1.1] mb-6 max-w-4xl">
+      Chaos<br/>
+      <span class="italic text-cwc-accent">With</span><br/>
+      Clarity
+    </h1>
+
+    <p class="text-cwc-muted font-light text-base md:text-lg max-w-md leading-relaxed mb-12">
+      I am a poet who does founder numbers.<br/>
+      A CFO who writes about death and freedom.<br/>
+      This is where my soul work lives.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 items-center">
+      <a href="/writings"
+         class="text-xs tracking-widest uppercase border border-cwc-accent text-cwc-accent px-8 py-3 hover:bg-cwc-accent hover:text-cwc-bg transition-all duration-200">
+        Read Poems
+      </a>
+      <a href="https://calendly.com" target="_blank" rel="noopener"
+         class="text-xs tracking-widest uppercase bg-cwc-accent text-cwc-bg px-8 py-3 hover:bg-cwc-accent-dark transition-all duration-200">
+        Book Soul + Strategy
+      </a>
+    </div>
+
+    <!-- thin line below -->
+    <div class="w-px h-16 bg-cwc-border mt-16"></div>
+  </section>
+
+
+  <!-- ======= THREE BLOCKS ======= -->
+  <section class="max-w-6xl mx-auto px-6 pb-24">
+    <div class="grid md:grid-cols-3 gap-px bg-cwc-border">
+
+      <!-- BLOCK 1: Latest Poem — ADD POEM BEFORE LAUNCH -->
+      <!--
+        HOW TO ADD A POEM:
+        1. Set data-title, data-date, data-poem, data-reflection
+        2. Update the h3 and the excerpt paragraph
+        3. data-poem: full poem text (one line per \n)
+      -->
+      <div class="bg-cwc-bg p-8 md:p-10 flex flex-col gap-4 reveal"
+           data-title="[Poem Title Here]"
+           data-date="[Date Here]"
+           data-poem="[Paste full poem text here]"
+           data-reflection="[Your reflection here]">
+        <p class="text-xs tracking-widest uppercase text-cwc-muted">Latest Poem</p>
+        <h3 class="font-serif text-xl text-cwc-text leading-snug">[Poem Title]</h3>
+        <p class="font-serif italic text-cwc-muted text-sm leading-relaxed flex-1 border-l border-cwc-border pl-4">
+          ← Paste first 4 lines of your poem here →
+        </p>
+        <button data-open-poem
+                class="text-xs tracking-widest uppercase text-cwc-accent hover:text-cwc-text transition-colors self-start flex items-center gap-2">
+          Read full <i class="ph ph-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- BLOCK 2: Soul + Strategy -->
+      <div class="bg-cwc-surface p-8 md:p-10 flex flex-col gap-4 reveal">
+        <p class="text-xs tracking-widest uppercase text-cwc-sage">1:1 Offering</p>
+        <h3 class="font-serif text-xl text-cwc-text">Soul + Strategy</h3>
+        <p class="text-cwc-muted text-sm leading-relaxed flex-1">
+          For founders who are financially sharp but emotionally lost.
+          90 minutes of runway clarity + inner pattern work.
+        </p>
+        <p class="text-cwc-accent text-sm font-light">₹15,000 &nbsp;·&nbsp; 90 mins</p>
+        <a href="https://calendly.com" target="_blank" rel="noopener"
+           class="text-xs tracking-widest uppercase text-cwc-sage border border-cwc-sage px-4 py-2 w-fit hover:bg-cwc-sage hover:text-cwc-bg transition-all duration-200">
+          Book a Call
+        </a>
+      </div>
+
+      <!-- BLOCK 3: Join List -->
+      <div class="bg-cwc-bg p-8 md:p-10 flex flex-col gap-4 reveal">
+        <p class="text-xs tracking-widest uppercase text-cwc-muted">Letters</p>
+        <h3 class="font-serif text-xl text-cwc-text">Join the Chaos</h3>
+        <p class="text-cwc-muted text-sm leading-relaxed flex-1">
+          Poems and reflections sent to your inbox. No noise. Just soul work.
+        </p>
+        <!-- Replace with Beehiiv embed -->
+        <form class="flex flex-col gap-2" action="/join">
+          <input
+            type="email"
+            placeholder="your@email.com"
+            class="bg-cwc-surface border border-cwc-border text-cwc-text text-sm px-4 py-2.5 placeholder-cwc-muted focus:outline-none focus:border-cwc-accent transition-colors"
+          />
+          <button type="submit"
+                  class="text-xs tracking-widest uppercase bg-cwc-accent text-cwc-bg py-2.5 hover:bg-cwc-accent-dark transition-colors">
+            Send Me Poems
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======= ABOUT STRIP ======= -->
+  <section class="max-w-6xl mx-auto px-6 pb-24 reveal">
+    <div class="border border-cwc-border p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+      <div class="flex-1">
+        <p class="text-xs tracking-widest uppercase text-cwc-muted mb-4">Who writes here</p>
+        <p class="font-serif text-2xl md:text-3xl text-cwc-text leading-relaxed">
+          "Spreadsheets couldn't answer<br class="hidden md:block"/> the chest ache. So I write."
+        </p>
+      </div>
+      <a href="/about"
+         class="text-xs tracking-widest uppercase border border-cwc-border text-cwc-muted px-6 py-3 hover:border-cwc-accent hover:text-cwc-accent transition-all duration-200 whitespace-nowrap">
+        About Abby →
+      </a>
+    </div>
+  </section>
+
+</Layout>

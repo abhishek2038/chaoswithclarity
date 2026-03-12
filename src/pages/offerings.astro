@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Offerings | Chaos With Clarity" description="Three ways to work with Abby.">
+
+  <!-- PAGE HEADER -->
+  <div class="pt-32 pb-16 px-6 max-w-6xl mx-auto">
+    <div class="w-px h-12 bg-cwc-border mb-8"></div>
+    <p class="text-xs tracking-widest uppercase text-cwc-muted mb-3">Work Together</p>
+    <h1 class="font-serif text-4xl md:text-6xl text-cwc-text">Offerings</h1>
+    <p class="text-cwc-muted text-sm mt-3">Three ways in</p>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 pb-24">
+
+    <div class="grid md:grid-cols-3 gap-px bg-cwc-border mb-24">
+
+      <!-- CARD 1: Soul + Strategy (featured) -->
+      <div class="bg-cwc-surface-2 p-8 md:p-10 flex flex-col gap-5 reveal col-span-1">
+        <div class="flex items-start justify-between">
+          <i class="ph ph-leaf text-3xl text-cwc-sage"></i>
+          <span class="text-xs tracking-widest uppercase text-cwc-accent border border-cwc-accent px-2 py-0.5">Featured</span>
+        </div>
+        <div>
+          <h2 class="font-serif text-2xl text-cwc-text mb-1">Soul + Strategy</h2>
+          <p class="text-cwc-muted text-xs tracking-wide">For founders &amp; professionals</p>
+        </div>
+        <div class="text-cwc-accent font-serif text-2xl">
+          ₹15,000
+          <span class="text-cwc-muted text-sm font-sans font-light ml-1">· 90 mins</span>
+        </div>
+        <div class="w-full h-px bg-cwc-border"></div>
+        <ul class="flex flex-col gap-2.5 flex-1">
+          {['Runway + pricing clarity', 'Emotional patterns blocking growth', 'Lifestyle design that fits you', 'One-on-one, held with full presence'].map(item => (
+            <li class="flex items-start gap-2.5 text-cwc-muted text-sm">
+              <i class="ph ph-check text-cwc-sage mt-0.5 shrink-0"></i>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p class="text-cwc-muted text-sm leading-relaxed">
+          You've built something real. But something inside is off. This isn't coaching.
+          This isn't therapy. It's a mirror.
+        </p>
+        <!-- Replace with your Calendly link -->
+        <a href="https://calendly.com" target="_blank" rel="noopener"
+           class="text-xs tracking-widest uppercase bg-cwc-accent text-cwc-bg px-6 py-3 text-center hover:bg-cwc-accent-dark transition-colors mt-auto">
+          Book a Call
+        </a>
+        <p class="text-cwc-muted/50 text-xs italic text-center">Replace with your Calendly link</p>
+      </div>
+
+      <!-- CARD 2: Chaos Circles -->
+      <div class="bg-cwc-bg p-8 md:p-10 flex flex-col gap-5 reveal">
+        <i class="ph ph-fire text-3xl text-cwc-accent"></i>
+        <div>
+          <h2 class="font-serif text-2xl text-cwc-text mb-1">Chaos Circles</h2>
+          <p class="text-cwc-muted text-xs tracking-wide">6 people · 6 weeks</p>
+        </div>
+        <div class="text-cwc-accent font-serif text-2xl">
+          ₹8,000
+          <span class="text-cwc-muted text-sm font-sans font-light ml-1">/ person</span>
+        </div>
+        <div class="w-full h-px bg-cwc-border"></div>
+        <ul class="flex flex-col gap-2.5 flex-1">
+          {['Weekly poems + guided reflection', 'Money & soul conversations', 'Intimate small group', 'A container for real things'].map(item => (
+            <li class="flex items-start gap-2.5 text-cwc-muted text-sm">
+              <i class="ph ph-check text-cwc-accent mt-0.5 shrink-0"></i>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p class="text-cwc-muted text-sm leading-relaxed">
+          Six people who are done pretending everything is fine. No fixing. Just witnessing.
+        </p>
+        <p class="text-cwc-muted text-xs">Next circle: <strong class="text-cwc-text">March 2026</strong></p>
+        <!-- Replace with Typeform link -->
+        <a href="https://typeform.com" target="_blank" rel="noopener"
+           class="text-xs tracking-widest uppercase border border-cwc-accent text-cwc-accent px-6 py-3 text-center hover:bg-cwc-accent hover:text-cwc-bg transition-all duration-200 mt-auto">
+          Join Waitlist
+        </a>
+        <p class="text-cwc-muted/50 text-xs italic text-center">Replace with your Typeform link</p>
+      </div>
+
+      <!-- CARD 3: Letters from Chaos -->
+      <div class="bg-cwc-bg p-8 md:p-10 flex flex-col gap-5 reveal">
+        <i class="ph ph-book-open text-3xl text-cwc-muted"></i>
+        <div>
+          <h2 class="font-serif text-2xl text-cwc-text mb-1">Letters from Chaos</h2>
+          <p class="text-cwc-muted text-xs tracking-wide">Curated poems · digital download</p>
+        </div>
+        <div class="text-cwc-accent font-serif text-2xl">
+          ₹999
+          <span class="text-cwc-muted text-sm font-sans font-light ml-1">one-time</span>
+        </div>
+        <div class="w-full h-px bg-cwc-border"></div>
+        <ul class="flex flex-col gap-2.5 flex-1">
+          {['30+ pages of poetry', 'Personal reflections on each poem', 'Designed for slow, repeated reading', 'Your pocket poet for uncertain days'].map(item => (
+            <li class="flex items-start gap-2.5 text-cwc-muted text-sm">
+              <i class="ph ph-check text-cwc-muted mt-0.5 shrink-0"></i>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p class="text-cwc-muted text-sm leading-relaxed">
+          Poems from three years of writing — on money, mortality, love, and the strange gift of being alive.
+        </p>
+        <!-- Replace with Stripe payment link -->
+        <a href="https://buy.stripe.com" target="_blank" rel="noopener"
+           class="text-xs tracking-widest uppercase bg-cwc-surface text-cwc-text border border-cwc-border px-6 py-3 text-center hover:border-cwc-accent hover:text-cwc-accent transition-all duration-200 mt-auto">
+          Buy Now
+        </a>
+        <p class="text-cwc-muted/50 text-xs italic text-center">Replace with your Stripe link</p>
+      </div>
+
+    </div>
+
+    <!-- Testimonial -->
+    <blockquote class="border-l-2 border-cwc-accent pl-8 py-2 max-w-xl mx-auto text-center reveal">
+      <p class="font-serif italic text-cwc-muted text-lg">"Abby's poems land like quiet thunder."</p>
+      <cite class="text-cwc-muted/60 text-xs tracking-widest uppercase mt-3 block">— A reader</cite>
+    </blockquote>
+
+    <!-- Secondary CTA -->
+    <div class="text-center mt-16 reveal">
+      <p class="text-cwc-muted text-sm mb-6">Not sure which is right for you?</p>
+      <a href="/about"
+         class="text-xs tracking-widest uppercase border border-cwc-border text-cwc-muted px-6 py-3 hover:border-cwc-accent hover:text-cwc-accent transition-all duration-200">
+        Read About Abby →
+      </a>
+    </div>
+
+  </div>
+</Layout>

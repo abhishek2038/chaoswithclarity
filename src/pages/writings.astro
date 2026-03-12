@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const themes = [
+  {
+    id: 'freedom',
+    label: 'Freedom & Observer',
+    color: 'text-cwc-accent border-cwc-accent',
+    dot: 'bg-cwc-accent',
+  },
+  {
+    id: 'pain',
+    label: 'Pain & Grief',
+    color: 'text-cwc-muted border-cwc-border',
+    dot: 'bg-cwc-muted',
+  },
+  {
+    id: 'love',
+    label: 'Love & Letting Go',
+    color: 'text-pink-300/70 border-pink-300/30',
+    dot: 'bg-pink-300/70',
+  },
+  {
+    id: 'nature',
+    label: 'Nature & Travel',
+    color: 'text-cwc-sage border-cwc-sage',
+    dot: 'bg-cwc-sage',
+  },
+  {
+    id: 'money',
+    label: 'Money & Work',
+    color: 'text-yellow-200/70 border-yellow-200/30',
+    dot: 'bg-yellow-200/70',
+  },
+];
+
+// Poem slots — fill in data-* attributes before launch
+// data-title, data-date, data-poem (full text), data-reflection
+---
+
+<Layout title="Writings | Chaos With Clarity" description="All poems by Abby — grouped by theme.">
+
+  <!-- PAGE HEADER -->
+  <div class="pt-32 pb-16 px-6 max-w-6xl mx-auto">
+    <div class="w-px h-12 bg-cwc-border mb-8"></div>
+    <p class="text-xs tracking-widest uppercase text-cwc-muted mb-3">All Writings</p>
+    <h1 class="font-serif text-4xl md:text-6xl text-cwc-text">Poems</h1>
+    <p class="text-cwc-muted text-sm mt-3">Grouped by theme · newest first</p>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 pb-24">
+
+    <!-- ── FREEDOM & OBSERVER ── -->
+    <section class="mb-20 reveal">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-2 h-2 rounded-full bg-cwc-accent"></div>
+        <h2 class="font-serif italic text-cwc-accent text-xl">Freedom &amp; Observer</h2>
+        <div class="flex-1 h-px bg-cwc-border"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-px bg-cwc-border">
+        {[1,2,3].map(() => (
+          <article class="bg-cwc-bg p-7 flex flex-col gap-4 poem-card"
+                   data-title="[Poem Title]"
+                   data-date="[Date]"
+                   data-poem="[Full poem text]"
+                   data-reflection="[Reflection]">
+            <p class="text-xs tracking-widest uppercase text-cwc-muted">[Date]</p>
+            <h3 class="font-serif text-lg text-cwc-text">[Poem Title]</h3>
+            <p class="font-serif italic text-cwc-muted text-sm leading-relaxed flex-1 border-l border-cwc-border pl-4">
+              ← Paste first 4 lines here →
+            </p>
+            <button data-open-poem
+                    class="text-xs tracking-widest uppercase text-cwc-accent hover:text-cwc-text transition-colors self-start flex items-center gap-2">
+              Read <i class="ph ph-arrow-right"></i>
+            </button>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- ── PAIN & GRIEF ── -->
+    <section class="mb-20 reveal">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-2 h-2 rounded-full bg-cwc-muted"></div>
+        <h2 class="font-serif italic text-cwc-muted text-xl">Pain &amp; Grief</h2>
+        <div class="flex-1 h-px bg-cwc-border"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-px bg-cwc-border">
+        {[1,2,3].map(() => (
+          <article class="bg-cwc-bg p-7 flex flex-col gap-4 poem-card"
+                   data-title="[Poem Title]"
+                   data-date="[Date]"
+                   data-poem="[Full poem text]"
+                   data-reflection="[Reflection]">
+            <p class="text-xs tracking-widest uppercase text-cwc-muted">[Date]</p>
+            <h3 class="font-serif text-lg text-cwc-text">[Poem Title]</h3>
+            <p class="font-serif italic text-cwc-muted text-sm leading-relaxed flex-1 border-l border-cwc-border pl-4">
+              ← Paste first 4 lines here →
+            </p>
+            <button data-open-poem
+                    class="text-xs tracking-widest uppercase text-cwc-muted hover:text-cwc-text transition-colors self-start flex items-center gap-2">
+              Read <i class="ph ph-arrow-right"></i>
+            </button>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- ── LOVE & LETTING GO ── -->
+    <section class="mb-20 reveal">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-2 h-2 rounded-full bg-pink-300/70"></div>
+        <h2 class="font-serif italic text-pink-300/70 text-xl">Love &amp; Letting Go</h2>
+        <div class="flex-1 h-px bg-cwc-border"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-px bg-cwc-border">
+        {[1,2,3].map(() => (
+          <article class="bg-cwc-bg p-7 flex flex-col gap-4 poem-card"
+                   data-title="[Poem Title]"
+                   data-date="[Date]"
+                   data-poem="[Full poem text]"
+                   data-reflection="[Reflection]">
+            <p class="text-xs tracking-widest uppercase text-cwc-muted">[Date]</p>
+            <h3 class="font-serif text-lg text-cwc-text">[Poem Title]</h3>
+            <p class="font-serif italic text-cwc-muted text-sm leading-relaxed flex-1 border-l border-cwc-border pl-4">
+              ← Paste first 4 lines here →
+            </p>
+            <button data-open-poem
+                    class="text-xs tracking-widest uppercase text-pink-300/70 hover:text-cwc-text transition-colors self-start flex items-center gap-2">
+              Read <i class="ph ph-arrow-right"></i>
+            </button>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- ── NATURE & TRAVEL ── -->
+    <section class="mb-20 reveal">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-2 h-2 rounded-full bg-cwc-sage"></div>
+        <h2 class="font-serif italic text-cwc-sage text-xl">Nature &amp; Travel</h2>
+        <div class="flex-1 h-px bg-cwc-border"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-px bg-cwc-border">
+        {[1,2,3].map(() => (
+          <article class="bg-cwc-bg p-7 flex flex-col gap-4 poem-card"
+                   data-title="[Poem Title]"
+                   data-date="[Date]"
+                   data-poem="[Full poem text]"
+                   data-reflection="[Reflection]">
+            <p class="text-xs tracking-widest uppercase text-cwc-muted">[Date]</p>
+            <h3 class="font-serif text-lg text-cwc-text">[Poem Title]</h3>
+            <p class="font-serif italic text-cwc-muted text-sm leading-relaxed flex-1 border-l border-cwc-border pl-4">
+              ← Paste first 4 lines here →
+            </p>
+            <button data-open-poem
+                    class="text-xs tracking-widest uppercase text-cwc-sage hover:text-cwc-text transition-colors self-start flex items-center gap-2">
+              Read <i class="ph ph-arrow-right"></i>
+            </button>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- ── MONEY & WORK ── -->
+    <section class="mb-20 reveal">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-2 h-2 rounded-full bg-yellow-200/70"></div>
+        <h2 class="font-serif italic text-yellow-200/70 text-xl">Money &amp; Work</h2>
+        <div class="flex-1 h-px bg-cwc-border"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-px bg-cwc-border">
+        {[1,2,3].map(() => (
+          <article class="bg-cwc-bg p-7 flex flex-col gap-4 poem-card"
+                   data-title="[Poem Title]"
+                   data-date="[Date]"
+                   data-poem="[Full poem text]"
+                   data-reflection="[Reflection]">
+            <p class="text-xs tracking-widest uppercase text-cwc-muted">[Date]</p>
+            <h3 class="font-serif text-lg text-cwc-text">[Poem Title]</h3>
+            <p class="font-serif italic text-cwc-muted text-sm leading-relaxed flex-1 border-l border-cwc-border pl-4">
+              ← Paste first 4 lines here →
+            </p>
+            <button data-open-poem
+                    class="text-xs tracking-widest uppercase text-yellow-200/70 hover:text-cwc-text transition-colors self-start flex items-center gap-2">
+              Read <i class="ph ph-arrow-right"></i>
+            </button>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- JOIN CTA -->
+    <div class="border-t border-cwc-border pt-12 text-center reveal">
+      <p class="font-serif italic text-cwc-muted mb-6">These poems arrive in your inbox every week.</p>
+      <a href="/join"
+         class="text-xs tracking-widest uppercase bg-cwc-accent text-cwc-bg px-8 py-3 hover:bg-cwc-accent-dark transition-colors">
+        Join the List →
+      </a>
+    </div>
+
+  </div>
+</Layout>

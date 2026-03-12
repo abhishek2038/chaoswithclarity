@@ -1,0 +1,238 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Poetry meets founder finance. Soul work for ambition + peace.',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" is:inline></script>
+</head>
+
+<body class="bg-cwc-bg text-cwc-text font-sans antialiased">
+
+  <!-- ======= HEADER ======= -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+      <a href="/" class="font-serif text-cwc-text text-lg tracking-wide hover:text-cwc-accent transition-colors">
+        Chaos With Clarity
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-light tracking-wide">
+        <a href="/" class:list={['hover:text-cwc-accent transition-colors', { 'text-cwc-accent': currentPath === '/' }]}>Home</a>
+        <a href="/writings" class:list={['hover:text-cwc-accent transition-colors', { 'text-cwc-accent': currentPath.startsWith('/writings') }]}>Writings</a>
+        <a href="/offerings" class:list={['hover:text-cwc-accent transition-colors', { 'text-cwc-accent': currentPath.startsWith('/offerings') }]}>Offerings</a>
+        <a href="/about" class:list={['hover:text-cwc-accent transition-colors', { 'text-cwc-accent': currentPath.startsWith('/about') }]}>About</a>
+        <a href="/join" class="border border-cwc-accent text-cwc-accent px-4 py-1.5 text-xs tracking-widest uppercase hover:bg-cwc-accent hover:text-cwc-bg transition-all duration-200">
+          Join
+        </a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="md:hidden text-cwc-text" aria-label="Open menu">
+        <i class="ph ph-list text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden bg-cwc-surface border-t border-cwc-border">
+      <nav class="flex flex-col px-6 py-6 gap-5 text-sm font-light tracking-wide">
+        <a href="/" class="hover:text-cwc-accent transition-colors">Home</a>
+        <a href="/writings" class="hover:text-cwc-accent transition-colors">Writings</a>
+        <a href="/offerings" class="hover:text-cwc-accent transition-colors">Offerings</a>
+        <a href="/about" class="hover:text-cwc-accent transition-colors">About</a>
+        <a href="/join" class="border border-cwc-accent text-cwc-accent px-4 py-2 text-xs tracking-widest uppercase w-fit hover:bg-cwc-accent hover:text-cwc-bg transition-all">
+          Join
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= MAIN CONTENT ======= -->
+  <main>
+    <slot />
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="border-t border-cwc-border mt-24 py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="font-serif italic text-cwc-muted text-sm">© 2026 Chaos With Clarity</p>
+      <div class="flex items-center gap-6 text-sm text-cwc-muted">
+        <a href="https://instagram.com/chaoswithclarity" target="_blank" rel="noopener" class="hover:text-cwc-accent transition-colors flex items-center gap-1.5">
+          <i class="ph ph-instagram-logo"></i> Instagram
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" class="hover:text-cwc-accent transition-colors flex items-center gap-1.5">
+          <i class="ph ph-youtube-logo"></i> YouTube
+        </a>
+        <a href="https://abbyjain.com" target="_blank" rel="noopener" class="hover:text-cwc-accent transition-colors">
+          abbyjain.com ↗
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ======= POEM MODAL ======= -->
+  <div id="poem-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+    <!-- backdrop -->
+    <div id="modal-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+    <!-- inner -->
+    <div class="relative z-10 bg-cwc-surface border border-cwc-border w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-sm p-8 md:p-12">
+      <button id="modal-close" class="absolute top-5 right-5 text-cwc-muted hover:text-cwc-text transition-colors" aria-label="Close">
+        <i class="ph ph-x text-xl"></i>
+      </button>
+
+      <p id="modal-date" class="text-cwc-muted text-xs tracking-widest uppercase mb-3"></p>
+      <h2 id="modal-title" class="font-serif text-2xl md:text-3xl text-cwc-text mb-6"></h2>
+      <div id="modal-body" class="font-serif italic text-cwc-text/90 leading-relaxed text-lg space-y-1"></div>
+
+      <div id="modal-reflection" class="mt-8 border-l-2 border-cwc-accent pl-5 hidden">
+        <p class="text-xs tracking-widest uppercase text-cwc-accent mb-2">Reflection</p>
+        <p id="modal-reflection-text" class="text-cwc-muted text-sm leading-relaxed"></p>
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/writings" class="text-xs tracking-widest uppercase text-cwc-muted border border-cwc-border px-4 py-2 hover:border-cwc-accent hover:text-cwc-accent transition-colors">
+          ← All Poems
+        </a>
+        <button id="modal-share" class="text-xs tracking-widest uppercase text-cwc-muted border border-cwc-border px-4 py-2 hover:border-cwc-accent hover:text-cwc-accent transition-colors flex items-center gap-2">
+          <i class="ph ph-share-network"></i> Share
+        </button>
+        <a href="/join" class="text-xs tracking-widest uppercase bg-cwc-accent text-cwc-bg px-4 py-2 hover:bg-cwc-accent-dark transition-colors">
+          Join the List
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    // ── Header scroll effect ──
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header?.classList.add('bg-cwc-bg/95', 'backdrop-blur-md', 'border-b', 'border-cwc-border');
+      } else {
+        header?.classList.remove('bg-cwc-bg/95', 'backdrop-blur-md', 'border-b', 'border-cwc-border');
+      }
+    });
+
+    // ── Mobile menu ──
+    const menuBtn  = document.getElementById('menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    menuBtn?.addEventListener('click', () => {
+      const open = mobileNav?.classList.toggle('hidden');
+      const icon = menuBtn.querySelector('i');
+      if (icon) icon.className = open ? 'ph ph-list text-2xl' : 'ph ph-x text-2xl';
+    });
+
+    // ── Poem modal ──
+    const modal       = document.getElementById('poem-modal');
+    const backdrop    = document.getElementById('modal-backdrop');
+    const modalClose  = document.getElementById('modal-close');
+    const modalDate   = document.getElementById('modal-date');
+    const modalTitle  = document.getElementById('modal-title');
+    const modalBody   = document.getElementById('modal-body');
+    const modalRefl   = document.getElementById('modal-reflection');
+    const modalReflTx = document.getElementById('modal-reflection-text');
+    const modalShare  = document.getElementById('modal-share');
+
+    function openModal(card: HTMLElement) {
+      const title      = card.dataset.title      || '';
+      const date       = card.dataset.date       || '';
+      const poem       = card.dataset.poem       || '';
+      const reflection = card.dataset.reflection || '';
+
+      if (modalDate)  modalDate.textContent  = date;
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalBody) {
+        modalBody.innerHTML = poem.split('\n').map(line =>
+          line.trim() === '' ? '<br>' : `<span>${line}</span>`
+        ).join('<br>');
+      }
+      if (modalReflTx) modalReflTx.textContent = reflection;
+      if (modalRefl)   modalRefl.classList.toggle('hidden', !reflection);
+
+      modal?.classList.remove('hidden');
+      modal?.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal?.classList.add('hidden');
+      modal?.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('[data-open-poem]');
+      if (btn) {
+        const card = (btn as HTMLElement).closest('[data-title]') as HTMLElement;
+        if (card) openModal(card);
+      }
+    });
+
+    backdrop?.addEventListener('click', closeModal);
+    modalClose?.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    modalShare?.addEventListener('click', () => {
+      if (navigator.share) navigator.share({ url: window.location.href });
+      else navigator.clipboard.writeText(window.location.href).then(() => alert('Link copied!'));
+    });
+
+    // ── Scroll reveal ──
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('opacity-100', 'translate-y-0');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    }
+  </script>
+
+  <style is:global>
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.opacity-100 {
+      opacity: 1;
+    }
+    .reveal.translate-y-0 {
+      transform: translateY(0);
+    }
+  </style>
+</body>
+</html>

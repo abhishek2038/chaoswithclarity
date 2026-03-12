@@ -8,9 +8,12 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^5.5.0",
     "@astrojs/cloudflare": "^12.0.0",
     "@astrojs/tailwind": "^6.0.0",
+    "astro": "^5.5.0",
     "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.72.0"
   }
 }

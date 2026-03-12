@@ -2,134 +2,163 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Offerings | Chaos With Clarity" description="Three ways to work with Abby.">
+<Layout title="Offerings | Chaos With Clarity" description="Three ways to work with Abby — Soul + Strategy, Chaos Circles, and Letters from Chaos.">
 
   <!-- PAGE HEADER -->
-  <div class="pt-32 pb-16 px-6 max-w-6xl mx-auto">
-    <div class="w-px h-12 bg-cwc-border mb-8"></div>
-    <p class="text-xs tracking-widest uppercase text-cwc-muted mb-3">Work Together</p>
-    <h1 class="font-serif text-4xl md:text-6xl text-cwc-text">Offerings</h1>
-    <p class="text-cwc-muted text-sm mt-3">Three ways in</p>
+  <div style="background: var(--bg-alt); border-bottom: 1px solid var(--border); padding-top: 9rem; padding-bottom: 4.5rem;">
+    <div style="max-width: 72rem; margin: 0 auto; padding: 0 2rem;">
+      <p class="eyebrow" style="margin-bottom: 1.5rem;">Work Together</p>
+      <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 700; color: var(--text); letter-spacing: -0.03em; line-height: 0.9;">
+        Offerings
+      </h1>
+      <p style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 1.1rem; color: var(--muted); margin-top: 1.25rem;">
+        Three ways to work with Abby.
+      </p>
+    </div>
   </div>
 
-  <div class="max-w-6xl mx-auto px-6 pb-24">
 
-    <div class="grid md:grid-cols-3 gap-px bg-cwc-border mb-24">
+  <!-- 01 · SOUL + STRATEGY -->
+  <div style="max-width: 72rem; margin: 0 auto; padding: 5rem 2rem;">
 
-      <!-- CARD 1: Soul + Strategy (featured) -->
-      <div class="bg-cwc-surface-2 p-8 md:p-10 flex flex-col gap-5 reveal col-span-1">
-        <div class="flex items-start justify-between">
-          <i class="ph ph-leaf text-3xl text-cwc-sage"></i>
-          <span class="text-xs tracking-widest uppercase text-cwc-accent border border-cwc-accent px-2 py-0.5">Featured</span>
-        </div>
-        <div>
-          <h2 class="font-serif text-2xl text-cwc-text mb-1">Soul + Strategy</h2>
-          <p class="text-cwc-muted text-xs tracking-wide">For founders &amp; professionals</p>
-        </div>
-        <div class="text-cwc-accent font-serif text-2xl">
-          ₹15,000
-          <span class="text-cwc-muted text-sm font-sans font-light ml-1">· 90 mins</span>
-        </div>
-        <div class="w-full h-px bg-cwc-border"></div>
-        <ul class="flex flex-col gap-2.5 flex-1">
-          {['Runway + pricing clarity', 'Emotional patterns blocking growth', 'Lifestyle design that fits you', 'One-on-one, held with full presence'].map(item => (
-            <li class="flex items-start gap-2.5 text-cwc-muted text-sm">
-              <i class="ph ph-check text-cwc-sage mt-0.5 shrink-0"></i>
-              {item}
+    <!-- Section number header -->
+    <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 3.5rem;">
+      <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 3.5rem; color: var(--border); line-height: 1; flex-shrink: 0; font-weight: 700;">01</span>
+      <div style="height: 1px; flex: 1; background: var(--border);"></div>
+    </div>
+
+    <div class="soul-grid reveal">
+
+      <!-- Left: info -->
+      <div>
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.25rem; color: var(--text); font-weight: 700; line-height: 1.1; margin-bottom: 0.5rem;">Soul + Strategy</h2>
+        <p style="font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 2.25rem;">For founders &amp; professionals</p>
+        <p style="color: var(--muted); font-size: 0.94rem; line-height: 1.9; margin-bottom: 2.5rem;">
+          You've built something real. The numbers are there — or close enough. But something inside is off. This isn't coaching. This isn't therapy. It's a mirror.
+        </p>
+        <ul style="list-style: none; margin: 0 0 3rem; display: flex; flex-direction: column; gap: 0.9rem;">
+          {['Runway + pricing clarity', 'Emotional patterns blocking growth', 'Lifestyle design that actually fits you', 'One-on-one, held with full presence'].map(item => (
+            <li style="display: flex; gap: 1rem; align-items: flex-start; font-size: 0.9rem; color: var(--text);">
+              <span style="color: var(--sage); flex-shrink: 0; margin-top: 0.1em;">—</span>
+              <span>{item}</span>
             </li>
           ))}
         </ul>
-        <p class="text-cwc-muted text-sm leading-relaxed">
-          You've built something real. But something inside is off. This isn't coaching.
-          This isn't therapy. It's a mirror.
-        </p>
-        <!-- Replace with your Calendly link -->
-        <a href="https://calendly.com" target="_blank" rel="noopener"
-           class="text-xs tracking-widest uppercase bg-cwc-accent text-cwc-bg px-6 py-3 text-center hover:bg-cwc-accent-dark transition-colors mt-auto">
-          Book a Call
-        </a>
-        <p class="text-cwc-muted/50 text-xs italic text-center">Replace with your Calendly link</p>
+        <a href="https://calendly.com" target="_blank" rel="noopener" class="btn btn-fill">Book a Call</a>
+        <p style="color: var(--dim); font-size: 0.7rem; font-style: italic; margin-top: 0.75rem;">Replace with your Calendly link</p>
       </div>
 
-      <!-- CARD 2: Chaos Circles -->
-      <div class="bg-cwc-bg p-8 md:p-10 flex flex-col gap-5 reveal">
-        <i class="ph ph-fire text-3xl text-cwc-accent"></i>
-        <div>
-          <h2 class="font-serif text-2xl text-cwc-text mb-1">Chaos Circles</h2>
-          <p class="text-cwc-muted text-xs tracking-wide">6 people · 6 weeks</p>
+      <!-- Right: price panel -->
+      <div style="background: var(--bg-alt); border: 1px solid var(--border); padding: 3rem 2.5rem; display: flex; flex-direction: column; gap: 1.75rem; align-self: start;">
+        <p class="eyebrow">Investment</p>
+        <p style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(3rem, 5.5vw, 4.75rem); color: var(--accent); line-height: 1; letter-spacing: -0.02em; font-weight: 700;">₹15,000</p>
+        <div style="height: 1px; background: var(--border);"></div>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <p style="font-size: 0.83rem; color: var(--muted);">90 minutes, one on one</p>
+          <p style="font-size: 0.83rem; color: var(--muted);">Held with full presence</p>
+          <p style="font-size: 0.83rem; color: var(--muted);">No scripts. Just truth.</p>
         </div>
-        <div class="text-cwc-accent font-serif text-2xl">
-          ₹8,000
-          <span class="text-cwc-muted text-sm font-sans font-light ml-1">/ person</span>
-        </div>
-        <div class="w-full h-px bg-cwc-border"></div>
-        <ul class="flex flex-col gap-2.5 flex-1">
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- DIVIDER -->
+  <div style="max-width: 72rem; margin: 0 auto; padding: 0 2rem;">
+    <div style="height: 1px; background: var(--border);"></div>
+  </div>
+
+
+  <!-- 02 + 03 -->
+  <div style="max-width: 72rem; margin: 0 auto; padding: 5rem 2rem;">
+    <div class="pair-grid" style="border: 1px solid var(--border);">
+
+      <!-- Chaos Circles -->
+      <div class="pair-left reveal" style="padding: 3rem; border-right: 1px solid var(--border);">
+        <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.5rem; color: var(--border); line-height: 1; display: block; margin-bottom: 2rem; font-weight: 700;">02</span>
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.75rem; color: var(--text); font-weight: 600; margin-bottom: 0.35rem;">Chaos Circles</h2>
+        <p style="font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;">6 people · 6 weeks</p>
+        <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.25rem; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; font-weight: 600;">₹8,000</p>
+        <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 2rem;">per person</p>
+        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.85; margin-bottom: 2rem;">
+          Six people who are done pretending everything is fine. Six weeks of poems, questions, and the kind of honesty that only happens in small rooms.
+        </p>
+        <ul style="list-style: none; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.6rem;">
           {['Weekly poems + guided reflection', 'Money & soul conversations', 'Intimate small group', 'A container for real things'].map(item => (
-            <li class="flex items-start gap-2.5 text-cwc-muted text-sm">
-              <i class="ph ph-check text-cwc-accent mt-0.5 shrink-0"></i>
-              {item}
+            <li style="font-size: 0.85rem; color: var(--muted); display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--sage); flex-shrink: 0;">—</span>
+              <span>{item}</span>
             </li>
           ))}
         </ul>
-        <p class="text-cwc-muted text-sm leading-relaxed">
-          Six people who are done pretending everything is fine. No fixing. Just witnessing.
+        <p style="color: var(--muted); font-size: 0.8rem; margin-bottom: 2rem;">
+          Next circle: <span style="color: var(--text); font-weight: 400;">March 2026</span>
         </p>
-        <p class="text-cwc-muted text-xs">Next circle: <strong class="text-cwc-text">March 2026</strong></p>
-        <!-- Replace with Typeform link -->
-        <a href="https://typeform.com" target="_blank" rel="noopener"
-           class="text-xs tracking-widest uppercase border border-cwc-accent text-cwc-accent px-6 py-3 text-center hover:bg-cwc-accent hover:text-cwc-bg transition-all duration-200 mt-auto">
-          Join Waitlist
-        </a>
-        <p class="text-cwc-muted/50 text-xs italic text-center">Replace with your Typeform link</p>
+        <a href="https://typeform.com" target="_blank" rel="noopener" class="btn btn-outline">Join Waitlist</a>
+        <p style="color: var(--dim); font-size: 0.7rem; font-style: italic; margin-top: 0.75rem;">Replace with your Typeform link</p>
       </div>
 
-      <!-- CARD 3: Letters from Chaos -->
-      <div class="bg-cwc-bg p-8 md:p-10 flex flex-col gap-5 reveal">
-        <i class="ph ph-book-open text-3xl text-cwc-muted"></i>
-        <div>
-          <h2 class="font-serif text-2xl text-cwc-text mb-1">Letters from Chaos</h2>
-          <p class="text-cwc-muted text-xs tracking-wide">Curated poems · digital download</p>
-        </div>
-        <div class="text-cwc-accent font-serif text-2xl">
-          ₹999
-          <span class="text-cwc-muted text-sm font-sans font-light ml-1">one-time</span>
-        </div>
-        <div class="w-full h-px bg-cwc-border"></div>
-        <ul class="flex flex-col gap-2.5 flex-1">
-          {['30+ pages of poetry', 'Personal reflections on each poem', 'Designed for slow, repeated reading', 'Your pocket poet for uncertain days'].map(item => (
-            <li class="flex items-start gap-2.5 text-cwc-muted text-sm">
-              <i class="ph ph-check text-cwc-muted mt-0.5 shrink-0"></i>
-              {item}
+      <!-- Letters from Chaos -->
+      <div class="reveal" style="padding: 3rem;">
+        <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.5rem; color: var(--border); line-height: 1; display: block; margin-bottom: 2rem; font-weight: 700;">03</span>
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.75rem; color: var(--text); font-weight: 600; margin-bottom: 0.35rem;">Letters from Chaos</h2>
+        <p style="font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;">Curated poems · digital download</p>
+        <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.25rem; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; font-weight: 600;">₹999</p>
+        <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 2rem;">one-time</p>
+        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.85; margin-bottom: 2rem;">
+          A curated collection of poems from three years of writing — on money, mortality, love, and the strange gift of being alive.
+        </p>
+        <ul style="list-style: none; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+          {['30+ pages of poetry', 'My personal reflections on each poem', 'Designed for slow, repeated reading', 'Your pocket poet for uncertain days'].map(item => (
+            <li style="font-size: 0.85rem; color: var(--muted); display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--dim); flex-shrink: 0;">—</span>
+              <span>{item}</span>
             </li>
           ))}
         </ul>
-        <p class="text-cwc-muted text-sm leading-relaxed">
-          Poems from three years of writing — on money, mortality, love, and the strange gift of being alive.
-        </p>
-        <!-- Replace with Stripe payment link -->
-        <a href="https://buy.stripe.com" target="_blank" rel="noopener"
-           class="text-xs tracking-widest uppercase bg-cwc-surface text-cwc-text border border-cwc-border px-6 py-3 text-center hover:border-cwc-accent hover:text-cwc-accent transition-all duration-200 mt-auto">
-          Buy Now
-        </a>
-        <p class="text-cwc-muted/50 text-xs italic text-center">Replace with your Stripe link</p>
+        <a href="https://buy.stripe.com" target="_blank" rel="noopener" class="btn btn-ghost">Buy Now</a>
+        <p style="color: var(--dim); font-size: 0.7rem; font-style: italic; margin-top: 0.75rem;">Replace with your Stripe link</p>
       </div>
 
     </div>
-
-    <!-- Testimonial -->
-    <blockquote class="border-l-2 border-cwc-accent pl-8 py-2 max-w-xl mx-auto text-center reveal">
-      <p class="font-serif italic text-cwc-muted text-lg">"Abby's poems land like quiet thunder."</p>
-      <cite class="text-cwc-muted/60 text-xs tracking-widest uppercase mt-3 block">— A reader</cite>
-    </blockquote>
-
-    <!-- Secondary CTA -->
-    <div class="text-center mt-16 reveal">
-      <p class="text-cwc-muted text-sm mb-6">Not sure which is right for you?</p>
-      <a href="/about"
-         class="text-xs tracking-widest uppercase border border-cwc-border text-cwc-muted px-6 py-3 hover:border-cwc-accent hover:text-cwc-accent transition-all duration-200">
-        Read About Abby →
-      </a>
-    </div>
-
   </div>
+
+
+  <!-- DIVIDER -->
+  <div style="max-width: 72rem; margin: 0 auto; padding: 0 2rem;">
+    <div style="height: 1px; background: var(--border);"></div>
+  </div>
+
+
+  <!-- TESTIMONIAL + CTA -->
+  <div class="reveal" style="max-width: 48rem; margin: 0 auto; padding: 5rem 2rem 7rem; text-align: center;">
+    <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; font-style: italic; color: var(--muted); line-height: 1.65; margin-bottom: 1rem;">
+      "Abby's poems land like quiet thunder."
+    </p>
+    <cite style="font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--dim); font-style: normal;">— A reader</cite>
+    <div style="margin-top: 3.5rem;">
+      <p style="color: var(--muted); font-size: 0.88rem; margin-bottom: 1.75rem;">Not sure which is right for you?</p>
+      <a href="/about" class="btn btn-ghost">Read About Abby →</a>
+    </div>
+  </div>
+
 </Layout>
+
+<style>
+  .soul-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .pair-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 768px) {
+    .soul-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .pair-grid { grid-template-columns: 1fr; }
+    .pair-left { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+  }
+</style>

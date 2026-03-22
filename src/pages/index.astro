@@ -6,63 +6,68 @@ import Layout from '../layouts/Layout.astro';
   description="Short, honest ideas about ego, experience, and being fully alive — for people who think too much and feel even more."
 >
 
-  <!-- ══ HERO ════════════════════════════════════════════════════
-       Deep forest green. Giant bleeding coral type. That's the design.
-  ══════════════════════════════════════════════════════════════ -->
-  <section class="hero">
-    <div class="hero-inner">
-      <h1 class="hero-title">
-        <span class="hero-word hw-chaos">Chaos</span>
-        <span class="hero-with">with</span>
-        <span class="hero-word hw-clarity">Clarity</span>
+  <!-- ══ HERO ══════════════════════════════════════════════ -->
+  <section style="min-height:100svh;background:var(--bg);display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 5rem;position:relative;overflow:hidden;">
+    <!-- background video — loops first 5 sec via JS below -->
+    <video id="hero-vid" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.45;">
+      <source src="/images/abby-video.mp4" type="video/mp4" />
+    </video>
+    <!-- dark overlay — cinematic depth, lets video breathe -->
+    <div style="position:absolute;inset:0;background:var(--bg);opacity:0.4;z-index:1;pointer-events:none;"></div>
+
+    <div style="max-width:72rem;margin:0 auto;width:100%;position:relative;z-index:2;">
+      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:2rem;font-weight:600;">Essays · Poetry · Inner Work</p>
+
+      <h1 style="font-family:'Fraunces',serif;letter-spacing:-0.03em;line-height:0.9;margin-bottom:2.5rem;">
+        <span style="display:block;font-size:clamp(4rem,10vw,9rem);font-weight:800;color:var(--text);">Chaos</span>
+        <span style="display:block;font-size:clamp(1.6rem,3.8vw,3.4rem);font-weight:400;font-style:italic;color:var(--olive-accent);padding-left:clamp(1rem,3vw,3rem);line-height:1.5;">With</span>
+        <span style="display:block;font-size:clamp(4rem,10vw,9rem);font-weight:800;color:var(--text);">Clarity</span>
       </h1>
-    </div>
 
-    <div class="hero-foot">
-      <p class="hero-tag">Essays · Poetry · Inner Work — Abby</p>
-      <nav class="hero-nav">
-        <a href="/writings" class="hero-link">Read the writing <span class="arrow">↗</span></a>
-        <a href="/join" class="hero-link">Get the letters <span class="arrow">↗</span></a>
-      </nav>
-    </div>
-  </section>
+      <p style="color:var(--text-muted);font-size:clamp(0.95rem,1.8vw,1.1rem);line-height:2.1;max-width:36rem;margin-bottom:1.5rem;font-weight:300;border-left:2px solid var(--olive-accent);padding-left:1.25rem;">
+        Short, honest ideas about ego, experience, and being fully alive.<br/>
+        <em style="color:var(--olive-accent);font-style:italic;">For people who think too much and feel even more.</em>
+      </p>
 
-  <!-- ══ STATEMENT ═══════════════════════════════════════════════
-       Solid coral. Big cream statement. Paw-inc energy.
-  ══════════════════════════════════════════════════════════════ -->
-  <section class="statement">
-    <div class="statement-inner">
-      <p class="st-label">This space is for you if —</p>
-      <h2 class="st-headline">
-        You feel it<br/>
-        <em>before you<br/>name it.</em>
-      </h2>
-      <ul class="st-list">
-        <li>You're tired of empty motivation and want depth without the jargon.</li>
-        <li>You overthink, feel a lot, and secretly like that about yourself.</li>
-        <li>You're curious about stillness, but allergic to spiritual performance.</li>
-        <li>You want to own fewer things, carry less ego, and experience more life.</li>
-      </ul>
-      <a href="/writings" class="st-cta">Start reading <span>→</span></a>
-    </div>
-  </section>
+      <p style="color:var(--text-muted);font-size:0.95rem;max-width:36rem;line-height:1.9;margin-bottom:3rem;font-weight:300;">
+        I'm Abby, a writer and creator who turns the mess of everyday life into lines that make you pause, breathe, and see differently. This is the calm corner of the internet where we slow down, question everything, and leave a little lighter than we arrived.
+      </p>
 
-  <!-- ══ ABOUT + POEM ════════════════════════════════════════════
-       Warm linen. Two columns. Breathing room.
-  ══════════════════════════════════════════════════════════════ -->
-  <section class="about-section">
-    <div class="about-grid">
-
-      <div class="about-left">
-        <p class="section-label">About this space</p>
-        <blockquote class="about-quote">
-          "Spreadsheets couldn't answer<br/>the chest ache.<br/>So I write."
-        </blockquote>
-        <p class="about-body">Nine years of finance — from EY audit rooms to sitting across from founders who had everything and felt nothing — taught me one thing: clarity without depth is just noise with good formatting.</p>
-        <a href="/about" class="about-link">About Abby →</a>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;">
+        <a href="/writings" style="display:inline-block;background:var(--olive-accent);color:var(--text-on-dark);font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;font-weight:600;transition:background 0.2s;" onmouseover="this.style.background='var(--olive-bright)'" onmouseout="this.style.background='var(--olive-accent)'">Read the Writing</a>
+        <a href="https://youtube.com/@iamabbyjain" target="_blank" rel="noopener" style="display:inline-block;border:1px solid var(--border);color:var(--text-muted);font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--olive-accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">Watch the Reels</a>
+        <a href="/join" style="display:inline-block;border:1px solid var(--border);color:var(--text-muted);font-size:0.76rem;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--olive-accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">Get the Letters</a>
       </div>
+    </div>
+  </section>
 
-      <article class="about-poem"
+  <!-- ══ THIS SPACE IS FOR YOU ══════════════════════════════ -->
+  <section style="max-width:72rem;margin:0 auto;padding:6rem 3rem;background:var(--bg-alt);">
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;" class="for-you-grid">
+      <div style="position:sticky;top:7rem;">
+        <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1rem;font-weight:600;">This space is for you if</p>
+        <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:var(--text);line-height:1.05;">You feel it<br/><em style="font-weight:400;color:var(--text-muted);">before you<br/>name it.</em></h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        {[
+          "You're tired of empty motivation and want depth without the jargon.",
+          "You overthink, feel a lot, and secretly like that about yourself.",
+          "You're curious about mindfulness, but allergic to perfectionism and spiritual performance.",
+          "You want to own fewer things, carry less ego, and experience more life."
+        ].map((line, i) => (
+          <div style={`padding:2rem 0;border-bottom:1px solid var(--border);${i===0?'border-top:1px solid var(--border);':''}`}>
+            <p style="font-size:1rem;color:var(--text);font-weight:500;line-height:1.65;">{line}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FEATURED POEM ══════════════════════════════════════ -->
+  <section style="max-width:72rem;margin:0 auto;padding:6rem 3rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);" class="poem-home-grid">
+
+      <article style="padding:3.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:1.25rem;"
                data-poem-card
                data-title="Unstruck Silence (Anhat Nad)"
                data-date="March 2026"
@@ -111,366 +116,69 @@ Be less, not more.
 
 Be less, not more."
                data-reflection="">
-        <p class="section-label" style="color:var(--olive-accent);">Featured Poem · March 2026</p>
-        <h3 class="poem-big-title">Unstruck<br/>Silence</h3>
-        <div class="poem-lines">
+        <p style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive-accent);font-weight:600;">Featured Poem · March 2026</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--text);line-height:1.15;">Unstruck Silence<br/><em style="font-weight:400;font-size:0.8em;color:var(--text-muted);">(Anhat Nad)</em></h3>
+        <div style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.05rem;line-height:2.2;border-left:3px solid var(--olive-accent);padding-left:1.5rem;flex:1;">
           <p>It starts but never ends,</p>
           <p>It is just life, nothing to amend.</p>
           <p>Silence is louder than noise,</p>
           <p>Once you hear it, it abides.</p>
         </div>
-        <p class="poem-read-cta">Click to read in full <span>→</span></p>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <span style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--olive-accent);font-weight:600;">Click to read</span>
+          <i class="ph ph-arrow-right" style="color:var(--olive-accent);font-size:0.9rem;"></i>
+        </div>
       </article>
 
+      <div style="background:var(--bg-alt);padding:3.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:2rem;">
+        <div>
+          <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1.5rem;font-weight:600;">About this space</p>
+          <p style="font-family:'Fraunces',serif;font-size:1.4rem;font-weight:500;color:var(--text);line-height:1.5;margin-bottom:1.25rem;">
+            "Spreadsheets couldn't answer the chest ache. So I write."
+          </p>
+          <p style="font-size:0.92rem;color:var(--text-muted);line-height:1.9;">Nine years of finance, from EY audit rooms to sitting across from founders who had everything and felt nothing, taught me one thing: clarity without depth is just noise with good formatting.</p>
+        </div>
+        <div>
+          <a href="/about" style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;border:1px solid var(--border);padding:0.75rem 1.75rem;display:inline-block;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--olive-accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">About Abby →</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ══ NEWSLETTER ══════════════════════════════════════════════
-       Back to forest. Big italic Fraunces. One CTA.
-  ══════════════════════════════════════════════════════════════ -->
-  <section class="newsletter">
-    <div class="nl-inner">
-      <p class="section-label" style="color:var(--olive-accent);">The Letters</p>
-      <h2 class="nl-title">
-        Honest notes<br/>
-        <em>from the middle<br/>of it all.</em>
+  <!-- ══ NEWSLETTER CTA ══════════════════════════════════════ -->
+  <section style="background:var(--bg-alt);padding:7rem 3rem;border-top:1px solid var(--border);">
+    <div style="max-width:50rem;margin:0 auto;text-align:center;">
+      <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1.5rem;font-weight:600;">The Letters</p>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:var(--text);line-height:1.05;margin-bottom:1.5rem;">
+        Honest notes from<br/><em style="font-weight:400;color:var(--olive-accent);">the middle of it all.</em>
       </h2>
-      <p class="nl-body">
-        Thoughts I don't share on Instagram or YouTube. Drafts, process,
-        questions I'm still figuring out. No spam. No "daily grind" tips.
+      <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.9;max-width:36rem;margin:0 auto 2.5rem;font-weight:300;">
+        Thoughts I don't share on Instagram or YouTube. Drafts, behind-the-scenes process, questions I'm still figuring out. No spam. No "daily grind" tips. Just honest notes.
       </p>
-      <a href="/join" class="nl-cta">Get the Letters</a>
+      <a href="/join" style="display:inline-block;background:var(--olive-accent);color:var(--olive-dark);font-size:0.76rem;letter-spacing:0.18em;text-transform:uppercase;padding:1.1rem 2.5rem;text-decoration:none;font-weight:700;transition:background 0.2s;" onmouseover="this.style.background='var(--olive-bright)'" onmouseout="this.style.background='var(--olive-accent)'">Get the Letters</a>
     </div>
   </section>
 
 </Layout>
 
 <style>
-  /* ══ HERO ══════════════════════════════════════════════════════ */
-  .hero {
-    min-height: 100svh;
-    background: var(--olive-dark);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 4.25rem; /* nav height */
-    overflow: hidden;
-    position: relative;
+  @media (max-width: 768px) {
+    .for-you-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; background: var(--bg-alt) !important; }
+    .for-you-grid > div:first-child { position: static !important; }
+    .poem-home-grid { grid-template-columns: 1fr !important; }
+    .poem-home-grid > article { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
   }
-  .hero-inner {
-    flex: 1;
-    display: flex;
-    align-items: flex-end;
-    padding: 3rem 3rem 0;
-  }
-  .hero-title {
-    font-family: 'Fraunces', serif;
-    line-height: 0.82;
-    letter-spacing: -0.04em;
-    margin: 0;
-  }
-  .hero-word {
-    display: block;
-    font-size: clamp(7rem, 20vw, 24rem);
-    font-weight: 800;
-    color: var(--olive-accent);
-    /* let it bleed off the right edge */
-    white-space: nowrap;
-  }
-  .hero-with {
-    display: block;
-    font-size: clamp(2rem, 5vw, 6rem);
-    font-weight: 400;
-    font-style: italic;
-    color: var(--text-on-dark);
-    padding-left: clamp(1.5rem, 5vw, 8rem);
-    line-height: 1.6;
-    opacity: 0.7;
-  }
-
-  /* entry animations */
-  .hw-chaos {
-    animation: fromLeft 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-  }
-  .hero-with {
-    animation: fromLeft 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
-  }
-  .hw-clarity {
-    animation: fromRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
-  }
-  @keyframes fromLeft {
-    from { transform: translateX(-10vw); opacity: 0; }
-    to   { transform: translateX(0);     opacity: 1; }
-  }
-  @keyframes fromRight {
-    from { transform: translateX(10vw);  opacity: 0; }
-    to   { transform: translateX(0);     opacity: 1; }
-  }
-
-  /* footer bar of the hero */
-  .hero-foot {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1.5rem 3rem;
-    border-top: 1px solid rgba(245,236,224,0.12);
-    margin-top: 2rem;
-    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
-  }
-  @keyframes fadeUp {
-    from { transform: translateY(1.5rem); opacity: 0; }
-    to   { transform: translateY(0);      opacity: 1; }
-  }
-  .hero-tag {
-    font-size: 0.7rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--text-dim-dark);
-    font-weight: 500;
-    opacity: 0.6;
-  }
-  .hero-nav {
-    display: flex;
-    gap: 2.5rem;
-  }
-  .hero-link {
-    font-size: 0.72rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--text-dim-dark);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-  .hero-link:hover { color: var(--text-on-dark); }
-  .hero-link .arrow { transition: transform 0.2s; }
-  .hero-link:hover .arrow { transform: translate(2px, -2px); }
-
-  /* ══ STATEMENT ══════════════════════════════════════════════════
-     Solid coral bg — the whole section IS the colour.
-  ══════════════════════════════════════════════════════════════ */
-  .statement {
-    background: var(--olive-accent);
-    padding: 8rem 3rem;
-    overflow: hidden;
-  }
-  .statement-inner {
-    max-width: 72rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
-  }
-  .st-label {
-    font-size: 0.68rem;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    color: rgba(245,236,224,0.6);
-    font-weight: 600;
-    grid-column: 1 / -1;
-    margin-bottom: -2rem;
-  }
-  .st-headline {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(3.2rem, 8vw, 9rem);
-    font-weight: 800;
-    color: var(--text-on-dark);
-    line-height: 0.92;
-    letter-spacing: -0.03em;
-  }
-  .st-headline em {
-    font-weight: 400;
-    color: rgba(245,236,224,0.72);
-  }
-  .st-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding-top: 1rem;
-  }
-  .st-list li {
-    font-size: 1rem;
-    color: rgba(245,236,224,0.82);
-    line-height: 1.7;
-    padding: 1.4rem 0;
-    border-bottom: 1px solid rgba(245,236,224,0.18);
-    font-weight: 300;
-  }
-  .st-list li:first-child { border-top: 1px solid rgba(245,236,224,0.18); }
-  .st-cta {
-    grid-column: 1 / -1;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-on-dark);
-    text-decoration: none;
-    font-weight: 700;
-    border-bottom: 1px solid rgba(245,236,224,0.4);
-    padding-bottom: 0.25rem;
-    margin-top: 2.5rem;
-    transition: border-color 0.2s, opacity 0.2s;
-  }
-  .st-cta:hover { border-color: var(--text-on-dark); opacity: 0.75; }
-
-  /* ══ ABOUT + POEM ═══════════════════════════════════════════════ */
-  .about-section {
-    background: var(--bg);
-    padding: 8rem 3rem;
-  }
-  .about-grid {
-    max-width: 72rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: start;
-  }
-  .section-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--text-faint);
-    font-weight: 600;
-    margin-bottom: 2rem;
-    display: block;
-  }
-  .about-quote {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.25;
-    margin: 0 0 2rem;
-    border: none;
-    padding: 0;
-    font-style: normal;
-    letter-spacing: -0.02em;
-  }
-  .about-body {
-    font-size: 0.97rem;
-    color: var(--text-muted);
-    line-height: 1.9;
-    margin-bottom: 2.5rem;
-    font-weight: 300;
-  }
-  .about-link {
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.2rem;
-    transition: color 0.2s, border-color 0.2s;
-  }
-  .about-link:hover { color: var(--text); border-color: var(--olive-accent); }
-
-  /* poem side */
-  .about-poem {
-    cursor: pointer;
-    padding: 3rem;
-    background: var(--bg-card);
-    border-top: 3px solid var(--olive-accent);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .about-poem:hover { transform: translateY(-6px); }
-  .poem-big-title {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
-    color: var(--text);
-    line-height: 1.0;
-    letter-spacing: -0.03em;
-  }
-  .poem-lines {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    color: var(--text-muted);
-    font-size: 1rem;
-    line-height: 2.1;
-    border-left: 2px solid var(--olive-accent);
-    padding-left: 1.25rem;
-  }
-  .poem-read-cta {
-    font-size: 0.68rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--olive-accent);
-    font-weight: 700;
-  }
-
-  /* ══ NEWSLETTER ════════════════════════════════════════════════ */
-  .newsletter {
-    background: var(--olive-dark);
-    padding: 9rem 3rem;
-    overflow: hidden;
-  }
-  .nl-inner {
-    max-width: 60rem;
-    margin: 0 auto;
-  }
-  .nl-title {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(3rem, 8vw, 8rem);
-    font-weight: 800;
-    color: var(--text-on-dark);
-    line-height: 0.9;
-    letter-spacing: -0.04em;
-    margin: 1.5rem 0 2.5rem;
-  }
-  .nl-title em {
-    font-weight: 400;
-    color: var(--olive-accent);
-  }
-  .nl-body {
-    font-size: 1rem;
-    color: var(--text-dim-dark);
-    line-height: 1.9;
-    max-width: 38rem;
-    margin-bottom: 3rem;
-    font-weight: 300;
-    opacity: 0.8;
-  }
-  .nl-cta {
-    display: inline-block;
-    background: var(--olive-accent);
-    color: var(--text-on-dark);
-    font-size: 0.76rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 1.1rem 2.75rem;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background 0.2s;
-  }
-  .nl-cta:hover { background: var(--olive-bright); }
-
-  /* ══ RESPONSIVE ════════════════════════════════════════════════ */
-  @media (max-width: 900px) {
-    .statement-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .st-label { margin-bottom: 0; }
-    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-  }
-  @media (max-width: 600px) {
-    .hero-inner { padding: 2rem 1.5rem 0; }
-    .hero-foot { padding: 1.25rem 1.5rem; flex-direction: column; align-items: flex-start; }
-    .statement { padding: 5rem 1.5rem; }
-    .about-section { padding: 5rem 1.5rem; }
-    .about-poem { padding: 2rem; }
-    .newsletter { padding: 6rem 1.5rem; }
+  @media (max-width: 480px) {
+    section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
   }
 </style>
+
+<script>
+  // Loop only the first 5 seconds of the hero video
+  const vid = document.getElementById('hero-vid');
+  if (vid) {
+    vid.addEventListener('timeupdate', () => {
+      if (vid.currentTime >= 5) vid.currentTime = 0;
+    });
+  }
+</script>

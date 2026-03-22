@@ -23,13 +23,12 @@ import Layout from '../layouts/Layout.astro';
     </p>
 
     <!-- Email form — powered by Kit (kit.com) -->
-    <!-- TODO: Replace YOUR_FORM_ID below with your actual Kit form ID -->
-    <!-- Get it from: kit.com → Forms → your form → Settings → copy the ID from the embed URL -->
     <form
       style="display:flex;flex-direction:column;gap:0.6rem;width:100%;max-width:22rem;"
-      action="https://app.kit.com/forms/YOUR_FORM_ID/subscriptions"
+      action="https://app.kit.com/forms/9235299/subscriptions"
       method="post"
-      data-sv-form="YOUR_FORM_ID"
+      data-sv-form="9235299"
+      data-uid="a0087c26ee"
     >
       <input
         type="email"
@@ -110,6 +109,8 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 </Layout>
+
+<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 
 <style>
   @media (max-width: 768px) {

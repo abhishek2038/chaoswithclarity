@@ -24,29 +24,39 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Email form — powered by Kit (kit.com) -->
     <form
+      class="seva-form formkit-form"
       style="display:flex;flex-direction:column;gap:0.6rem;width:100%;max-width:22rem;"
       action="https://app.kit.com/forms/9235299/subscriptions"
       method="post"
       data-sv-form="9235299"
       data-uid="a0087c26ee"
+      data-format="inline"
+      data-version="5"
     >
-      <input
-        type="email"
-        name="email_address"
-        placeholder="your@email.com"
-        required
-        style="background:var(--olive-dark);border:1px solid var(--border-dark);color:var(--text-on-dark);font-size:0.92rem;padding:1rem 1.1rem;font-family:'DM Sans',sans-serif;font-weight:400;outline:none;width:100%;transition:border-color 0.2s;"
-        onfocus="this.style.borderColor='var(--olive-accent)'"
-        onblur="this.style.borderColor='var(--border-dark)'"
-      />
-      <button
-        type="submit"
-        style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--olive-accent);color:var(--text-on-dark);padding:1rem 1.5rem;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;transition:background 0.2s;"
-        onmouseover="this.style.background='var(--olive-bright)'"
-        onmouseout="this.style.background='var(--olive-accent)'"
-      >
-        Get the Letters
-      </button>
+      <div data-element="fields" class="seva-fields formkit-fields">
+        <div class="formkit-field">
+          <input
+            class="formkit-input"
+            type="email"
+            name="email_address"
+            placeholder="your@email.com"
+            required
+            style="background:var(--olive-dark);border:1px solid var(--border-dark);color:var(--text-on-dark);font-size:0.92rem;padding:1rem 1.1rem;font-family:'DM Sans',sans-serif;font-weight:400;outline:none;width:100%;transition:border-color 0.2s;"
+            onfocus="this.style.borderColor='var(--olive-accent)'"
+            onblur="this.style.borderColor='var(--border-dark)'"
+          />
+        </div>
+        <button
+          data-element="submit"
+          class="formkit-submit"
+          type="submit"
+          style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--olive-accent);color:var(--text-on-dark);padding:1rem 1.5rem;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;transition:background 0.2s;width:100%;"
+          onmouseover="this.style.background='var(--olive-bright)'"
+          onmouseout="this.style.background='var(--olive-accent)'"
+        >
+          <span>Get the Letters</span>
+        </button>
+      </div>
     </form>
 
     <p style="color:var(--text-muted);font-size:0.78rem;margin-top:1rem;letter-spacing:0.06em;opacity:0.7;">No spam. Ever. Unsubscribe any time.</p>

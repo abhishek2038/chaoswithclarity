@@ -9,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- ══ HERO ══════════════════════════════════════════════ -->
   <section style="min-height:100svh;background:var(--bg);display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 5rem;position:relative;overflow:hidden;">
     <!-- background video — loops first 5 sec via JS below -->
-    <video id="hero-vid" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.45;">
+    <video id="hero-vid" autoplay muted loop playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.45;">
       <source src="/images/abby-video.mp4" type="video/mp4" />
     </video>
     <!-- dark overlay — cinematic depth, lets video breathe -->

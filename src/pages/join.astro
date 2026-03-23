@@ -22,8 +22,63 @@ import Layout from '../layouts/Layout.astro';
       No spam. No "daily grind" tips. Just honest notes.
     </p>
 
-    <!-- Kit form embed — renders Monterey theme + custom CSS from Kit dashboard -->
-    <script is:inline async data-uid="a0087c26ee" src="https://f.convertkit.com/a0087c26ee/index.js"></script>
+    <!-- Our design, Kit backend -->
+    <form
+      id="cwc-form"
+      style="display:flex;flex-direction:column;gap:0.6rem;width:100%;max-width:22rem;"
+    >
+      <input
+        type="email"
+        id="cwc-email"
+        placeholder="your@email.com"
+        required
+        style="background:var(--bg-alt);border:1px solid var(--border);color:var(--text);font-size:0.92rem;padding:1rem 1.1rem;font-family:'DM Sans',sans-serif;font-weight:400;outline:none;width:100%;transition:border-color 0.2s;"
+        onfocus="this.style.borderColor='var(--gold)'"
+        onblur="this.style.borderColor='var(--border)'"
+      />
+      <button
+        type="submit"
+        id="cwc-btn"
+        style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold);color:var(--bg);padding:1rem 1.5rem;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;transition:background 0.2s;"
+        onmouseover="this.style.background='var(--olive-bright)'"
+        onmouseout="this.style.background='var(--gold)'"
+      >
+        Get the Letters
+      </button>
+      <p id="cwc-msg" style="display:none;font-size:0.82rem;color:var(--gold);letter-spacing:0.04em;margin-top:0.25rem;"></p>
+    </form>
+
+    <script is:inline>
+      document.getElementById('cwc-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const email = document.getElementById('cwc-email').value;
+        const btn = document.getElementById('cwc-btn');
+        const msg = document.getElementById('cwc-msg');
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        try {
+          const res = await fetch('https://app.kit.com/forms/9235299/subscriptions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'email_address=' + encodeURIComponent(email)
+          });
+          if (res.ok || res.status === 200 || res.status === 303) {
+            msg.textContent = 'Check your inbox to confirm. ✓';
+            msg.style.display = 'block';
+            btn.style.display = 'none';
+            document.getElementById('cwc-email').style.display = 'none';
+          } else {
+            throw new Error();
+          }
+        } catch {
+          msg.textContent = 'Something went wrong — try again.';
+          msg.style.color = '#c0392b';
+          msg.style.display = 'block';
+          btn.textContent = 'Get the Letters';
+          btn.disabled = false;
+        }
+      });
+    </script>
 
     <p style="color:var(--text-muted);font-size:0.78rem;margin-top:1rem;letter-spacing:0.06em;opacity:0.7;">No spam. Ever. Unsubscribe any time.</p>
 

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CWC Logo — Small Caps</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #06050a;
+    color: #e4ddd0;
+    font-family: 'DM Sans', sans-serif;
+    padding: 60px 40px;
+  }
+
+  .section-title {
+    font-size: 0.58rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #b8881e;
+    margin-bottom: 6px;
+  }
+  .section-sub {
+    font-size: 0.76rem;
+    color: #5e5448;
+    margin-bottom: 36px;
+  }
+  .section { margin-bottom: 64px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2px;
+  }
+
+  .tile {
+    background: #0e0c14;
+    padding: 44px 28px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    position: relative;
+    min-height: 260px;
+    justify-content: center;
+  }
+  .tile-light { background: #f5ece0; }
+  .tile-parchment { background: #ede3d0; }
+
+  .tile-label {
+    position: absolute;
+    top: 11px; left: 14px;
+    font-size: 0.48rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2e2b40;
+  }
+  .tile-light  .tile-label,
+  .tile-parchment .tile-label { color: #c0b49a; }
+
+  .desc {
+    font-size: 0.72rem;
+    color: #5e5448;
+    line-height: 1.65;
+    text-align: center;
+    max-width: 180px;
+  }
+  .tile-light .desc,
+  .tile-parchment .desc { color: #9c8e7a; }
+
+  hr { border: none; border-top: 1px solid #1a1826; margin: 56px 0; }
+
+  /* ── Small caps helper classes ── */
+  .sc {
+    font-variant: small-caps;
+    font-feature-settings: "smcp" 1;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ SECTION 1: SPIRAL + SMALL CAPS WORDMARK ══ -->
+<div class="section">
+  <p class="section-title">Spiral · Small Caps Wordmark</p>
+  <p class="section-sub">The inward spiral with small-caps type treatments — six lockups.</p>
+
+  <div class="grid">
+
+    <!-- A: Spiral + "chaos with clarity" small caps, side by side -->
+    <div class="tile">
+      <span class="tile-label">A — horizontal lockup</span>
+      <div style="display:flex;align-items:center;gap:18px;">
+        <canvas id="a1" width="56" height="56"></canvas>
+        <div>
+          <div style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.25rem;letter-spacing:0.12em;color:#e4ddd0;line-height:1.15;">
+            Chaos With Clarity
+          </div>
+          <div style="font-size:0.45rem;letter-spacing:0.35em;color:#5e5448;text-transform:uppercase;margin-top:5px;">chaoswithclarity.com</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- A light -->
+    <div class="tile tile-light">
+      <span class="tile-label">A — light bg</span>
+      <div style="display:flex;align-items:center;gap:18px;">
+        <canvas id="a1b" width="56" height="56"></canvas>
+        <div>
+          <div style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.25rem;letter-spacing:0.12em;color:#0e0c14;line-height:1.15;">
+            Chaos With Clarity
+          </div>
+          <div style="font-size:0.45rem;letter-spacing:0.35em;color:#b0a08a;text-transform:uppercase;margin-top:5px;">chaoswithclarity.com</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- B: Stacked — spiral above, small caps name below -->
+    <div class="tile">
+      <span class="tile-label">B — stacked</span>
+      <canvas id="b1" width="62" height="62"></canvas>
+      <div style="text-align:center;">
+        <div style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.1rem;letter-spacing:0.18em;color:#e4ddd0;">
+          Chaos With Clarity
+        </div>
+        <div style="width:36px;height:1px;background:#b8881e;opacity:0.35;margin:8px auto;"></div>
+        <div style="font-size:0.44rem;letter-spacing:0.32em;color:#5e5448;text-transform:uppercase;">chaoswithclarity.com</div>
+      </div>
+    </div>
+
+    <!-- B light -->
+    <div class="tile tile-light">
+      <span class="tile-label">B — stacked light</span>
+      <canvas id="b1b" width="62" height="62"></canvas>
+      <div style="text-align:center;">
+        <div style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.1rem;letter-spacing:0.18em;color:#0e0c14;">
+          Chaos With Clarity
+        </div>
+        <div style="width:36px;height:1px;background:#b8881e;opacity:0.4;margin:8px auto;"></div>
+        <div style="font-size:0.44rem;letter-spacing:0.32em;color:#b0a08a;text-transform:uppercase;">chaoswithclarity.com</div>
+      </div>
+    </div>
+
+    <!-- C: Cormorant italic small caps — more literary feel -->
+    <div class="tile">
+      <span class="tile-label">C — literary (Cormorant)</span>
+      <canvas id="c1" width="56" height="56"></canvas>
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-variant:small-caps;font-size:1.4rem;letter-spacing:0.1em;color:#e4ddd0;line-height:1.1;">
+          Chaos With Clarity
+        </div>
+      </div>
+      <p class="desc">Cormorant italic + small caps. More literary, poetic — closer to how the work feels.</p>
+    </div>
+
+    <!-- C light -->
+    <div class="tile tile-parchment">
+      <span class="tile-label">C — parchment bg</span>
+      <canvas id="c1b" width="56" height="56"></canvas>
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-variant:small-caps;font-size:1.4rem;letter-spacing:0.1em;color:#0e0c14;line-height:1.1;">
+          Chaos With Clarity
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr>
+
+<!-- ══ SECTION 2: C.W.C MONOGRAM IN SMALL CAPS ══ -->
+<div class="section">
+  <p class="section-title">C.W.C Monogram · Small Caps</p>
+  <p class="section-sub">The initials alone — for profile, favicon, stamp, embossing.</p>
+
+  <div class="grid">
+
+    <!-- M1: C·W·C serif small caps, large -->
+    <div class="tile">
+      <span class="tile-label">M1 — serif dots</span>
+      <div style="text-align:center;">
+        <div style="font-family:'Fraunces',serif;font-weight:200;font-variant:small-caps;font-size:3.2rem;letter-spacing:0.18em;color:#b8881e;line-height:1;">c·w·c</div>
+        <div style="font-size:0.46rem;letter-spacing:0.38em;color:#5e5448;text-transform:uppercase;margin-top:10px;">chaos with clarity</div>
+      </div>
+    </div>
+
+    <!-- M2: c.w.c lowercase small caps italic -->
+    <div class="tile">
+      <span class="tile-label">M2 — italic</span>
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-variant:small-caps;font-size:3rem;letter-spacing:0.14em;color:#b8881e;line-height:1;">c.w.c</div>
+        <div style="width:32px;height:1px;background:#b8881e;opacity:0.35;margin:10px auto;"></div>
+        <div style="font-size:0.46rem;letter-spacing:0.32em;color:#5e5448;text-transform:uppercase;">chaos with clarity</div>
+      </div>
+    </div>
+
+    <!-- M3: CWC stacked vertically -->
+    <div class="tile">
+      <span class="tile-label">M3 — vertical stack</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0px;">
+        <div style="font-family:'Fraunces',serif;font-weight:200;font-variant:small-caps;font-size:2.2rem;letter-spacing:0.3em;color:#b8881e;line-height:1.05;writing-mode:vertical-rl;text-orientation:mixed;letter-spacing:0.2em;">C·W·C</div>
+      </div>
+      <div style="font-size:0.44rem;letter-spacing:0.3em;color:#5e5448;text-transform:uppercase;text-align:center;">chaos with clarity</div>
+      <p class="desc">Vertical stack — for spines, narrow formats, bookmark.</p>
+    </div>
+
+    <!-- M4: Circle stamp with small caps -->
+    <div class="tile">
+      <span class="tile-label">M4 — circle stamp</span>
+      <svg width="120" height="120" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="52" stroke="#b8881e" stroke-width="0.8" fill="none" opacity="0.45"/>
+        <circle cx="60" cy="60" r="47" stroke="#b8881e" stroke-width="0.3" fill="none" opacity="0.2"/>
+        <text x="60" y="68" text-anchor="middle"
+              font-family="Fraunces, Georgia, serif"
+              font-size="20" font-weight="200"
+              fill="#b8881e" letter-spacing="5"
+              style="font-variant:small-caps">c·w·c</text>
+        <path id="topArc2" d="M 16 60 A 44 44 0 0 1 104 60" fill="none"/>
+        <text font-family="Cormorant Garamond, serif" font-size="7.5" fill="#98907c"
+              font-style="italic" letter-spacing="3.5">
+          <textPath href="#topArc2" startOffset="8%">chaos  ·  with  ·  clarity</textPath>
+        </text>
+        <path id="botArc2" d="M 16 60 A 44 44 0 0 0 104 60" fill="none"/>
+        <text font-family="DM Sans, sans-serif" font-size="6" fill="#5e5448" letter-spacing="2.8">
+          <textPath href="#botArc2" startOffset="10%">chaoswithclarity.com</textPath>
+        </text>
+        <circle cx="8"  cy="60" r="2" fill="#b8881e" opacity="0.4"/>
+        <circle cx="112" cy="60" r="2" fill="#b8881e" opacity="0.4"/>
+      </svg>
+    </div>
+
+    <!-- M5: On light -->
+    <div class="tile tile-light">
+      <span class="tile-label">M1 on light</span>
+      <div style="text-align:center;">
+        <div style="font-family:'Fraunces',serif;font-weight:200;font-variant:small-caps;font-size:3.2rem;letter-spacing:0.18em;color:#b8881e;line-height:1;">c·w·c</div>
+        <div style="font-size:0.46rem;letter-spacing:0.38em;color:#b0a08a;text-transform:uppercase;margin-top:10px;">chaos with clarity</div>
+      </div>
+    </div>
+
+    <!-- M6: Parchment stamp -->
+    <div class="tile tile-parchment">
+      <span class="tile-label">M4 on parchment</span>
+      <svg width="120" height="120" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="52" stroke="#b8881e" stroke-width="0.8" fill="none" opacity="0.5"/>
+        <circle cx="60" cy="60" r="47" stroke="#b8881e" stroke-width="0.3" fill="none" opacity="0.25"/>
+        <text x="60" y="68" text-anchor="middle"
+              font-family="Fraunces, Georgia, serif"
+              font-size="20" font-weight="200"
+              fill="#b8881e" letter-spacing="5"
+              style="font-variant:small-caps">c·w·c</text>
+        <path id="topArc3" d="M 16 60 A 44 44 0 0 1 104 60" fill="none"/>
+        <text font-family="Cormorant Garamond, serif" font-size="7.5" fill="#9c8472"
+              font-style="italic" letter-spacing="3.5">
+          <textPath href="#topArc3" startOffset="8%">chaos  ·  with  ·  clarity</textPath>
+        </text>
+        <path id="botArc3" d="M 16 60 A 44 44 0 0 0 104 60" fill="none"/>
+        <text font-family="DM Sans, sans-serif" font-size="6" fill="#c0aa8a" letter-spacing="2.8">
+          <textPath href="#botArc3" startOffset="10%">chaoswithclarity.com</textPath>
+        </text>
+        <circle cx="8"   cy="60" r="2" fill="#b8881e" opacity="0.4"/>
+        <circle cx="112" cy="60" r="2" fill="#b8881e" opacity="0.4"/>
+      </svg>
+    </div>
+
+  </div>
+</div>
+
+<hr>
+
+<!-- ══ SECTION 3: FINAL RECOMMENDED LOCKUP ══ -->
+<div class="section">
+  <p class="section-title">Recommended Final Lockup</p>
+  <p class="section-sub">Spiral (V2 chaos→clarity) · small caps · all three backgrounds.</p>
+
+  <div class="grid">
+
+    <div class="tile" style="padding:52px 36px;">
+      <span class="tile-label">Final — dark</span>
+      <canvas id="f1" width="68" height="68"></canvas>
+      <div style="text-align:center;">
+        <div style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.15rem;letter-spacing:0.2em;color:#e4ddd0;">Chaos With Clarity</div>
+        <div style="width:30px;height:1px;background:#b8881e;opacity:0.35;margin:8px auto;"></div>
+        <div style="font-size:0.43rem;letter-spacing:0.3em;color:#5e5448;text-transform:uppercase;">chaoswithclarity.com</div>
+      </div>
+    </div>
+
+    <div class="tile tile-light" style="padding:52px 36px;">
+      <span class="tile-label">Final — light</span>
+      <canvas id="f2" width="68" height="68"></canvas>
+      <div style="text-align:center;">
+        <div style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.15rem;letter-spacing:0.2em;color:#0e0c14;">Chaos With Clarity</div>
+        <div style="width:30px;height:1px;background:#b8881e;opacity:0.4;margin:8px auto;"></div>
+        <div style="font-size:0.43rem;letter-spacing:0.3em;color:#b0a08a;text-transform:uppercase;">chaoswithclarity.com</div>
+      </div>
+    </div>
+
+    <div class="tile tile-parchment" style="padding:52px 36px;">
+      <span class="tile-label">Final — parchment</span>
+      <canvas id="f3" width="68" height="68"></canvas>
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-variant:small-caps;font-size:1.25rem;letter-spacing:0.15em;color:#0e0c14;">Chaos With Clarity</div>
+        <div style="width:30px;height:1px;background:#b8881e;opacity:0.4;margin:8px auto;"></div>
+        <div style="font-size:0.43rem;letter-spacing:0.3em;color:#b0a08a;text-transform:uppercase;">chaoswithclarity.com</div>
+      </div>
+    </div>
+
+    <!-- Icon / favicon -->
+    <div class="tile" style="padding:52px 36px;">
+      <span class="tile-label">Icon only</span>
+      <canvas id="f4" width="80" height="80"></canvas>
+      <p class="desc" style="color:#5e5448;">Favicon · social profile · app icon</p>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+function drawSpiral(id, opts = {}) {
+  const c = document.getElementById(id);
+  if (!c) return;
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+  const cx = W/2, cy = H/2;
+  const {
+    gold       = '#b8881e',
+    goldBright = '#d4a432',
+    bg         = null,
+    maxR       = W * 0.44,
+    turns      = 2.7,
+    dashed     = true,
+  } = opts;
+
+  ctx.clearRect(0,0,W,H);
+  if (bg) { ctx.fillStyle = bg; ctx.fillRect(0,0,W,H); }
+
+  const steps = 700;
+
+  if (dashed) {
+    // Outer 60% — dashed, faint
+    for (let i = 0; i < steps * 0.62; i++) {
+      const t    = i / steps;
+      const tN   = (i+1) / steps;
+      const ang  = t * turns * 2 * Math.PI;
+      const angN = tN * turns * 2 * Math.PI;
+      const r    = maxR * (1 - t * 0.93);
+      const rN   = maxR * (1 - tN * 0.93);
+      if (i % 5 < 2) continue; // creates dash gaps
+      const alpha = 0.12 + t * 0.45;
+      ctx.beginPath();
+      ctx.moveTo(cx + r * Math.cos(ang),   cy + r * Math.sin(ang));
+      ctx.lineTo(cx + rN * Math.cos(angN), cy + rN * Math.sin(angN));
+      ctx.strokeStyle = gold;
+      ctx.globalAlpha = alpha;
+      ctx.lineWidth = 0.9;
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+
+    // Inner 40% — solid, full opacity
+    ctx.beginPath();
+    let first = true;
+    for (let i = Math.floor(steps * 0.58); i <= steps; i++) {
+      const t   = i / steps;
+      const ang = t * turns * 2 * Math.PI;
+      const r   = maxR * (1 - t * 0.93);
+      const x   = cx + r * Math.cos(ang);
+      const y   = cy + r * Math.sin(ang);
+      if (first) { ctx.moveTo(x,y); first=false; } else ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle = gold;
+    ctx.globalAlpha = 1;
+    ctx.lineWidth = 1.4;
+    ctx.lineJoin = 'round';
+    ctx.stroke();
+
+  } else {
+    // Simple full spiral
+    ctx.beginPath();
+    let first = true;
+    for (let i = 0; i <= steps; i++) {
+      const t   = i / steps;
+      const ang = t * turns * 2 * Math.PI;
+      const r   = maxR * (1 - t * 0.93);
+      const x   = cx + r * Math.cos(ang);
+      const y   = cy + r * Math.sin(ang);
+      if (first) { ctx.moveTo(x,y); first=false; } else ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle = gold;
+    ctx.globalAlpha = 0.8;
+    ctx.lineWidth = 1.2;
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+  }
+
+  // Centre dot
+  ctx.beginPath();
+  ctx.arc(cx, cy, W * 0.045, 0, Math.PI*2);
+  ctx.fillStyle = gold;
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(cx, cy, W * 0.022, 0, Math.PI*2);
+  ctx.fillStyle = goldBright;
+  ctx.fill();
+}
+
+window.addEventListener('load', () => {
+  // Section 1
+  drawSpiral('a1',  {maxR:23, turns:2.5});
+  drawSpiral('a1b', {maxR:23, turns:2.5, bg:'#f5ece0', goldBright:'#7a5c14'});
+  drawSpiral('b1',  {maxR:26, turns:2.6});
+  drawSpiral('b1b', {maxR:26, turns:2.6, bg:'#f5ece0', goldBright:'#7a5c14'});
+  drawSpiral('c1',  {maxR:23, turns:2.5});
+  drawSpiral('c1b', {maxR:23, turns:2.5, bg:'#ede3d0', goldBright:'#7a5c14'});
+
+  // Section 3 finals
+  drawSpiral('f1', {maxR:29, turns:2.7});
+  drawSpiral('f2', {maxR:29, turns:2.7, bg:'#f5ece0', goldBright:'#7a5c14'});
+  drawSpiral('f3', {maxR:29, turns:2.7, bg:'#ede3d0', goldBright:'#7a5c14'});
+  drawSpiral('f4', {maxR:34, turns:3.0, goldBright:'#d4a432'});
+});
+</script>
+</body>
+</html>

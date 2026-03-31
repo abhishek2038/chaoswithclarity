@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CWC — Final Logo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;1,9..144,200;1,9..144,300&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #06050a;
+    color: #e4ddd0;
+    font-family: 'Fraunces', serif;
+    padding: 60px 40px;
+  }
+
+  /* ── page header ── */
+  .pg-label {
+    font-size: 0.52rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: #b8881e;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+  }
+  .pg-title {
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2rem;
+    color: #e4ddd0;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .pg-desc {
+    font-size: 0.78rem;
+    color: #5e5448;
+    line-height: 1.85;
+    font-family: sans-serif;
+    max-width: 540px;
+    margin-bottom: 64px;
+  }
+
+  /* ── section ── */
+  .sec-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: #b8881e;
+    font-family: sans-serif;
+    margin-bottom: 4px;
+  }
+  .sec-sub {
+    font-size: 0.72rem;
+    color: #3a3650;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+  }
+
+  /* ── grid ── */
+  .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-bottom: 48px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 48px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-bottom: 48px; }
+  @media(max-width:700px) {
+    .grid2,.grid3,.grid4 { grid-template-columns: repeat(2,1fr); }
+  }
+
+  /* ── tile ── */
+  .tile {
+    background: #0e0c14;
+    padding: 48px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    position: relative;
+    min-height: 240px;
+  }
+  .on-light    { background: #f5ece0; }
+  .on-parchment{ background: #ede3d0; }
+  .on-mid      { background: #14121c; }
+
+  .tile-tag {
+    position: absolute;
+    top: 11px; left: 14px;
+    font-size: 0.44rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #2a2838;
+    font-family: sans-serif;
+  }
+  .on-light .tile-tag, .on-parchment .tile-tag { color: #c4b5a0; }
+
+  /* ── wordmark helpers ── */
+  .wm-sc {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-variant: small-caps;
+    letter-spacing: 0.2em;
+    color: #e4ddd0;
+  }
+  .wm-sc-dark { color: #0e0c14; }
+  .wm-sc-it {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-variant: small-caps;
+    letter-spacing: 0.14em;
+    color: #e4ddd0;
+  }
+  .wm-sc-it-dark { color: #0e0c14; }
+  .wm-url {
+    font-size: 0.42rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #3a3650;
+    font-family: sans-serif;
+  }
+  .wm-url-light { color: #b8a890; }
+  .rule { width: 26px; height: 1px; background: #b8881e; opacity: 0.35; margin: 0 auto; }
+
+  hr { border: none; border-top: 1px solid #1a1826; margin: 52px 0; }
+
+  /* download button */
+  .dl-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .dl-btn {
+    font-size: 0.52rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #b8881e;
+    border: 1px solid #b8881e;
+    padding: 8px 18px;
+    cursor: pointer;
+    background: none;
+    font-family: sans-serif;
+    transition: background 0.2s, color 0.2s;
+  }
+  .dl-btn:hover { background: #b8881e; color: #06050a; }
+</style>
+</head>
+<body>
+
+<!-- ── header ── -->
+<p class="pg-label">Chaos With Clarity — Final Logo</p>
+<h1 class="pg-title">V2 · The Settling Spiral</h1>
+<p class="pg-desc">
+  The outer rings are dashed and faint — the noise, the unsettled mind, the forest of thought.
+  As the spiral moves inward, the line becomes unbroken, solid, clear.
+  The still point at the centre is the observer.
+  The eye reads it the same way the mind experiences it: chaos on the outside, clarity within.
+</p>
+
+<!-- ══ 1. MARK ONLY ══════════════════════════════════════ -->
+<p class="sec-label">01 — The Mark</p>
+<p class="sec-sub">Icon only · favicon · profile picture · wax seal</p>
+
+<div class="grid4">
+  <div class="tile">
+    <span class="tile-tag">Ink black</span>
+    <canvas id="m1" width="96" height="96"></canvas>
+  </div>
+  <div class="tile on-mid">
+    <span class="tile-tag">Deep ink</span>
+    <canvas id="m2" width="96" height="96"></canvas>
+  </div>
+  <div class="tile on-light">
+    <span class="tile-tag">Light</span>
+    <canvas id="m3" width="96" height="96"></canvas>
+  </div>
+  <div class="tile on-parchment">
+    <span class="tile-tag">Parchment</span>
+    <canvas id="m4" width="96" height="96"></canvas>
+  </div>
+</div>
+
+<!-- ══ 2. HORIZONTAL LOCKUP ══════════════════════════════ -->
+<p class="sec-label">02 — Horizontal Lockup</p>
+<p class="sec-sub">Site header · email signature · social bio</p>
+
+<div class="grid2">
+
+  <div class="tile" style="min-height:160px;">
+    <span class="tile-tag">Dark · Fraunces small caps</span>
+    <div style="display:flex;align-items:center;gap:18px;">
+      <canvas id="h1" width="54" height="54"></canvas>
+      <div style="width:1px;height:36px;background:#b8881e;opacity:0.18;"></div>
+      <div>
+        <div class="wm-sc" style="font-size:1.1rem;">Chaos With Clarity</div>
+        <div class="wm-url" style="margin-top:5px;">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tile on-light" style="min-height:160px;">
+    <span class="tile-tag">Light · Fraunces small caps</span>
+    <div style="display:flex;align-items:center;gap:18px;">
+      <canvas id="h2" width="54" height="54"></canvas>
+      <div style="width:1px;height:36px;background:#b8881e;opacity:0.25;"></div>
+      <div>
+        <div class="wm-sc wm-sc-dark" style="font-size:1.1rem;">Chaos With Clarity</div>
+        <div class="wm-url wm-url-light" style="margin-top:5px;">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tile on-mid" style="min-height:160px;">
+    <span class="tile-tag">Deep ink · Cormorant italic</span>
+    <div style="display:flex;align-items:center;gap:18px;">
+      <canvas id="h3" width="54" height="54"></canvas>
+      <div style="width:1px;height:36px;background:#b8881e;opacity:0.18;"></div>
+      <div>
+        <div class="wm-sc-it" style="font-size:1.2rem;">Chaos With Clarity</div>
+        <div class="wm-url" style="margin-top:5px;">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tile on-parchment" style="min-height:160px;">
+    <span class="tile-tag">Parchment · Cormorant italic</span>
+    <div style="display:flex;align-items:center;gap:18px;">
+      <canvas id="h4" width="54" height="54"></canvas>
+      <div style="width:1px;height:36px;background:#b8881e;opacity:0.22;"></div>
+      <div>
+        <div class="wm-sc-it wm-sc-it-dark" style="font-size:1.2rem;">Chaos With Clarity</div>
+        <div class="wm-url wm-url-light" style="margin-top:5px;">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ 3. STACKED LOCKUP ═════════════════════════════════ -->
+<p class="sec-label">03 — Stacked Lockup</p>
+<p class="sec-sub">Book covers · retreat materials · social posts · email footer</p>
+
+<div class="grid4">
+
+  <div class="tile">
+    <span class="tile-tag">Dark · Fraunces</span>
+    <canvas id="s1" width="68" height="68"></canvas>
+    <div style="text-align:center;">
+      <div class="wm-sc" style="font-size:0.95rem;">Chaos With Clarity</div>
+      <div class="rule" style="margin:9px auto;"></div>
+      <div class="wm-url">chaoswithclarity.com</div>
+    </div>
+  </div>
+
+  <div class="tile on-mid">
+    <span class="tile-tag">Deep ink · Fraunces</span>
+    <canvas id="s2" width="68" height="68"></canvas>
+    <div style="text-align:center;">
+      <div class="wm-sc" style="font-size:0.95rem;">Chaos With Clarity</div>
+      <div class="rule" style="margin:9px auto;"></div>
+      <div class="wm-url">chaoswithclarity.com</div>
+    </div>
+  </div>
+
+  <div class="tile on-light">
+    <span class="tile-tag">Light · Fraunces</span>
+    <canvas id="s3" width="68" height="68"></canvas>
+    <div style="text-align:center;">
+      <div class="wm-sc wm-sc-dark" style="font-size:0.95rem;">Chaos With Clarity</div>
+      <div class="rule" style="margin:9px auto;opacity:0.4;"></div>
+      <div class="wm-url wm-url-light">chaoswithclarity.com</div>
+    </div>
+  </div>
+
+  <div class="tile on-parchment">
+    <span class="tile-tag">Parchment · Cormorant</span>
+    <canvas id="s4" width="68" height="68"></canvas>
+    <div style="text-align:center;">
+      <div class="wm-sc-it wm-sc-it-dark" style="font-size:1.05rem;">Chaos With Clarity</div>
+      <div class="rule" style="margin:9px auto;opacity:0.38;"></div>
+      <div class="wm-url wm-url-light">chaoswithclarity.com</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ 4. CIRCLE STAMP ══════════════════════════════════ -->
+<p class="sec-label">04 — Circle Stamp</p>
+<p class="sec-sub">Wax seals · book covers · merchandise · embossing</p>
+
+<div class="grid3">
+
+  <div class="tile" style="min-height:280px;">
+    <span class="tile-tag">Dark</span>
+    <svg width="140" height="140" viewBox="0 0 140 140">
+      <circle cx="70" cy="70" r="62" stroke="#b8881e" stroke-width="0.7" fill="none" opacity="0.4"/>
+      <circle cx="70" cy="70" r="56" stroke="#b8881e" stroke-width="0.25" fill="none" opacity="0.18"/>
+      <canvas id="st1_c" width="52" height="52" style="display:none"></canvas>
+      <image id="st1_img" x="44" y="44" width="52" height="52"/>
+      <path id="ta1" d="M 17 70 A 53 53 0 0 1 123 70" fill="none"/>
+      <text font-family="Cormorant Garamond,serif" font-size="8" fill="#98907c"
+            font-style="italic" letter-spacing="3.2">
+        <textPath href="#ta1" startOffset="9%">chaos · with · clarity</textPath>
+      </text>
+      <path id="ba1" d="M 17 70 A 53 53 0 0 0 123 70" fill="none"/>
+      <text font-family="sans-serif" font-size="6" fill="#3a3650" letter-spacing="2.4">
+        <textPath href="#ba1" startOffset="10%">chaoswithclarity.com</textPath>
+      </text>
+      <circle cx="8"   cy="70" r="2" fill="#b8881e" opacity="0.35"/>
+      <circle cx="132" cy="70" r="2" fill="#b8881e" opacity="0.35"/>
+    </svg>
+  </div>
+
+  <div class="tile on-parchment" style="min-height:280px;">
+    <span class="tile-tag">Parchment</span>
+    <svg width="140" height="140" viewBox="0 0 140 140">
+      <circle cx="70" cy="70" r="62" stroke="#b8881e" stroke-width="0.7" fill="none" opacity="0.5"/>
+      <circle cx="70" cy="70" r="56" stroke="#b8881e" stroke-width="0.25" fill="none" opacity="0.22"/>
+      <canvas id="st2_c" width="52" height="52" style="display:none"></canvas>
+      <image id="st2_img" x="44" y="44" width="52" height="52"/>
+      <path id="ta2" d="M 17 70 A 53 53 0 0 1 123 70" fill="none"/>
+      <text font-family="Cormorant Garamond,serif" font-size="8" fill="#9a8060"
+            font-style="italic" letter-spacing="3.2">
+        <textPath href="#ta2" startOffset="9%">chaos · with · clarity</textPath>
+      </text>
+      <path id="ba2" d="M 17 70 A 53 53 0 0 0 123 70" fill="none"/>
+      <text font-family="sans-serif" font-size="6" fill="#c0a882" letter-spacing="2.4">
+        <textPath href="#ba2" startOffset="10%">chaoswithclarity.com</textPath>
+      </text>
+      <circle cx="8"   cy="70" r="2" fill="#b8881e" opacity="0.4"/>
+      <circle cx="132" cy="70" r="2" fill="#b8881e" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <div class="tile on-light" style="min-height:280px;">
+    <span class="tile-tag">Light</span>
+    <svg width="140" height="140" viewBox="0 0 140 140">
+      <circle cx="70" cy="70" r="62" stroke="#b8881e" stroke-width="0.7" fill="none" opacity="0.5"/>
+      <circle cx="70" cy="70" r="56" stroke="#b8881e" stroke-width="0.25" fill="none" opacity="0.22"/>
+      <canvas id="st3_c" width="52" height="52" style="display:none"></canvas>
+      <image id="st3_img" x="44" y="44" width="52" height="52"/>
+      <path id="ta3" d="M 17 70 A 53 53 0 0 1 123 70" fill="none"/>
+      <text font-family="Cormorant Garamond,serif" font-size="8" fill="#7a6040"
+            font-style="italic" letter-spacing="3.2">
+        <textPath href="#ta3" startOffset="9%">chaos · with · clarity</textPath>
+      </text>
+      <path id="ba3" d="M 17 70 A 53 53 0 0 0 123 70" fill="none"/>
+      <text font-family="sans-serif" font-size="6" fill="#b8a080" letter-spacing="2.4">
+        <textPath href="#ba3" startOffset="10%">chaoswithclarity.com</textPath>
+      </text>
+      <circle cx="8"   cy="70" r="2" fill="#b8881e" opacity="0.4"/>
+      <circle cx="132" cy="70" r="2" fill="#b8881e" opacity="0.4"/>
+    </svg>
+  </div>
+
+</div>
+
+<!-- ══ 5. FAVICON SIZES ══════════════════════════════════ -->
+<p class="sec-label">05 — Favicon Sizes</p>
+<p class="sec-sub">Mark holds at small sizes because the dashed-to-solid contrast is readable even tiny.</p>
+
+<div class="tile" style="flex-direction:row;gap:32px;min-height:140px;margin-bottom:48px;justify-content:center;align-items:flex-end;">
+  <div style="text-align:center;">
+    <canvas id="fv16" width="16" height="16"></canvas>
+    <div style="font-size:0.42rem;color:#3a3650;font-family:sans-serif;margin-top:8px;">16px</div>
+  </div>
+  <div style="text-align:center;">
+    <canvas id="fv32" width="32" height="32"></canvas>
+    <div style="font-size:0.42rem;color:#3a3650;font-family:sans-serif;margin-top:8px;">32px</div>
+  </div>
+  <div style="text-align:center;">
+    <canvas id="fv48" width="48" height="48"></canvas>
+    <div style="font-size:0.42rem;color:#3a3650;font-family:sans-serif;margin-top:8px;">48px</div>
+  </div>
+  <div style="text-align:center;">
+    <canvas id="fv64" width="64" height="64"></canvas>
+    <div style="font-size:0.42rem;color:#3a3650;font-family:sans-serif;margin-top:8px;">64px</div>
+  </div>
+  <div style="text-align:center;">
+    <canvas id="fv96" width="96" height="96"></canvas>
+    <div style="font-size:0.42rem;color:#3a3650;font-family:sans-serif;margin-top:8px;">96px</div>
+  </div>
+</div>
+
+<!-- ══ 6. EXPORT ════════════════════════════════════════ -->
+<hr>
+<p class="sec-label">Export</p>
+<p class="sec-sub">Download individual assets as PNG.</p>
+<div class="dl-row" id="dl-row"></div>
+
+
+<script>
+// ─────────────────────────────────────────────────────────
+// Draw the V2 spiral: dashed outer → solid inner
+// ─────────────────────────────────────────────────────────
+function drawV2(canvas, opts = {}) {
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W / 2, cy = H / 2;
+
+  const {
+    bg         = null,
+    gold       = '#b8881e',
+    goldBright = '#d4a432',
+    maxR       = W * 0.44,
+    turns      = 2.75,
+  } = opts;
+
+  ctx.clearRect(0, 0, W, H);
+  if (bg) { ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H); }
+
+  const steps = 900;
+  const totalA = turns * 2 * Math.PI;
+
+  // ── Outer portion: dashed, fading in ──
+  // Goes from t=0 (outermost) to t=SPLIT
+  const SPLIT = 0.60;
+  for (let i = 0; i < steps * SPLIT; i++) {
+    const t  = i / steps;
+    const t2 = (i + 1) / steps;
+
+    // Dash gap every 6 steps: draw 3, skip 3
+    if (i % 7 < 3) continue;
+
+    const a1 = t  * totalA;
+    const a2 = t2 * totalA;
+    // Ease: tighter as we go inward
+    const r1 = maxR * Math.pow(1 - t,  0.80);
+    const r2 = maxR * Math.pow(1 - t2, 0.80);
+
+    // Alpha: barely visible outer edge → medium approaching solid
+    const alpha = 0.08 + (t / SPLIT) * 0.52;
+
+    ctx.beginPath();
+    ctx.moveTo(cx + r1 * Math.cos(a1), cy + r1 * Math.sin(a1));
+    ctx.lineTo(cx + r2 * Math.cos(a2), cy + r2 * Math.sin(a2));
+    ctx.strokeStyle = gold;
+    ctx.globalAlpha = alpha;
+    ctx.lineWidth   = Math.max(0.6, W * 0.010);
+    ctx.lineCap     = 'round';
+    ctx.stroke();
+  }
+
+  // ── Inner portion: fully solid, bright ──
+  // Blends from the last dashed segment into the dot
+  ctx.globalAlpha = 1;
+  ctx.beginPath();
+  let first = true;
+  for (let i = Math.floor(steps * (SPLIT - 0.04)); i <= steps; i++) {
+    const t   = i / steps;
+    const a   = t * totalA;
+    const r   = maxR * Math.pow(1 - t, 0.80);
+    const x   = cx + r * Math.cos(a);
+    const y   = cy + r * Math.sin(a);
+    if (first) { ctx.moveTo(x, y); first = false; }
+    else ctx.lineTo(x, y);
+  }
+  ctx.strokeStyle = gold;
+  ctx.lineWidth   = Math.max(1, W * 0.014);
+  ctx.lineJoin    = 'round';
+  ctx.lineCap     = 'round';
+  ctx.stroke();
+
+  // ── Centre dot ──
+  const dr = Math.max(2, W * 0.05);
+  ctx.beginPath();
+  ctx.arc(cx, cy, dr, 0, Math.PI * 2);
+  ctx.fillStyle = gold;
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(cx, cy, dr * 0.45, 0, Math.PI * 2);
+  ctx.fillStyle = goldBright;
+  ctx.fill();
+}
+
+// Copy canvas data into an SVG <image> element
+function canvasToImg(cId, imgId) {
+  const c   = document.getElementById(cId);
+  const img = document.getElementById(imgId);
+  if (c && img) img.setAttribute('href', c.toDataURL());
+}
+
+// ─────────────────────────────────────────────────────────
+// Render everything
+// ─────────────────────────────────────────────────────────
+const DARK_OPTS  = {};
+const MID_OPTS   = { bg: '#14121c' };
+const LIGHT_OPTS = { bg: '#f5ece0', goldBright: '#7a5c14' };
+const PARCH_OPTS = { bg: '#ede3d0', goldBright: '#7a5c14' };
+
+window.addEventListener('load', () => {
+
+  // Section 1 — mark only
+  drawV2(document.getElementById('m1'), DARK_OPTS);
+  drawV2(document.getElementById('m2'), MID_OPTS);
+  drawV2(document.getElementById('m3'), LIGHT_OPTS);
+  drawV2(document.getElementById('m4'), PARCH_OPTS);
+
+  // Section 2 — horizontal
+  drawV2(document.getElementById('h1'), DARK_OPTS);
+  drawV2(document.getElementById('h2'), LIGHT_OPTS);
+  drawV2(document.getElementById('h3'), MID_OPTS);
+  drawV2(document.getElementById('h4'), PARCH_OPTS);
+
+  // Section 3 — stacked
+  drawV2(document.getElementById('s1'), DARK_OPTS);
+  drawV2(document.getElementById('s2'), MID_OPTS);
+  drawV2(document.getElementById('s3'), LIGHT_OPTS);
+  drawV2(document.getElementById('s4'), PARCH_OPTS);
+
+  // Section 4 — stamps
+  drawV2(document.getElementById('st1_c'), DARK_OPTS);
+  drawV2(document.getElementById('st2_c'), PARCH_OPTS);
+  drawV2(document.getElementById('st3_c'), LIGHT_OPTS);
+  canvasToImg('st1_c', 'st1_img');
+  canvasToImg('st2_c', 'st2_img');
+  canvasToImg('st3_c', 'st3_img');
+
+  // Section 5 — favicons
+  drawV2(document.getElementById('fv16'), { ...DARK_OPTS, maxR: 6,  turns: 1.8 });
+  drawV2(document.getElementById('fv32'), { ...DARK_OPTS, maxR: 13, turns: 2.2 });
+  drawV2(document.getElementById('fv48'), { ...DARK_OPTS, maxR: 20, turns: 2.4 });
+  drawV2(document.getElementById('fv64'), { ...DARK_OPTS, maxR: 27, turns: 2.5 });
+  drawV2(document.getElementById('fv96'), { ...DARK_OPTS, maxR: 40, turns: 2.7 });
+
+  // ── Export buttons ──
+  const exports = [
+    { label: 'Mark — dark (96px)',      id: 'm1' },
+    { label: 'Mark — light (96px)',     id: 'm3' },
+    { label: 'Mark — parchment (96px)', id: 'm4' },
+    { label: 'Favicon 32px',            id: 'fv32' },
+    { label: 'Favicon 64px',            id: 'fv64' },
+  ];
+  const row = document.getElementById('dl-row');
+  exports.forEach(({ label, id }) => {
+    const btn = document.createElement('button');
+    btn.className = 'dl-btn';
+    btn.textContent = '↓ ' + label;
+    btn.addEventListener('click', () => {
+      const c = document.getElementById(id);
+      if (!c) return;
+      const a = document.createElement('a');
+      a.download = 'cwc-logo-' + id + '.png';
+      a.href = c.toDataURL('image/png');
+      a.click();
+    });
+    row.appendChild(btn);
+  });
+});
+</script>
+</body>
+</html>

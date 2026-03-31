@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CWC — The Breath Mark</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;1,9..144,200;1,9..144,300&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #06050a;
+    color: #e4ddd0;
+    font-family: 'Fraunces', serif;
+    padding: 60px 40px;
+  }
+
+  .intro {
+    max-width: 520px;
+    margin-bottom: 56px;
+  }
+  .intro-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #b8881e;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 12px;
+  }
+  .intro-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #e4ddd0;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+  .intro-body {
+    font-size: 0.8rem;
+    color: #5e5448;
+    line-height: 1.8;
+    font-family: sans-serif;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+  .grid-wide {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+
+  .tile {
+    background: #0e0c14;
+    padding: 52px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+    min-height: 280px;
+  }
+  .tile-light    { background: #f5ece0; }
+  .tile-parchment{ background: #ede3d0; }
+  .tile-mid      { background: #14121c; }
+
+  .tile-label {
+    position: absolute;
+    top: 12px; left: 16px;
+    font-size: 0.46rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2e2b3a;
+    font-family: sans-serif;
+  }
+  .tile-light .tile-label,
+  .tile-parchment .tile-label { color: #c4b8a4; }
+
+  .wm {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-variant: small-caps;
+    letter-spacing: 0.18em;
+    color: #e4ddd0;
+    line-height: 1.1;
+  }
+  .wm-light  { color: #0e0c14; }
+  .wm-url {
+    font-size: 0.42rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #3a3650;
+    font-family: sans-serif;
+    margin-top: 4px;
+  }
+  .wm-url-light { color: #b8aa96; }
+
+  .rule { width: 28px; height: 1px; background: #b8881e; opacity: 0.35; }
+
+  hr { border: none; border-top: 1px solid #1a1826; margin: 52px 0; }
+
+  .section-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #b8881e;
+    font-family: sans-serif;
+    margin-bottom: 6px;
+  }
+  .section-sub {
+    font-size: 0.76rem;
+    color: #3a3650;
+    font-family: sans-serif;
+    margin-bottom: 28px;
+  }
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <p class="intro-label">CWC — The Breath Mark</p>
+  <h1 class="intro-title">Two spirals, one breath.<br/>Chaos in. Clarity out.</h1>
+  <p class="intro-body">
+    The mark is two spirals interleaved — offset by half a turn, converging to the same still point.
+    One is the inhale: the world rushing in, the noise, the forest of thought.
+    The other is the exhale: the settling, the return, the I am that.
+    They are not opposites. They are one continuous movement.
+  </p>
+</div>
+
+<!-- ══ THE MARK ALONE ══ -->
+<p class="section-label">The Mark</p>
+<p class="section-sub">Icon-only — for favicon, profile picture, wax seal, embossing.</p>
+
+<div class="grid">
+
+  <div class="tile">
+    <span class="tile-label">Dark — large</span>
+    <canvas id="mark_dark_lg" width="100" height="100"></canvas>
+  </div>
+
+  <div class="tile tile-mid">
+    <span class="tile-label">Dark mid — large</span>
+    <canvas id="mark_mid_lg" width="100" height="100"></canvas>
+  </div>
+
+  <div class="tile tile-light">
+    <span class="tile-label">Light — large</span>
+    <canvas id="mark_light_lg" width="100" height="100"></canvas>
+  </div>
+
+  <div class="tile tile-parchment">
+    <span class="tile-label">Parchment — large</span>
+    <canvas id="mark_parch_lg" width="100" height="100"></canvas>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- ══ HORIZONTAL LOCKUP ══ -->
+<p class="section-label">Horizontal Lockup</p>
+<p class="section-sub">Mark left, name right — for site header, email signature, social bio.</p>
+
+<div class="grid-wide">
+
+  <div class="tile" style="min-height:200px;">
+    <span class="tile-label">Dark</span>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <canvas id="h_dark" width="58" height="58"></canvas>
+      <div style="width:1px;height:40px;background:#b8881e;opacity:0.2;"></div>
+      <div>
+        <div class="wm" style="font-size:1.15rem;">Chaos With Clarity</div>
+        <div class="wm-url">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tile tile-light" style="min-height:200px;">
+    <span class="tile-label">Light</span>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <canvas id="h_light" width="58" height="58"></canvas>
+      <div style="width:1px;height:40px;background:#b8881e;opacity:0.3;"></div>
+      <div>
+        <div class="wm wm-light" style="font-size:1.15rem;">Chaos With Clarity</div>
+        <div class="wm-url wm-url-light">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tile tile-parchment" style="min-height:200px;">
+    <span class="tile-label">Parchment — italic Cormorant</span>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <canvas id="h_parch" width="58" height="58"></canvas>
+      <div style="width:1px;height:40px;background:#b8881e;opacity:0.3;"></div>
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-variant:small-caps;font-size:1.25rem;letter-spacing:0.12em;color:#0e0c14;line-height:1.1;">Chaos With Clarity</div>
+        <div class="wm-url wm-url-light">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- ══ STACKED LOCKUP ══ -->
+<p class="section-label">Stacked Lockup</p>
+<p class="section-sub">Mark above, name below — for book covers, retreat materials, social posts.</p>
+
+<div class="grid">
+
+  <div class="tile">
+    <span class="tile-label">Dark — stacked</span>
+    <canvas id="s_dark" width="72" height="72"></canvas>
+    <div style="text-align:center;">
+      <div class="wm" style="font-size:1rem;">Chaos With Clarity</div>
+      <div class="rule" style="margin:9px auto;"></div>
+      <div class="wm-url">chaoswithclarity.com</div>
+    </div>
+  </div>
+
+  <div class="tile tile-light">
+    <span class="tile-label">Light — stacked</span>
+    <canvas id="s_light" width="72" height="72"></canvas>
+    <div style="text-align:center;">
+      <div class="wm wm-light" style="font-size:1rem;">Chaos With Clarity</div>
+      <div class="rule" style="margin:9px auto;opacity:0.4;"></div>
+      <div class="wm-url wm-url-light">chaoswithclarity.com</div>
+    </div>
+  </div>
+
+  <div class="tile tile-parchment">
+    <span class="tile-label">Parchment — stacked</span>
+    <canvas id="s_parch" width="72" height="72"></canvas>
+    <div style="text-align:center;">
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-variant:small-caps;font-size:1.05rem;letter-spacing:0.14em;color:#0e0c14;">Chaos With Clarity</div>
+      <div class="rule" style="margin:9px auto;opacity:0.35;"></div>
+      <div class="wm-url wm-url-light">chaoswithclarity.com</div>
+    </div>
+  </div>
+
+  <div class="tile tile-mid">
+    <span class="tile-label">Dark mid — stacked</span>
+    <canvas id="s_mid" width="72" height="72"></canvas>
+    <div style="text-align:center;">
+      <div class="wm" style="font-size:1rem;">Chaos With Clarity</div>
+      <div class="rule" style="margin:9px auto;"></div>
+      <div class="wm-url">chaoswithclarity.com</div>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- ══ CIRCLE STAMP ══ -->
+<p class="section-label">Circle Stamp</p>
+<p class="section-sub">For wax seals, book covers, embossing, merchandise.</p>
+
+<div class="grid">
+
+  <div class="tile">
+    <span class="tile-label">Stamp — dark</span>
+    <svg width="130" height="130" viewBox="0 0 130 130">
+      <circle cx="65" cy="65" r="58" stroke="#b8881e" stroke-width="0.7" fill="none" opacity="0.4"/>
+      <circle cx="65" cy="65" r="53" stroke="#b8881e" stroke-width="0.25" fill="none" opacity="0.2"/>
+      <canvas id="stamp_dark" width="50" height="50" style="display:none;"></canvas>
+      <image id="stamp_dark_img" x="40" y="40" width="50" height="50"/>
+      <path id="stArcT" d="M 14 65 A 51 51 0 0 1 116 65" fill="none"/>
+      <text font-family="Cormorant Garamond, serif" font-size="8.5" fill="#98907c"
+            font-style="italic" letter-spacing="3">
+        <textPath href="#stArcT" startOffset="8%">chaos · with · clarity</textPath>
+      </text>
+      <path id="stArcB" d="M 14 65 A 51 51 0 0 0 116 65" fill="none"/>
+      <text font-family="sans-serif" font-size="6.2" fill="#3a3650" letter-spacing="2.5">
+        <textPath href="#stArcB" startOffset="9%">chaoswithclarity.com</textPath>
+      </text>
+      <circle cx="7"   cy="65" r="2.2" fill="#b8881e" opacity="0.4"/>
+      <circle cx="123" cy="65" r="2.2" fill="#b8881e" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <div class="tile tile-parchment">
+    <span class="tile-label">Stamp — parchment</span>
+    <svg width="130" height="130" viewBox="0 0 130 130">
+      <circle cx="65" cy="65" r="58" stroke="#b8881e" stroke-width="0.7" fill="none" opacity="0.5"/>
+      <circle cx="65" cy="65" r="53" stroke="#b8881e" stroke-width="0.25" fill="none" opacity="0.25"/>
+      <canvas id="stamp_parch" width="50" height="50" style="display:none;"></canvas>
+      <image id="stamp_parch_img" x="40" y="40" width="50" height="50"/>
+      <path id="stArcT2" d="M 14 65 A 51 51 0 0 1 116 65" fill="none"/>
+      <text font-family="Cormorant Garamond, serif" font-size="8.5" fill="#9c8472"
+            font-style="italic" letter-spacing="3">
+        <textPath href="#stArcT2" startOffset="8%">chaos · with · clarity</textPath>
+      </text>
+      <path id="stArcB2" d="M 14 65 A 51 51 0 0 0 116 65" fill="none"/>
+      <text font-family="sans-serif" font-size="6.2" fill="#c0aa8e" letter-spacing="2.5">
+        <textPath href="#stArcB2" startOffset="9%">chaoswithclarity.com</textPath>
+      </text>
+      <circle cx="7"   cy="65" r="2.2" fill="#b8881e" opacity="0.45"/>
+      <circle cx="123" cy="65" r="2.2" fill="#b8881e" opacity="0.45"/>
+    </svg>
+  </div>
+
+  <div class="tile tile-light">
+    <span class="tile-label">Stamp — light</span>
+    <svg width="130" height="130" viewBox="0 0 130 130">
+      <circle cx="65" cy="65" r="58" stroke="#b8881e" stroke-width="0.7" fill="none" opacity="0.5"/>
+      <circle cx="65" cy="65" r="53" stroke="#b8881e" stroke-width="0.25" fill="none" opacity="0.25"/>
+      <canvas id="stamp_light" width="50" height="50" style="display:none;"></canvas>
+      <image id="stamp_light_img" x="40" y="40" width="50" height="50"/>
+      <path id="stArcT3" d="M 14 65 A 51 51 0 0 1 116 65" fill="none"/>
+      <text font-family="Cormorant Garamond, serif" font-size="8.5" fill="#7a6852"
+            font-style="italic" letter-spacing="3">
+        <textPath href="#stArcT3" startOffset="8%">chaos · with · clarity</textPath>
+      </text>
+      <path id="stArcB3" d="M 14 65 A 51 51 0 0 0 116 65" fill="none"/>
+      <text font-family="sans-serif" font-size="6.2" fill="#b0a48e" letter-spacing="2.5">
+        <textPath href="#stArcB3" startOffset="9%">chaoswithclarity.com</textPath>
+      </text>
+      <circle cx="7"   cy="65" r="2.2" fill="#b8881e" opacity="0.45"/>
+      <circle cx="123" cy="65" r="2.2" fill="#b8881e" opacity="0.45"/>
+    </svg>
+  </div>
+
+  <!-- Favicon sizes -->
+  <div class="tile" style="gap:16px;">
+    <span class="tile-label">Favicon sizes</span>
+    <div style="display:flex;align-items:flex-end;gap:20px;">
+      <div style="text-align:center;">
+        <canvas id="fav_32" width="32" height="32"></canvas>
+        <div style="font-size:0.42rem;color:#3a3650;margin-top:6px;font-family:sans-serif;">32px</div>
+      </div>
+      <div style="text-align:center;">
+        <canvas id="fav_48" width="48" height="48"></canvas>
+        <div style="font-size:0.42rem;color:#3a3650;margin-top:6px;font-family:sans-serif;">48px</div>
+      </div>
+      <div style="text-align:center;">
+        <canvas id="fav_64" width="64" height="64"></canvas>
+        <div style="font-size:0.42rem;color:#3a3650;margin-top:6px;font-family:sans-serif;">64px</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────
+// Core double-spiral draw function
+// ─────────────────────────────────────────────────────────
+function drawBreath(canvas, opts = {}) {
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W / 2, cy = H / 2;
+
+  const {
+    bg         = null,
+    gold1      = '#b8881e',   // primary spiral colour
+    gold2      = '#d4a432',   // secondary spiral colour (the other breath)
+    dotInner   = '#d4a432',
+    maxR       = W * 0.43,
+    turns      = 2.6,
+    steps      = 800,
+  } = opts;
+
+  ctx.clearRect(0, 0, W, H);
+  if (bg) { ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H); }
+
+  const totalAngle = turns * 2 * Math.PI;
+
+  // Draw one spiral
+  function spiral(angleOffset, color, alphaScale, lineW) {
+    ctx.save();
+    for (let i = 0; i < steps; i++) {
+      const t  = i / steps;
+      const t2 = (i + 1) / steps;
+      const a1 = angleOffset + t  * totalAngle;
+      const a2 = angleOffset + t2 * totalAngle;
+      const r1 = maxR * Math.pow(1 - t,  0.72);  // eased: tighter centre
+      const r2 = maxR * Math.pow(1 - t2, 0.72);
+
+      // Fade from faint (outer) to full (inner)
+      const alpha = alphaScale * (0.08 + t * 0.9);
+
+      ctx.beginPath();
+      ctx.moveTo(cx + r1 * Math.cos(a1), cy + r1 * Math.sin(a1));
+      ctx.lineTo(cx + r2 * Math.cos(a2), cy + r2 * Math.sin(a2));
+      ctx.strokeStyle = color;
+      ctx.globalAlpha = alpha;
+      ctx.lineWidth   = lineW;
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  // Spiral 1 — the inhale
+  spiral(0,        gold1, 0.95, W * 0.014);
+  // Spiral 2 — the exhale (offset by π)
+  spiral(Math.PI,  gold2, 0.55, W * 0.012);
+
+  // Centre still-point
+  ctx.save();
+  ctx.globalAlpha = 1;
+  const dr = W * 0.048;
+  ctx.beginPath();
+  ctx.arc(cx, cy, dr, 0, Math.PI * 2);
+  ctx.fillStyle = gold1;
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(cx, cy, dr * 0.46, 0, Math.PI * 2);
+  ctx.fillStyle = dotInner;
+  ctx.fill();
+  ctx.restore();
+}
+
+// ─────────────────────────────────────────────────────────
+// Helper to copy canvas to SVG <image>
+// ─────────────────────────────────────────────────────────
+function canvasToSVGImage(canvasId, imgId) {
+  const c = document.getElementById(canvasId);
+  const img = document.getElementById(imgId);
+  if (c && img) img.setAttribute('href', c.toDataURL());
+}
+
+window.addEventListener('load', () => {
+
+  // ── Marks (icon only) ─────────────────────────────
+  drawBreath(document.getElementById('mark_dark_lg'),  {});
+  drawBreath(document.getElementById('mark_mid_lg'),   { bg:'#14121c' });
+  drawBreath(document.getElementById('mark_light_lg'), { bg:'#f5ece0', gold2:'#c8a040', dotInner:'#7a5c14' });
+  drawBreath(document.getElementById('mark_parch_lg'), { bg:'#ede3d0', gold2:'#c8a040', dotInner:'#7a5c14' });
+
+  // ── Horizontal lockup canvases ────────────────────
+  drawBreath(document.getElementById('h_dark'),  {});
+  drawBreath(document.getElementById('h_light'), { bg:'#f5ece0', gold2:'#c8a040', dotInner:'#7a5c14' });
+  drawBreath(document.getElementById('h_parch'), { bg:'#ede3d0', gold2:'#c8a040', dotInner:'#7a5c14' });
+
+  // ── Stacked lockup canvases ────────────────────────
+  drawBreath(document.getElementById('s_dark'),  {});
+  drawBreath(document.getElementById('s_light'), { bg:'#f5ece0', gold2:'#c8a040', dotInner:'#7a5c14' });
+  drawBreath(document.getElementById('s_parch'), { bg:'#ede3d0', gold2:'#c8a040', dotInner:'#7a5c14' });
+  drawBreath(document.getElementById('s_mid'),   { bg:'#14121c' });
+
+  // ── Stamp canvases → SVG images ───────────────────
+  drawBreath(document.getElementById('stamp_dark'),  {});
+  drawBreath(document.getElementById('stamp_parch'), { bg:'#ede3d0', gold2:'#c8a040', dotInner:'#7a5c14' });
+  drawBreath(document.getElementById('stamp_light'), { bg:'#f5ece0', gold2:'#c8a040', dotInner:'#7a5c14' });
+  canvasToSVGImage('stamp_dark',  'stamp_dark_img');
+  canvasToSVGImage('stamp_parch', 'stamp_parch_img');
+  canvasToSVGImage('stamp_light', 'stamp_light_img');
+
+  // ── Favicon sizes ─────────────────────────────────
+  drawBreath(document.getElementById('fav_32'), { maxR:13, turns:2.2 });
+  drawBreath(document.getElementById('fav_48'), { maxR:20, turns:2.4 });
+  drawBreath(document.getElementById('fav_64'), { maxR:27, turns:2.5 });
+
+});
+</script>
+</body>
+</html>

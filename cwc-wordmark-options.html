@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CWC — Wordmark Options</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;1,9..144,200;1,9..144,300&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap');
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: #06050a;
+    color: #e4ddd0;
+    font-family: sans-serif;
+    padding: 60px 40px;
+  }
+
+  .pg-label {
+    font-size: 0.52rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #b8881e;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2px;
+  }
+
+  .tile {
+    background: #0e0c14;
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    min-height: 220px;
+    justify-content: center;
+  }
+
+  .tile-tag {
+    position: absolute;
+    top: 12px; left: 14px;
+    font-size: 0.44rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2a2838;
+  }
+
+  .lockup {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .divider {
+    width: 1px;
+    height: 38px;
+    background: #b8881e;
+    opacity: 0.2;
+  }
+
+  .url {
+    font-size: 0.4rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #3a3650;
+    margin-top: 5px;
+  }
+</style>
+</head>
+<body>
+
+<p class="pg-label">Wordmark options — pick the one that feels right</p>
+
+<div class="grid">
+
+  <!-- A: one word, all lowercase small caps -->
+  <div class="tile">
+    <span class="tile-tag">A — one word, lowercase</span>
+    <div class="lockup">
+      <canvas id="c1" width="54" height="54"></canvas>
+      <div class="divider"></div>
+      <div>
+        <div style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.05rem;letter-spacing:0.2em;color:#e4ddd0;">chaoswithclarity</div>
+        <div class="url">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B: two lines — chaos / with clarity -->
+  <div class="tile">
+    <span class="tile-tag">B — two lines stacked</span>
+    <div class="lockup">
+      <canvas id="c2" width="54" height="54"></canvas>
+      <div class="divider"></div>
+      <div>
+        <div style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.2rem;letter-spacing:0.14em;color:#b8881e;line-height:1.1;">Chaos</div>
+        <div style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.2rem;letter-spacing:0.14em;color:#e4ddd0;line-height:1.1;">With Clarity</div>
+        <div class="url">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C: chaos italic, with clarity regular -->
+  <div class="tile">
+    <span class="tile-tag">C — chaos italic, clarity upright</span>
+    <div class="lockup">
+      <canvas id="c3" width="54" height="54"></canvas>
+      <div class="divider"></div>
+      <div>
+        <div style="display:flex;align-items:baseline;gap:6px;">
+          <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-variant:small-caps;font-size:1.3rem;letter-spacing:0.08em;color:#b8881e;">chaos</span>
+          <span style="font-family:'Fraunces',serif;font-weight:200;font-variant:small-caps;font-size:0.75rem;letter-spacing:0.2em;color:#5e5448;">with</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-variant:small-caps;font-size:1.3rem;letter-spacing:0.08em;color:#e4ddd0;">clarity</span>
+        </div>
+        <div class="url">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- D: chaos large, with small, clarity large — all on one line -->
+  <div class="tile">
+    <span class="tile-tag">D — with as connector</span>
+    <div class="lockup">
+      <canvas id="c4" width="54" height="54"></canvas>
+      <div class="divider"></div>
+      <div>
+        <div style="display:flex;align-items:baseline;gap:4px;line-height:1;">
+          <span style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.15rem;letter-spacing:0.1em;color:#e4ddd0;">Chaos</span>
+          <span style="font-family:'Fraunces',serif;font-weight:200;font-style:italic;font-size:0.7rem;letter-spacing:0.15em;color:#5e5448;padding:0 2px;">with</span>
+          <span style="font-family:'Fraunces',serif;font-weight:300;font-variant:small-caps;font-size:1.15rem;letter-spacing:0.1em;color:#e4ddd0;">Clarity</span>
+        </div>
+        <div class="url">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E: all caps spaced, classic -->
+  <div class="tile">
+    <span class="tile-tag">E — wide spaced caps</span>
+    <div class="lockup">
+      <canvas id="c5" width="54" height="54"></canvas>
+      <div class="divider"></div>
+      <div>
+        <div style="font-family:'Fraunces',serif;font-weight:200;font-size:0.72rem;letter-spacing:0.45em;text-transform:uppercase;color:#e4ddd0;line-height:1.6;">
+          Chaos<br/>With Clarity
+        </div>
+        <div class="url">chaoswithclarity.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- F: C·W·C initials + full name below -->
+  <div class="tile">
+    <span class="tile-tag">F — initials + full name</span>
+    <div class="lockup">
+      <canvas id="c6" width="54" height="54"></canvas>
+      <div class="divider"></div>
+      <div>
+        <div style="font-family:'Fraunces',serif;font-weight:200;font-variant:small-caps;font-size:1.6rem;letter-spacing:0.2em;color:#b8881e;line-height:1;">c·w·c</div>
+        <div style="font-size:0.44rem;letter-spacing:0.28em;text-transform:uppercase;color:#5e5448;margin-top:5px;">chaos with clarity</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function drawV2(canvas, opts = {}) {
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H/2;
+  const { bg=null, gold='#b8881e', goldBright='#d4a432', maxR=W*0.44, turns=2.75 } = opts;
+
+  ctx.clearRect(0,0,W,H);
+  if (bg) { ctx.fillStyle=bg; ctx.fillRect(0,0,W,H); }
+
+  const steps=900, totalA=turns*2*Math.PI, SPLIT=0.60;
+
+  for (let i=0; i<steps*SPLIT; i++) {
+    const t=i/steps, t2=(i+1)/steps;
+    if (i%7<3) continue;
+    const a1=t*totalA, a2=t2*totalA;
+    const r1=maxR*Math.pow(1-t,0.80), r2=maxR*Math.pow(1-t2,0.80);
+    ctx.beginPath();
+    ctx.moveTo(cx+r1*Math.cos(a1), cy+r1*Math.sin(a1));
+    ctx.lineTo(cx+r2*Math.cos(a2), cy+r2*Math.sin(a2));
+    ctx.strokeStyle=gold;
+    ctx.globalAlpha=0.08+(t/SPLIT)*0.52;
+    ctx.lineWidth=Math.max(0.6,W*0.010);
+    ctx.lineCap='round';
+    ctx.stroke();
+  }
+  ctx.globalAlpha=1;
+  ctx.beginPath();
+  let first=true;
+  for (let i=Math.floor(steps*(SPLIT-0.04)); i<=steps; i++) {
+    const t=i/steps, a=t*totalA, r=maxR*Math.pow(1-t,0.80);
+    const x=cx+r*Math.cos(a), y=cy+r*Math.sin(a);
+    if (first){ctx.moveTo(x,y);first=false;}else ctx.lineTo(x,y);
+  }
+  ctx.strokeStyle=gold; ctx.lineWidth=Math.max(1,W*0.014);
+  ctx.lineJoin='round'; ctx.lineCap='round'; ctx.stroke();
+
+  const dr=Math.max(2,W*0.05);
+  ctx.beginPath(); ctx.arc(cx,cy,dr,0,Math.PI*2); ctx.fillStyle=gold; ctx.fill();
+  ctx.beginPath(); ctx.arc(cx,cy,dr*0.45,0,Math.PI*2); ctx.fillStyle=goldBright; ctx.fill();
+}
+
+window.addEventListener('load', () => {
+  ['c1','c2','c3','c4','c5','c6'].forEach(id => drawV2(document.getElementById(id)));
+});
+</script>
+</body>
+</html>

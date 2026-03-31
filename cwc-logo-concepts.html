@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CWC Logo Concepts</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #06050a;
+    color: #e4ddd0;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    padding: 60px 40px;
+  }
+
+  .page-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #b8881e;
+    margin-bottom: 8px;
+  }
+
+  .page-sub {
+    font-size: 0.85rem;
+    color: #98907c;
+    margin-bottom: 60px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .concept {
+    background: #0e0c14;
+    border: 1px solid #242232;
+    border-radius: 4px;
+    padding: 40px 32px;
+  }
+
+  .concept-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #5e5448;
+    margin-bottom: 32px;
+  }
+
+  .logo-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  /* Dark bg version */
+  .logo-dark {
+    background: #06050a;
+    padding: 40px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  /* Light bg version */
+  .logo-light {
+    background: #f5ece0;
+    padding: 40px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .variant-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #5e5448;
+    margin-top: 8px;
+    align-self: flex-start;
+  }
+
+  .concept-desc {
+    font-size: 0.82rem;
+    color: #98907c;
+    line-height: 1.7;
+    border-top: 1px solid #1e1c2a;
+    padding-top: 20px;
+  }
+
+  .concept-desc strong {
+    color: #b8881e;
+    font-weight: 500;
+  }
+
+  /* ── WORDMARK ── */
+  .wordmark {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+  .wordmark .chaos { color: #b8881e; }
+  .wordmark .with  { font-size: 0.7em; color: #5e5448; font-style: italic; display: block; text-align: center; margin: 2px 0; letter-spacing: 0.12em; }
+  .wordmark .clarity { color: #e4ddd0; }
+  .wordmark-light .chaos  { color: #b8881e; }
+  .wordmark-light .clarity { color: #0e0c14; }
+  .wordmark-light .with   { color: #9c9080; }
+
+  /* ── CONCEPT 1: THE STILL POINT ── */
+  /* Tangled lines converging to a bright center dot */
+
+  /* ── CONCEPT 3: WORDMARK + RULE ── */
+  .wm3 {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .wm3-text {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300;
+  }
+  .wm3-text .line1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
+    display: block;
+  }
+  .wm3-text .line2 {
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 2px;
+  }
+  .wm3-divider {
+    width: 1px;
+    height: 36px;
+    background: #b8881e;
+    opacity: 0.5;
+  }
+  .wm3-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<p class="page-title">Chaos With Clarity — Logo Concepts</p>
+<p class="page-sub">Three directions. Each embodies the philosophy differently.</p>
+
+<div class="grid">
+
+  <!-- ══ CONCEPT 1: THE STILL POINT ══ -->
+  <div class="concept">
+    <p class="concept-label">Concept 01 — The Still Point</p>
+
+    <div class="logo-display">
+
+      <p class="variant-label">Dark background</p>
+      <div class="logo-dark">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Chaotic outer strokes — the forest, the noise -->
+          <line x1="40" y1="40" x2="8"  y2="6"  stroke="#b8881e" stroke-width="0.6" opacity="0.25"/>
+          <line x1="40" y1="40" x2="72" y2="10" stroke="#b8881e" stroke-width="0.6" opacity="0.2"/>
+          <line x1="40" y1="40" x2="74" y2="44" stroke="#b8881e" stroke-width="0.6" opacity="0.3"/>
+          <line x1="40" y1="40" x2="68" y2="72" stroke="#b8881e" stroke-width="0.6" opacity="0.2"/>
+          <line x1="40" y1="40" x2="40" y2="76" stroke="#b8881e" stroke-width="0.6" opacity="0.25"/>
+          <line x1="40" y1="40" x2="12" y2="70" stroke="#b8881e" stroke-width="0.6" opacity="0.2"/>
+          <line x1="40" y1="40" x2="6"  y2="42" stroke="#b8881e" stroke-width="0.6" opacity="0.3"/>
+          <line x1="40" y1="40" x2="14" y2="18" stroke="#b8881e" stroke-width="0.6" opacity="0.2"/>
+          <!-- Slightly wavy paths for organic feel -->
+          <path d="M40 40 Q20 15 5 22"  stroke="#b8881e" stroke-width="0.5" fill="none" opacity="0.18"/>
+          <path d="M40 40 Q58 20 70 28"  stroke="#b8881e" stroke-width="0.5" fill="none" opacity="0.18"/>
+          <path d="M40 40 Q62 55 60 74"  stroke="#b8881e" stroke-width="0.5" fill="none" opacity="0.18"/>
+          <path d="M40 40 Q18 56 20 74"  stroke="#b8881e" stroke-width="0.5" fill="none" opacity="0.18"/>
+          <!-- Mid ring — gathering -->
+          <circle cx="40" cy="40" r="16" stroke="#b8881e" stroke-width="0.5" opacity="0.2" stroke-dasharray="2 3"/>
+          <!-- Inner ring — clarity forming -->
+          <circle cx="40" cy="40" r="8"  stroke="#b8881e" stroke-width="0.8" opacity="0.5"/>
+          <!-- The still point — the observer -->
+          <circle cx="40" cy="40" r="3.5" fill="#b8881e"/>
+          <circle cx="40" cy="40" r="2"   fill="#d4a432"/>
+        </svg>
+        <!-- Wordmark -->
+        <div style="text-align:center;">
+          <div style="font-family:'Fraunces',serif; font-weight:300; font-size:1.1rem; letter-spacing:0.18em; color:#e4ddd0; text-transform:uppercase;">Chaos With Clarity</div>
+          <div style="font-size:0.5rem; letter-spacing:0.35em; color:#5e5448; margin-top:5px; text-transform:uppercase;">chaoswithclarity.com</div>
+        </div>
+      </div>
+
+      <p class="variant-label">Light background</p>
+      <div class="logo-light">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="40" y1="40" x2="8"  y2="6"  stroke="#7a5c14" stroke-width="0.6" opacity="0.25"/>
+          <line x1="40" y1="40" x2="72" y2="10" stroke="#7a5c14" stroke-width="0.6" opacity="0.2"/>
+          <line x1="40" y1="40" x2="74" y2="44" stroke="#7a5c14" stroke-width="0.6" opacity="0.3"/>
+          <line x1="40" y1="40" x2="68" y2="72" stroke="#7a5c14" stroke-width="0.6" opacity="0.2"/>
+          <line x1="40" y1="40" x2="40" y2="76" stroke="#7a5c14" stroke-width="0.6" opacity="0.25"/>
+          <line x1="40" y1="40" x2="12" y2="70" stroke="#7a5c14" stroke-width="0.6" opacity="0.2"/>
+          <line x1="40" y1="40" x2="6"  y2="42" stroke="#7a5c14" stroke-width="0.6" opacity="0.3"/>
+          <line x1="40" y1="40" x2="14" y2="18" stroke="#7a5c14" stroke-width="0.6" opacity="0.2"/>
+          <path d="M40 40 Q20 15 5 22"  stroke="#7a5c14" stroke-width="0.5" fill="none" opacity="0.18"/>
+          <path d="M40 40 Q58 20 70 28"  stroke="#7a5c14" stroke-width="0.5" fill="none" opacity="0.18"/>
+          <path d="M40 40 Q62 55 60 74"  stroke="#7a5c14" stroke-width="0.5" fill="none" opacity="0.18"/>
+          <path d="M40 40 Q18 56 20 74"  stroke="#7a5c14" stroke-width="0.5" fill="none" opacity="0.18"/>
+          <circle cx="40" cy="40" r="16" stroke="#7a5c14" stroke-width="0.5" opacity="0.2" stroke-dasharray="2 3"/>
+          <circle cx="40" cy="40" r="8"  stroke="#7a5c14" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="40" cy="40" r="3.5" fill="#b8881e"/>
+          <circle cx="40" cy="40" r="2"   fill="#d4a432"/>
+        </svg>
+        <div style="text-align:center;">
+          <div style="font-family:'Fraunces',serif; font-weight:300; font-size:1.1rem; letter-spacing:0.18em; color:#0e0c14; text-transform:uppercase;">Chaos With Clarity</div>
+          <div style="font-size:0.5rem; letter-spacing:0.35em; color:#9c9080; margin-top:5px; text-transform:uppercase;">chaoswithclarity.com</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="concept-desc">
+      <strong>The philosophy:</strong> The scattered lines are the forest of consciousness — every thought, every noise, every path you've planted yourself. They all converge to a single still point. The gold dot at the centre is the observer. The clarity that was always there, waiting.
+    </p>
+  </div>
+
+  <!-- ══ CONCEPT 2: THE SPIRAL ══ -->
+  <div class="concept">
+    <p class="concept-label">Concept 02 — The Inward Spiral</p>
+
+    <div class="logo-display">
+
+      <p class="variant-label">Dark background</p>
+      <div class="logo-dark">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer spiral — chaotic, open -->
+          <path d="M 40 8
+                   A 32 32 0 1 1 9 46"
+                stroke="#b8881e" stroke-width="1.2" fill="none" opacity="0.25" stroke-linecap="round"/>
+          <!-- Mid spiral -->
+          <path d="M 40 16
+                   A 24 24 0 1 1 17 50"
+                stroke="#b8881e" stroke-width="1" fill="none" opacity="0.4" stroke-linecap="round"/>
+          <!-- Inner spiral -->
+          <path d="M 40 24
+                   A 16 16 0 1 1 25 53"
+                stroke="#b8881e" stroke-width="0.9" fill="none" opacity="0.6" stroke-linecap="round"/>
+          <!-- Tightest arc -->
+          <path d="M 40 31
+                   A 9 9 0 1 1 32 47"
+                stroke="#b8881e" stroke-width="1.2" fill="none" opacity="0.8" stroke-linecap="round"/>
+          <!-- Centre -->
+          <circle cx="40" cy="40" r="3" fill="#b8881e"/>
+          <circle cx="40" cy="40" r="1.5" fill="#d4a432"/>
+        </svg>
+        <div style="text-align:center;">
+          <div style="font-family:'Fraunces',serif; font-size:0.95rem; font-weight:300; letter-spacing:0.25em; color:#e4ddd0; text-transform:uppercase; font-style:italic;">chaos with clarity</div>
+        </div>
+      </div>
+
+      <p class="variant-label">Light background</p>
+      <div class="logo-light">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 40 8 A 32 32 0 1 1 9 46"
+                stroke="#b8881e" stroke-width="1.2" fill="none" opacity="0.25" stroke-linecap="round"/>
+          <path d="M 40 16 A 24 24 0 1 1 17 50"
+                stroke="#b8881e" stroke-width="1" fill="none" opacity="0.4" stroke-linecap="round"/>
+          <path d="M 40 24 A 16 16 0 1 1 25 53"
+                stroke="#b8881e" stroke-width="0.9" fill="none" opacity="0.6" stroke-linecap="round"/>
+          <path d="M 40 31 A 9 9 0 1 1 32 47"
+                stroke="#b8881e" stroke-width="1.2" fill="none" opacity="0.8" stroke-linecap="round"/>
+          <circle cx="40" cy="40" r="3" fill="#b8881e"/>
+          <circle cx="40" cy="40" r="1.5" fill="#7a5c14"/>
+        </svg>
+        <div style="text-align:center;">
+          <div style="font-family:'Fraunces',serif; font-size:0.95rem; font-weight:300; letter-spacing:0.25em; color:#0e0c14; text-transform:uppercase; font-style:italic;">chaos with clarity</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="concept-desc">
+      <strong>The philosophy:</strong> The journey home isn't linear. It spirals — you revisit the same territory, but from deeper inside yourself each time. The outer rings are wide and open (chaos, the external world). The spiral tightens into a single golden point. The self.
+    </p>
+  </div>
+
+  <!-- ══ CONCEPT 3: THE WORDMARK ══ -->
+  <div class="concept">
+    <p class="concept-label">Concept 03 — The Wordmark</p>
+
+    <div class="logo-display">
+
+      <p class="variant-label">Dark background — with mark</p>
+      <div class="logo-dark">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <!-- Small still-point mark -->
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <line x1="16" y1="16" x2="2"  y2="2"  stroke="#b8881e" stroke-width="0.7" opacity="0.3"/>
+            <line x1="16" y1="16" x2="30" y2="4"  stroke="#b8881e" stroke-width="0.7" opacity="0.25"/>
+            <line x1="16" y1="16" x2="30" y2="18" stroke="#b8881e" stroke-width="0.7" opacity="0.3"/>
+            <line x1="16" y1="16" x2="26" y2="28" stroke="#b8881e" stroke-width="0.7" opacity="0.25"/>
+            <line x1="16" y1="16" x2="16" y2="30" stroke="#b8881e" stroke-width="0.7" opacity="0.3"/>
+            <line x1="16" y1="16" x2="4"  y2="28" stroke="#b8881e" stroke-width="0.7" opacity="0.25"/>
+            <line x1="16" y1="16" x2="2"  y2="18" stroke="#b8881e" stroke-width="0.7" opacity="0.3"/>
+            <line x1="16" y1="16" x2="6"  y2="6"  stroke="#b8881e" stroke-width="0.7" opacity="0.2"/>
+            <circle cx="16" cy="16" r="6" stroke="#b8881e" stroke-width="0.6" opacity="0.35"/>
+            <circle cx="16" cy="16" r="2" fill="#b8881e"/>
+            <circle cx="16" cy="16" r="1" fill="#d4a432"/>
+          </svg>
+          <div style="width:1px; height:32px; background:#b8881e; opacity:0.3;"></div>
+          <div>
+            <div style="font-family:'Fraunces',serif; font-weight:300; font-size:1.3rem; letter-spacing:0.06em; color:#e4ddd0; line-height:1.1;">Chaos<br/>With Clarity</div>
+          </div>
+        </div>
+        <div style="font-size:0.5rem; letter-spacing:0.4em; color:#5e5448; text-transform:uppercase; margin-top:4px;">chaoswithclarity.com</div>
+      </div>
+
+      <p class="variant-label">Dark background — wordmark only</p>
+      <div class="logo-dark">
+        <div style="text-align:center;">
+          <div style="font-family:'Fraunces',serif; font-weight:300; font-size:2.2rem; letter-spacing:0.02em; color:#b8881e; line-height:1;">C·W·C</div>
+          <div style="font-size:0.52rem; letter-spacing:0.4em; color:#98907c; text-transform:uppercase; margin-top:8px;">Chaos With Clarity</div>
+          <div style="width:40px; height:1px; background:#b8881e; opacity:0.4; margin:8px auto 0;"></div>
+        </div>
+      </div>
+
+      <p class="variant-label">Light background</p>
+      <div class="logo-light">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <line x1="16" y1="16" x2="2"  y2="2"  stroke="#7a5c14" stroke-width="0.7" opacity="0.3"/>
+            <line x1="16" y1="16" x2="30" y2="4"  stroke="#7a5c14" stroke-width="0.7" opacity="0.25"/>
+            <line x1="16" y1="16" x2="30" y2="18" stroke="#7a5c14" stroke-width="0.7" opacity="0.3"/>
+            <line x1="16" y1="16" x2="26" y2="28" stroke="#7a5c14" stroke-width="0.7" opacity="0.25"/>
+            <line x1="16" y1="16" x2="16" y2="30" stroke="#7a5c14" stroke-width="0.7" opacity="0.3"/>
+            <line x1="16" y1="16" x2="4"  y2="28" stroke="#7a5c14" stroke-width="0.7" opacity="0.25"/>
+            <line x1="16" y1="16" x2="2"  y2="18" stroke="#7a5c14" stroke-width="0.7" opacity="0.3"/>
+            <line x1="16" y1="16" x2="6"  y2="6"  stroke="#7a5c14" stroke-width="0.7" opacity="0.2"/>
+            <circle cx="16" cy="16" r="6" stroke="#7a5c14" stroke-width="0.6" opacity="0.35"/>
+            <circle cx="16" cy="16" r="2" fill="#b8881e"/>
+            <circle cx="16" cy="16" r="1" fill="#7a5c14"/>
+          </svg>
+          <div style="width:1px; height:32px; background:#b8881e; opacity:0.4;"></div>
+          <div>
+            <div style="font-family:'Fraunces',serif; font-weight:300; font-size:1.3rem; letter-spacing:0.06em; color:#0e0c14; line-height:1.1;">Chaos<br/>With Clarity</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="concept-desc">
+      <strong>The philosophy:</strong> The mark alone, scaled small — for favicon, social profile picture, embossing. The name carries the weight. "Chaos With Clarity" stacked is a visual argument: the words sit on top of each other like layers of the self being uncovered.
+    </p>
+  </div>
+
+</div>
+
+<!-- ══ USAGE NOTES ══ -->
+<div style="border-top:1px solid #1e1c2a; padding-top:40px; max-width:800px;">
+  <p style="font-size:0.6rem; letter-spacing:0.25em; text-transform:uppercase; color:#b8881e; margin-bottom:16px;">Notes on use</p>
+  <p style="font-size:0.85rem; color:#98907c; line-height:1.8;">
+    <strong style="color:#e4ddd0;">Concept 01</strong> (The Still Point) is the strongest for the CWC philosophy — chaos converging to clarity is the entire thesis of the work. Works beautifully as a favicon, profile photo, and site header mark.<br><br>
+    <strong style="color:#e4ddd0;">Concept 02</strong> (The Spiral) is more meditative — better for book covers, retreat materials, or anything about the inner journey specifically.<br><br>
+    <strong style="color:#e4ddd0;">Concept 03</strong> is the most versatile — the mark + wordmark combination works across all contexts. C·W·C as an embossed stamp has real presence.
+  </p>
+</div>
+
+</body>
+</html>

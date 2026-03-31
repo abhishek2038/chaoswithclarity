@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { sections, essays } from '../data/poems';
 ---
 <Layout
   title="Writings | Chaos With Clarity"
@@ -23,566 +24,90 @@ import Layout from '../layouts/Layout.astro';
 
   <div class="writings-wrap">
 
-    <!-- ══ FREEDOM & OBSERVER ══════════════════════════════════ -->
-    <section class="writings-section">
-      <div class="section-head">
-        <p class="section-num" aria-hidden="true">01</p>
-        <div class="section-label-row">
-          <span class="section-dot" style="background:var(--olive-bright);"></span>
-          <h2 class="section-label-text" style="color:var(--olive-bright);">Freedom &amp; Observer</h2>
-          <div class="section-line"></div>
+    {sections.map((section) => (
+      <section class="writings-section" id={section.id}>
+
+        <div class="section-head">
+          <p class="section-num" aria-hidden="true">{section.num}</p>
+          <div class="section-label-row">
+            <span class="section-dot" style={`background:${section.accent};`}></span>
+            <h2 class="section-label-text" style={`color:${section.accent};`}>{section.label}</h2>
+            <div class="section-line"></div>
+          </div>
+          {section.subtitle && <p class="section-subtitle">{section.subtitle}</p>}
         </div>
-      </div>
 
-      <div class="poem-grid-3">
-        <article class="poem-card anim-card" style="--card-accent:var(--olive-bright);"
-                 data-poem-card
-                 data-title="Unstruck Silence (Anhat Nad)"
-                 data-date="March 2026"
-                 data-poem="It starts but never ends,
-It is just life, nothing to amend.
-
-Silence is louder than noise,
-Once you hear it, it abides.
-
-Anhat Nad, it is said,
-The uncreated sound that spreads.
-Not from anywhere near or far,
-Always present, revealing scars.
-
-Contradiction is life's way of being,
-Fighting it is simply fleeing.
-
-Give your heart a pause,
-Breathe in and listen to the cosmos.
-It enters you and penetrates deep,
-Making every restless cell sleep.
-
-I know it sounds absurd,
-That is why words feel blurred.
-
-It starts but never ends,
-It is just life, nothing to amend.
-
-Empty the weight you carry in your heart,
-Just be, and let silence be the start.
-
-A start not of something new,
-But something in you you always knew.
-
-You are so small, yet vast the roles you play,
-Trying to be more as life slips away.
-
-To be ahead is just a muse,
-Your breaths are counted, if you choose to view.
-
-See what you truly hold,
-Let go of wanting, and be bold.
-
-Let silence become your home,
-Be less, not more.
-
-Be less, not more."
-                 data-reflection="">
-          <p class="card-date">March 2026</p>
-          <h3 class="card-title">Unstruck Silence<br/><em class="card-subtitle">(Anhat Nad)</em></h3>
-          <div class="card-preview" style="--prev-color:var(--olive-bright);">
-            <p>It starts but never ends,</p>
-            <p>It is just life, nothing to amend.</p>
-            <p>Silence is louder than noise,</p>
-            <p>Once you hear it, it abides.</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--olive-bright);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-
-        <article class="poem-card anim-card" style="--card-accent:var(--olive-bright);"
-                 data-poem-card
-                 data-title="Let the Body Sync"
-                 data-date="2025"
-                 data-poem="I take a few breaths,
-My heart ponders and wants rest,
-Not from the chase or grind,
-But to be still and just be kind,
-Kind to my own self,
-To feel the sync and how body and mind connect,
-The integration begins within,
-The universe then aligns and spins,
-Spewing out all I want,
-Stripping away the inessential thoughts,
-Just be and the moment in time,
-No rush to be ahead in line,
-Walk with my own pace,
-Knowing I always have grace,
-I move the earth and stars,
-When I am me and the cosmos just a macrocosm of my own heart."
-                 data-reflection="This poem came from a morning when I was exhausted — not from doing too much, but from trying too hard to become something. The body knows things the mind refuses to accept. When I finally stopped striving and just breathed, everything settled.">
-          <p class="card-date">2025</p>
-          <h3 class="card-title">Let the Body Sync</h3>
-          <div class="card-preview" style="--prev-color:var(--olive-bright);">
-            <p>I take a few breaths,</p>
-            <p>My heart ponders and wants rest,</p>
-            <p>Not from the chase or grind,</p>
-            <p>But to be still and just be kind.</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--olive-bright);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-
-        <article class="poem-card anim-card" style="--card-accent:var(--olive-bright);"
-                 data-poem-card
-                 data-title="Let Me Be Conscious"
-                 data-date="2025"
-                 data-poem="Let me breathe today, let me be conscious,
-Let me be free today, let me be outrageous,
-Let me feel the pain I keep hiding,
-Let me kiss a plant today I keep avoiding,
-Let me be me without any validations,
-Let me express myself without any questions,
-If I could live like this for a moment,
-I have lived it all, there remains no obligation,
-If I die, I don't wanna be remembered,
-If I live today, I wanna be felt with your full conscious,
-If I could bring a small change, I have done my part,
-If I make someone smile today, I have been kind to my own heart,
-In all those dreams and aspirations, there was a selfishness I couldn't see,
-My well wishers instead telling me let it be,
-Run after all the things you will regret,
-Keep skipping life like everyone and die with a heart that's sad,
-Hope for a new life, begin it all anew,
-Forget the past and run to the future shining like hue,
-My heart said, it will be the same in the future as it was in the past,
-If you can't feel the fresh air today and the dew on the morning grass,
-Each breath felt is what you actually lived,
-Being present to every second this life brings,
-Being afraid you will lose what you have,
-If you can appreciate each second without dread,
-I am what I am, I will always be,
-I don't want to imagine what I could be,
-Let me accept the now and myself as it is,
-Maybe I realize how perfect it all is,
-Nothing could have been better, it's my journey,
-A journey not to become,
-A journey to just be and shed what the world unto me has done,
-Let me breathe today, let me be conscious,
-Let me be free today, let me be outrageous!"
-                 data-reflection="This is the poem I come back to when I start performing life instead of living it. There's a difference between having a life and feeling it. This is about choosing to feel it — even the uncomfortable parts, especially the uncomfortable parts.">
-          <p class="card-date">2025</p>
-          <h3 class="card-title">Let Me Be Conscious</h3>
-          <div class="card-preview" style="--prev-color:var(--olive-bright);">
-            <p>Let me breathe today, let me be conscious,</p>
-            <p>Let me be free today, let me be outrageous,</p>
-            <p>Let me feel the pain I keep hiding.</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--olive-bright);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-      </div>
-    </section>
-
-    <!-- ══ INNER WORK ═══════════════════════════════════════════ -->
-    <section class="writings-section">
-      <div class="section-head">
-        <p class="section-num" aria-hidden="true">02</p>
-        <div class="section-label-row">
-          <span class="section-dot" style="background:var(--olive-accent);"></span>
-          <h2 class="section-label-text" style="color:var(--olive-accent);">Inner Work</h2>
-          <div class="section-line"></div>
+        <div class="poem-grid-3">
+          {section.poems.map((poem) => (
+            <article
+              class={`poem-card anim-card${poem.series ? ' trilogy-card' : ''}`}
+              style={`--card-accent:${section.accent};`}
+              data-poem-card
+              data-title={poem.subtitle ? `${poem.title} ${poem.subtitle}` : poem.title}
+              data-date={poem.date}
+              data-poem={poem.text}
+              data-reflection={poem.reflection ?? ''}
+            >
+              {poem.series && (
+                <p class="card-series">
+                  {poem.series}{poem.seriesPart ? ` · ${poem.seriesPart}` : ''}
+                </p>
+              )}
+              <p class="card-date">{poem.date}</p>
+              <h3 class="card-title">
+                {poem.title}
+                {poem.subtitle && (
+                  <><br/><em class="card-subtitle">{poem.subtitle}</em></>
+                )}
+              </h3>
+              <div class="card-preview" style={`--prev-color:${section.accent};`}>
+                {poem.preview.map((line) => <p>{line}</p>)}
+              </div>
+              <span class="card-cta" style={`--cta:${section.accent};`}>
+                Read full poem <i class="ph ph-arrow-right cta-arrow"></i>
+              </span>
+            </article>
+          ))}
         </div>
-      </div>
 
-      <div class="poem-grid-3">
-        <article class="poem-card anim-card" style="--card-accent:var(--olive-accent);"
-                 data-poem-card
-                 data-title="The Mirror"
-                 data-date="2025"
-                 data-poem="See yourself in the mirror and identify,
-Are those really you and your beautiful eyes?
-Beautiful they seem from outside,
-But it's your perspective, not the sight.
-You have changed and grown a lot,
-The body tells you, but maybe your heart not.
-I see the kindness of time,
-It evolves us without a whine.
-When I look in the mirror, I want to see
-The way I see myself and not from the world I flee.
-I will be me, just give me time.
-Oh fool, you never know what's your crime.
-This moment is all you have,
-You are changing every passing breath.
-Realise the beauty of it now,
-Otherwise just look in the mirror and bow.
-Respect yourself but don't be proud,
-Throw away all your doubts.
-What is in you, you see outside,
-Mirror just a reflection and not a sight!"
-                 data-reflection="">
-          <p class="card-date">2025</p>
-          <h3 class="card-title">The Mirror</h3>
-          <div class="card-preview" style="--prev-color:var(--olive-accent);">
-            <p>See yourself in the mirror and identify,</p>
-            <p>Are those really you and your beautiful eyes?</p>
-            <p>What is in you, you see outside.</p>
+      </section>
+    ))}
+
+    <!-- ══ ESSAYS ══════════════════════════════════════════════ -->
+    {essays.length > 0 && (
+      <section class="writings-section" id="essays">
+
+        <div class="section-head">
+          <p class="section-num" aria-hidden="true">VI</p>
+          <div class="section-label-row">
+            <span class="section-dot" style="background:var(--text-faint);"></span>
+            <h2 class="section-label-text" style="color:var(--text-muted);">Essays</h2>
+            <div class="section-line"></div>
           </div>
-          <span class="card-cta" style="--cta:var(--olive-accent);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-
-        <article class="poem-card anim-card" style="--card-accent:var(--olive-accent);"
-                 data-poem-card
-                 data-title="Beyond Words"
-                 data-date="2025"
-                 data-poem="I see language is just words,
-Assigned meaning to not be absurd.
-Sharing ideas and experiences, it's all,
-But as we humans evolve,
-Lies and deceit those words conceal.
-Thinking overrides what we feel.
-The energy, the heart, not real things,
-But our motives and desires, it seems.
-Dividing and spreading a deep scar,
-I am this and they are different from what we are.
-Beneath it all, the hearts beat the same,
-Feel the energy, not what words claim.
-You will find the same ignite,
-Same humans, just different sight.
-Expand yourself beyond the words,
-Let us be one beyond these mere words.
-
-Oh! So I wish I could speak it aloud,
-But then again they are words, no doubt.
-Just stillness and a kind smile,
-A deep caress for humans and all life.
-It could work wonders and be heard,
-More genuine, not absurd.
-But for this, it has to start,
-Let it be from my own heart."
-                 data-reflection="">
-          <p class="card-date">2025</p>
-          <h3 class="card-title">Beyond Words</h3>
-          <div class="card-preview" style="--prev-color:var(--olive-accent);">
-            <p>I see language is just words,</p>
-            <p>Thinking overrides what we feel.</p>
-            <p>Expand yourself beyond the words.</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--olive-accent);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-
-        <article class="poem-card anim-card" style="--card-accent:var(--olive-accent);"
-                 data-poem-card
-                 data-title="The Right Eyes"
-                 data-date="2025"
-                 data-poem="Have seen a lot of eyes,
-But nothing so mesmerising where depth abides.
-Reflection of pain and suffering in life,
-But kindness and the sparks it ignites.
-Then a thought passes by,
-Life is beautiful, just need the right eyes!"
-                 data-reflection="">
-          <p class="card-date">2025</p>
-          <h3 class="card-title">The Right Eyes</h3>
-          <div class="card-preview" style="--prev-color:var(--olive-accent);">
-            <p>Have seen a lot of eyes,</p>
-            <p>But nothing so mesmerising where depth abides.</p>
-            <p>Life is beautiful, just need the right eyes!</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--olive-accent);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-
-        <!-- ── FOREST OF CONSCIOUSNESS SERIES ── Part I, II, III, IV ─ -->
-        <article class="poem-card anim-card trilogy-card" style="--card-accent:var(--olive-accent);"
-                 data-poem-card
-                 data-title="The Seed"
-                 data-date="2026"
-                 data-poem="I am just getting started,
-not to become successful or known,
-just peeling layer on layer,
-to return back home.
-The conditioning of time,
-I didn't choose,
-the crimes society committed against me in its ruse,
-they called it culture, schooling, and what not,
-they killed the real me without a thought.
-A flower that could have bloomed,
-just with love and care,
-but the so-called benefactors
-looked with disgrace and snare.
-The fruit of life could have been sweet,
-now I peel it layer by layer
-to find the seed.
-The seed to be planted,
-so it can grow,
-receive all the love,
-acceptance, no guilt, no shame —
-the kind I know.
-A tree where all life could feel joy,
-birds chirping their morning song,
-tired souls resting beneath,
-monkeys swinging all day long.
-So many more trees, grown from its seed,
-natural, spontaneous, alive,
-not of validation or greed.
-Plant such a garden,
-butterflies drifting by,
-just a look, just a feeling,
-to make you cry with joy."
-                 data-reflection="Part I of the Forest of Consciousness series. Before the forest, before the awakening — there is the seed. The peeling back of conditioning, the search for what was always true beneath it all. Continue with Part II: I Am That.">
-          <p class="card-series">Forest of Consciousness · Part I of IV</p>
-          <p class="card-date">2026</p>
-          <h3 class="card-title">The Seed</h3>
-          <div class="card-preview" style="--prev-color:var(--olive-accent);">
-            <p>I am just getting started,</p>
-            <p>not to become successful or known,</p>
-            <p>just peeling layer on layer, to return back home.</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--olive-accent);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-
-        <article class="poem-card anim-card trilogy-card" style="--card-accent:var(--olive-accent);"
-                 data-poem-card
-                 data-title="I Am That"
-                 data-date="2025"
-                 data-poem="Day begins, just a hearty smile to the sun,
-Rays of light and hope return,
-Each passing moment, second to none,
-Every second, I stay in the now as one,
-All doubts vanish, even the how,
-No misery and pain to bow,
-Thoughts still there like the clouds,
-Waiting for rain, relief it shouts,
-Why do I run this maze,
-Lost in my mind, or just a craze,
-Turning slowly, days go by,
-Doubts, misery all by the side to creep and cry,
-Then again I return to the now,
-Smiling at a dream the mind created somehow,
-Though I was wide awake,
-Felt like nightmares waiting to break,
-Breaking from inside, just like a cocoon,
-Waiting like a butterfly, to bloom soon,
-Lost in the stillness of the rays,
-They bestowed something the heart craves,
-If I could expand myself out,
-I am the consciousness, I am that,
-Just need to realize, and know that,
-Which created all this, abstract and vast,
-As the moon slowly burns,
-Inside the home I return!!"
-                 data-reflection="Part II of the Forest of Consciousness series. The seed has been found — now the poet moves through the mind's noise and returns, arriving at the realisation: I am the consciousness, I am that. Begin with Part I: The Seed. Continue with Part III: Forest of Consciousness.">
-          <p class="card-series">Forest of Consciousness · Part II of IV</p>
-          <p class="card-date">2025</p>
-          <h3 class="card-title">I Am That</h3>
-          <div class="card-preview" style="--prev-color:var(--olive-accent);">
-            <p>Every second, I stay in the now as one,</p>
-            <p>I am the consciousness, I am that,</p>
-            <p>Inside the home I return.</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--olive-accent);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-
-        <article class="poem-card anim-card trilogy-card" style="--card-accent:var(--olive-accent);"
-                 data-poem-card
-                 data-title="Forest of Consciousness"
-                 data-date="2025"
-                 data-poem="On a search, lost in the forest of consciousness,
-Thoughts falling like rain,
-Flooding the ground with pain,
-Which path is mine, I know,
-Green, or buried under snow?
-I can't find the start,
-Misery, I know my path,
-Or so I believe, to give this heart relief.
-The end is near but the start is far,
-It's like the moon and the stars,
-The sun doesn't burn me — my own thoughts inflame,
-No one to blame, yet I feel the world's the same,
-Trying to catch the rainbow,
-Though it doesn't exist, I know,
-Illusions all around, silence louder than sound,
-Just one ray of light, one peak in sight,
-From where I can leap, out of this sleep,
-Lost to be found, rooted in my own ground,
-Planted the trees myself, in this forest of consciousness."
-                 data-reflection="Part III of the Forest of Consciousness series. The poet is lost inside the mind's own forest — and realises, at the end, that she planted the trees herself. Begin with Part I: The Seed. End with Part IV: The Journey.">
-          <p class="card-series">Forest of Consciousness · Part III of IV</p>
-          <p class="card-date">2025</p>
-          <h3 class="card-title">Forest of<br/>Consciousness</h3>
-          <div class="card-preview" style="--prev-color:var(--olive-accent);">
-            <p>On a search, lost in the forest of consciousness,</p>
-            <p>Thoughts falling like rain,</p>
-            <p>Flooding the ground with pain.</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--olive-accent);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-
-        <article class="poem-card anim-card trilogy-card" style="--card-accent:var(--olive-accent);"
-                 data-poem-card
-                 data-title="The Journey"
-                 data-date="2025"
-                 data-poem="The journey is long, but there's a start,
-The journey to myself, to my own heart.
-
-It begins in time, though timeless,
-It's a journey of miles, without a step.
-
-The more I travelled, the farther I got,
-The more I thought, time didn't stop.
-
-It had to begin, not somewhere far,
-The day I stopped chasing, looked at my own scar.
-
-The journey of eternity, the journey of lives,
-The journey of a river, nowhere it resides.
-
-From a small waterfall to the sea,
-From sea to the clouds no one can see.
-
-A journey of a moment, yet eternities went by,
-The journey of joy, but filled with cries.
-
-Not the journey that society preaches,
-The journey to discover it's beyond your reaches.
-
-The journey of sun and earth in the sky,
-Looks like a chase with everything spinning by.
-
-The journey home, deep within myself,
-The journey of oneness, from heaven to hell.
-
-The journey of a million thoughts
-That occupy my mind,
-The journey of stillness
-With no thoughts to bind.
-
-The journey of love, the journey of bliss,
-Pause, breathe, in the moment so you don't miss."
-                 data-reflection="Part IV of the Forest of Consciousness series — the integration. After planting the seed, recognising the self, and wandering the forest, this poem asks: what is the journey itself? Not outward, not even inward — but the movement of a river that arrives nowhere and everywhere. Begin with Part I: The Seed.">
-          <p class="card-series">Forest of Consciousness · Part IV of IV</p>
-          <p class="card-date">2025</p>
-          <h3 class="card-title">The Journey</h3>
-          <div class="card-preview" style="--prev-color:var(--olive-accent);">
-            <p>The journey to myself, to my own heart.</p>
-            <p>The day I stopped chasing, looked at my own scar.</p>
-            <p>Pause, breathe, in the moment so you don't miss.</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--olive-accent);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-      </div>
-    </section>
-
-    <!-- ══ ESSAYS ════════════════════════════════════════════════ -->
-    <section class="writings-section">
-      <div class="section-head">
-        <p class="section-num" aria-hidden="true">03</p>
-        <div class="section-label-row">
-          <span class="section-dot" style="background:var(--text-faint);"></span>
-          <h2 class="section-label-text" style="color:var(--text-faint);">Essays</h2>
-          <div class="section-line"></div>
-          <span class="coming-badge">Coming soon</span>
+          <p class="section-subtitle">Longer reflections on consciousness, technology, and the examined life.</p>
         </div>
-      </div>
 
-      <div class="essay-grid">
-        <div class="essay-card anim-card">
-          <p class="essay-tag">Essay</p>
-          <h3 class="essay-title">Who Owns You?</h3>
-          <p class="essay-desc">How our gadgets, purchases, and rewards slowly start controlling our thoughts, time, and emotions, and how to take your attention back.</p>
-          <span class="essay-soon">Coming soon</span>
+        <div class="essay-grid">
+          {essays.map((essay) => (
+            essay.status === 'published' && essay.url ? (
+              <a href={essay.url} class="essay-card anim-card">
+                <p class="essay-tag">Essay</p>
+                <h3 class="essay-title">{essay.title}</h3>
+                <p class="essay-desc">{essay.description}</p>
+              </a>
+            ) : (
+              <div class="essay-card anim-card">
+                <p class="essay-tag">Essay</p>
+                <h3 class="essay-title">{essay.title}</h3>
+                <p class="essay-desc">{essay.description}</p>
+                <span class="essay-soon">Coming soon</span>
+              </div>
+            )
+          ))}
         </div>
-        <div class="essay-card anim-card">
-          <p class="essay-tag">Essay</p>
-          <h3 class="essay-title">We Were Never Meant for Intelligence</h3>
-          <p class="essay-desc">Why AI is not the real threat. The real danger is humans forgetting that our edge was experience, not efficiency.</p>
-          <span class="essay-soon">Coming soon</span>
-        </div>
-        <div class="essay-card anim-card">
-          <p class="essay-tag">Essay</p>
-          <h3 class="essay-title">Choosing Reality Over Symbols</h3>
-          <p class="essay-desc">How we mistake words, labels, and spoilers for the real thing, and what it means to actually live your own experience.</p>
-          <span class="essay-soon">Coming soon</span>
-        </div>
-        <div class="essay-card anim-card">
-          <p class="essay-tag">Essay</p>
-          <h3 class="essay-title">When Reading Rewires You</h3>
-          <p class="essay-desc">How books quietly change the way you see situations, people, and yourself long after you close the last page.</p>
-          <span class="essay-soon">Coming soon</span>
-        </div>
-      </div>
-    </section>
 
-    <!-- ══ PAIN & GRIEF ══════════════════════════════════════════ -->
-    <section class="writings-section">
-      <div class="section-head">
-        <p class="section-num" aria-hidden="true">04</p>
-        <div class="section-label-row">
-          <span class="section-dot" style="background:var(--text-muted);"></span>
-          <h2 class="section-label-text" style="color:var(--text-muted);">Pain &amp; Grief</h2>
-          <div class="section-line"></div>
-        </div>
-      </div>
-
-      <div class="poem-grid-2">
-        <article class="poem-card anim-card" style="--card-accent:var(--text-muted);"
-                 data-poem-card
-                 data-title="The Walking Contradiction"
-                 data-date="2025"
-                 data-poem="I am not nice, but I am kind,
-I see and observe, even when I am blind.
-Blind to the way people act, but not the intent,
-A softness in the heart, but the capacity to mend.
-
-I am an introvert inside, but an extrovert by nature,
-I am pure in my heart, but not in stature.
-I am everything, yet nowhere,
-I am everywhere, but nothing in despair.
-
-I am a walking contradiction,
-A fleeting shadow, a vivid depiction.
-I am chaos wrapped in serenity,
-A fragile soul, yet infinity.
-
-I am the silence after the storm,
-The shapeless mold, yet every form.
-I am a paradox that you can't define,
-A story unfinished, a journey divine.
-
-I am something, a puzzle undone,
-A spark in the dark, a rising sun."
-                 data-reflection="I wrote this when I was trying to explain myself to someone and realized — I can't. And that's okay. The contradiction is not a flaw. It's the whole point.">
-          <p class="card-date">2025</p>
-          <h3 class="card-title">The Walking Contradiction</h3>
-          <div class="card-preview" style="--prev-color:var(--text-muted);">
-            <p>I am not nice, but I am kind,</p>
-            <p>I see and observe, even when I am blind.</p>
-            <p>I am chaos wrapped in serenity.</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--text-muted);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-
-        <article class="poem-card anim-card" style="--card-accent:var(--text-muted);"
-                 data-poem-card
-                 data-title="Nothing to Gain"
-                 data-date="2025"
-                 data-poem="People desire love, I want hate,
-People want happiness, I want sadness to be my mate,
-All the pain is temporary, suffering is my choice,
-The reason I am here will not suffice,
-It's a journey not a game of destination,
-It's about the experiences you had without any expectations,
-As slowly slowly, everything is lost,
-I become nothing without any thought,
-I reach my true state and found peace in all the pain,
-Now I am everything where there is nothing to gain,
-I have reached where it all started,
-I am the oneness which in its eternity is all delighted!"
-                 data-reflection="This poem looks dark from the outside. But it's actually the most peaceful thing I've ever written. When you stop trying to get something out of life — not in defeat, but in acceptance — you become everything. That's the paradox of surrender.">
-          <p class="card-date">2025</p>
-          <h3 class="card-title">Nothing to Gain</h3>
-          <div class="card-preview" style="--prev-color:var(--text-muted);">
-            <p>People desire love, I want hate,</p>
-            <p>All the pain is temporary, suffering is my choice.</p>
-            <p>Now I am everything where there is nothing to gain.</p>
-          </div>
-          <span class="card-cta" style="--cta:var(--text-muted);">Read full poem <i class="ph ph-arrow-right cta-arrow"></i></span>
-        </article>
-      </div>
-    </section>
+      </section>
+    )}
 
     <!-- ══ JOIN CTA ═══════════════════════════════════════════════ -->
     <div class="writings-cta anim-card">
@@ -703,6 +228,14 @@ I am the oneness which in its eternity is all delighted!"
     flex: 1;
     height: 0;
   }
+  .section-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-faint);
+    margin-top: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    font-style: italic;
+  }
   .coming-badge {
     font-size: 0.63rem;
     letter-spacing: 0.18em;
@@ -812,6 +345,8 @@ I am the oneness which in its eternity is all delighted!"
       border-color 0.3s ease,
       box-shadow 0.35s ease,
       transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+    text-decoration: none;
+    color: inherit;
   }
   .essay-card:hover {
     border-left-color: var(--text-faint);

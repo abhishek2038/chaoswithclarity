@@ -218,6 +218,22 @@ export const sections: Section[] = [
           'But as we humans evolve,',
         ],
         text: `I see language is just words,\nAssigned meaning to not be absurd.\nSharing ideas and experiences, it's all,\nBut as we humans evolve,\nLies and deceit those words conceal.\nThinking overrides what we feel.\nThe energy, the heart, not real things,\nBut our motives and desires, it seems.\nDividing and spreading a deep scar,\nI am this and they are different from what we are.\nBeneath it all, the hearts beat the same,\nFeel the energy, not what words claim.\nYou will find the same ignite,\nSame humans, just different sight.\nExpand yourself beyond the words,\nLet us be one beyond these mere words.\n\nOh! So I wish I could speak it aloud,\nBut then again they are words, no doubt.\nJust stillness and a kind smile,\nA deep caress for humans and all life.\nIt could work wonders and be heard,\nMore genuine, not absurd.\nBut for this, it has to start,\nLet it be from my own heart.`,
+        series: 'The Mirror',
+        seriesPart: 'Part I',
+      },
+      {
+        id: 'the-mirror',
+        title: 'The Mirror',
+        date: 'February 2026',
+        preview: [
+          'See yourself in the mirror and identify,',
+          'Are those really you and your beautiful eyes?',
+          'Beautiful they seem from outside,',
+          'But it\'s your perspective, not the sight.',
+        ],
+        text: `See yourself in the mirror and identify,\nAre those really you and your beautiful eyes?\nBeautiful they seem from outside,\nBut it's your perspective, not the sight.\n\nYou have changed and grown a lot,\nThe body tells you, but maybe your heart not.\nI see the kindness of time,\nIt evolves us without a whine.\n\nWhen I look in the mirror, I want to see\nThe way I see myself — and not from the world I flee.\nI will be me, just give me time.\nOh fool, you never know what's your crime.\n\nThis moment is all you have,\nYou are changing every passing breath.\nRealize the beauty of it now,\nOtherwise just look in the mirror and bow.\n\nRespect yourself but don't be proud,\nThrow away all your doubts.\nWhat is in you, you see outside,\nMirror just a reflection and not a sight!`,
+        series: 'The Mirror',
+        seriesPart: 'Part II',
       },
       {
         id: 'the-right-eyes',
@@ -230,6 +246,8 @@ export const sections: Section[] = [
           'But kindness and the sparks it ignites.',
         ],
         text: `Have seen a lot of eyes,\nBut nothing so mesmerising where depth abides.\nReflection of pain and suffering in life,\nBut kindness and the sparks it ignites.\nThen a thought passes by,\nLife is beautiful, just need the right eyes!`,
+        series: 'The Mirror',
+        seriesPart: 'Part III',
       },
       {
         id: 'the-seed',
@@ -494,18 +512,6 @@ export const sections: Section[] = [
           'I am here temporarily — what will suffice?',
         ],
         text: `Do I have a purpose, or just being born,\nTo refuse and negate what I own?\nOwning nothing only seems right,\nI am here temporarily — what will suffice?\n\nI come and go from this world,\nNo choice, or maybe not known, as I return to the dust,\nI have come far but still feel at the start,\nIt's all beating in the same heart.\n\nLet it be what it is for now,\nErase myself slowly — there was no self to bow,\nIlliterate in ego and its game,\nEven realizing it as thought feels the same,\n\nWater moving slowly from earth to sky,\nRain giving it back with no what or why,\nIt seems purpose is just another illusion in time,\nWith all this one energy — different forms to amaze the eye.`,
-      },
-      {
-        id: 'the-mirror',
-        title: 'The Mirror',
-        date: 'February 2026',
-        preview: [
-          'See yourself in the mirror and identify,',
-          'Are those really you and your beautiful eyes?',
-          'Beautiful they seem from outside,',
-          'But it\'s your perspective, not the sight.',
-        ],
-        text: `See yourself in the mirror and identify,\nAre those really you and your beautiful eyes?\nBeautiful they seem from outside,\nBut it's your perspective, not the sight.\n\nYou have changed and grown a lot,\nThe body tells you, but maybe your heart not.\nI see the kindness of time,\nIt evolves us without a whine.\n\nWhen I look in the mirror, I want to see\nThe way I see myself — and not from the world I flee.\nI will be me, just give me time.\nOh fool, you never know what's your crime.\n\nThis moment is all you have,\nYou are changing every passing breath.\nRealize the beauty of it now,\nOtherwise just look in the mirror and bow.\n\nRespect yourself but don't be proud,\nThrow away all your doubts.\nWhat is in you, you see outside,\nMirror just a reflection and not a sight!`,
       },
       {
         id: 'the-search',

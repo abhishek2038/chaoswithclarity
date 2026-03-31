@@ -220,6 +220,7 @@ export const sections: Section[] = [
         text: `I see language is just words,\nAssigned meaning to not be absurd.\nSharing ideas and experiences, it's all,\nBut as we humans evolve,\nLies and deceit those words conceal.\nThinking overrides what we feel.\nThe energy, the heart, not real things,\nBut our motives and desires, it seems.\nDividing and spreading a deep scar,\nI am this and they are different from what we are.\nBeneath it all, the hearts beat the same,\nFeel the energy, not what words claim.\nYou will find the same ignite,\nSame humans, just different sight.\nExpand yourself beyond the words,\nLet us be one beyond these mere words.\n\nOh! So I wish I could speak it aloud,\nBut then again they are words, no doubt.\nJust stillness and a kind smile,\nA deep caress for humans and all life.\nIt could work wonders and be heard,\nMore genuine, not absurd.\nBut for this, it has to start,\nLet it be from my own heart.`,
         series: 'The Mirror',
         seriesPart: 'Part I',
+        reflection: 'Language is the first filter. Before we can see ourselves or others clearly, we have to notice how much words get in the way — dividing, labelling, distorting. This is where the trilogy begins: with the quiet realisation that what we say is never quite what we mean.',
       },
       {
         id: 'the-mirror',
@@ -234,6 +235,7 @@ export const sections: Section[] = [
         text: `See yourself in the mirror and identify,\nAre those really you and your beautiful eyes?\nBeautiful they seem from outside,\nBut it's your perspective, not the sight.\n\nYou have changed and grown a lot,\nThe body tells you, but maybe your heart not.\nI see the kindness of time,\nIt evolves us without a whine.\n\nWhen I look in the mirror, I want to see\nThe way I see myself — and not from the world I flee.\nI will be me, just give me time.\nOh fool, you never know what's your crime.\n\nThis moment is all you have,\nYou are changing every passing breath.\nRealize the beauty of it now,\nOtherwise just look in the mirror and bow.\n\nRespect yourself but don't be proud,\nThrow away all your doubts.\nWhat is in you, you see outside,\nMirror just a reflection and not a sight!`,
         series: 'The Mirror',
         seriesPart: 'Part II',
+        reflection: 'Having questioned the language we use, we turn it inward. The mirror doesn\'t lie — but we do, every time we look and see what we expect rather than what\'s there. This poem is about learning to look honestly, without the filter of who we think we should be.',
       },
       {
         id: 'the-right-eyes',
@@ -248,6 +250,7 @@ export const sections: Section[] = [
         text: `Have seen a lot of eyes,\nBut nothing so mesmerising where depth abides.\nReflection of pain and suffering in life,\nBut kindness and the sparks it ignites.\nThen a thought passes by,\nLife is beautiful, just need the right eyes!`,
         series: 'The Mirror',
         seriesPart: 'Part III',
+        reflection: 'The trilogy closes simply — not with philosophy, but with sight. When the words fall away and the mirror is honest, what remains is just a way of seeing. Life is beautiful. You just need the right eyes.',
       },
       {
         id: 'the-seed',

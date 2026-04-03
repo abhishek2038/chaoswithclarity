@@ -29,6 +29,7 @@ export interface Poem {
   reflection?: string; // Personal note shown at bottom of modal
   series?: string;     // Series name, e.g. 'Forest of Consciousness'
   seriesPart?: string; // e.g. 'Part I'
+  taster?: boolean;    // true = full poem visible on website; false = preview only, drives to shop
 }
 
 export interface Section {
@@ -65,6 +66,7 @@ export const sections: Section[] = [
       {
         id: 'just-a-man',
         title: 'Just a Man',
+        taster: true,
         date: 'February 2026',
         preview: [
           'I am just a man, yet I forget,',
@@ -112,6 +114,7 @@ export const sections: Section[] = [
       {
         id: 'bare',
         title: 'Bare',
+        taster: true,
         date: 'March 2026',
         preview: [
           'Breathe in the sun,',
@@ -240,6 +243,7 @@ export const sections: Section[] = [
       {
         id: 'the-right-eyes',
         title: 'The Right Eyes',
+        taster: true,
         date: '2025',
         preview: [
           'Have seen a lot of eyes,',
@@ -350,6 +354,7 @@ export const sections: Section[] = [
       {
         id: 'let-me-breathe-today',
         title: 'Let Me Breathe Today',
+        taster: true,
         date: 'October 2024',
         preview: [
           'Let me breathe today, let me be conscious,',
@@ -531,6 +536,7 @@ export const sections: Section[] = [
       {
         id: 'nothing-to-gain',
         title: 'Nothing to Gain',
+        taster: true,
         date: '2025',
         preview: [
           'People desire love, I want hate,',
@@ -554,6 +560,7 @@ export const sections: Section[] = [
     poems: [
       {
         id: 'the-river',
+        taster: true,
         title: 'The River',
         date: 'January 2025',
         preview: [

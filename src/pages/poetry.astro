@@ -9,12 +9,14 @@ import Layout from '../layouts/Layout.astro';
   <!-- ══ PAGE HEADER ══════════════════════════════════════════ -->
   <section class="page-header">
     <div class="page-header-inner">
-      <p class="overline" style="color:var(--gold);">Digital Downloads</p>
+      <p class="overline">Digital Downloads</p>
       <h1 class="page-h1">Poetry<br/>Collections</h1>
       <div class="header-rule"></div>
       <p class="page-sub">
         Forty poems. Two series. Five themes.<br class="br-d"/>
-        Take them with you.
+        Written between 2024 and 2026 — on mortality, ego,<br class="br-d"/>
+        meditation, pain, freedom, and love.<br class="br-d"/>
+        <strong style="color:var(--text);">Take them with you.</strong>
       </p>
     </div>
     <p class="header-bg-word" aria-hidden="true">poems</p>
@@ -25,40 +27,60 @@ import Layout from '../layouts/Layout.astro';
     <!-- ══ FEATURED: FULL COLLECTION ══════════════════════════ -->
     <section class="shop-section">
       <div class="section-head">
+        <span class="section-dot" style="background:var(--gold);"></span>
         <p class="section-label" style="color:var(--gold);">Full Collection</p>
       </div>
 
       <div class="featured-card">
         <div class="featured-text">
-          <p class="product-tag">Digital PDF · 84 pages</p>
-          <h2 class="product-title">Chaos With Clarity<br/><em class="product-subtitle">A Collection of Poems</em></h2>
+          <p class="product-tag">Digital PDF · 84 pages · A5 format</p>
+          <h2 class="product-title">Chaos With Clarity</h2>
+          <p class="product-subtitle-line">A Collection of Poems</p>
           <p class="product-desc">
-            Forty poems written between 2024 and 2026 — on mortality, ego, meditation, pain,
-            freedom, and love. Includes the complete Mirror Trilogy and Forest of Consciousness
-            series, with reflections on the arc of each.
+            The complete body of work — forty poems across five themes:
+            being human, the inward turn, pain and transformation, freedom
+            and becoming, and love in all its forms. Includes the full
+            Mirror Trilogy and Forest of Consciousness series, author
+            reflections, and a note on the writing.
           </p>
-          <ul class="product-list">
-            <li>5 thematic sections</li>
-            <li>2 named series with author reflections</li>
-            <li>A note from the author</li>
-            <li>Beautifully typeset, A5 format</li>
-          </ul>
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <span class="highlight-num">40</span>
+              <span class="highlight-label">poems</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-item">
+              <span class="highlight-num">5</span>
+              <span class="highlight-label">themes</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-item">
+              <span class="highlight-num">2</span>
+              <span class="highlight-label">series</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-item">
+              <span class="highlight-num">84</span>
+              <span class="highlight-label">pages</span>
+            </div>
+          </div>
           <div class="product-price-row">
             <p class="product-price">$9</p>
-            <p class="product-price-note">One-time · Yours to keep</p>
+            <p class="product-price-note">One-time purchase · Yours forever</p>
           </div>
-          <!-- Replace href with your Gumroad link -->
-          <a href="https://gumroad.com" target="_blank" rel="noopener" class="buy-btn">
+          <a href="https://chaoswithclarity.gumroad.com/l/poems" target="_blank" rel="noopener" class="buy-btn">
             Get the Collection →
           </a>
         </div>
         <div class="featured-cover">
           <div class="book-cover">
+            <div class="book-glow"></div>
+            <p class="book-cover-label">The Complete Work</p>
             <p class="book-cover-title">CHAOS<br/>WITH<br/>CLARITY</p>
             <div class="book-cover-rule"></div>
             <p class="book-cover-sub">A Collection of Poems</p>
             <p class="book-cover-author">Abby</p>
-            <p class="book-cover-num">40 Poems</p>
+            <p class="book-cover-num">40 Poems · 2024–2026</p>
           </div>
         </div>
       </div>
@@ -67,6 +89,7 @@ import Layout from '../layouts/Layout.astro';
     <!-- ══ FREE CHAPBOOKS ══════════════════════════════════════ -->
     <section class="shop-section">
       <div class="section-head">
+        <span class="section-dot" style="background:var(--olive-bright);"></span>
         <p class="section-label" style="color:var(--olive-bright);">Free Chapbooks</p>
         <p class="section-note">No email required. Just download and read.</p>
       </div>
@@ -75,10 +98,13 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Mirror Trilogy -->
         <div class="chapbook-card">
-          <div class="chapbook-spine" style="background:var(--gold);"></div>
+          <div class="chapbook-accent" style="--accent:var(--gold);"></div>
           <div class="chapbook-body">
-            <p class="product-tag">3 poems · Free</p>
-            <h3 class="chapbook-title">The Mirror</h3>
+            <div class="chapbook-top">
+              <p class="product-tag">3 poems · Free</p>
+              <span class="free-badge">FREE</span>
+            </div>
+            <h3 class="chapbook-title">The Mirror Trilogy</h3>
             <p class="chapbook-series">A Trilogy in Three Parts</p>
             <p class="chapbook-desc">
               Language. Reflection. Sight. Three poems written on the same day,
@@ -90,7 +116,7 @@ import Layout from '../layouts/Layout.astro';
               <span>II · The Mirror</span>
               <span>III · The Right Eyes</span>
             </div>
-            <a href="/downloads/TheMirror_Trilogy.pdf" download class="free-btn">
+            <a href="https://chaoswithclarity.gumroad.com/l/mirror" target="_blank" rel="noopener" class="free-btn" style="--btn-color:var(--gold);">
               Download Free →
             </a>
           </div>
@@ -98,9 +124,12 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Forest of Consciousness -->
         <div class="chapbook-card">
-          <div class="chapbook-spine" style="background:var(--olive-bright);"></div>
+          <div class="chapbook-accent" style="--accent:var(--olive-bright);"></div>
           <div class="chapbook-body">
-            <p class="product-tag">4 poems · Free</p>
+            <div class="chapbook-top">
+              <p class="product-tag">4 poems · Free</p>
+              <span class="free-badge" style="--badge-bg:var(--olive-bright);">FREE</span>
+            </div>
             <h3 class="chapbook-title">Forest of Consciousness</h3>
             <p class="chapbook-series">A Four-Part Series</p>
             <p class="chapbook-desc">
@@ -114,7 +143,32 @@ import Layout from '../layouts/Layout.astro';
               <span>III · Forest of Consciousness</span>
               <span>IV · The Journey</span>
             </div>
-            <a href="/downloads/ForestOfConsciousness_Chapbook.pdf" download class="free-btn" style="--btn-color:var(--olive-bright);">
+            <a href="https://chaoswithclarity.gumroad.com/l/forest" target="_blank" rel="noopener" class="free-btn" style="--btn-color:var(--olive-bright);">
+              Download Free →
+            </a>
+          </div>
+        </div>
+
+        <!-- Let Me Breathe Today -->
+        <div class="chapbook-card">
+          <div class="chapbook-accent" style="--accent:var(--text-muted);"></div>
+          <div class="chapbook-body">
+            <div class="chapbook-top">
+              <p class="product-tag">1 poem · Free</p>
+              <span class="free-badge" style="--badge-bg:var(--text-muted);">FREE</span>
+            </div>
+            <h3 class="chapbook-title">Let Me Breathe Today</h3>
+            <p class="chapbook-series">A Single Poem</p>
+            <p class="chapbook-desc">
+              On presence, acceptance, and the quiet freedom of just being.
+              Written in October 2024 — one of the most personal pieces
+              in the collection.
+            </p>
+            <div class="chapbook-poems">
+              <span style="font-style:italic;color:var(--text-muted);">"Let me breathe today, let me be conscious,</span>
+              <span style="font-style:italic;color:var(--text-muted);">Let me be free today, let me be outrageous..."</span>
+            </div>
+            <a href="https://chaoswithclarity.gumroad.com/l/breathe" target="_blank" rel="noopener" class="free-btn" style="--btn-color:var(--text-muted);">
               Download Free →
             </a>
           </div>
@@ -123,47 +177,99 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
+    <!-- ══ PULL QUOTE ═════════════════════════════════════════ -->
+    <section class="pull-quote-section">
+      <blockquote class="pull-quote">
+        "Every poem begins in chaos and ends, not in answers, but in something clearer."
+      </blockquote>
+    </section>
+
     <!-- ══ POEM CARDS ═════════════════════════════════════════ -->
     <section class="shop-section">
       <div class="section-head">
+        <span class="section-dot" style="background:var(--text-muted);"></span>
         <p class="section-label" style="color:var(--text-muted);">Poem Cards</p>
-        <p class="section-note">6 poems · Downloadable · Print and frame them.</p>
+        <p class="section-note">Print. Frame. Gift. Keep.</p>
       </div>
 
       <div class="cards-row">
         <div class="cards-preview">
-          <div class="mock-card" style="--rot:-2deg;">
+          <div class="mock-card" style="--rot:-3deg; --delay:0s;">
+            <div class="mock-accent"></div>
             <p class="mock-title">The Right Eyes</p>
             <p class="mock-line">Life is beautiful,</p>
-            <p class="mock-line">just need the right eyes.</p>
+            <p class="mock-line">just need the right eyes!</p>
+            <p class="mock-author">— Abby</p>
           </div>
-          <div class="mock-card" style="--rot:1.5deg;">
+          <div class="mock-card" style="--rot:2deg; --delay:0.1s;">
+            <div class="mock-accent"></div>
             <p class="mock-title">Nothing to Gain</p>
             <p class="mock-line">I am everything</p>
             <p class="mock-line">where there is nothing to gain.</p>
+            <p class="mock-author">— Abby</p>
           </div>
-          <div class="mock-card" style="--rot:-0.5deg;">
+          <div class="mock-card" style="--rot:-1deg; --delay:0.2s;">
+            <div class="mock-accent"></div>
             <p class="mock-title">Just a Man</p>
             <p class="mock-line">I am just a man,</p>
-            <p class="mock-line">time to choose to be kind.</p>
+            <p class="mock-line">each passing second, to choose to be kind.</p>
+            <p class="mock-author">— Abby</p>
           </div>
         </div>
         <div class="cards-info">
-          <p class="product-tag">6 A5 cards · PDF download</p>
-          <h3 class="chapbook-title">Poem Cards</h3>
+          <p class="product-tag">6 beautifully designed A5 cards · PDF download</p>
+          <h3 class="cards-title">Poem Cards</h3>
+          <p class="cards-subtitle">Six poems. Six cards. Words to carry with you.</p>
           <p class="chapbook-desc">
-            Six poems, each on its own landscape card. Print at home,
-            put them on your desk, or frame them. The Right Eyes,
-            Nothing to Gain, Just a Man, The Search, Bare, A Gloomy Day.
+            Each poem lives on its own parchment card with elegant typography,
+            gold accents, and the CWC watermark. Print at home on good paper,
+            frame them, put them on your desk, or give them to someone who
+            needs the words.
           </p>
+          <div class="cards-poem-list">
+            <span>The Right Eyes</span>
+            <span>Nothing to Gain</span>
+            <span>Just a Man</span>
+            <span>The Search</span>
+            <span>Bare</span>
+            <span>A Gloomy Day</span>
+          </div>
           <div class="product-price-row">
-            <p class="product-price">$5</p>
+            <p class="product-price" style="color:var(--text-muted);">$5</p>
             <p class="product-price-note">Print as many times as you like</p>
           </div>
-          <!-- Replace href with your Gumroad link -->
-          <a href="https://gumroad.com" target="_blank" rel="noopener" class="buy-btn" style="--btn-bg:var(--text-muted);">
+          <a href="https://chaoswithclarity.gumroad.com/l/cards" target="_blank" rel="noopener" class="buy-btn" style="--btn-bg:var(--text-muted);">
             Get the Cards →
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ WHAT YOU GET ═══════════════════════════════════════ -->
+    <section class="shop-section">
+      <div class="what-you-get">
+        <h3 class="wyg-title">What you get</h3>
+        <div class="wyg-grid">
+          <div class="wyg-item">
+            <span class="wyg-icon">↓</span>
+            <p class="wyg-label">Instant download</p>
+            <p class="wyg-detail">PDF delivered immediately after purchase</p>
+          </div>
+          <div class="wyg-item">
+            <span class="wyg-icon">∞</span>
+            <p class="wyg-label">Yours forever</p>
+            <p class="wyg-detail">No DRM, no expiry, no subscriptions</p>
+          </div>
+          <div class="wyg-item">
+            <span class="wyg-icon">A5</span>
+            <p class="wyg-label">Beautifully typeset</p>
+            <p class="wyg-detail">Lora serif font on parchment-toned pages</p>
+          </div>
+          <div class="wyg-item">
+            <span class="wyg-icon">♡</span>
+            <p class="wyg-label">Independent work</p>
+            <p class="wyg-detail">Written, designed, and published by Abby</p>
+          </div>
         </div>
       </div>
     </section>
@@ -171,6 +277,7 @@ import Layout from '../layouts/Layout.astro';
     <!-- ══ COMING SOON ════════════════════════════════════════ -->
     <section class="shop-section">
       <div class="section-head">
+        <span class="section-dot" style="background:var(--border);"></span>
         <p class="section-label" style="color:var(--text-faint);">Coming Soon</p>
       </div>
 
@@ -192,8 +299,11 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- ══ BOTTOM CTA ═════════════════════════════════════════ -->
     <div class="shop-cta">
-      <p class="shop-cta-text">Want poems in your inbox before they become products?</p>
-      <a href="/join" class="buy-btn">Get the Letters →</a>
+      <div class="shop-cta-inner">
+        <p class="shop-cta-label">Stay close</p>
+        <p class="shop-cta-text">Want poems in your inbox before they become products?</p>
+        <a href="/join" class="buy-btn" style="--btn-bg:var(--olive-accent);">Get the Letters →</a>
+      </div>
     </div>
 
   </div>
@@ -208,80 +318,151 @@ import Layout from '../layouts/Layout.astro';
     position: relative; overflow: hidden;
   }
   .page-header-inner { max-width: 72rem; margin: 0 auto; position: relative; z-index: 2; }
-  .overline { font-size: 0.66rem; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.5rem; }
+  .overline { font-size: 0.66rem; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.5rem; color: var(--gold); }
   .page-h1 { font-family: 'Fraunces', serif; font-size: clamp(3.5rem,9vw,8rem); font-weight: 800; color: var(--text); letter-spacing: -0.03em; line-height: 0.9; margin-bottom: 2rem; }
   .header-rule { width: 3rem; height: 3px; background: var(--gold); margin-bottom: 1.75rem; }
-  .page-sub { color: var(--text-muted); font-size: 0.95rem; line-height: 1.95; font-weight: 300; max-width: 42rem; }
+  .page-sub { color: var(--text-muted); font-size: 1rem; line-height: 2; font-weight: 300; max-width: 42rem; }
   .header-bg-word { position: absolute; bottom: -1.5rem; right: -1rem; font-family: 'Fraunces', serif; font-size: clamp(6rem,18vw,16rem); font-weight: 800; color: var(--border); opacity: 0.35; letter-spacing: -0.05em; line-height: 1; user-select: none; pointer-events: none; z-index: 1; }
   .br-d { display: inline; }
 
   /* ── WRAPPER ─────────────────────────────────────────────── */
   .shop-wrap { max-width: 72rem; margin: 0 auto; padding: 5rem 3rem 7rem; }
-  .shop-section { margin-bottom: 5rem; }
+  .shop-section { margin-bottom: 5.5rem; }
 
   /* ── SECTION HEADS ───────────────────────────────────────── */
-  .section-head { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; display: flex; align-items: baseline; gap: 1.5rem; }
-  .section-label { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.01em; }
-  .section-note { font-size: 0.82rem; color: var(--text-faint); font-weight: 300; }
+  .section-head { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
+  .section-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .section-label { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.01em; }
+  .section-note { font-size: 0.82rem; color: var(--text-faint); font-weight: 300; margin-left: auto; }
 
   /* ── FEATURED CARD ───────────────────────────────────────── */
-  .featured-card { display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: start; background: var(--bg-card); padding: 3.5rem; border-top: 4px solid var(--gold); }
+  .featured-card {
+    display: grid; grid-template-columns: 1fr auto; gap: 4.5rem; align-items: start;
+    background: var(--bg-card); padding: 3.5rem;
+    border: 1px solid var(--border); border-top: 4px solid var(--gold);
+    position: relative;
+  }
   .product-tag { font-size: 0.63rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-faint); font-weight: 600; margin-bottom: 1rem; }
-  .product-title { font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 800; color: var(--text); line-height: 1.1; margin-bottom: 1.25rem; }
-  .product-subtitle { font-weight: 400; font-style: italic; font-size: 1.3rem; color: var(--text-muted); }
-  .product-desc { color: var(--text-muted); font-size: 0.93rem; line-height: 1.95; margin-bottom: 1.5rem; max-width: 38rem; }
-  .product-list { list-style: none; padding: 0; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.5rem; }
-  .product-list li { font-size: 0.85rem; color: var(--text-muted); padding-left: 1rem; position: relative; }
-  .product-list li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
+  .product-title { font-family: 'Fraunces', serif; font-size: 2.6rem; font-weight: 800; color: var(--text); line-height: 1.05; margin-bottom: 0.4rem; }
+  .product-subtitle-line { font-family: 'Fraunces', serif; font-weight: 400; font-style: italic; font-size: 1.2rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+  .product-desc { color: var(--text-muted); font-size: 0.93rem; line-height: 2; margin-bottom: 1.75rem; max-width: 38rem; }
+
+  /* Feature highlights row */
+  .feature-highlights { display: flex; align-items: center; gap: 1.75rem; margin-bottom: 2.25rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .highlight-item { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }
+  .highlight-num { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 800; color: var(--gold); line-height: 1; }
+  .highlight-label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-faint); font-weight: 500; }
+  .highlight-divider { width: 1px; height: 2.5rem; background: var(--border); }
+
   .product-price-row { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.75rem; }
-  .product-price { font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 800; color: var(--gold); line-height: 1; }
+  .product-price { font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 800; color: var(--gold); line-height: 1; }
   .product-price-note { font-size: 0.78rem; color: var(--text-faint); }
-  .buy-btn { display: inline-block; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; background: var(--btn-bg, var(--gold)); color: var(--text-on-dark); padding: 1rem 2.25rem; text-decoration: none; font-weight: 700; transition: opacity 0.2s, transform 0.2s; }
-  .buy-btn:hover { opacity: 0.85; transform: translateY(-2px); }
+  .buy-btn {
+    display: inline-block; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+    background: var(--btn-bg, var(--gold)); color: var(--text-on-dark);
+    padding: 1.1rem 2.5rem; text-decoration: none; font-weight: 700;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .buy-btn:hover { opacity: 0.88; transform: translateY(-2px); }
 
   /* ── BOOK COVER MOCK ─────────────────────────────────────── */
   .featured-cover { flex-shrink: 0; }
-  .book-cover { width: 140px; background: #06050a; padding: 2rem 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; border-left: 5px solid var(--gold); min-height: 200px; justify-content: center; }
-  .book-cover-title { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 800; color: var(--text, #f0ebe0); line-height: 1.1; letter-spacing: -0.01em; }
+  .book-cover {
+    width: 155px; background: #06050a; padding: 2rem 1.5rem;
+    display: flex; flex-direction: column; gap: 0.6rem;
+    border-left: 5px solid var(--gold); min-height: 230px; justify-content: center;
+    position: relative; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 2px 8px rgba(184,136,30,0.15);
+  }
+  .book-glow { position: absolute; top: -20px; left: -20px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(184,136,30,0.12) 0%, transparent 70%); pointer-events: none; }
+  .book-cover-label { font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); opacity: 0.6; }
+  .book-cover-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 800; color: #f0ebe0; line-height: 1.1; letter-spacing: -0.01em; }
   .book-cover-rule { width: 2rem; height: 2px; background: var(--gold); }
   .book-cover-sub { font-size: 0.65rem; color: #c0a878; font-style: italic; }
   .book-cover-author { font-size: 0.72rem; color: var(--gold); margin-top: 0.5rem; }
-  .book-cover-num { font-size: 0.6rem; color: #7a6a52; letter-spacing: 0.15em; text-transform: uppercase; margin-top: auto; padding-top: 1.5rem; }
+  .book-cover-num { font-size: 0.55rem; color: #7a6a52; letter-spacing: 0.15em; text-transform: uppercase; margin-top: auto; padding-top: 1rem; }
 
   /* ── CHAPBOOKS GRID ──────────────────────────────────────── */
-  .chapbook-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .chapbook-card { display: flex; background: var(--bg-card); overflow: hidden; }
-  .chapbook-spine { width: 5px; flex-shrink: 0; }
-  .chapbook-body { padding: 2.5rem; flex: 1; }
+  .chapbook-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .chapbook-card { display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border); overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
+  .chapbook-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+  .chapbook-accent { height: 3px; background: var(--accent, var(--gold)); }
+  .chapbook-body { padding: 2.25rem; flex: 1; display: flex; flex-direction: column; }
+  .chapbook-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+  .chapbook-top .product-tag { margin-bottom: 0; }
+  .free-badge { font-size: 0.52rem; letter-spacing: 0.22em; font-weight: 800; text-transform: uppercase; background: var(--badge-bg, var(--gold)); color: var(--bg-card); padding: 0.25rem 0.6rem; border-radius: 2px; }
   .chapbook-title { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 800; color: var(--text); margin-bottom: 0.25rem; }
-  .chapbook-series { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 1rem; }
-  .chapbook-desc { color: var(--text-muted); font-size: 0.88rem; line-height: 1.9; margin-bottom: 1.25rem; }
-  .chapbook-poems { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1.75rem; }
-  .chapbook-poems span { font-size: 0.78rem; color: var(--text-faint); font-style: italic; }
-  .free-btn { display: inline-block; font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--btn-color, var(--gold)); border: 1px solid var(--btn-color, var(--gold)); padding: 0.7rem 1.5rem; text-decoration: none; font-weight: 700; transition: background 0.2s, color 0.2s; }
+  .chapbook-series { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 1rem; }
+  .chapbook-desc { color: var(--text-muted); font-size: 0.86rem; line-height: 1.9; margin-bottom: 1.25rem; }
+  .chapbook-poems { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1.75rem; margin-top: auto; }
+  .chapbook-poems span { font-size: 0.76rem; color: var(--text-faint); }
+  .free-btn {
+    display: inline-block; font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--btn-color, var(--gold)); border: 1px solid var(--btn-color, var(--gold));
+    padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 700;
+    transition: background 0.2s, color 0.2s; align-self: flex-start;
+  }
   .free-btn:hover { background: var(--btn-color, var(--gold)); color: var(--text-on-dark); }
 
+  /* ── PULL QUOTE ──────────────────────────────────────────── */
+  .pull-quote-section { margin-bottom: 5.5rem; padding: 3.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; }
+  .pull-quote {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+    color: var(--text-muted); line-height: 1.9; max-width: 38rem; margin: 0 auto;
+    padding: 0 2rem; position: relative;
+  }
+  .pull-quote::before { content: ''; display: block; width: 2rem; height: 2px; background: var(--gold); margin: 0 auto 1.5rem; }
+
   /* ── POEM CARDS ROW ──────────────────────────────────────── */
-  .cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-  .cards-preview { display: flex; flex-direction: column; gap: 0; position: relative; height: 220px; }
-  .mock-card { position: absolute; background: #FAF7F2; border: 1px solid var(--border); padding: 1.25rem 1.5rem; width: 85%; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border-left: 3px solid var(--gold); }
-  .mock-card:nth-child(1) { top: 0; left: 0; transform: rotate(var(--rot)); z-index: 3; }
-  .mock-card:nth-child(2) { top: 30px; left: 20px; transform: rotate(var(--rot)); z-index: 2; }
-  .mock-card:nth-child(3) { top: 60px; left: 40px; transform: rotate(var(--rot)); z-index: 1; }
-  .mock-title { font-family: 'Fraunces', serif; font-size: 0.82rem; font-weight: 700; color: #1A1610; margin-bottom: 0.4rem; }
-  .mock-line { font-family: Georgia, serif; font-style: italic; font-size: 0.75rem; color: #7A6A52; line-height: 1.6; }
+  .cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center; }
+  .cards-preview { position: relative; height: 260px; perspective: 800px; }
+  .mock-card {
+    position: absolute; background: #f5edd8; border: 1px solid #d8c9a8;
+    padding: 1.5rem 1.75rem; width: 80%;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,0.1);
+    transform: rotate(var(--rot));
+    transition: transform 0.4s ease;
+  }
+  .mock-card:nth-child(1) { top: 0; left: 10%; z-index: 3; }
+  .mock-card:nth-child(2) { top: 40px; left: 5%; z-index: 2; }
+  .mock-card:nth-child(3) { top: 80px; left: 15%; z-index: 1; }
+  .mock-card:hover { transform: rotate(0deg) scale(1.03); z-index: 10; }
+  .mock-accent { position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: #b8881e; }
+  .mock-title { font-family: 'Fraunces', serif; font-size: 0.88rem; font-weight: 700; color: #2a1f0e; margin-bottom: 0.5rem; }
+  .mock-line { font-family: Georgia, serif; font-style: italic; font-size: 0.78rem; color: #7a6a58; line-height: 1.7; }
+  .mock-author { font-size: 0.68rem; color: #b8881e; margin-top: 0.6rem; }
+
+  .cards-title { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 800; color: var(--text); margin-bottom: 0.3rem; }
+  .cards-subtitle { font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; color: var(--text-muted); margin-bottom: 1.25rem; }
+  .cards-poem-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+  .cards-poem-list span {
+    font-size: 0.68rem; letter-spacing: 0.1em; color: var(--text-faint);
+    border: 1px solid var(--border); padding: 0.35rem 0.75rem;
+    font-style: italic;
+  }
+
+  /* ── WHAT YOU GET ────────────────────────────────────────── */
+  .what-you-get { border: 1px solid var(--border); padding: 3rem; background: var(--bg-card); }
+  .wyg-title { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 2rem; text-align: center; }
+  .wyg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+  .wyg-item { text-align: center; }
+  .wyg-icon { font-family: 'Fraunces', serif; font-size: 1.4rem; color: var(--gold); display: block; margin-bottom: 0.75rem; font-weight: 700; }
+  .wyg-label { font-size: 0.78rem; font-weight: 700; color: var(--text); margin-bottom: 0.35rem; }
+  .wyg-detail { font-size: 0.72rem; color: var(--text-faint); line-height: 1.7; }
 
   /* ── COMING SOON ─────────────────────────────────────────── */
   .coming-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .coming-card { background: var(--bg-card); padding: 2rem 2.5rem; border-top: 2px dashed var(--border); }
-  .coming-tag { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-faint); font-weight: 600; margin-bottom: 0.75rem; }
+  .coming-card { background: var(--bg-card); padding: 2.25rem 2.5rem; border: 1px solid var(--border); border-top: 2px dashed var(--border); }
+  .coming-tag { font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-faint); font-weight: 600; margin-bottom: 0.75rem; }
   .coming-title { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.75rem; }
   .coming-desc { color: var(--text-faint); font-size: 0.85rem; line-height: 1.85; margin-bottom: 1rem; }
   .coming-price { font-size: 0.72rem; letter-spacing: 0.12em; color: var(--text-faint); font-style: italic; }
 
   /* ── BOTTOM CTA ──────────────────────────────────────────── */
   .shop-cta { border-top: 1px solid var(--border); padding-top: 4rem; text-align: center; }
-  .shop-cta-text { font-family: 'Fraunces', serif; font-style: italic; color: var(--text-muted); font-size: 1.2rem; margin-bottom: 2rem; }
+  .shop-cta-inner { max-width: 28rem; margin: 0 auto; }
+  .shop-cta-label { font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+  .shop-cta-text { font-family: 'Fraunces', serif; font-style: italic; color: var(--text-muted); font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.7; }
 
   /* ── RESPONSIVE ──────────────────────────────────────────── */
   @media (max-width: 960px) {
@@ -291,11 +472,14 @@ import Layout from '../layouts/Layout.astro';
     .cards-row { grid-template-columns: 1fr; }
     .cards-preview { display: none; }
     .coming-grid { grid-template-columns: 1fr; }
+    .wyg-grid { grid-template-columns: 1fr 1fr; }
+    .feature-highlights { flex-wrap: wrap; }
   }
   @media (max-width: 580px) {
     .shop-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
     .page-header { padding-left: 1.5rem; padding-right: 1.5rem; }
     .header-bg-word { display: none; }
     .br-d { display: none; }
+    .wyg-grid { grid-template-columns: 1fr; }
   }
 </style>

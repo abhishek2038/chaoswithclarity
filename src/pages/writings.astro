@@ -39,34 +39,62 @@ import { sections, essays } from '../data/poems';
 
         <div class="poem-grid-3">
           {section.poems.map((poem) => (
-            <article
-              class={`poem-card anim-card${poem.series ? ' trilogy-card' : ''}`}
-              style={`--card-accent:${section.accent};`}
-              data-poem-card
-              data-title={poem.subtitle ? `${poem.title} ${poem.subtitle}` : poem.title}
-              data-date={poem.date}
-              data-poem={poem.text}
-              data-reflection={poem.reflection ?? ''}
-            >
-              {poem.series && (
-                <p class="card-series">
-                  {poem.series}{poem.seriesPart ? ` · ${poem.seriesPart}` : ''}
-                </p>
-              )}
-              <p class="card-date">{poem.date}</p>
-              <h3 class="card-title">
-                {poem.title}
-                {poem.subtitle && (
-                  <><br/><em class="card-subtitle">{poem.subtitle}</em></>
+            poem.taster ? (
+              /* ── TASTER: full poem available in modal ── */
+              <article
+                class={`poem-card anim-card${poem.series ? ' trilogy-card' : ''}`}
+                style={`--card-accent:${section.accent};`}
+                data-poem-card
+                data-title={poem.subtitle ? `${poem.title} ${poem.subtitle}` : poem.title}
+                data-date={poem.date}
+                data-poem={poem.text}
+                data-reflection={poem.reflection ?? ''}
+              >
+                {poem.series && (
+                  <p class="card-series">
+                    {poem.series}{poem.seriesPart ? ` · ${poem.seriesPart}` : ''}
+                  </p>
                 )}
-              </h3>
-              <div class="card-preview" style={`--prev-color:${section.accent};`}>
-                {poem.preview.map((line) => <p>{line}</p>)}
-              </div>
-              <span class="card-cta" style={`--cta:${section.accent};`}>
-                Read full poem <i class="ph ph-arrow-right cta-arrow"></i>
-              </span>
-            </article>
+                <p class="card-date">{poem.date}</p>
+                <h3 class="card-title">
+                  {poem.title}
+                  {poem.subtitle && (
+                    <><br/><em class="card-subtitle">{poem.subtitle}</em></>
+                  )}
+                </h3>
+                <div class="card-preview" style={`--prev-color:${section.accent};`}>
+                  {poem.preview.map((line) => <p>{line}</p>)}
+                </div>
+                <span class="card-cta" style={`--cta:${section.accent};`}>
+                  Read full poem <i class="ph ph-arrow-right cta-arrow"></i>
+                </span>
+              </article>
+            ) : (
+              /* ── NON-TASTER: preview only, drives to shop ── */
+              <article
+                class={`poem-card anim-card locked-card${poem.series ? ' trilogy-card' : ''}`}
+                style={`--card-accent:${section.accent};`}
+              >
+                {poem.series && (
+                  <p class="card-series">
+                    {poem.series}{poem.seriesPart ? ` · ${poem.seriesPart}` : ''}
+                  </p>
+                )}
+                <p class="card-date">{poem.date}</p>
+                <h3 class="card-title">
+                  {poem.title}
+                  {poem.subtitle && (
+                    <><br/><em class="card-subtitle">{poem.subtitle}</em></>
+                  )}
+                </h3>
+                <div class="card-preview" style={`--prev-color:${section.accent};`}>
+                  {poem.preview.slice(0, 2).map((line) => <p>{line}</p>)}
+                </div>
+                <a href="/poetry" class="card-cta locked-cta" style={`--cta:${section.accent};`}>
+                  In the collection →
+                </a>
+              </article>
+            )
           ))}
         </div>
 
@@ -331,6 +359,21 @@ import { sections, essays } from '../data/poems';
   .poem-card:hover .cta-arrow {
     transform: translateX(5px);
   }
+
+  /* ══ LOCKED CARD (non-taster) ════════════════════════════════ */
+  .locked-card { opacity: 0.72; cursor: default; }
+  .locked-card:hover { border-color: var(--border); transform: none; }
+  .locked-cta {
+    text-decoration: none;
+    color: var(--text-faint);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .locked-cta:hover { opacity: 1; }
 
   /* ══ ESSAY CARDS ══════════════════════════════════════════════ */
   .essay-card {

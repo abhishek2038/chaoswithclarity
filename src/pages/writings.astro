@@ -122,12 +122,14 @@ import { sections, essays } from '../data/poems';
                 <p class="essay-tag">Essay</p>
                 <h3 class="essay-title">{essay.title}</h3>
                 <p class="essay-desc">{essay.description}</p>
+                {essay.snippet && <p class="essay-snippet">{essay.snippet}</p>}
               </a>
             ) : (
               <div class="essay-card anim-card">
                 <p class="essay-tag">Essay</p>
                 <h3 class="essay-title">{essay.title}</h3>
                 <p class="essay-desc">{essay.description}</p>
+                {essay.snippet && <p class="essay-snippet">{essay.snippet}</p>}
                 <span class="essay-soon">Coming soon</span>
               </div>
             )
@@ -152,7 +154,7 @@ import { sections, essays } from '../data/poems';
 <style>
   /* ══ PAGE HEADER ══════════════════════════════════════════════ */
   .page-header {
-    padding: 10rem 3rem 6rem;
+    padding: 6rem 3rem 4rem;
     background: var(--bg-alt);
     border-bottom: 1px solid var(--border);
     position: relative;
@@ -215,9 +217,9 @@ import { sections, essays } from '../data/poems';
   .writings-wrap {
     max-width: 72rem;
     margin: 0 auto;
-    padding: 5rem 3rem 7rem;
+    padding: 4rem 3rem 5rem;
   }
-  .writings-section { margin-bottom: 6rem; }
+  .writings-section { margin-bottom: 4rem; }
 
   /* ══ SECTION HEADERS ══════════════════════════════════════════ */
   .section-head { margin-bottom: 3rem; }
@@ -282,8 +284,8 @@ import { sections, essays } from '../data/poems';
     gap: 1.25rem;
     border-top: 4px solid var(--card-accent, var(--olive-accent));
     box-shadow:
-      0 2px 20px rgba(15,10,6,0.07),
-      0 1px 5px rgba(15,10,6,0.04);
+      0 2px 20px rgba(42,36,24,0.05),
+      0 1px 5px rgba(42,36,24,0.02);
     cursor: pointer;
     transition:
       transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -292,8 +294,8 @@ import { sections, essays } from '../data/poems';
   .poem-card:hover {
     transform: translateY(-9px);
     box-shadow:
-      0 22px 60px rgba(15,10,6,0.13),
-      0 6px 18px rgba(15,10,6,0.08);
+      0 22px 60px rgba(42,36,24,0.08),
+      0 6px 18px rgba(42,36,24,0.05);
   }
 
   .card-date {
@@ -383,7 +385,7 @@ import { sections, essays } from '../data/poems';
     flex-direction: column;
     gap: 0.9rem;
     border-left: 4px solid var(--border);
-    box-shadow: 0 2px 16px rgba(15,10,6,0.06);
+    box-shadow: 0 2px 16px rgba(42,36,24,0.04);
     transition:
       border-color 0.3s ease,
       box-shadow 0.35s ease,
@@ -394,7 +396,7 @@ import { sections, essays } from '../data/poems';
   .essay-card:hover {
     border-left-color: var(--text-faint);
     transform: translateY(-6px);
-    box-shadow: 0 14px 40px rgba(15,10,6,0.1);
+    box-shadow: 0 14px 40px rgba(42,36,24,0.06);
   }
   .essay-tag {
     font-size: 0.63rem;
@@ -414,6 +416,14 @@ import { sections, essays } from '../data/poems';
     color: var(--text-muted);
     font-size: 0.9rem;
     line-height: 1.9;
+  }
+  .essay-snippet {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.85;
+    font-style: italic;
+    opacity: 0.75;
+    margin-top: 0.25rem;
     flex: 1;
   }
   .essay-soon {

@@ -312,7 +312,7 @@ import Layout from '../layouts/Layout.astro';
 <style>
   /* ── PAGE HEADER ─────────────────────────────────────────── */
   .page-header {
-    padding: 10rem 3rem 6rem;
+    padding: 6rem 3rem 4rem;
     background: var(--bg-alt);
     border-bottom: 1px solid var(--border);
     position: relative; overflow: hidden;
@@ -326,8 +326,8 @@ import Layout from '../layouts/Layout.astro';
   .br-d { display: inline; }
 
   /* ── WRAPPER ─────────────────────────────────────────────── */
-  .shop-wrap { max-width: 72rem; margin: 0 auto; padding: 5rem 3rem 7rem; }
-  .shop-section { margin-bottom: 5.5rem; }
+  .shop-wrap { max-width: 72rem; margin: 0 auto; padding: 4rem 3rem 5rem; }
+  .shop-section { margin-bottom: 4rem; }
 
   /* ── SECTION HEADS ───────────────────────────────────────── */
   .section-head { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
@@ -368,19 +368,19 @@ import Layout from '../layouts/Layout.astro';
   /* ── BOOK COVER MOCK ─────────────────────────────────────── */
   .featured-cover { flex-shrink: 0; }
   .book-cover {
-    width: 155px; background: #06050a; padding: 2rem 1.5rem;
+    width: 155px; background: #f5f0e6; padding: 2rem 1.5rem;
     display: flex; flex-direction: column; gap: 0.6rem;
     border-left: 5px solid var(--gold); min-height: 230px; justify-content: center;
     position: relative; overflow: hidden;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 2px 8px rgba(184,136,30,0.15);
+    box-shadow: 0 8px 40px rgba(42,36,24,0.08), 0 2px 8px rgba(184,136,30,0.1);
   }
   .book-glow { position: absolute; top: -20px; left: -20px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(184,136,30,0.12) 0%, transparent 70%); pointer-events: none; }
   .book-cover-label { font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); opacity: 0.6; }
-  .book-cover-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 800; color: #f0ebe0; line-height: 1.1; letter-spacing: -0.01em; }
+  .book-cover-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 800; color: #2a2418; line-height: 1.1; letter-spacing: -0.01em; }
   .book-cover-rule { width: 2rem; height: 2px; background: var(--gold); }
   .book-cover-sub { font-size: 0.65rem; color: #c0a878; font-style: italic; }
   .book-cover-author { font-size: 0.72rem; color: var(--gold); margin-top: 0.5rem; }
-  .book-cover-num { font-size: 0.55rem; color: #7a6a52; letter-spacing: 0.15em; text-transform: uppercase; margin-top: auto; padding-top: 1rem; }
+  .book-cover-num { font-size: 0.55rem; color: #9a8c76; letter-spacing: 0.15em; text-transform: uppercase; margin-top: auto; padding-top: 1rem; }
 
   /* ── CHAPBOOKS GRID ──────────────────────────────────────── */
   .chapbook-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
@@ -405,7 +405,7 @@ import Layout from '../layouts/Layout.astro';
   .free-btn:hover { background: var(--btn-color, var(--gold)); color: var(--text-on-dark); }
 
   /* ── PULL QUOTE ──────────────────────────────────────────── */
-  .pull-quote-section { margin-bottom: 5.5rem; padding: 3.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; }
+  .pull-quote-section { margin-bottom: 4rem; padding: 3rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; }
   .pull-quote {
     font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(1.15rem, 2.5vw, 1.5rem);
     color: var(--text-muted); line-height: 1.9; max-width: 38rem; margin: 0 auto;
@@ -417,9 +417,9 @@ import Layout from '../layouts/Layout.astro';
   .cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center; }
   .cards-preview { position: relative; height: 260px; perspective: 800px; }
   .mock-card {
-    position: absolute; background: #f5edd8; border: 1px solid #d8c9a8;
+    position: absolute; background: #faf6ee; border: 1px solid #ddd5c4;
     padding: 1.5rem 1.75rem; width: 80%;
-    box-shadow: 0 6px 25px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 25px rgba(42,36,24,0.08), 0 1px 3px rgba(42,36,24,0.04);
     transform: rotate(var(--rot));
     transition: transform 0.4s ease;
   }
@@ -428,9 +428,9 @@ import Layout from '../layouts/Layout.astro';
   .mock-card:nth-child(3) { top: 80px; left: 15%; z-index: 1; }
   .mock-card:hover { transform: rotate(0deg) scale(1.03); z-index: 10; }
   .mock-accent { position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: #b8881e; }
-  .mock-title { font-family: 'Fraunces', serif; font-size: 0.88rem; font-weight: 700; color: #2a1f0e; margin-bottom: 0.5rem; }
-  .mock-line { font-family: Georgia, serif; font-style: italic; font-size: 0.78rem; color: #7a6a58; line-height: 1.7; }
-  .mock-author { font-size: 0.68rem; color: #b8881e; margin-top: 0.6rem; }
+  .mock-title { font-family: 'Fraunces', serif; font-size: 0.88rem; font-weight: 700; color: #2a2418; margin-bottom: 0.5rem; }
+  .mock-line { font-family: Georgia, serif; font-style: italic; font-size: 0.78rem; color: #6b5d48; line-height: 1.7; }
+  .mock-author { font-size: 0.68rem; color: #9a7418; margin-top: 0.6rem; }
 
   .cards-title { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 800; color: var(--text); margin-bottom: 0.3rem; }
   .cards-subtitle { font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; color: var(--text-muted); margin-bottom: 1.25rem; }

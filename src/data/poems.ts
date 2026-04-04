@@ -45,6 +45,7 @@ export interface Essay {
   id: string;
   title: string;
   description: string;
+  snippet?: string;   // Opening teaser paragraph shown on the card
   status: 'coming-soon' | 'published';
   url?: string;
 }
@@ -91,6 +92,7 @@ export const sections: Section[] = [
       {
         id: 'unapologetically-me',
         title: 'Unapologetically Me',
+        taster: true,
         date: 'February 2026',
         preview: [
           'I am insane, so what — it\'s still me,',
@@ -139,6 +141,7 @@ export const sections: Section[] = [
       {
         id: 'the-observer-awakens',
         title: 'The Observer Awakens',
+        taster: true,
         date: 'April 2025',
         preview: [
           'Everything was the same —',
@@ -228,6 +231,7 @@ export const sections: Section[] = [
       {
         id: 'the-mirror',
         title: 'The Mirror',
+        taster: true,
         date: 'February 2026',
         preview: [
           'See yourself in the mirror and identify,',
@@ -274,6 +278,7 @@ export const sections: Section[] = [
       {
         id: 'i-am-that',
         title: 'I Am That',
+        taster: true,
         date: '2025',
         preview: [
           'Day begins, just a hearty smile to the sun,',
@@ -368,6 +373,7 @@ export const sections: Section[] = [
       {
         id: 'the-storm-within',
         title: 'The Storm Within',
+        taster: true,
         date: 'January 2025',
         preview: [
           'A storm is rising inside me,',
@@ -380,6 +386,7 @@ export const sections: Section[] = [
       {
         id: 'seed-in-the-dark',
         title: 'Seed in the Dark',
+        taster: true,
         date: 'February 2026',
         preview: [
           'Feeling clueless, will there be light?',
@@ -464,6 +471,7 @@ export const sections: Section[] = [
       {
         id: 'what-is-freedom',
         title: 'What Is Freedom',
+        taster: true,
         date: 'January 2025',
         preview: [
           'Let\'s explore what freedom is today —',
@@ -586,6 +594,7 @@ export const sections: Section[] = [
       {
         id: 'you-and-me-are-one',
         title: 'You and Me Are One',
+        taster: true,
         date: 'February 2025',
         preview: [
           'There is you and me,',
@@ -632,24 +641,28 @@ export const essays: Essay[] = [
     id: 'who-owns-you',
     title: 'Who Owns You?',
     description: 'On attention, algorithms, and reclaiming the self.',
+    snippet: 'You open the phone for one thing and thirty minutes later you are somewhere else entirely. The algorithm knew exactly which door to open. You walked right through it. The question is not whether you are being watched — it is whether you still remember what you were looking for.',
     status: 'coming-soon',
   },
   {
     id: 'never-meant-for-intelligence',
     title: 'We Were Never Meant for Intelligence',
     description: 'Why consciousness precedes cognition — and what we lost when we forgot.',
+    snippet: 'We built machines that think faster than us and called it progress. But thinking was never the point. A tree does not think about growing. A river does not calculate its path. Somewhere along the way we confused the tool for the hand that holds it.',
     status: 'coming-soon',
   },
   {
     id: 'choosing-reality',
     title: 'Choosing Reality Over Symbols',
     description: 'Money, status, degrees — and the life that happens while you chase them.',
+    snippet: 'The degree hangs on the wall. The car sits in the driveway. The title is on the business card. And still, at three in the morning, something is missing. We spent years collecting symbols of a life instead of living one.',
     status: 'coming-soon',
   },
   {
     id: 'when-reading-rewires',
     title: 'When Reading Rewires You',
     description: 'How slow reading changed the way I see everything.',
+    snippet: 'I used to read to finish. Now I read to stay. One paragraph can rearrange the furniture inside your head if you let it. The books that changed me were not the ones I flew through — they were the ones that made me stop and stare at the ceiling for ten minutes.',
     status: 'coming-soon',
   },
 ];

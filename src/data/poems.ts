@@ -62,7 +62,7 @@ export const sections: Section[] = [
     num: '01',
     label: 'Being Human',
     subtitle: 'On mortality, ego, identity, and what it means to be alive.',
-    accent: 'var(--gold)',
+    accent: 'var(--sec-human)',
     poems: [
       {
         id: 'just-a-man',
@@ -92,7 +92,6 @@ export const sections: Section[] = [
       {
         id: 'unapologetically-me',
         title: 'Unapologetically Me',
-        taster: true,
         date: 'February 2026',
         preview: [
           'I am insane, so what — it\'s still me,',
@@ -111,7 +110,7 @@ export const sections: Section[] = [
     num: '02',
     label: 'The Inward Turn',
     subtitle: 'On meditation, awareness, the observer, and quiet reflections.',
-    accent: 'var(--olive-bright)',
+    accent: 'var(--sec-inward)',
     poems: [
       {
         id: 'bare',
@@ -231,7 +230,6 @@ export const sections: Section[] = [
       {
         id: 'the-mirror',
         title: 'The Mirror',
-        taster: true,
         date: 'February 2026',
         preview: [
           'See yourself in the mirror and identify,',
@@ -278,7 +276,6 @@ export const sections: Section[] = [
       {
         id: 'i-am-that',
         title: 'I Am That',
-        taster: true,
         date: '2025',
         preview: [
           'Day begins, just a hearty smile to the sun,',
@@ -330,7 +327,7 @@ export const sections: Section[] = [
     num: '03',
     label: 'Pain & Transformation',
     subtitle: 'On suffering, grief, darkness, and the slow work of healing.',
-    accent: 'var(--text-muted)',
+    accent: 'var(--sec-pain)',
     poems: [
       {
         id: 'what-to-do-with-the-pain',
@@ -373,7 +370,6 @@ export const sections: Section[] = [
       {
         id: 'the-storm-within',
         title: 'The Storm Within',
-        taster: true,
         date: 'January 2025',
         preview: [
           'A storm is rising inside me,',
@@ -386,7 +382,6 @@ export const sections: Section[] = [
       {
         id: 'seed-in-the-dark',
         title: 'Seed in the Dark',
-        taster: true,
         date: 'February 2026',
         preview: [
           'Feeling clueless, will there be light?',
@@ -454,7 +449,7 @@ export const sections: Section[] = [
     num: '04',
     label: 'Freedom & Becoming',
     subtitle: 'On letting go, liberation, searching for self, and finding purpose.',
-    accent: 'var(--olive-accent)',
+    accent: 'var(--sec-freedom)',
     poems: [
       {
         id: 'a-little-a-lot',
@@ -564,7 +559,7 @@ export const sections: Section[] = [
     num: '05',
     label: 'Love, Nature & The World',
     subtitle: 'On human bonds, the living world, and being fully present.',
-    accent: 'var(--gold)',
+    accent: 'var(--sec-love)',
     poems: [
       {
         id: 'the-river',
@@ -594,7 +589,6 @@ export const sections: Section[] = [
       {
         id: 'you-and-me-are-one',
         title: 'You and Me Are One',
-        taster: true,
         date: 'February 2025',
         preview: [
           'There is you and me,',

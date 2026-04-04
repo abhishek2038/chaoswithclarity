@@ -56,31 +56,40 @@ const {
 
     :root {
       /* Foundations */
-      --olive-deep:   #f5f0e6;
-      --olive-dark:   #ebe5d8;
-      --olive-mid:    #d6cfc0;
+      --olive-deep:   #f7f7f8;
+      --olive-dark:   #eeeef0;
+      --olive-mid:    #d8d8dc;
 
-      /* Accent — antique gold */
-      --olive-accent: #9a7418;
-      --olive-bright: #b8881e;
-      --olive-light:  #c0a050;
+      /* Accent — warm amber */
+      --olive-accent: #c47d1a;
+      --olive-bright: #d98e20;
+      --olive-light:  #e0a840;
 
-      /* Backgrounds — warm parchment */
-      --bg:           #faf6ee;
-      --bg-alt:       #f2ecdf;
-      --bg-card:      #f5f0e6;
+      /* Backgrounds — clean white */
+      --bg:           #ffffff;
+      --bg-alt:       #f5f5f7;
+      --bg-card:      #fafafa;
 
-      /* Typography — dark on light */
-      --text:         #2a2418;
-      --text-muted:   #6b5d48;
-      --text-faint:   #9a8c76;
-      --text-on-dark: #faf6ee;
-      --text-dim-dark:#d6cfc0;
+      /* Typography */
+      --text:         #1a1a2e;
+      --text-muted:   #555566;
+      --text-faint:   #888899;
+      --text-on-dark: #ffffff;
+      --text-dim-dark:#ccccdd;
 
       /* Structure */
-      --gold:         #9a7418;
-      --border:       #ddd5c4;
-      --border-dark:  #ccc3b0;
+      --gold:         #c47d1a;
+      --border:       #e5e5ea;
+      --border-dark:  #d5d5da;
+
+      /* Section accent palette */
+      --sec-human:    #c47d1a;
+      --sec-inward:   #6b5ea6;
+      --sec-awaken:   #2a8e6e;
+      --sec-pain:     #b84040;
+      --sec-freedom:  #2870a8;
+      --sec-love:     #c45888;
+      --sec-essay:    #555566;
     }
 
     html { scroll-behavior: smooth; }
@@ -154,7 +163,7 @@ const {
     /* POEM MODAL */
     #poem-modal {
       display: none; position: fixed; inset: 0; z-index: 1000;
-      background: rgba(42,36,24,0.55); backdrop-filter: blur(8px);
+      background: rgba(26,26,46,0.5); backdrop-filter: blur(10px);
       align-items: center; justify-content: center; padding: 2rem;
     }
     #poem-modal.open { display: flex; }
@@ -209,6 +218,7 @@ const {
     <ul class="nav-links" id="nav-menu">
       <li><a href="/writings">Writing</a></li>
       <li><a href="/poetry">Poetry</a></li>
+      <li><a href="/writings#work-with-abby">Work with Abby</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/join" class="nav-cta">Get the Letters</a></li>
     </ul>

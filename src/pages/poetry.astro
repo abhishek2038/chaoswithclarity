@@ -368,19 +368,19 @@ import Layout from '../layouts/Layout.astro';
   /* ── BOOK COVER MOCK ─────────────────────────────────────── */
   .featured-cover { flex-shrink: 0; }
   .book-cover {
-    width: 155px; background: #f5f0e6; padding: 2rem 1.5rem;
+    width: 155px; background: var(--bg-card); padding: 2rem 1.5rem;
     display: flex; flex-direction: column; gap: 0.6rem;
-    border-left: 5px solid var(--gold); min-height: 230px; justify-content: center;
+    border-left: 5px solid var(--olive-accent); min-height: 230px; justify-content: center;
     position: relative; overflow: hidden;
-    box-shadow: 0 8px 40px rgba(42,36,24,0.08), 0 2px 8px rgba(184,136,30,0.1);
+    box-shadow: 0 8px 40px rgba(26,26,46,0.08), 0 2px 8px rgba(196,125,26,0.1);
   }
-  .book-glow { position: absolute; top: -20px; left: -20px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(184,136,30,0.12) 0%, transparent 70%); pointer-events: none; }
-  .book-cover-label { font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); opacity: 0.6; }
-  .book-cover-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 800; color: #2a2418; line-height: 1.1; letter-spacing: -0.01em; }
-  .book-cover-rule { width: 2rem; height: 2px; background: var(--gold); }
-  .book-cover-sub { font-size: 0.65rem; color: #c0a878; font-style: italic; }
-  .book-cover-author { font-size: 0.72rem; color: var(--gold); margin-top: 0.5rem; }
-  .book-cover-num { font-size: 0.55rem; color: #9a8c76; letter-spacing: 0.15em; text-transform: uppercase; margin-top: auto; padding-top: 1rem; }
+  .book-glow { position: absolute; top: -20px; left: -20px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(196,125,26,0.12) 0%, transparent 70%); pointer-events: none; }
+  .book-cover-label { font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--olive-accent); opacity: 0.6; }
+  .book-cover-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 800; color: var(--text); line-height: 1.1; letter-spacing: -0.01em; }
+  .book-cover-rule { width: 2rem; height: 2px; background: var(--olive-accent); }
+  .book-cover-sub { font-size: 0.65rem; color: var(--olive-accent); font-style: italic; }
+  .book-cover-author { font-size: 0.72rem; color: var(--olive-accent); margin-top: 0.5rem; }
+  .book-cover-num { font-size: 0.55rem; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: auto; padding-top: 1rem; }
 
   /* ── CHAPBOOKS GRID ──────────────────────────────────────── */
   .chapbook-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
@@ -417,9 +417,9 @@ import Layout from '../layouts/Layout.astro';
   .cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center; }
   .cards-preview { position: relative; height: 260px; perspective: 800px; }
   .mock-card {
-    position: absolute; background: #faf6ee; border: 1px solid #ddd5c4;
+    position: absolute; background: var(--bg-card); border: 1px solid var(--border);
     padding: 1.5rem 1.75rem; width: 80%;
-    box-shadow: 0 6px 25px rgba(42,36,24,0.08), 0 1px 3px rgba(42,36,24,0.04);
+    box-shadow: 0 6px 25px rgba(26,26,46,0.08), 0 1px 3px rgba(26,26,46,0.04);
     transform: rotate(var(--rot));
     transition: transform 0.4s ease;
   }
@@ -427,10 +427,10 @@ import Layout from '../layouts/Layout.astro';
   .mock-card:nth-child(2) { top: 40px; left: 5%; z-index: 2; }
   .mock-card:nth-child(3) { top: 80px; left: 15%; z-index: 1; }
   .mock-card:hover { transform: rotate(0deg) scale(1.03); z-index: 10; }
-  .mock-accent { position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: #b8881e; }
-  .mock-title { font-family: 'Fraunces', serif; font-size: 0.88rem; font-weight: 700; color: #2a2418; margin-bottom: 0.5rem; }
-  .mock-line { font-family: Georgia, serif; font-style: italic; font-size: 0.78rem; color: #6b5d48; line-height: 1.7; }
-  .mock-author { font-size: 0.68rem; color: #9a7418; margin-top: 0.6rem; }
+  .mock-accent { position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--olive-accent); }
+  .mock-title { font-family: 'Fraunces', serif; font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+  .mock-line { font-family: Georgia, serif; font-style: italic; font-size: 0.78rem; color: var(--text-muted); line-height: 1.7; }
+  .mock-author { font-size: 0.68rem; color: var(--olive-accent); margin-top: 0.6rem; }
 
   .cards-title { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 800; color: var(--text); margin-bottom: 0.3rem; }
   .cards-subtitle { font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; color: var(--text-muted); margin-bottom: 1.25rem; }

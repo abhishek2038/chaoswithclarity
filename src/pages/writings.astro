@@ -91,7 +91,7 @@ import { sections, essays } from '../data/poems';
                   {poem.preview.slice(0, 2).map((line) => <p>{line}</p>)}
                 </div>
                 <a href="/poetry" class="card-cta locked-cta" style={`--cta:${section.accent};`}>
-                  In the collection →
+                  Full poem in the collection →
                 </a>
               </article>
             )
@@ -108,8 +108,8 @@ import { sections, essays } from '../data/poems';
         <div class="section-head">
           <p class="section-num" aria-hidden="true">VI</p>
           <div class="section-label-row">
-            <span class="section-dot" style="background:var(--text-faint);"></span>
-            <h2 class="section-label-text" style="color:var(--text-muted);">Essays</h2>
+            <span class="section-dot" style="background:var(--sec-essay);"></span>
+            <h2 class="section-label-text" style="color:var(--sec-essay);">Essays</h2>
             <div class="section-line"></div>
           </div>
           <p class="section-subtitle">Longer reflections on consciousness, technology, and the examined life.</p>
@@ -117,27 +117,65 @@ import { sections, essays } from '../data/poems';
 
         <div class="essay-grid">
           {essays.map((essay) => (
-            essay.status === 'published' && essay.url ? (
-              <a href={essay.url} class="essay-card anim-card">
-                <p class="essay-tag">Essay</p>
-                <h3 class="essay-title">{essay.title}</h3>
-                <p class="essay-desc">{essay.description}</p>
-                {essay.snippet && <p class="essay-snippet">{essay.snippet}</p>}
-              </a>
-            ) : (
-              <div class="essay-card anim-card">
-                <p class="essay-tag">Essay</p>
-                <h3 class="essay-title">{essay.title}</h3>
-                <p class="essay-desc">{essay.description}</p>
-                {essay.snippet && <p class="essay-snippet">{essay.snippet}</p>}
-                <span class="essay-soon">Coming soon</span>
-              </div>
-            )
+            <div class="essay-card anim-card">
+              <p class="essay-tag">Essay</p>
+              <h3 class="essay-title">{essay.title}</h3>
+              <p class="essay-desc">{essay.description}</p>
+              {essay.snippet && <p class="essay-snippet">{essay.snippet}</p>}
+            </div>
           ))}
         </div>
 
       </section>
     )}
+
+    <!-- ══ WORK WITH ABBY ═════════════════════════════════════════ -->
+    <section class="writings-section work-with-abby" id="work-with-abby">
+      <div class="section-head">
+        <p class="section-num" aria-hidden="true">VII</p>
+        <div class="section-label-row">
+          <span class="section-dot" style="background:var(--olive-accent);"></span>
+          <h2 class="section-label-text" style="color:var(--olive-accent);">Work with Abby</h2>
+          <div class="section-line"></div>
+        </div>
+        <p class="section-subtitle">One-on-one guidance for those navigating inner work, creative expression, or simply trying to live more honestly.</p>
+      </div>
+
+      <div class="work-abby-content">
+        <div class="work-abby-intro">
+          <p>Sometimes you don't need another book or course — you need a conversation with someone who has sat with the same questions.</p>
+          <p>I offer personal, one-on-one sessions for anyone working through themes that show up in my writing: ego, awareness, identity, creative blocks, or just the quiet restlessness of wanting more from life.</p>
+          <p>No frameworks. No jargon. Just honest conversation and practical clarity.</p>
+          <ul class="work-abby-list">
+            <li>Inner work &amp; self-awareness</li>
+            <li>Creative expression &amp; writing</li>
+            <li>Navigating transitions &amp; uncertainty</li>
+            <li>Building a mindful, intentional life</li>
+          </ul>
+        </div>
+
+        <form class="enquiry-form" action="https://formsubmit.co/abby@chaoswithclarity.com" method="POST">
+          <input type="hidden" name="_subject" value="New enquiry from chaoswithclarity.com" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://chaoswithclarity.com/writings#work-with-abby" />
+          <h3 class="form-title">Reach out</h3>
+          <p class="form-subtitle">Tell me a little about yourself and what you're looking for. I'll get back to you personally.</p>
+          <div class="form-field">
+            <label for="enquiry-name">Name</label>
+            <input type="text" id="enquiry-name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="form-field">
+            <label for="enquiry-email">Email</label>
+            <input type="email" id="enquiry-email" name="email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-field">
+            <label for="enquiry-message">What's on your mind?</label>
+            <textarea id="enquiry-message" name="message" rows="5" required placeholder="What are you working through? What kind of guidance are you looking for?"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Enquiry</button>
+        </form>
+      </div>
+    </section>
 
     <!-- ══ JOIN CTA ═══════════════════════════════════════════════ -->
     <div class="writings-cta anim-card">
@@ -215,11 +253,33 @@ import { sections, essays } from '../data/poems';
 
   /* ══ WRAPPER ══════════════════════════════════════════════════ */
   .writings-wrap {
-    max-width: 72rem;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 4rem 3rem 5rem;
+    padding: 0;
   }
-  .writings-section { margin-bottom: 4rem; }
+  .writings-section {
+    margin-bottom: 0;
+    padding: 4rem 3rem;
+  }
+  .writings-section > * {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Per-section background tints */
+  #being-human       { background: #fffaf2; }
+  #the-inward-turn   { background: #f5f3fa; }
+  #pain-and-transformation { background: #faf2f2; }
+  #freedom-and-becoming    { background: #f0f5fa; }
+  #love-nature-and-the-world { background: #faf0f5; }
+  #essays            { background: #f5f5f7; }
+  .work-with-abby    { background: #fffaf2; }
+  #being-human .section-num       { color: rgba(196,125,26,0.15); }
+  #the-inward-turn .section-num   { color: rgba(107,94,166,0.15); }
+  #pain-and-transformation .section-num { color: rgba(184,64,64,0.12); }
+  #freedom-and-becoming .section-num    { color: rgba(40,112,168,0.12); }
+  #love-nature-and-the-world .section-num { color: rgba(196,88,136,0.12); }
 
   /* ══ SECTION HEADERS ══════════════════════════════════════════ */
   .section-head { margin-bottom: 3rem; }
@@ -466,6 +526,111 @@ import { sections, essays } from '../data/poems';
   .poem-card.anim-card.visible:hover  { transform: translateY(-9px); }
   .essay-card.anim-card.visible:hover { transform: translateY(-6px); }
 
+  /* ══ WORK WITH ABBY ═══════════════════════════════════════════ */
+  .work-abby-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .work-abby-intro p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+  .work-abby-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.25rem;
+  }
+  .work-abby-list li {
+    font-size: 0.88rem;
+    color: var(--text);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    padding-left: 1.25rem;
+    position: relative;
+  }
+  .work-abby-list li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--olive-accent);
+    font-size: 0.5rem;
+    top: 0.7rem;
+  }
+  .enquiry-form {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .form-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0;
+  }
+  .form-subtitle {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .form-field label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    font-weight: 600;
+  }
+  .form-field input,
+  .form-field textarea {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-field input:focus,
+  .form-field textarea:focus {
+    border-color: var(--olive-accent);
+  }
+  .form-field textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  .form-submit {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: var(--olive-accent);
+    color: var(--text-on-dark);
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    align-self: flex-start;
+  }
+  .form-submit:hover {
+    background: var(--olive-bright);
+    transform: translateY(-2px);
+  }
+
   /* ══ JOIN CTA ═════════════════════════════════════════════════ */
   .writings-cta {
     border-top: 1px solid var(--border);
@@ -519,6 +684,7 @@ import { sections, essays } from '../data/poems';
     .poem-grid-3 { grid-template-columns: 1fr 1fr; }
     .essay-grid  { grid-template-columns: 1fr; }
     .poem-grid-2 { grid-template-columns: 1fr; }
+    .work-abby-content { grid-template-columns: 1fr; }
     .br-d { display: none; }
   }
   @media (max-width: 580px) {

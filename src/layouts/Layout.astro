@@ -4,19 +4,27 @@ export interface Props {
   description?: string;
   canonicalURL?: string;
   ogImage?: string;
+  jsonLd?: string;
 }
+const site = "https://chaoswithclarity.com";
 const {
   title,
-  description = "Short, honest ideas about ego, experience, and being fully alive.",
+  description = "Short, honest ideas about ego, experience, and being fully alive — poetry and essays by Abby.",
   canonicalURL = Astro.url.href,
-  ogImage = "/og-default.png"
+  ogImage = "/og-default.png",
+  jsonLd,
 } = Astro.props;
+const absoluteOgImage = ogImage.startsWith("http") ? ogImage : `${site}${ogImage}`;
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a3a2a" />
+  <meta name="author" content="Abby" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalURL} />
@@ -35,21 +43,28 @@ const {
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalURL} />
-  <meta property="og:image" content={ogImage} />
+  <meta property="og:image" content={absoluteOgImage} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={absoluteOgImage} />
+  <meta property="og:site_name" content="Chaos With Clarity" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Abby",
-    "url": "https://chaoswithclarity.com",
-    "sameAs": ["https://instagram.com/iamabbyjain","https://youtube.com/@iamabbyjain"]
-  }
-  </script>
+  {jsonLd ? (
+    <script type="application/ld+json" set:html={jsonLd} />
+  ) : (
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abby",
+      "url": "https://chaoswithclarity.com",
+      "sameAs": ["https://instagram.com/iamabbyjain","https://youtube.com/@iamabbyjain"]
+    }
+    </script>
+  )}
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -122,7 +137,7 @@ const {
       font-weight: 300;
       font-variant: small-caps;
       letter-spacing: 0.16em;
-      color: var(--burgundy);
+      color: #6b1a2a;
       line-height: 1;
     }
     .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }

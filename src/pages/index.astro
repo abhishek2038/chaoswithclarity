@@ -2,14 +2,27 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout
-  title="Chaos With Clarity | Abby"
-  description="Short, honest ideas about ego, experience, and being fully alive — for people who think too much and feel even more."
+  title="Chaos With Clarity — Poetry & Essays by Abby"
+  description="Short, honest ideas about ego, experience, and being fully alive. Poetry, essays, and inner work for people who think too much and feel even more."
+  jsonLd={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Chaos With Clarity",
+    "url": "https://chaoswithclarity.com",
+    "description": "Poetry, essays, and inner work by Abby — short honest ideas about ego, experience, and being fully alive.",
+    "author": {
+      "@type": "Person",
+      "name": "Abby",
+      "url": "https://chaoswithclarity.com/about",
+      "sameAs": ["https://instagram.com/iamabbyjain", "https://youtube.com/@iamabbyjain"]
+    }
+  })}
 >
 
   <!-- ══ HERO ══════════════════════════════════════════════ -->
   <section style="min-height:100svh;background:#1a3a2a;display:flex;flex-direction:column;justify-content:center;padding:5rem 3rem 4rem;position:relative;overflow:hidden;">
     <!-- background video — loops first 5 sec via JS below -->
-    <video id="hero-vid" autoplay muted loop playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.3;">
+    <video id="hero-vid" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.3;">
       <source src="/images/abby-video.mp4" type="video/mp4" />
     </video>
     <!-- dark overlay — cinematic depth -->

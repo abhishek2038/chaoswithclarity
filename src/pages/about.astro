@@ -2,8 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout
-  title="About Abby | Chaos With Clarity"
-  description="Abby is a writer, poet, and fractional CFO who turns the mess of everyday life into lines that make you pause, breathe, and see differently."
+  title="About Abby — Writer, Poet & Creator | Chaos With Clarity"
+  description="Abby is a writer, poet, and fractional CFO who turns the mess of everyday life into lines that make you pause. Nine years of finance, now writing about ego, awareness, and the examined life."
+  jsonLd={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Abby",
+    "url": "https://chaoswithclarity.com/about",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Abby",
+      "jobTitle": "Writer, Poet, Fractional CFO",
+      "url": "https://chaoswithclarity.com",
+      "sameAs": ["https://instagram.com/iamabbyjain", "https://youtube.com/@iamabbyjain", "https://abbyjain.com"]
+    }
+  })}
 >
 
   <!-- HEADER — DEEP GREEN with warm text -->
@@ -26,12 +39,12 @@ import Layout from '../layouts/Layout.astro';
           <div class="about-photo-wrap">
             <img
               src="/images/abby-mountains.jpg"
-              alt="Abby"
+              alt="Abby, writer and poet behind Chaos With Clarity, in the mountains"
               class="photo-a"
             />
             <img
               src="/images/abby-mountains1.jpg"
-              alt="Abby"
+              alt="Abby outdoors surrounded by nature"
               class="photo-b"
             />
           </div>
@@ -90,7 +103,7 @@ import Layout from '../layouts/Layout.astro';
             <source srcset="/images/abby-photo.heic" type="image/heic" />
             <img
               src="/images/abby-photo.jpg"
-              alt="Abby"
+              alt="Abby — writer, poet, and creator of Chaos With Clarity"
               loading="lazy"
               onerror="this.style.display='none'"
             />

@@ -2,8 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout
-  title="The Collection | Chaos With Clarity"
-  description="Poetry collections and chapbooks by Abby — available as digital downloads."
+  title="Poetry Collection — 40 Poems by Abby | Chaos With Clarity"
+  description="Download the complete poetry collection: 40 poems across five themes. Two free chapbooks and printable poem cards. Digital PDF, yours forever."
+  jsonLd={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Chaos With Clarity — A Collection of Poems",
+    "description": "40 poems across five themes by Abby. Digital PDF, 84 pages.",
+    "author": { "@type": "Person", "name": "Abby" },
+    "offers": {
+      "@type": "Offer",
+      "price": "9",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://chaoswithclarity.gumroad.com/l/poems"
+    }
+  })}
 >
 
   <!-- ══ PAGE HEADER ══════════════════════════════════════════ -->

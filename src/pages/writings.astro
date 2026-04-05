@@ -3,8 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import { sections, essays } from '../data/poems';
 ---
 <Layout
-  title="Writings | Chaos With Clarity"
-  description="Essays and poems by Abby — on ego, experience, technology, love, and being fully alive."
+  title="Poems & Essays on Ego, Awareness, and Being Alive — Chaos With Clarity"
+  description="Read 40 poems and essays by Abby across five themes: being human, the inward turn, pain and transformation, freedom, and love. Free poems to read online."
+  jsonLd={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Writings — Chaos With Clarity",
+    "description": "40 poems and essays by Abby on ego, awareness, meditation, pain, freedom, and love.",
+    "url": "https://chaoswithclarity.com/writings",
+    "isPartOf": { "@type": "WebSite", "name": "Chaos With Clarity", "url": "https://chaoswithclarity.com" }
+  })}
 >
 
   <!-- ══ PAGE HEADER ══════════════════════════════════════════ -->

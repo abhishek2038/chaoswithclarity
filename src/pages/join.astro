@@ -2,8 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout
-  title="Get the Letters | Chaos With Clarity"
-  description="An occasional letter with thoughts Abby doesn't share on Instagram or YouTube. Drafts, behind-the-scenes, and questions still being figured out."
+  title="Get the Letters — Honest Notes from Abby | Chaos With Clarity"
+  description="Subscribe to occasional letters from Abby with poems, essays, drafts, and behind-the-scenes thoughts not shared on Instagram or YouTube. No spam, ever."
+  jsonLd={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Get the Letters",
+    "description": "Subscribe to occasional letters from Abby with poems, essays, and behind-the-scenes thoughts.",
+    "url": "https://chaoswithclarity.com/join"
+  })}
 >
 
   <!-- HERO — deep green with warm gold accents -->

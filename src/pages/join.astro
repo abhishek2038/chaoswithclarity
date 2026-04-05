@@ -53,7 +53,7 @@ import Layout from '../layouts/Layout.astro';
             if (res.ok || res.status === 200 || res.status === 303) {
               msg.textContent = 'Check your inbox to confirm.';
               msg.style.display = 'block';
-              msg.style.color = '#e8c170';
+              msg.style.color = '#d4a04a';
               btn.style.display = 'none';
               document.getElementById('cwc-email').style.display = 'none';
             } else {
@@ -79,7 +79,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- WHAT ARRIVES — alternating color cards -->
-  <section class="join-section" style="background:#f2f7f4;">
+  <section class="join-section" style="background:#f0e8dc;">
     <div class="join-inner">
 
       <div class="arrives-divider">
@@ -91,21 +91,21 @@ import Layout from '../layouts/Layout.astro';
       <div class="arrives-grid">
 
         <div class="arrives-card" style="background:#1a3a2a;">
-          <i class="ph ph-pencil-line arrives-icon" style="color:#e8c170;"></i>
+          <i class="ph ph-pencil-line arrives-icon" style="color:#d4a04a;"></i>
           <h3 class="arrives-title" style="color:#f0f0f0;">Poems</h3>
-          <p class="arrives-desc" style="color:#a8c8b0;">New poems as they come, raw, unpolished, honest. The kind I'd share with a close friend over chai.</p>
+          <p class="arrives-desc" style="color:#c8b8a0;">New poems as they come, raw, unpolished, honest. The kind I'd share with a close friend over chai.</p>
         </div>
 
         <div class="arrives-card" style="background:#1a3a2a;">
-          <i class="ph ph-notebook arrives-icon" style="color:#e8c170;"></i>
+          <i class="ph ph-notebook arrives-icon" style="color:#d4a04a;"></i>
           <h3 class="arrives-title" style="color:#f0f0f0;">Essays &amp; Drafts</h3>
-          <p class="arrives-desc" style="color:#a8c8b0;">Thoughts I'm still working through. Behind-the-scenes process. Questions I don't share anywhere else.</p>
+          <p class="arrives-desc" style="color:#c8b8a0;">Thoughts I'm still working through. Behind-the-scenes process. Questions I don't share anywhere else.</p>
         </div>
 
         <div class="arrives-card" style="background:#142e22;">
           <i class="ph ph-fire arrives-icon" style="color:#e86850;"></i>
           <h3 class="arrives-title" style="color:#f0f0f0;">Circles</h3>
-          <p class="arrives-desc" style="color:#a8c8b0;">Occasional invites to Chaos Circles, small group conversations for people who want to go deeper than surface.</p>
+          <p class="arrives-desc" style="color:#c8b8a0;">Occasional invites to Chaos Circles, small group conversations for people who want to go deeper than surface.</p>
         </div>
 
       </div>
@@ -168,14 +168,14 @@ import Layout from '../layouts/Layout.astro';
   .join-tagline {
     font-family: 'Fraunces', serif;
     font-style: italic;
-    color: #e8c170;
+    color: #d4a04a;
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
     letter-spacing: 0.01em;
     font-weight: 500;
   }
   .join-desc {
-    color: #a8c8b0;
+    color: #c8b8a0;
     font-size: 0.95rem;
     line-height: 2.1;
     margin-bottom: 3rem;
@@ -204,7 +204,7 @@ import Layout from '../layouts/Layout.astro';
     border-radius: 4px;
     transition: border-color 0.2s;
   }
-  .join-input:focus { border-color: #e8c170; }
+  .join-input:focus { border-color: #d4a04a; }
   .join-input::placeholder { color: rgba(255,255,255,0.35); }
   .join-submit {
     font-size: 0.72rem;
@@ -241,14 +241,14 @@ import Layout from '../layouts/Layout.astro';
   .join-quote p {
     font-family: 'Fraunces', serif;
     font-style: italic;
-    color: #a8c8b0;
+    color: #c8b8a0;
     font-size: 1.2rem;
     line-height: 1.8;
   }
   .join-quote cite {
     display: block;
     font-size: 0.7rem;
-    color: #e8c170;
+    color: #d4a04a;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-top: 0.75rem;

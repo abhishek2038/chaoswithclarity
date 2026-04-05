@@ -55,49 +55,49 @@ const {
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* ── Core palette ── */
-      --green-deep:   #1a3a2a;   /* primary dark */
-      --green-mid:    #2a5a3a;   /* hover dark */
-      --green-light:  #a8c8b0;   /* body text on dark */
+      /* ── Forest + Earth palette ── */
+      --green-deep:   #1a3a2a;
+      --green-mid:    #2a5a3a;
+      --green-light:  #a8c8b0;
 
-      --coral:        #e86850;   /* primary accent / CTAs */
-      --coral-dark:   #d05840;   /* hover accent */
-      --gold:         #e8c170;   /* secondary accent / quotes */
-      --gold-dim:     #c9a050;   /* subtle gold */
+      --coral:        #e86850;
+      --coral-dark:   #d05840;
+      --gold:         #d4a04a;
+      --gold-light:   #e8c170;
 
-      /* ── Backgrounds ── */
-      --bg:           #ffffff;
-      --bg-sage:      #f2f7f4;   /* light green tint */
-      --bg-cream:     #faf8f5;   /* warm card bg */
-      --bg-dark:      #1a3a2a;   /* dark sections */
-      --bg-darker:    #142e22;   /* deepest */
+      /* ── Backgrounds: warm earth ── */
+      --bg:           #faf6ef;   /* warm cream */
+      --bg-sand:      #f0e8dc;   /* sand */
+      --bg-terra:     #e6d8c8;   /* terracotta tint */
+      --bg-card:      #ffffff;
+      --bg-dark:      #1a3a2a;
+      --bg-darker:    #142e22;
 
       /* ── Typography ── */
-      --text:         #1a2a22;
-      --text-muted:   #4a5a50;
-      --text-faint:   #7a8a80;
-      --text-on-dark: #f0f0f0;
-      --text-on-dark-muted: #a8c8b0;
+      --text:         #2a2018;
+      --text-muted:   #5a4a38;
+      --text-faint:   #8a7a68;
+      --text-on-dark: #faf6ef;
+      --text-on-dark-muted: #c8b8a0;
 
       /* ── Structure ── */
-      --border:       #dce8e0;
-      --border-dark:  #c8d8cc;
+      --border:       #ddd0c0;
+      --border-dark:  #c8b8a0;
 
-      /* ── Legacy aliases (keep writings page working) ── */
+      /* ── Legacy aliases ── */
       --olive-accent: #e86850;
       --olive-bright: #d05840;
-      --bg-alt:       #f2f7f4;
-      --bg-card:      #faf8f5;
-      --text-dim-dark:#a8c8b0;
+      --bg-alt:       #f0e8dc;
+      --text-dim-dark:#c8b8a0;
 
-      /* ── Section accent palette (writings page) ── */
+      /* ── Section accents ── */
       --sec-human:    #e86850;
       --sec-inward:   #1a3a2a;
       --sec-awaken:   #2a8e6e;
       --sec-pain:     #c45050;
       --sec-freedom:  #2a5a3a;
-      --sec-love:     #e8c170;
-      --sec-essay:    #4a5a50;
+      --sec-love:     #d4a04a;
+      --sec-essay:    #5a4a38;
     }
 
     html { scroll-behavior: smooth; }
@@ -116,8 +116,8 @@ const {
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
+      background: #faf6ef;
+      border-bottom: 1px solid #ddd0c0;
       padding: 0 3rem; height: 4.25rem;
       display: flex; align-items: center; justify-content: space-between;
     }

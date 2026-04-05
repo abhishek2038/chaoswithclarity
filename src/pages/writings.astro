@@ -12,8 +12,8 @@ import { sections, essays } from '../data/poems';
     <div class="page-header-inner">
       <p class="overline" style="color:#e86850;">All Writings</p>
       <h1 class="page-h1" style="color:#f0f0f0;">Essays<br/>&amp; Poems</h1>
-      <div class="header-rule" style="background:#e8c170;"></div>
-      <p class="page-sub" style="color:#a8c8b0;">
+      <div class="header-rule" style="background:#d4a04a;"></div>
+      <p class="page-sub" style="color:#c8b8a0;">
         Ideas that stay with you the next time you're scrolling at 2am,<br class="br-d"/>
         or wondering why you still feel restless even when everything looks fine on paper.
       </p>
@@ -97,11 +97,11 @@ import { sections, essays } from '../data/poems';
         <div class="section-head">
           <p class="section-num" aria-hidden="true" style="color:rgba(232,193,112,0.15);">VI</p>
           <div class="section-label-row" style="border-bottom-color:rgba(255,255,255,0.1);">
-            <span class="section-dot" style="background:#e8c170;"></span>
-            <h2 class="section-label-text" style="color:#e8c170;">Essays</h2>
+            <span class="section-dot" style="background:#d4a04a;"></span>
+            <h2 class="section-label-text" style="color:#d4a04a;">Essays</h2>
             <div class="section-line"></div>
           </div>
-          <p class="section-subtitle" style="color:#a8c8b0;">Longer reflections on consciousness, technology, and the examined life.</p>
+          <p class="section-subtitle" style="color:#c8b8a0;">Longer reflections on consciousness, technology, and the examined life.</p>
         </div>
 
         <div class="essay-grid">
@@ -257,20 +257,20 @@ import { sections, essays } from '../data/poems';
   }
 
   /* Per-section backgrounds — alternating sage / white */
-  #being-human                   { background: #f2f7f4; }
-  #the-inward-turn               { background: #ffffff; }
-  #pain-and-transformation       { background: #f2f7f4; }
-  #freedom-and-becoming          { background: #ffffff; }
-  #love-nature-and-the-world     { background: #f2f7f4; }
+  #being-human                   { background: #f0e8dc; }
+  #the-inward-turn               { background: #faf6ef; }
+  #pain-and-transformation       { background: #f0e8dc; }
+  #freedom-and-becoming          { background: #faf6ef; }
+  #love-nature-and-the-world     { background: #f0e8dc; }
   #essays                        { background: #1a3a2a; }
-  .work-with-abby                { background: #f2f7f4; }
+  .work-with-abby                { background: #f0e8dc; }
 
   /* Section numbers — subtle green */
   .writings-section .section-num { color: rgba(26,58,42,0.12); }
 
   /* Consistent green left border on all cards */
   .poem-card       { border-left: 3px solid #1a3a2a; }
-  #essays .essay-card { border-left: 3px solid #e8c170; }
+  #essays .essay-card { border-left: 3px solid #d4a04a; }
 
   /* Section divider line */
   .section-label-row { border-bottom-color: #dce8e0; }
@@ -338,8 +338,8 @@ import { sections, essays } from '../data/poems';
     border-top: none;
     border-radius: 8px;
     box-shadow:
-      0 2px 16px rgba(26,26,46,0.08),
-      0 1px 4px rgba(26,26,46,0.04);
+      0 2px 16px rgba(26,58,42,0.1),
+      0 1px 4px rgba(26,58,42,0.05);
     cursor: pointer;
     transition:
       transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -423,7 +423,7 @@ import { sections, essays } from '../data/poems';
     text-transform: uppercase;
     font-weight: 700;
     color: #1a3a2a;
-    background: #d8e8dc;
+    background: #ddd0c0;
     padding: 0.25rem 0.65rem;
     border-radius: 3px;
     align-self: flex-start;
@@ -440,8 +440,8 @@ import { sections, essays } from '../data/poems';
     align-items: center;
     gap: 1.5rem;
     flex-wrap: wrap;
-    box-shadow: 0 2px 12px rgba(26,26,46,0.06);
-    border-left: 3px solid var(--border);
+    box-shadow: 0 2px 12px rgba(26,58,42,0.08);
+    border-left: 3px solid #1a3a2a;
   }
   .more-poems-count {
     font-family: 'Fraunces', serif;
@@ -512,12 +512,12 @@ import { sections, essays } from '../data/poems';
     line-height: 1.25;
   }
   .essay-desc {
-    color: #a8c8b0;
+    color: #c8b8a0;
     font-size: 0.9rem;
     line-height: 1.9;
   }
   .essay-snippet {
-    color: #a8c8b0;
+    color: #c8b8a0;
     font-size: 0.82rem;
     line-height: 1.85;
     font-style: italic;

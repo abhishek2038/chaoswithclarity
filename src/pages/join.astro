@@ -6,148 +6,364 @@ import Layout from '../layouts/Layout.astro';
   description="An occasional letter with thoughts Abby doesn't share on Instagram or YouTube. Drafts, behind-the-scenes, and questions still being figured out."
 >
 
-  <!-- HERO -->
-  <section style="min-height:80svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 3rem 4rem;position:relative;background:var(--bg-alt);border-bottom:1px solid var(--border);">
+  <!-- HERO — deep green with warm gold accents -->
+  <section class="join-hero">
+    <div class="join-hero-inner">
+      <p class="join-overline">Stay in the Clarity</p>
 
-    <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1rem;font-weight:600;">Stay in the Clarity</p>
+      <h1 class="join-h1">Get the Letters</h1>
 
-    <h1 style="font-family:'Fraunces',serif;font-size:clamp(3rem,8vw,7rem);font-weight:800;color:var(--text);letter-spacing:-0.03em;margin-bottom:0.75rem;line-height:0.92;">Get the Letters</h1>
+      <p class="join-tagline">Honest notes from the middle of it all.</p>
 
-    <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--olive-accent);font-size:1.3rem;margin-bottom:2.5rem;letter-spacing:0.01em;font-weight:500;">Honest notes from the middle of it all.</p>
+      <p class="join-desc">
+        Thoughts I don't share on Instagram or YouTube.<br/>
+        Drafts. Behind-the-scenes process. Questions I'm still figuring out.<br/>
+        No spam. No "daily grind" tips. Just honest notes.
+      </p>
 
-    <p style="color:var(--text-muted);font-size:0.95rem;max-width:30rem;line-height:2.1;margin-bottom:3rem;font-weight:300;">
-      Thoughts I don't share on Instagram or YouTube.<br/>
-      Drafts. Behind-the-scenes process. Questions I'm still figuring out.<br/>
-      No spam. No "daily grind" tips. Just honest notes.
-    </p>
+      <!-- Our design, Kit backend -->
+      <form id="cwc-form" class="join-form">
+        <input
+          type="email"
+          id="cwc-email"
+          placeholder="your@email.com"
+          required
+          class="join-input"
+        />
+        <button type="submit" id="cwc-btn" class="join-submit">
+          Get the Letters
+        </button>
+        <p id="cwc-msg" class="join-msg"></p>
+      </form>
 
-    <!-- Our design, Kit backend -->
-    <form
-      id="cwc-form"
-      style="display:flex;flex-direction:column;gap:0.6rem;width:100%;max-width:22rem;"
-    >
-      <input
-        type="email"
-        id="cwc-email"
-        placeholder="your@email.com"
-        required
-        style="background:var(--bg-card);border:1px solid var(--border);color:var(--text);font-size:0.92rem;padding:1rem 1.1rem;font-family:'DM Sans',sans-serif;font-weight:400;outline:none;width:100%;transition:border-color 0.2s;"
-        onfocus="this.style.borderColor='var(--olive-accent)'"
-        onblur="this.style.borderColor='var(--border)'"
-      />
-      <button
-        type="submit"
-        id="cwc-btn"
-        style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--olive-accent);color:var(--text-on-dark);padding:1rem 1.5rem;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;transition:background 0.2s;"
-        onmouseover="this.style.background='var(--olive-bright)'"
-        onmouseout="this.style.background='var(--olive-accent)'"
-      >
-        Get the Letters
-      </button>
-      <p id="cwc-msg" style="display:none;font-size:0.82rem;color:var(--gold);letter-spacing:0.04em;margin-top:0.25rem;"></p>
-    </form>
-
-    <script is:inline>
-      document.getElementById('cwc-form').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const email = document.getElementById('cwc-email').value;
-        const btn = document.getElementById('cwc-btn');
-        const msg = document.getElementById('cwc-msg');
-        btn.textContent = 'Sending…';
-        btn.disabled = true;
-        try {
-          const res = await fetch('https://app.kit.com/forms/9235299/subscriptions', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: 'email_address=' + encodeURIComponent(email)
-          });
-          if (res.ok || res.status === 200 || res.status === 303) {
-            msg.textContent = 'Check your inbox to confirm. ✓';
+      <script is:inline>
+        document.getElementById('cwc-form').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const email = document.getElementById('cwc-email').value;
+          const btn = document.getElementById('cwc-btn');
+          const msg = document.getElementById('cwc-msg');
+          btn.textContent = 'Sending…';
+          btn.disabled = true;
+          try {
+            const res = await fetch('https://app.kit.com/forms/9235299/subscriptions', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: 'email_address=' + encodeURIComponent(email)
+            });
+            if (res.ok || res.status === 200 || res.status === 303) {
+              msg.textContent = 'Check your inbox to confirm.';
+              msg.style.display = 'block';
+              msg.style.color = '#e8c170';
+              btn.style.display = 'none';
+              document.getElementById('cwc-email').style.display = 'none';
+            } else {
+              throw new Error();
+            }
+          } catch {
+            msg.textContent = 'Something went wrong — try again.';
+            msg.style.color = '#e86850';
             msg.style.display = 'block';
-            btn.style.display = 'none';
-            document.getElementById('cwc-email').style.display = 'none';
-          } else {
-            throw new Error();
+            btn.textContent = 'Get the Letters';
+            btn.disabled = false;
           }
-        } catch {
-          msg.textContent = 'Something went wrong — try again.';
-          msg.style.color = '#c0392b';
-          msg.style.display = 'block';
-          btn.textContent = 'Get the Letters';
-          btn.disabled = false;
-        }
-      });
-    </script>
+        });
+      </script>
 
-    <p style="color:var(--text-muted);font-size:0.78rem;margin-top:1rem;letter-spacing:0.06em;opacity:0.7;">No spam. Ever. Unsubscribe any time.</p>
+      <p class="join-fine">No spam. Ever. Unsubscribe any time.</p>
 
-    <blockquote style="margin-top:4rem;border-top:1px solid var(--border);padding-top:2.5rem;max-width:30rem;">
-      <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.2rem;line-height:1.8;">"Save pieces that bother you a little.<br/>They usually have something to show you."</p>
-      <p style="font-size:0.7rem;color:var(--olive-accent);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.75rem;font-weight:600;">Abby</p>
-    </blockquote>
-
-    <div style="width:1px;height:4rem;background:linear-gradient(to bottom,var(--border),transparent);margin-top:2.5rem;"></div>
+      <blockquote class="join-quote">
+        <p>"Save pieces that bother you a little.<br/>They usually have something to show you."</p>
+        <cite>Abby</cite>
+      </blockquote>
+    </div>
   </section>
 
-  <!-- WHAT ARRIVES -->
-  <section style="max-width:72rem;margin:0 auto;padding:0 3rem 5rem;">
+  <!-- WHAT ARRIVES — alternating color cards -->
+  <section class="join-section" style="background:#fef0d8;">
+    <div class="join-inner">
 
-    <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:3rem;margin-top:4rem;">
-      <div style="flex:1;height:1px;background:var(--border);"></div>
-      <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--text-muted);padding:0 1rem;white-space:nowrap;font-weight:600;">What arrives</p>
-      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <div class="arrives-divider">
+        <div class="arrives-line"></div>
+        <p class="arrives-label">What arrives</p>
+        <div class="arrives-line"></div>
+      </div>
+
+      <div class="arrives-grid">
+
+        <div class="arrives-card" style="background:#1a3a2a;">
+          <i class="ph ph-pencil-line arrives-icon" style="color:#e8c170;"></i>
+          <h3 class="arrives-title" style="color:#f0f0f0;">Poems</h3>
+          <p class="arrives-desc" style="color:#a8c8b0;">New poems as they come, raw, unpolished, honest. The kind I'd share with a close friend over chai.</p>
+        </div>
+
+        <div class="arrives-card" style="background:#1a1a2e;">
+          <i class="ph ph-notebook arrives-icon" style="color:#8b7ec6;"></i>
+          <h3 class="arrives-title" style="color:#f0f0f0;">Essays &amp; Drafts</h3>
+          <p class="arrives-desc" style="color:#b0b0c8;">Thoughts I'm still working through. Behind-the-scenes process. Questions I don't share anywhere else.</p>
+        </div>
+
+        <div class="arrives-card" style="background:#3a1a2a;">
+          <i class="ph ph-fire arrives-icon" style="color:#e86850;"></i>
+          <h3 class="arrives-title" style="color:#f0f0f0;">Circles</h3>
+          <p class="arrives-desc" style="color:#c8a0b0;">Occasional invites to Chaos Circles, small group conversations for people who want to go deeper than surface.</p>
+        </div>
+
+      </div>
+
+      <!-- Poem preview -->
+      <div class="join-taste">
+        <p class="taste-label">A taste</p>
+        <h3 class="taste-title">Let Me Be Conscious</h3>
+        <p class="taste-date">2025</p>
+        <div class="taste-poem">
+          <p>Let me breathe today, let me be conscious,</p>
+          <p>Let me be free today, let me be outrageous,</p>
+          <p>Let me feel the pain I keep hiding,</p>
+          <p>Let me kiss a plant today I keep avoiding.</p>
+        </div>
+        <a href="/writings" class="taste-link">
+          Read all writings <i class="ph ph-arrow-right"></i>
+        </a>
+      </div>
+
     </div>
-
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);margin-bottom:4rem;" class="what-grid">
-
-      <div style="padding:2.5rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;">
-        <i class="ph ph-pencil-line" style="font-size:2rem;color:var(--olive-accent);"></i>
-        <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;">Poems</h3>
-        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;">New poems as they come, raw, unpolished, honest. The kind I'd share with a close friend over chai.</p>
-      </div>
-
-      <div style="padding:2.5rem;border-right:1px solid var(--border);background:var(--bg-alt);display:flex;flex-direction:column;gap:1rem;">
-        <i class="ph ph-notebook" style="font-size:2rem;color:var(--text-muted);"></i>
-        <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;">Essays &amp; Drafts</h3>
-        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;">Thoughts I'm still working through. Behind-the-scenes process. Questions I don't share anywhere else.</p>
-      </div>
-
-      <div style="padding:2.5rem;display:flex;flex-direction:column;gap:1rem;">
-        <i class="ph ph-fire" style="font-size:2rem;color:var(--olive-bright);"></i>
-        <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--text);font-weight:700;">Circles</h3>
-        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;">Occasional invites to Chaos Circles, small group conversations for people who want to go deeper than surface.</p>
-      </div>
-
-    </div>
-
-    <!-- Poem preview -->
-    <div style="max-width:44rem;margin:0 auto;border:1px solid var(--border);border-left:4px solid var(--olive-accent);padding:3rem 3.5rem;">
-      <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:0.75rem;font-weight:600;">A taste</p>
-      <h3 style="font-family:'Fraunces',serif;font-size:1.5rem;color:var(--text);margin-bottom:0.4rem;font-weight:700;">Let Me Be Conscious</h3>
-      <p style="color:var(--text-faint);font-size:0.75rem;margin-bottom:1.75rem;letter-spacing:0.06em;font-weight:600;">2025</p>
-      <div style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.05rem;line-height:2.2;margin-bottom:1.75rem;">
-        <p>Let me breathe today, let me be conscious,</p>
-        <p>Let me be free today, let me be outrageous,</p>
-        <p>Let me feel the pain I keep hiding,</p>
-        <p>Let me kiss a plant today I keep avoiding.</p>
-      </div>
-      <a href="/writings" style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive-accent);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;font-weight:600;">
-        Read all writings <i class="ph ph-arrow-right"></i>
-      </a>
-    </div>
-
   </section>
-
 
 </Layout>
 
 <style>
+  /* ══ HERO — Deep Forest Green ══════════════════════════════════ */
+  .join-hero {
+    min-height: 80svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 3rem 4rem;
+    background: #1a3a2a;
+    position: relative;
+  }
+  .join-hero-inner {
+    max-width: 30rem;
+    width: 100%;
+  }
+  .join-overline {
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #e86850;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .join-h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 800;
+    color: #f0f0f0;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+    line-height: 0.92;
+  }
+  .join-tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: #e8c170;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+  }
+  .join-desc {
+    color: #a8c8b0;
+    font-size: 0.95rem;
+    line-height: 2.1;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+
+  /* Form */
+  .join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+  .join-input {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #f0f0f0;
+    font-size: 0.92rem;
+    padding: 1rem 1.1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    outline: none;
+    width: 100%;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+  }
+  .join-input:focus { border-color: #e8c170; }
+  .join-input::placeholder { color: rgba(255,255,255,0.35); }
+  .join-submit {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: #e86850;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .join-submit:hover { background: #d05840; transform: translateY(-2px); }
+  .join-msg {
+    display: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    margin-top: 0.25rem;
+  }
+  .join-fine {
+    color: rgba(255,255,255,0.35);
+    font-size: 0.78rem;
+    margin-top: 1rem;
+    letter-spacing: 0.06em;
+  }
+  .join-quote {
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2.5rem;
+  }
+  .join-quote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: #a8c8b0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  .join-quote cite {
+    display: block;
+    font-size: 0.7rem;
+    color: #e8c170;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.75rem;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  /* ══ WHAT ARRIVES ══════════════════════════════════════════════ */
+  .join-section { padding: 4rem 3rem 5rem; }
+  .join-inner { max-width: 72rem; margin: 0 auto; }
+
+  .arrives-divider {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+    margin-top: 0;
+  }
+  .arrives-line { flex: 1; height: 1px; background: var(--border); }
+  .arrives-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--sec-human);
+    padding: 0 1rem;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  .arrives-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+  .arrives-card {
+    padding: 2.5rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s;
+  }
+  .arrives-card:hover { transform: translateY(-4px); }
+  .arrives-icon { font-size: 2rem; }
+  .arrives-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .arrives-desc {
+    font-size: 0.9rem;
+    line-height: 1.9;
+  }
+
+  /* Poem preview */
+  .join-taste {
+    max-width: 44rem;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    border-left: 4px solid #1a3a2a;
+    padding: 3rem 3.5rem;
+    box-shadow: 0 4px 24px rgba(26,58,42,0.08);
+  }
+  .taste-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #1a3a2a;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  .taste-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+  }
+  .taste-date {
+    color: var(--text-faint);
+    font-size: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+  .taste-poem {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 2.2;
+    margin-bottom: 1.75rem;
+  }
+  .taste-link {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #1a3a2a;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  .taste-link:hover { opacity: 0.7; }
+
+  /* ══ RESPONSIVE ════════════════════════════════════════════════ */
   @media (max-width: 768px) {
-    .what-grid { grid-template-columns: 1fr !important; }
-    .what-grid > div { border-right: none !important; border-bottom: 1px solid var(--border); }
-    .what-grid > div:last-child { border-bottom: none; }
+    .arrives-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 480px) {
-    section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+    .join-hero { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .join-section { padding-left: 1.5rem; padding-right: 1.5rem; }
   }
 </style>

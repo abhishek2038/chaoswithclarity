@@ -6,213 +6,202 @@ import Layout from '../layouts/Layout.astro';
   description="Abby is a writer, poet, and fractional CFO who turns the mess of everyday life into lines that make you pause, breathe, and see differently."
 >
 
-  <!-- HEADER -->
-  <section style="padding:6rem 3rem 4rem;background:var(--bg-alt);border-bottom:1px solid var(--border);">
-    <div style="max-width:72rem;margin:0 auto;">
-      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1.5rem;font-weight:600;">The Person</p>
-      <h1 style="font-family:'Fraunces',serif;font-size:clamp(3.5rem,9vw,8rem);font-weight:800;color:var(--text);letter-spacing:-0.03em;line-height:0.9;">About<br/>Abby</h1>
+  <!-- HEADER — DEEP GREEN with warm text -->
+  <section class="about-hero">
+    <div class="about-hero-inner">
+      <p class="about-overline">The Person</p>
+      <h1 class="about-h1">About<br/>Abby</h1>
+      <p class="about-hero-sub">Writer. Poet. Fractional CFO.<br/>Turning the mess of everyday life into lines that make you pause.</p>
     </div>
+    <p class="about-bg-word" aria-hidden="true">abby</p>
   </section>
 
-  <!-- INTRO GRID -->
-  <section style="max-width:72rem;margin:0 auto;padding:4rem 3rem;">
-    <div style="display:grid;grid-template-columns:1fr 1.4fr;border:1px solid var(--border);" class="about-grid">
+  <!-- INTRO GRID — light warm amber -->
+  <section class="about-section" style="background:#fef0d8;">
+    <div class="about-inner">
+      <div class="about-grid-intro" class:list={["about-grid"]}>
 
-      <!-- Photo -->
-      <div style="display:flex;flex-direction:column;border-right:1px solid var(--border);">
-        <div style="aspect-ratio:4/5;background:var(--olive-dark);overflow:hidden;position:relative;">
-          <img
-            src="/images/abby-mountains.jpg"
-            alt="Abby"
-            class="photo-a"
-            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;"
-          />
-          <img
-            src="/images/abby-mountains1.jpg"
-            alt="Abby"
-            class="photo-b"
-            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;"
-          />
+        <!-- Photo -->
+        <div class="about-photo-col">
+          <div class="about-photo-wrap">
+            <img
+              src="/images/abby-mountains.jpg"
+              alt="Abby"
+              class="photo-a"
+            />
+            <img
+              src="/images/abby-mountains1.jpg"
+              alt="Abby"
+              class="photo-b"
+            />
+          </div>
+          <div class="about-photo-quote">
+            <p>"Spreadsheets couldn't answer the chest ache. So I write."</p>
+          </div>
         </div>
-        <div style="padding:2.5rem 3rem;background:var(--bg-alt);border-top:1px solid var(--border);">
-          <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.2rem;line-height:1.8;">
-            "Spreadsheets couldn't answer the chest ache. So I write."
+
+        <!-- Intro text -->
+        <div class="about-intro-text">
+          <h2>
+            I create short philosophical essays, poems, and experiments in living with less noise and more awareness.
+          </h2>
+          <p>I'm not a guru, therapist, or productivity coach. I'm just someone who has spent a lot of time lost in my own head, and decided to turn that chaos into something useful.</p>
+          <p>Online, you'll find thoughts about ego, minimalism, technology, attention, and the strange project of being human in 2026. Offline, I'm usually reading, walking, or staring at mountains trying to make sense of things.</p>
+
+          <p class="about-sign">– Abby</p>
+
+          <div class="about-cta-row">
+            <a href="/writings" class="about-btn-primary">Read the Writing</a>
+            <a href="/join" class="about-btn-outline">Get the Letters</a>
+          </div>
+
+          <p class="about-cfo-link">
+            Looking for the CFO work?
+            <a href="https://abbyjain.com" target="_blank" rel="noopener">abbyjain.com ↗</a>
           </p>
         </div>
+
       </div>
-
-      <!-- Intro text -->
-      <div style="padding:3.5rem;display:flex;flex-direction:column;justify-content:center;gap:1.5rem;">
-        <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:var(--text);line-height:1.3;">
-          I create short philosophical essays, poems, and experiments in living with less noise and more awareness.
-        </h2>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2;">I'm not a guru, therapist, or productivity coach. I'm just someone who has spent a lot of time lost in my own head, and decided to turn that chaos into something useful.</p>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2;">Online, you'll find thoughts about ego, minimalism, technology, attention, and the strange project of being human in 2026. Offline, I'm usually reading, walking, or staring at mountains trying to make sense of things.</p>
-
-        <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--olive-accent);font-size:1.15rem;font-weight:600;">– Abby</p>
-
-        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.5rem;">
-          <a href="/writings" style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;background:var(--olive-accent);color:var(--text-on-dark);padding:0.85rem 1.75rem;text-decoration:none;font-weight:600;transition:background 0.2s;" onmouseover="this.style.background='var(--olive-bright)'" onmouseout="this.style.background='var(--olive-accent)'">Read the Writing</a>
-          <a href="/join" style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid var(--border);color:var(--text-muted);padding:0.85rem 1.75rem;text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--olive-accent)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">Get the Letters</a>
-        </div>
-
-        <p style="font-size:0.8rem;color:var(--text-faint);">
-          Looking for the CFO work?
-          <a href="https://abbyjain.com" target="_blank" rel="noopener" style="color:var(--olive-accent);text-decoration:none;margin-left:0.3rem;font-weight:500;">abbyjain.com ↗</a>
-        </p>
-      </div>
-
     </div>
   </section>
 
-  <!-- SECOND PHOTO (if available) -->
-  <section style="max-width:72rem;margin:0 auto;padding:0 3rem 4rem;">
-    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:0;border:1px solid var(--border);" class="photo2-grid">
-      <div style="padding:3.5rem;background:var(--bg-alt);display:flex;flex-direction:column;gap:1.5rem;">
-        <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:0.5rem;">
-          <div style="width:8px;height:8px;border-radius:50%;background:var(--olive-accent);flex-shrink:0;"></div>
-          <h2 style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.3rem;font-weight:500;">The longer story</h2>
-          <div style="flex:1;height:1px;background:var(--border);"></div>
-        </div>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
-          I started writing because the spreadsheets stopped making sense. Not financially. The numbers were always there. But existentially. You can model a company's runway to the day. You cannot model why you lie awake at 2am wondering if any of it means anything.
-        </p>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
-          Nine years of finance, from audit rooms at EY to sitting across from founders who had everything and felt nothing, taught me one thing: clarity without depth is just noise with good formatting.
-        </p>
-        <div style="border-left:3px solid var(--olive-accent);padding-left:1.5rem;margin:0.5rem 0;">
-          <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text);font-size:1.05rem;line-height:1.9;">
-            What are we really optimising for?<br/>
+  <!-- LONGER STORY — DARK SECTION (deep navy/charcoal) -->
+  <section class="about-section about-dark">
+    <div class="about-inner">
+      <div class="about-grid-story">
+        <div class="about-story-text">
+          <div class="story-header">
+            <div class="story-dot"></div>
+            <h2>The longer story</h2>
+            <div class="story-line"></div>
+          </div>
+          <p>I started writing because the spreadsheets stopped making sense. Not financially. The numbers were always there. But existentially. You can model a company's runway to the day. You cannot model why you lie awake at 2am wondering if any of it means anything.</p>
+          <p>Nine years of finance, from audit rooms at EY to sitting across from founders who had everything and felt nothing, taught me one thing: clarity without depth is just noise with good formatting.</p>
+          <blockquote class="story-blockquote">
+            <p>What are we really optimising for?<br/>
             What does "enough" look like beyond the spreadsheet?<br/>
-            What's the cost of a life that looks successful but feels empty?
-          </p>
+            What's the cost of a life that looks successful but feels empty?</p>
+          </blockquote>
+          <p>If that's the conversation you've been looking for, you're in the right place.</p>
         </div>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
-          If that's the conversation you've been looking for, you're in the right place.
-        </p>
-      </div>
-      <div style="border-left:1px solid var(--border);overflow:hidden;min-height:20rem;background:var(--bg-alt);position:relative;">
-        <picture style="width:100%;height:100%;display:block;">
-          <source srcset="/images/abby-photo.jpg" type="image/jpeg" />
-          <source srcset="/images/abby-photo.heic" type="image/heic" />
-          <img
-            src="/images/abby-photo.jpg"
-            alt="Abby"
-            loading="lazy"
-            style="width:100%;height:100%;object-fit:cover;"
-            onerror="this.style.display='none'"
-          />
-        </picture>
-        <div style="position:absolute;inset:0;background:linear-gradient(160deg,var(--bg-alt),var(--bg-card));z-index:-1;display:flex;align-items:center;justify-content:center;">
-          <i class="ph ph-user-circle" style="font-size:6rem;color:var(--border);opacity:0.5;"></i>
+        <div class="about-story-photo">
+          <picture>
+            <source srcset="/images/abby-photo.jpg" type="image/jpeg" />
+            <source srcset="/images/abby-photo.heic" type="image/heic" />
+            <img
+              src="/images/abby-photo.jpg"
+              alt="Abby"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </picture>
+          <div class="about-photo-fallback">
+            <i class="ph ph-user-circle"></i>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHAT IS CWC -->
-  <section style="max-width:72rem;margin:0 auto;padding:4rem 3rem 0;">
-    <div style="max-width:52rem;">
-      <p style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1.5rem;font-weight:600;">What is Chaos with Clarity?</p>
-      <p style="color:var(--text-muted);font-size:1rem;line-height:2.1;margin-bottom:1.25rem;">
-        Chaos with Clarity is my ongoing project to make inner life less confusing and more honest. Instead of shouting advice at you, I share experiments, reflections, and hard-earned realizations from my own life.
-      </p>
-      <p style="color:var(--text-muted);font-size:1rem;line-height:2.1;margin-bottom:1.75rem;">
-        You'll find ideas on ego, minimalism, technology, relationships, and meaning, all filtered through one simple question: Does this help me live more awake, or more on autopilot?
-      </p>
-      <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text);font-size:1.1rem;line-height:1.95;border-left:3px solid var(--olive-accent);padding-left:1.5rem;">
-        The goal here isn't to give you ten steps to fix your life. It's to offer perspectives that stay with you the next time you're scrolling at 2am, buying something you don't need, or wondering why you still feel restless even when everything looks fine on paper.
-      </p>
-    </div>
-  </section>
-
-  <!-- THE MARK -->
-  <section style="max-width:72rem;margin:0 auto;padding:4rem 3rem 0;">
-    <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:center;border-top:1px solid var(--border);padding-top:4rem;" class="mark-grid">
-
-      <!-- spiral mark, large -->
-      <div style="display:flex;justify-content:center;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="200" height="200" aria-hidden="true">
-          <path d="M37.0,20.0L36.9,21.5L36.6,23.0L36.2,24.4L35.7,25.8L35.0,27.2L34.3,28.5L33.4,29.7L32.4,30.8L31.4,31.8L30.2,32.7L29.0,33.5L27.7,34.2L26.4,34.7L25.1,35.2L23.7,35.5L22.3,35.7L20.8,35.8L19.4,35.7L18.0,35.5L16.7,35.2L15.4,34.8L14.1,34.3L12.9,33.6L11.7,32.9L10.7,32.0L9.7,31.1L8.8,30.1L8.0,29.0L7.3,27.8L6.7,26.6L6.2,25.4L5.9,24.1L5.6,22.8L5.5,21.5L5.5,20.2L5.6,19.0L5.8,17.7L6.2,16.5L6.6,15.3L7.2,14.1L7.8,13.0L8.5,12.0L9.3,11.1L10.2,10.2L11.2,9.4L12.2,8.8L13.3,8.2L14.4,7.7L15.5,7.3L16.7,7.0L17.9,6.9L19.1,6.8L20.3,6.8L21.4,7.0L22.6,7.2L23.7,7.6L24.7,8.0L25.7,8.6L26.7,9.2L27.6,9.9L28.4,10.7L29.1,11.5L29.8,12.4L30.4,13.3L30.9,14.3L31.3,15.4L31.6,16.4L31.8,17.5L31.9,18.5L31.9,19.6L31.8,20.7L31.6,21.7L31.3,22.7L31.0,23.7L30.5,24.6L30.0,25.5L29.4,26.3L28.7,27.1L28.0,27.8L27.3,28.4L26.4,28.9L25.6,29.4L24.7,29.8L23.7,30.1L22.8,30.3L21.9,30.5L20.9,30.5L20.0,30.5L19.1,30.3L18.1,30.1L17.3,29.9L16.4,29.5L15.6,29.1L14.9,28.6L14.2,28.0L13.5,27.4L13.0,26.8L12.5,26.0L12.0,25.3L11.6,24.5L11.4,23.7L11.1,22.9L11.0,22.1L10.9,21.3L10.9,20.5L11.0,19.7L11.1,18.9L11.4,18.1L11.6,17.4L12.0,16.7L12.4,16.0L12.8,15.4L13.4,14.8L13.9,14.3L14.5,13.8L15.1,13.4L15.8,13.1L16.4,12.8L17.1,12.6L17.8,12.5" stroke="#c47d1a" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4" stroke-dasharray="2 2"/>
-          <path d="M12.1,16.4L12.3,16.1L12.5,15.8L12.7,15.6L12.9,15.3L13.2,15.0L13.4,14.8L13.7,14.5L13.9,14.3L14.2,14.1L14.5,13.9L14.7,13.7L15.0,13.5L15.3,13.3L15.6,13.2L15.9,13.0L16.2,12.9L16.6,12.8L16.9,12.7L17.2,12.6L17.5,12.5L17.8,12.5L18.2,12.4L18.5,12.4L18.8,12.4L19.1,12.4L19.4,12.4L19.8,12.4L20.1,12.4L20.4,12.5L20.7,12.6L21.0,12.6L21.3,12.7L21.6,12.8L21.9,12.9L22.1,13.0L22.4,13.2L22.7,13.3L22.9,13.5L23.2,13.6L23.4,13.8L23.7,14.0L23.9,14.2L24.1,14.4L24.3,14.6L24.5,14.8L24.7,15.0L24.8,15.2L25.0,15.5L25.2,15.7L25.3,15.9L25.4,16.2L25.5,16.4L25.6,16.7L25.7,16.9L25.8,17.2L25.9,17.5L26.0,17.7L26.0,18.0L26.0,18.2L26.1,18.5L26.1,18.8L26.1,19.0L26.1,19.3L26.1,19.5L26.0,19.8L26.0,20.0L26.0,20.3L25.9,20.5L25.8,20.8L25.8,21.0L25.7,21.2L25.6,21.4L25.5,21.7L25.3,21.9L25.2,22.1L25.1,22.3L25.0,22.5L24.8,22.6L24.7,22.8L24.5,23.0L24.3,23.1L24.2,23.3L24.0,23.4L23.8,23.6L23.6,23.7L23.5,23.8L23.3,23.9L23.1,24.0L22.9,24.1L22.7,24.2L22.5,24.2L22.3,24.3L22.1,24.4L21.9,24.4L21.7,24.4L21.5,24.5L21.3,24.5L21.1,24.5L20.9,24.5L20.7,24.5L20.5,24.4L20.3,24.4L20.2,24.4L20.0,24.3L19.8,24.3L19.6,24.2L19.5,24.2L19.3,24.1L19.1,24.0L19.0,23.9L18.8,23.8L18.7,23.8L18.6,23.7L18.4,23.5L18.3,23.4L18.2,23.3L18.1,23.2L18.0,23.1L17.9,23.0L17.8,22.8L17.7,22.7L17.6,22.6L17.6,22.4L17.5,22.3L17.4,22.2L17.4,22.0L17.3,21.9L17.3,21.7L17.3,21.6L17.3,21.5L17.3,21.3L17.2,21.2L17.2,21.1L17.2,20.9L17.3,20.8L17.3,20.7L17.3,20.6L17.3,20.4L17.4,20.3L17.4,20.2L17.5,20.1L17.5,20.0L17.6,19.9L17.6,19.8L17.7,19.7L17.8,19.6L17.8,19.5L17.9,19.5L18.0,19.4L18.0,19.3L18.1,19.3L18.2,19.2L18.3,19.2L18.4,19.1L18.5,19.1L18.6,19.1L18.6,19.0L18.7,19.0L18.8,19.0L18.9,19.0L19.0,19.0L19.1,19.0L19.2,19.0L19.2,19.0L19.3,19.0L19.4,19.1L19.5,19.1L19.5,19.1L19.6,19.2L19.7,19.2L19.7,19.3L19.8,19.3L19.8,19.4L19.9,19.4L19.9,19.5L19.9,19.6L20.0,19.7L20.0,19.8L20.0,19.9L20.0,20.0" stroke="#c47d1a" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="20" cy="20" r="1.9" fill="#c47d1a"/>
-          <circle cx="20" cy="20" r="0.85" fill="#d98e20"/>
-        </svg>
-      </div>
-
-      <!-- philosophy text -->
-      <div style="display:flex;flex-direction:column;gap:1.5rem;">
-        <p style="font-size:0.6rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--olive-accent);font-weight:600;">The Mark</p>
-        <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:300;color:var(--text);line-height:1.3;">
-          The outer rings are broken.<br/>
-          <em style="color:var(--olive-accent);">The centre never is.</em>
-        </h2>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
-          The logo is a spiral — but not a perfect one. The outer rings are dashed and faint. This is the noise: the mind when it is full of the world, full of paths you've planted yourself without realising, full of thoughts falling like rain. Drawn not as something violent, but as something ordinary. A little scattered. A little lost.
-        </p>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:2.1;">
-          As the eye follows the spiral inward, the line becomes unbroken. Solid. Clear. Not because the chaos disappeared — it's still there in the outer rings — but because beneath it all, there has always been a still point.
-        </p>
-        <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text);font-size:1.05rem;line-height:1.9;border-left:3px solid var(--olive-accent);padding-left:1.5rem;">
-          You don't escape the noise. You find what was always still at the centre of it.
-        </p>
+  <!-- WHAT IS CWC — DEEP GREEN with coral/red accents -->
+  <section class="about-section about-green">
+    <div class="about-inner">
+      <p class="green-overline">What is Chaos with Clarity?</p>
+      <div class="green-content">
+        <p>Chaos with Clarity is my ongoing project to make inner life less confusing and more honest. Instead of shouting advice at you, I share experiments, reflections, and hard-earned realizations from my own life.</p>
+        <p>You'll find ideas on ego, minimalism, technology, relationships, and meaning, all filtered through one simple question: Does this help me live more awake, or more on autopilot?</p>
+        <blockquote class="green-blockquote">
+          <p>The goal here isn't to give you ten steps to fix your life. It's to offer perspectives that stay with you the next time you're scrolling at 2am, buying something you don't need, or wondering why you still feel restless even when everything looks fine on paper.</p>
+        </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- HOW TO USE THIS SPACE + FIND ME -->
-  <section style="max-width:72rem;margin:0 auto;padding:4rem 3rem 4rem;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);" class="use-grid">
+  <!-- THE MARK — light purple -->
+  <section class="about-section" style="background:#eee8f8;">
+    <div class="about-inner">
+      <div class="mark-grid">
 
-      <div style="padding:3rem;border-right:1px solid var(--border);background:var(--bg-alt);">
-        <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1.75rem;font-weight:600;">How to use this space</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:1.5rem;">
-          {[
-            "Start with whatever line makes you feel something, not what sounds \"important\".",
-            "Save pieces that bother you a little. They usually have something to show you.",
-            "Share posts with people you wish you could have deeper conversations with.",
-            "Come back when life feels loud and you need language for what you're feeling."
-          ].map(tip => (
-            <li style="display:flex;gap:1rem;align-items:flex-start;">
-              <span style="color:var(--olive-accent);font-family:'Fraunces',serif;font-size:1.1rem;margin-top:0.1rem;flex-shrink:0;font-weight:700;">·</span>
-              <p style="color:var(--text);font-size:0.9rem;line-height:1.9;">{tip}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div style="padding:3rem;">
-        <p style="font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:1.75rem;font-weight:600;">Find me here</p>
-        <div style="display:flex;flex-direction:column;gap:1.25rem;margin-bottom:2.5rem;">
-          <a href="https://instagram.com/iamabbyjain" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.875rem;text-decoration:none;color:var(--text);font-size:0.95rem;font-weight:500;">
-            <i class="ph ph-instagram-logo" style="font-size:1.35rem;color:var(--olive-accent);"></i>
-            @iamabbyjain
-          </a>
-          <a href="https://youtube.com/@iamabbyjain" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.875rem;text-decoration:none;color:var(--text);font-size:0.95rem;font-weight:500;">
-            <i class="ph ph-youtube-logo" style="font-size:1.35rem;color:var(--olive-accent);"></i>
-            YouTube @iamabbyjain
-          </a>
-          <a href="https://abbyjain.com" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.875rem;text-decoration:none;color:var(--text);font-size:0.95rem;font-weight:500;">
-            <i class="ph ph-briefcase" style="font-size:1.35rem;color:var(--text-faint);"></i>
-            abbyjain.com · CFO Work
-          </a>
+        <!-- spiral mark, large -->
+        <div class="mark-spiral">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="200" height="200" aria-hidden="true">
+            <path d="M37.0,20.0L36.9,21.5L36.6,23.0L36.2,24.4L35.7,25.8L35.0,27.2L34.3,28.5L33.4,29.7L32.4,30.8L31.4,31.8L30.2,32.7L29.0,33.5L27.7,34.2L26.4,34.7L25.1,35.2L23.7,35.5L22.3,35.7L20.8,35.8L19.4,35.7L18.0,35.5L16.7,35.2L15.4,34.8L14.1,34.3L12.9,33.6L11.7,32.9L10.7,32.0L9.7,31.1L8.8,30.1L8.0,29.0L7.3,27.8L6.7,26.6L6.2,25.4L5.9,24.1L5.6,22.8L5.5,21.5L5.5,20.2L5.6,19.0L5.8,17.7L6.2,16.5L6.6,15.3L7.2,14.1L7.8,13.0L8.5,12.0L9.3,11.1L10.2,10.2L11.2,9.4L12.2,8.8L13.3,8.2L14.4,7.7L15.5,7.3L16.7,7.0L17.9,6.9L19.1,6.8L20.3,6.8L21.4,7.0L22.6,7.2L23.7,7.6L24.7,8.0L25.7,8.6L26.7,9.2L27.6,9.9L28.4,10.7L29.1,11.5L29.8,12.4L30.4,13.3L30.9,14.3L31.3,15.4L31.6,16.4L31.8,17.5L31.9,18.5L31.9,19.6L31.8,20.7L31.6,21.7L31.3,22.7L31.0,23.7L30.5,24.6L30.0,25.5L29.4,26.3L28.7,27.1L28.0,27.8L27.3,28.4L26.4,28.9L25.6,29.4L24.7,29.8L23.7,30.1L22.8,30.3L21.9,30.5L20.9,30.5L20.0,30.5L19.1,30.3L18.1,30.1L17.3,29.9L16.4,29.5L15.6,29.1L14.9,28.6L14.2,28.0L13.5,27.4L13.0,26.8L12.5,26.0L12.0,25.3L11.6,24.5L11.4,23.7L11.1,22.9L11.0,22.1L10.9,21.3L10.9,20.5L11.0,19.7L11.1,18.9L11.4,18.1L11.6,17.4L12.0,16.7L12.4,16.0L12.8,15.4L13.4,14.8L13.9,14.3L14.5,13.8L15.1,13.4L15.8,13.1L16.4,12.8L17.1,12.6L17.8,12.5" stroke="#6b5ea6" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4" stroke-dasharray="2 2"/>
+            <path d="M12.1,16.4L12.3,16.1L12.5,15.8L12.7,15.6L12.9,15.3L13.2,15.0L13.4,14.8L13.7,14.5L13.9,14.3L14.2,14.1L14.5,13.9L14.7,13.7L15.0,13.5L15.3,13.3L15.6,13.2L15.9,13.0L16.2,12.9L16.6,12.8L16.9,12.7L17.2,12.6L17.5,12.5L17.8,12.5L18.2,12.4L18.5,12.4L18.8,12.4L19.1,12.4L19.4,12.4L19.8,12.4L20.1,12.4L20.4,12.5L20.7,12.6L21.0,12.6L21.3,12.7L21.6,12.8L21.9,12.9L22.1,13.0L22.4,13.2L22.7,13.3L22.9,13.5L23.2,13.6L23.4,13.8L23.7,14.0L23.9,14.2L24.1,14.4L24.3,14.6L24.5,14.8L24.7,15.0L24.8,15.2L25.0,15.5L25.2,15.7L25.3,15.9L25.4,16.2L25.5,16.4L25.6,16.7L25.7,16.9L25.8,17.2L25.9,17.5L26.0,17.7L26.0,18.0L26.0,18.2L26.1,18.5L26.1,18.8L26.1,19.0L26.1,19.3L26.1,19.5L26.0,19.8L26.0,20.0L26.0,20.3L25.9,20.5L25.8,20.8L25.8,21.0L25.7,21.2L25.6,21.4L25.5,21.7L25.3,21.9L25.2,22.1L25.1,22.3L25.0,22.5L24.8,22.6L24.7,22.8L24.5,23.0L24.3,23.1L24.2,23.3L24.0,23.4L23.8,23.6L23.6,23.7L23.5,23.8L23.3,23.9L23.1,24.0L22.9,24.1L22.7,24.2L22.5,24.2L22.3,24.3L22.1,24.4L21.9,24.4L21.7,24.4L21.5,24.5L21.3,24.5L21.1,24.5L20.9,24.5L20.7,24.5L20.5,24.4L20.3,24.4L20.2,24.4L20.0,24.3L19.8,24.3L19.6,24.2L19.5,24.2L19.3,24.1L19.1,24.0L19.0,23.9L18.8,23.8L18.7,23.8L18.6,23.7L18.4,23.5L18.3,23.4L18.2,23.3L18.1,23.2L18.0,23.1L17.9,23.0L17.8,22.8L17.7,22.7L17.6,22.6L17.6,22.4L17.5,22.3L17.4,22.2L17.4,22.0L17.3,21.9L17.3,21.7L17.3,21.6L17.3,21.5L17.3,21.3L17.2,21.2L17.2,21.1L17.2,20.9L17.3,20.8L17.3,20.7L17.3,20.6L17.3,20.4L17.4,20.3L17.4,20.2L17.5,20.1L17.5,20.0L17.6,19.9L17.6,19.8L17.7,19.7L17.8,19.6L17.8,19.5L17.9,19.5L18.0,19.4L18.0,19.3L18.1,19.3L18.2,19.2L18.3,19.2L18.4,19.1L18.5,19.1L18.6,19.1L18.6,19.0L18.7,19.0L18.8,19.0L18.9,19.0L19.0,19.0L19.1,19.0L19.2,19.0L19.2,19.0L19.3,19.0L19.4,19.1L19.5,19.1L19.5,19.1L19.6,19.2L19.7,19.2L19.7,19.3L19.8,19.3L19.8,19.4L19.9,19.4L19.9,19.5L19.9,19.6L20.0,19.7L20.0,19.8L20.0,19.9L20.0,20.0" stroke="#6b5ea6" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="20" cy="20" r="1.9" fill="#6b5ea6"/>
+            <circle cx="20" cy="20" r="0.85" fill="#8b7ec6"/>
+          </svg>
         </div>
-        <div style="border-top:1px solid var(--border);padding-top:1.5rem;">
-          <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.05rem;line-height:1.8;">
-            "I'm usually reading, walking, or staring at mountains trying to make sense of things."
-          </p>
+
+        <!-- philosophy text -->
+        <div class="mark-text">
+          <p class="mark-label">The Mark</p>
+          <h2 class="mark-heading">
+            The outer rings are broken.<br/>
+            <em>The centre never is.</em>
+          </h2>
+          <p>The logo is a spiral — but not a perfect one. The outer rings are dashed and faint. This is the noise: the mind when it is full of the world, full of paths you've planted yourself without realising, full of thoughts falling like rain.</p>
+          <p>As the eye follows the spiral inward, the line becomes unbroken. Solid. Clear. Not because the chaos disappeared — it's still there in the outer rings — but because beneath it all, there has always been a still point.</p>
+          <blockquote class="mark-blockquote">
+            <p>You don't escape the noise. You find what was always still at the centre of it.</p>
+          </blockquote>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- JOIN STRIP -->
-  <section style="max-width:72rem;margin:0 auto;padding:0 3rem 5rem;">
-    <div style="border-top:1px solid var(--border);padding-top:3rem;">
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;">
-        <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.2rem;">Poems. Essays. Reflections. Inbox only.</p>
-        <a href="/join" style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--olive-accent);color:var(--text-on-dark);padding:0.9rem 2rem;text-decoration:none;font-weight:600;white-space:nowrap;transition:background 0.2s;" onmouseover="this.style.background='var(--olive-bright)'" onmouseout="this.style.background='var(--olive-accent)'">Get the Letters</a>
+  <!-- HOW TO USE + FIND ME — soft blue -->
+  <section class="about-section" style="background:#dfedf8;">
+    <div class="about-inner">
+      <div class="use-grid">
+
+        <div class="use-col">
+          <p class="use-label" style="color:var(--sec-freedom);">How to use this space</p>
+          <ul class="use-list">
+            {[
+              "Start with whatever line makes you feel something, not what sounds \"important\".",
+              "Save pieces that bother you a little. They usually have something to show you.",
+              "Share posts with people you wish you could have deeper conversations with.",
+              "Come back when life feels loud and you need language for what you're feeling."
+            ].map(tip => (
+              <li>
+                <span class="use-dot">·</span>
+                <p>{tip}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="find-col">
+          <p class="use-label" style="color:var(--sec-freedom);">Find me here</p>
+          <div class="find-links">
+            <a href="https://instagram.com/iamabbyjain" target="_blank" rel="noopener">
+              <i class="ph ph-instagram-logo"></i>
+              @iamabbyjain
+            </a>
+            <a href="https://youtube.com/@iamabbyjain" target="_blank" rel="noopener">
+              <i class="ph ph-youtube-logo"></i>
+              YouTube @iamabbyjain
+            </a>
+            <a href="https://abbyjain.com" target="_blank" rel="noopener">
+              <i class="ph ph-briefcase"></i>
+              abbyjain.com · CFO Work
+            </a>
+          </div>
+          <div class="find-quote">
+            <p>"I'm usually reading, walking, or staring at mountains trying to make sense of things."</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN STRIP — rose pink -->
+  <section class="about-section about-join">
+    <div class="about-inner">
+      <div class="join-strip">
+        <p class="join-text">Poems. Essays. Reflections. Inbox only.</p>
+        <a href="/join" class="join-btn">Get the Letters</a>
       </div>
     </div>
   </section>
@@ -220,28 +209,484 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+  /* ══ HERO — Deep Forest Green ══════════════════════════════════ */
+  .about-hero {
+    padding: 6rem 3rem 5rem;
+    background: #1a3a2a;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-hero-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .about-overline {
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #e8c170;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  .about-h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    font-weight: 800;
+    color: #f0f0f0;
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+    margin-bottom: 1.5rem;
+  }
+  .about-hero-sub {
+    font-size: 1rem;
+    line-height: 2;
+    color: #a8c8b0;
+    font-weight: 300;
+    max-width: 36rem;
+  }
+  .about-bg-word {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1rem;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(6rem, 18vw, 16rem);
+    font-weight: 800;
+    color: rgba(255,255,255,0.06);
+    letter-spacing: -0.05em;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ══ SHARED SECTION LAYOUT ═════════════════════════════════════ */
+  .about-section {
+    padding: 4rem 3rem;
+  }
+  .about-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  /* ══ INTRO GRID — amber bg ═════════════════════════════════════ */
+  .about-grid-intro {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 30px rgba(196,125,26,0.1);
+  }
+  .about-photo-col {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+  }
+  .about-photo-wrap {
+    aspect-ratio: 4/5;
+    background: var(--olive-dark);
+    overflow: hidden;
+    position: relative;
+  }
+  .about-photo-wrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .about-photo-quote {
+    padding: 2rem 2.5rem;
+    background: #fef0d8;
+    border-top: 1px solid var(--border);
+  }
+  .about-photo-quote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: #8a5a10;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .about-intro-text {
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .about-intro-text h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .about-intro-text > p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 2;
+  }
+  .about-sign {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--sec-human);
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+  .about-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  .about-btn-primary {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: #1a3a2a;
+    color: #f0f0f0;
+    padding: 0.85rem 1.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .about-btn-primary:hover { background: #2a5a3a; }
+  .about-btn-outline {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.85rem 1.75rem;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .about-btn-outline:hover { border-color: #1a3a2a; color: var(--text); }
+  .about-cfo-link {
+    font-size: 0.8rem;
+    color: var(--text-faint);
+  }
+  .about-cfo-link a {
+    color: var(--sec-human);
+    text-decoration: none;
+    margin-left: 0.3rem;
+    font-weight: 500;
+  }
+
+  /* ══ DARK SECTION — deep navy/charcoal ═════════════════════════ */
+  .about-dark {
+    background: #1a1a2e;
+  }
+  .about-grid-story {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .about-story-text {
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .story-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .story-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e8c170;
+    flex-shrink: 0;
+  }
+  .story-header h2 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: #e8c170;
+    font-size: 1.3rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .story-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+  .about-story-text > p {
+    color: #b0b0c8;
+    font-size: 0.95rem;
+    line-height: 2.1;
+  }
+  .story-blockquote {
+    border-left: 3px solid #e8c170;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  .story-blockquote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: #f0f0f0;
+    font-size: 1.05rem;
+    line-height: 1.9;
+  }
+  .about-story-photo {
+    overflow: hidden;
+    min-height: 20rem;
+    background: #252545;
+    position: relative;
+  }
+  .about-story-photo picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .about-story-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .about-photo-fallback {
+    position: absolute;
+    inset: 0;
+    background: #252545;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-photo-fallback i {
+    font-size: 6rem;
+    color: rgba(255,255,255,0.08);
+  }
+
+  /* ══ GREEN SECTION — deep green + coral/red text ═══════════════ */
+  .about-green {
+    background: #1a3a2a;
+  }
+  .green-overline {
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #e86850;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  .green-content {
+    max-width: 52rem;
+  }
+  .green-content > p {
+    color: #a8c8b0;
+    font-size: 1rem;
+    line-height: 2.1;
+    margin-bottom: 1.25rem;
+  }
+  .green-blockquote {
+    border-left: 3px solid #e86850;
+    padding-left: 1.5rem;
+    margin-top: 1.75rem;
+  }
+  .green-blockquote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    line-height: 1.95;
+  }
+
+  /* ══ THE MARK — purple bg ══════════════════════════════════════ */
+  .mark-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .mark-spiral {
+    display: flex;
+    justify-content: center;
+  }
+  .mark-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .mark-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--sec-inward);
+    font-weight: 600;
+  }
+  .mark-heading {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .mark-heading em { color: var(--sec-inward); }
+  .mark-text > p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 2.1;
+  }
+  .mark-blockquote {
+    border-left: 3px solid var(--sec-inward);
+    padding-left: 1.5rem;
+  }
+  .mark-blockquote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.9;
+  }
+
+  /* ══ HOW TO USE + FIND ME — blue bg ════════════════════════════ */
+  .use-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 24px rgba(40,112,168,0.08);
+  }
+  .use-col {
+    padding: 3rem;
+    border-right: 1px solid var(--border);
+  }
+  .find-col {
+    padding: 3rem;
+  }
+  .use-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 1.75rem;
+    font-weight: 600;
+  }
+  .use-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .use-list li {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .use-dot {
+    color: var(--sec-freedom);
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+  .use-list li p {
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.9;
+  }
+  .find-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+  .find-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .find-links a:hover { color: var(--sec-freedom); }
+  .find-links i {
+    font-size: 1.35rem;
+    color: var(--sec-freedom);
+  }
+  .find-quote {
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+  }
+  .find-quote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  /* ══ JOIN STRIP — rose pink ════════════════════════════════════ */
+  .about-join {
+    background: #f8dfec;
+  }
+  .join-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .join-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--sec-love);
+    font-size: 1.2rem;
+  }
+  .join-btn {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: var(--sec-love);
+    color: #ffffff;
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .join-btn:hover { background: #a84878; transform: translateY(-2px); }
+
+  /* ══ RESPONSIVE ════════════════════════════════════════════════ */
   @media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr !important; }
-    .about-grid > div:first-child { border-right: none !important; border-bottom: 1px solid var(--border); }
-    .photo2-grid { grid-template-columns: 1fr !important; }
-    .photo2-grid > div:last-child { min-height: 20rem !important; border-left: none !important; border-top: 1px solid var(--border); }
-    .use-grid { grid-template-columns: 1fr !important; }
-    .use-grid > div:first-child { border-right: none !important; border-bottom: 1px solid var(--border); }
-    /* Fix: logo/philosophy grid collapses to single column on mobile */
-    .mark-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
-    .mark-grid > div:first-child svg { width: 140px !important; height: 140px !important; }
+    .about-grid-intro { grid-template-columns: 1fr; }
+    .about-photo-col { border-right: none; border-bottom: 1px solid var(--border); }
+    .about-grid-story { grid-template-columns: 1fr; }
+    .about-story-photo { min-height: 20rem; border-top: 1px solid rgba(255,255,255,0.08); }
+    .use-grid { grid-template-columns: 1fr; }
+    .use-col { border-right: none; border-bottom: 1px solid var(--border); }
+    .mark-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .mark-spiral svg { width: 140px; height: 140px; }
   }
   @media (max-width: 480px) {
-    section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+    .about-section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .about-hero { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .about-bg-word { display: none; }
   }
 
   /* Alternating photo crossfade */
-  .photo-a {
-    animation: fadeAB 8s ease-in-out infinite;
-  }
-  .photo-b {
-    animation: fadeBA 8s ease-in-out infinite;
-  }
+  .photo-a { animation: fadeAB 8s ease-in-out infinite; }
+  .photo-b { animation: fadeBA 8s ease-in-out infinite; }
   @keyframes fadeAB {
     0%, 40%  { opacity: 1; }
     50%, 90% { opacity: 0; }

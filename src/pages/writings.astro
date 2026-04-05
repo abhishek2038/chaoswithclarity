@@ -37,10 +37,9 @@ import { sections, essays } from '../data/poems';
           {section.subtitle && <p class="section-subtitle">{section.subtitle}</p>}
         </div>
 
+        {/* ── FREE POEMS FIRST ── */}
         <div class="poem-grid-3">
-          {section.poems.map((poem) => (
-            poem.taster ? (
-              /* ── TASTER: full poem available in modal ── */
+          {section.poems.filter(p => p.taster).map((poem) => (
               <article
                 class={`poem-card anim-card${poem.series ? ' trilogy-card' : ''}`}
                 style={`--card-accent:${section.accent};`}
@@ -55,6 +54,7 @@ import { sections, essays } from '../data/poems';
                     {poem.series}{poem.seriesPart ? ` · ${poem.seriesPart}` : ''}
                   </p>
                 )}
+                <span class="free-poem-badge">Free to read</span>
                 <p class="card-date">{poem.date}</p>
                 <h3 class="card-title">
                   {poem.title}
@@ -69,34 +69,23 @@ import { sections, essays } from '../data/poems';
                   Read full poem <i class="ph ph-arrow-right cta-arrow"></i>
                 </span>
               </article>
-            ) : (
-              /* ── NON-TASTER: preview only, drives to shop ── */
-              <article
-                class={`poem-card anim-card locked-card${poem.series ? ' trilogy-card' : ''}`}
-                style={`--card-accent:${section.accent};`}
-              >
-                {poem.series && (
-                  <p class="card-series">
-                    {poem.series}{poem.seriesPart ? ` · ${poem.seriesPart}` : ''}
-                  </p>
-                )}
-                <p class="card-date">{poem.date}</p>
-                <h3 class="card-title">
-                  {poem.title}
-                  {poem.subtitle && (
-                    <><br/><em class="card-subtitle">{poem.subtitle}</em></>
-                  )}
-                </h3>
-                <div class="card-preview" style={`--prev-color:${section.accent};`}>
-                  {poem.preview.slice(0, 2).map((line) => <p>{line}</p>)}
-                </div>
-                <a href="/poetry" class="card-cta locked-cta" style={`--cta:${section.accent};`}>
-                  Full poem in the collection →
-                </a>
-              </article>
-            )
           ))}
         </div>
+
+        {/* ── REMAINING POEMS (locked) + link to collection ── */}
+        {section.poems.filter(p => !p.taster).length > 0 && (
+          <div class="more-poems-row anim-card">
+            <p class="more-poems-count">+ {section.poems.filter(p => !p.taster).length} more poems in this section</p>
+            <div class="more-poems-titles">
+              {section.poems.filter(p => !p.taster).map((poem) => (
+                <span class="more-poem-name">{poem.title}</span>
+              ))}
+            </div>
+            <a href="/collection" class="more-poems-link" style={`--cta:${section.accent};`}>
+              Get the full collection →
+            </a>
+          </div>
+        )}
 
       </section>
     ))}
@@ -440,20 +429,65 @@ import { sections, essays } from '../data/poems';
     transform: translateX(5px);
   }
 
-  /* ══ LOCKED CARD (non-taster) ════════════════════════════════ */
-  .locked-card { opacity: 0.72; cursor: default; }
-  .locked-card:hover { border-color: var(--border); transform: none; }
-  .locked-cta {
-    text-decoration: none;
-    color: var(--text-faint);
-    font-size: 0.6rem;
-    letter-spacing: 0.18em;
+  /* ══ FREE BADGE ══════════════════════════════════════════════ */
+  .free-poem-badge {
+    font-size: 0.56rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-weight: 600;
-    opacity: 0.7;
+    font-weight: 700;
+    color: #2a8e6e;
+    background: #e6f5ef;
+    padding: 0.25rem 0.65rem;
+    border-radius: 3px;
+    align-self: flex-start;
+    margin-bottom: -0.5rem;
+  }
+
+  /* ══ MORE POEMS ROW ════════════════════════════════════════ */
+  .more-poems-row {
+    margin-top: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 12px rgba(26,26,46,0.06);
+    border-left: 3px solid var(--border);
+  }
+  .more-poems-count {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .more-poems-titles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    flex: 1;
+  }
+  .more-poem-name {
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.7rem;
+    border-radius: 3px;
+    font-style: italic;
+  }
+  .more-poems-link {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cta, var(--olive-accent));
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
     transition: opacity 0.2s;
   }
-  .locked-cta:hover { opacity: 1; }
+  .more-poems-link:hover { opacity: 0.75; }
 
   /* ══ ESSAY CARDS ══════════════════════════════════════════════ */
   .essay-card {

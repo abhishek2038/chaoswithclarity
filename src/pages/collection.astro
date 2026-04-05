@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout
-  title="Poetry | Chaos With Clarity"
+  title="The Collection | Chaos With Clarity"
   description="Poetry collections and chapbooks by Abby — available as digital downloads."
 >
 
@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="page-header">
     <div class="page-header-inner">
       <p class="overline">Digital Downloads</p>
-      <h1 class="page-h1">Poetry<br/>Collections</h1>
+      <h1 class="page-h1">The<br/>Collection</h1>
       <div class="header-rule"></div>
       <p class="page-sub">
         Forty poems. Two series. Five themes.<br class="br-d"/>
@@ -19,7 +19,7 @@ import Layout from '../layouts/Layout.astro';
         <strong style="color:var(--text);">Take them with you.</strong>
       </p>
     </div>
-    <p class="header-bg-word" aria-hidden="true">poems</p>
+    <p class="header-bg-word" aria-hidden="true">collection</p>
   </section>
 
   <div class="shop-wrap">
@@ -313,7 +313,7 @@ import Layout from '../layouts/Layout.astro';
   /* ── PAGE HEADER ─────────────────────────────────────────── */
   .page-header {
     padding: 6rem 3rem 4rem;
-    background: var(--bg-alt);
+    background: linear-gradient(135deg, #fef0d8 0%, #eee8f8 35%, #dfedf8 65%, #f8dfec 100%);
     border-bottom: 1px solid var(--border);
     position: relative; overflow: hidden;
   }
@@ -326,8 +326,16 @@ import Layout from '../layouts/Layout.astro';
   .br-d { display: inline; }
 
   /* ── WRAPPER ─────────────────────────────────────────────── */
-  .shop-wrap { max-width: 72rem; margin: 0 auto; padding: 4rem 3rem 5rem; }
-  .shop-section { margin-bottom: 4rem; }
+  .shop-wrap { max-width: 100%; margin: 0 auto; padding: 0; }
+  .shop-section { margin-bottom: 0; padding: 4rem 3rem; }
+  .shop-section > * { max-width: 72rem; margin-left: auto; margin-right: auto; }
+
+  /* Alternating section colors */
+  .shop-section:nth-child(1) { background: #fef0d8; } /* Full Collection — amber */
+  .shop-section:nth-child(2) { background: #e6f5ef; } /* Free Chapbooks — green */
+  .shop-section:nth-child(4) { background: #eee8f8; } /* Poem Cards — purple */
+  .shop-section:nth-child(5) { background: #dfedf8; } /* What you get — blue */
+  .shop-section:nth-child(6) { background: #fce4e4; } /* Coming Soon — rose */
 
   /* ── SECTION HEADS ───────────────────────────────────────── */
   .section-head { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
@@ -338,9 +346,10 @@ import Layout from '../layouts/Layout.astro';
   /* ── FEATURED CARD ───────────────────────────────────────── */
   .featured-card {
     display: grid; grid-template-columns: 1fr auto; gap: 4.5rem; align-items: start;
-    background: var(--bg-card); padding: 3.5rem;
+    background: #ffffff; padding: 3.5rem;
     border: 1px solid var(--border); border-top: 4px solid var(--gold);
-    position: relative;
+    border-radius: 10px; position: relative;
+    box-shadow: 0 4px 24px rgba(196,125,26,0.08);
   }
   .product-tag { font-size: 0.63rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-faint); font-weight: 600; margin-bottom: 1rem; }
   .product-title { font-family: 'Fraunces', serif; font-size: 2.6rem; font-weight: 800; color: var(--text); line-height: 1.05; margin-bottom: 0.4rem; }
@@ -384,7 +393,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* ── CHAPBOOKS GRID ──────────────────────────────────────── */
   .chapbook-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-  .chapbook-card { display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border); overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
+  .chapbook-card { display: flex; flex-direction: column; background: #ffffff; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color 0.3s, transform 0.3s; box-shadow: 0 2px 16px rgba(26,26,46,0.06); }
   .chapbook-card:hover { border-color: var(--gold); transform: translateY(-3px); }
   .chapbook-accent { height: 3px; background: var(--accent, var(--gold)); }
   .chapbook-body { padding: 2.25rem; flex: 1; display: flex; flex-direction: column; }
@@ -405,7 +414,7 @@ import Layout from '../layouts/Layout.astro';
   .free-btn:hover { background: var(--btn-color, var(--gold)); color: var(--text-on-dark); }
 
   /* ── PULL QUOTE ──────────────────────────────────────────── */
-  .pull-quote-section { margin-bottom: 4rem; padding: 3rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; }
+  .pull-quote-section { margin-bottom: 0; padding: 3.5rem 3rem; background: #f8dfec; text-align: center; }
   .pull-quote {
     font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(1.15rem, 2.5vw, 1.5rem);
     color: var(--text-muted); line-height: 1.9; max-width: 38rem; margin: 0 auto;
@@ -442,7 +451,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   /* ── WHAT YOU GET ────────────────────────────────────────── */
-  .what-you-get { border: 1px solid var(--border); padding: 3rem; background: var(--bg-card); }
+  .what-you-get { border: 1px solid var(--border); padding: 3rem; background: #ffffff; border-radius: 10px; box-shadow: 0 2px 16px rgba(26,26,46,0.06); }
   .wyg-title { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 2rem; text-align: center; }
   .wyg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
   .wyg-item { text-align: center; }
@@ -452,14 +461,14 @@ import Layout from '../layouts/Layout.astro';
 
   /* ── COMING SOON ─────────────────────────────────────────── */
   .coming-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .coming-card { background: var(--bg-card); padding: 2.25rem 2.5rem; border: 1px solid var(--border); border-top: 2px dashed var(--border); }
+  .coming-card { background: #ffffff; padding: 2.25rem 2.5rem; border: 1px solid var(--border); border-top: 2px dashed var(--border); border-radius: 10px; box-shadow: 0 2px 12px rgba(26,26,46,0.05); }
   .coming-tag { font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-faint); font-weight: 600; margin-bottom: 0.75rem; }
   .coming-title { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.75rem; }
   .coming-desc { color: var(--text-faint); font-size: 0.85rem; line-height: 1.85; margin-bottom: 1rem; }
   .coming-price { font-size: 0.72rem; letter-spacing: 0.12em; color: var(--text-faint); font-style: italic; }
 
   /* ── BOTTOM CTA ──────────────────────────────────────────── */
-  .shop-cta { border-top: 1px solid var(--border); padding-top: 4rem; text-align: center; }
+  .shop-cta { background: linear-gradient(135deg, #fef0d8 0%, #eee8f8 50%, #dfedf8 100%); padding: 4rem 3rem; text-align: center; }
   .shop-cta-inner { max-width: 28rem; margin: 0 auto; }
   .shop-cta-label { font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
   .shop-cta-text { font-family: 'Fraunces', serif; font-style: italic; color: var(--text-muted); font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.7; }

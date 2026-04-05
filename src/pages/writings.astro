@@ -10,10 +10,10 @@ import { sections, essays } from '../data/poems';
   <!-- ══ PAGE HEADER ══════════════════════════════════════════ -->
   <section class="page-header">
     <div class="page-header-inner">
-      <p class="overline" style="color:var(--olive-accent);">All Writings</p>
-      <h1 class="page-h1">Essays<br/>&amp; Poems</h1>
-      <div class="header-rule"></div>
-      <p class="page-sub">
+      <p class="overline" style="color:#e86850;">All Writings</p>
+      <h1 class="page-h1" style="color:#f0f0f0;">Essays<br/>&amp; Poems</h1>
+      <div class="header-rule" style="background:#e8c170;"></div>
+      <p class="page-sub" style="color:#a8c8b0;">
         Ideas that stay with you the next time you're scrolling at 2am,<br class="br-d"/>
         or wondering why you still feel restless even when everything looks fine on paper.
       </p>
@@ -95,13 +95,13 @@ import { sections, essays } from '../data/poems';
       <section class="writings-section" id="essays">
 
         <div class="section-head">
-          <p class="section-num" aria-hidden="true">VI</p>
-          <div class="section-label-row">
-            <span class="section-dot" style="background:var(--sec-essay);"></span>
-            <h2 class="section-label-text" style="color:var(--sec-essay);">Essays</h2>
+          <p class="section-num" aria-hidden="true" style="color:rgba(232,193,112,0.15);">VI</p>
+          <div class="section-label-row" style="border-bottom-color:rgba(255,255,255,0.1);">
+            <span class="section-dot" style="background:#e8c170;"></span>
+            <h2 class="section-label-text" style="color:#e8c170;">Essays</h2>
             <div class="section-line"></div>
           </div>
-          <p class="section-subtitle">Longer reflections on consciousness, technology, and the examined life.</p>
+          <p class="section-subtitle" style="color:#a8c8b0;">Longer reflections on consciousness, technology, and the examined life.</p>
         </div>
 
         <div class="essay-grid">
@@ -182,7 +182,7 @@ import { sections, essays } from '../data/poems';
   /* ══ PAGE HEADER ══════════════════════════════════════════════ */
   .page-header {
     padding: 6rem 3rem 4rem;
-    background: linear-gradient(135deg, #fef0d8 0%, #eee8f8 35%, #dfedf8 65%, #f8dfec 100%);
+    background: #1a3a2a;
     border-bottom: 1px solid var(--border);
     position: relative;
     overflow: hidden;
@@ -256,37 +256,24 @@ import { sections, essays } from '../data/poems';
     margin-right: auto;
   }
 
-  /* Per-section backgrounds — bold, visible color */
-  #being-human       { background: #fef0d8; }
-  #the-inward-turn   { background: #eee8f8; }
-  #pain-and-transformation { background: #fce4e4; }
-  #freedom-and-becoming    { background: #dfedf8; }
-  #love-nature-and-the-world { background: #f8dfec; }
-  #essays            { background: #eaecf0; }
-  .work-with-abby    { background: #fef0d8; }
+  /* Per-section backgrounds — alternating sage / white */
+  #being-human                   { background: #f2f7f4; }
+  #the-inward-turn               { background: #ffffff; }
+  #pain-and-transformation       { background: #f2f7f4; }
+  #freedom-and-becoming          { background: #ffffff; }
+  #love-nature-and-the-world     { background: #f2f7f4; }
+  #essays                        { background: #1a3a2a; }
+  .work-with-abby                { background: #f2f7f4; }
 
-  #being-human .section-num       { color: rgba(196,125,26,0.25); }
-  #the-inward-turn .section-num   { color: rgba(107,94,166,0.25); }
-  #pain-and-transformation .section-num { color: rgba(184,64,64,0.20); }
-  #freedom-and-becoming .section-num    { color: rgba(40,112,168,0.20); }
-  #love-nature-and-the-world .section-num { color: rgba(196,88,136,0.20); }
-  #essays .section-num { color: rgba(85,85,102,0.15); }
+  /* Section numbers — subtle green */
+  .writings-section .section-num { color: rgba(26,58,42,0.12); }
 
-  /* Colored left border on cards per section */
-  #being-human .poem-card       { border-left: 3px solid var(--sec-human); }
-  #the-inward-turn .poem-card   { border-left: 3px solid var(--sec-inward); }
-  #pain-and-transformation .poem-card { border-left: 3px solid var(--sec-pain); }
-  #freedom-and-becoming .poem-card    { border-left: 3px solid var(--sec-freedom); }
-  #love-nature-and-the-world .poem-card { border-left: 3px solid var(--sec-love); }
-  #essays .essay-card { border-left: 3px solid var(--sec-essay); }
+  /* Consistent green left border on all cards */
+  .poem-card       { border-left: 3px solid #1a3a2a; }
+  #essays .essay-card { border-left: 3px solid #e8c170; }
 
-  /* Section divider line color */
-  #being-human .section-label-row       { border-bottom-color: var(--sec-human); }
-  #the-inward-turn .section-label-row   { border-bottom-color: var(--sec-inward); }
-  #pain-and-transformation .section-label-row { border-bottom-color: var(--sec-pain); }
-  #freedom-and-becoming .section-label-row    { border-bottom-color: var(--sec-freedom); }
-  #love-nature-and-the-world .section-label-row { border-bottom-color: var(--sec-love); }
-  #essays .section-label-row { border-bottom-color: var(--sec-essay); }
+  /* Section divider line */
+  .section-label-row { border-bottom-color: #dce8e0; }
 
   /* ══ SECTION HEADERS ══════════════════════════════════════════ */
   .section-head { margin-bottom: 3rem; }
@@ -435,8 +422,8 @@ import { sections, essays } from '../data/poems';
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-weight: 700;
-    color: #2a8e6e;
-    background: #e6f5ef;
+    color: #1a3a2a;
+    background: #d8e8dc;
     padding: 0.25rem 0.65rem;
     border-radius: 3px;
     align-self: flex-start;
@@ -491,13 +478,13 @@ import { sections, essays } from '../data/poems';
 
   /* ══ ESSAY CARDS ══════════════════════════════════════════════ */
   .essay-card {
-    background: #ffffff;
+    background: rgba(255,255,255,0.08);
     padding: 2.25rem;
     display: flex;
     flex-direction: column;
     gap: 0.9rem;
     border-radius: 8px;
-    box-shadow: 0 2px 16px rgba(26,26,46,0.08);
+    box-shadow: none;
     transition:
       border-color 0.3s ease,
       box-shadow 0.35s ease,
@@ -514,23 +501,23 @@ import { sections, essays } from '../data/poems';
     font-size: 0.63rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--text-faint);
+    color: #e86850;
     font-weight: 600;
   }
   .essay-title {
     font-family: 'Fraunces', serif;
     font-size: 1.2rem;
-    color: var(--text);
+    color: #f0f0f0;
     font-weight: 700;
     line-height: 1.25;
   }
   .essay-desc {
-    color: var(--text-muted);
+    color: #a8c8b0;
     font-size: 0.9rem;
     line-height: 1.9;
   }
   .essay-snippet {
-    color: var(--text-muted);
+    color: #a8c8b0;
     font-size: 0.82rem;
     line-height: 1.85;
     font-style: italic;
@@ -669,17 +656,18 @@ import { sections, essays } from '../data/poems';
     font-size: 0.72rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    background: var(--olive-accent);
-    color: var(--text-on-dark);
+    background: #1a3a2a;
+    color: #f0f0f0;
     border: none;
     padding: 1rem 2rem;
     font-weight: 700;
     cursor: pointer;
+    border-radius: 4px;
     transition: background 0.2s, transform 0.2s;
     align-self: flex-start;
   }
   .form-submit:hover {
-    background: var(--olive-bright);
+    background: #2a5a3a;
     transform: translateY(-2px);
   }
 
@@ -702,15 +690,16 @@ import { sections, essays } from '../data/poems';
     font-size: 0.72rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    background: var(--olive-accent);
-    color: var(--text-on-dark);
+    background: #e86850;
+    color: #ffffff;
     padding: 1rem 2.75rem;
     text-decoration: none;
     font-weight: 700;
+    border-radius: 4px;
     transition: background 0.2s ease, transform 0.2s ease;
   }
   .cta-btn:hover {
-    background: var(--olive-bright);
+    background: #d05840;
     transform: translateY(-2px);
   }
 

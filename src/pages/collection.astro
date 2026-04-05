@@ -9,14 +9,14 @@ import Layout from '../layouts/Layout.astro';
   <!-- ══ PAGE HEADER ══════════════════════════════════════════ -->
   <section class="page-header">
     <div class="page-header-inner">
-      <p class="overline">Digital Downloads</p>
-      <h1 class="page-h1">The<br/>Collection</h1>
-      <div class="header-rule"></div>
-      <p class="page-sub">
+      <p class="overline" style="color:#e86850;">Digital Downloads</p>
+      <h1 class="page-h1" style="color:#f0f0f0;">The<br/>Collection</h1>
+      <div class="header-rule" style="background:#e8c170;"></div>
+      <p class="page-sub" style="color:#a8c8b0;">
         Forty poems. Two series. Five themes.<br class="br-d"/>
         Written between 2024 and 2026 — on mortality, ego,<br class="br-d"/>
         meditation, pain, freedom, and love.<br class="br-d"/>
-        <strong style="color:var(--text);">Take them with you.</strong>
+        <strong style="color:#f0f0f0;">Take them with you.</strong>
       </p>
     </div>
     <p class="header-bg-word" aria-hidden="true">collection</p>
@@ -313,7 +313,7 @@ import Layout from '../layouts/Layout.astro';
   /* ── PAGE HEADER ─────────────────────────────────────────── */
   .page-header {
     padding: 6rem 3rem 4rem;
-    background: linear-gradient(135deg, #fef0d8 0%, #eee8f8 35%, #dfedf8 65%, #f8dfec 100%);
+    background: #1a3a2a;
     border-bottom: 1px solid var(--border);
     position: relative; overflow: hidden;
   }
@@ -330,12 +330,12 @@ import Layout from '../layouts/Layout.astro';
   .shop-section { margin-bottom: 0; padding: 4rem 3rem; }
   .shop-section > * { max-width: 72rem; margin-left: auto; margin-right: auto; }
 
-  /* Alternating section colors */
-  .shop-section:nth-child(1) { background: #fef0d8; } /* Full Collection — amber */
-  .shop-section:nth-child(2) { background: #e6f5ef; } /* Free Chapbooks — green */
-  .shop-section:nth-child(4) { background: #eee8f8; } /* Poem Cards — purple */
-  .shop-section:nth-child(5) { background: #dfedf8; } /* What you get — blue */
-  .shop-section:nth-child(6) { background: #fce4e4; } /* Coming Soon — rose */
+  /* Alternating section colors — unified green scheme */
+  .shop-section:nth-child(1) { background: #f2f7f4; } /* Full Collection */
+  .shop-section:nth-child(2) { background: #ffffff; } /* Free Chapbooks */
+  .shop-section:nth-child(4) { background: #f2f7f4; } /* Poem Cards */
+  .shop-section:nth-child(5) { background: #ffffff; } /* What you get */
+  .shop-section:nth-child(6) { background: #f2f7f4; } /* Coming Soon */
 
   /* ── SECTION HEADS ───────────────────────────────────────── */
   .section-head { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
@@ -347,9 +347,9 @@ import Layout from '../layouts/Layout.astro';
   .featured-card {
     display: grid; grid-template-columns: 1fr auto; gap: 4.5rem; align-items: start;
     background: #ffffff; padding: 3.5rem;
-    border: 1px solid var(--border); border-top: 4px solid var(--gold);
+    border: 1px solid var(--border); border-top: 4px solid #1a3a2a;
     border-radius: 10px; position: relative;
-    box-shadow: 0 4px 24px rgba(196,125,26,0.08);
+    box-shadow: 0 4px 24px rgba(26,58,42,0.08);
   }
   .product-tag { font-size: 0.63rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-faint); font-weight: 600; margin-bottom: 1rem; }
   .product-title { font-family: 'Fraunces', serif; font-size: 2.6rem; font-weight: 800; color: var(--text); line-height: 1.05; margin-bottom: 0.4rem; }
@@ -368,7 +368,7 @@ import Layout from '../layouts/Layout.astro';
   .product-price-note { font-size: 0.78rem; color: var(--text-faint); }
   .buy-btn {
     display: inline-block; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
-    background: var(--btn-bg, var(--gold)); color: var(--text-on-dark);
+    background: var(--btn-bg, #e86850); color: #ffffff; border-radius: 4px;
     padding: 1.1rem 2.5rem; text-decoration: none; font-weight: 700;
     transition: opacity 0.2s, transform 0.2s;
   }
@@ -414,13 +414,13 @@ import Layout from '../layouts/Layout.astro';
   .free-btn:hover { background: var(--btn-color, var(--gold)); color: var(--text-on-dark); }
 
   /* ── PULL QUOTE ──────────────────────────────────────────── */
-  .pull-quote-section { margin-bottom: 0; padding: 3.5rem 3rem; background: #f8dfec; text-align: center; }
+  .pull-quote-section { margin-bottom: 0; padding: 3.5rem 3rem; background: #1a3a2a; text-align: center; }
   .pull-quote {
     font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-    color: var(--text-muted); line-height: 1.9; max-width: 38rem; margin: 0 auto;
+    color: #a8c8b0; line-height: 1.9; max-width: 38rem; margin: 0 auto;
     padding: 0 2rem; position: relative;
   }
-  .pull-quote::before { content: ''; display: block; width: 2rem; height: 2px; background: var(--gold); margin: 0 auto 1.5rem; }
+  .pull-quote::before { content: ''; display: block; width: 2rem; height: 2px; background: #e8c170; margin: 0 auto 1.5rem; }
 
   /* ── POEM CARDS ROW ──────────────────────────────────────── */
   .cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center; }
@@ -468,10 +468,10 @@ import Layout from '../layouts/Layout.astro';
   .coming-price { font-size: 0.72rem; letter-spacing: 0.12em; color: var(--text-faint); font-style: italic; }
 
   /* ── BOTTOM CTA ──────────────────────────────────────────── */
-  .shop-cta { background: linear-gradient(135deg, #fef0d8 0%, #eee8f8 50%, #dfedf8 100%); padding: 4rem 3rem; text-align: center; }
+  .shop-cta { background: #1a3a2a; padding: 4rem 3rem; text-align: center; }
   .shop-cta-inner { max-width: 28rem; margin: 0 auto; }
-  .shop-cta-label { font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
-  .shop-cta-text { font-family: 'Fraunces', serif; font-style: italic; color: var(--text-muted); font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.7; }
+  .shop-cta-label { font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase; color: #e86850; font-weight: 600; margin-bottom: 1rem; }
+  .shop-cta-text { font-family: 'Fraunces', serif; font-style: italic; color: #a8c8b0; font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.7; }
 
   /* ── RESPONSIVE ──────────────────────────────────────────── */
   @media (max-width: 960px) {

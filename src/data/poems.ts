@@ -80,6 +80,7 @@ export const sections: Section[] = [
       {
         id: 'the-incomprehensible-delight',
         title: 'The Incomprehensible Delight',
+        taster: true,
         date: 'February 2026',
         preview: [
           'Religion divides, and man still fights,',
@@ -92,6 +93,7 @@ export const sections: Section[] = [
       {
         id: 'unapologetically-me',
         title: 'Unapologetically Me',
+        taster: true,
         date: 'February 2026',
         preview: [
           'I am insane, so what — it\'s still me,',
@@ -344,6 +346,7 @@ export const sections: Section[] = [
       {
         id: 'a-gloomy-day',
         title: 'A Gloomy Day',
+        taster: true,
         date: 'February 2025',
         preview: [
           'Today, it\'s a gloomy day,',
@@ -382,6 +385,7 @@ export const sections: Section[] = [
       {
         id: 'seed-in-the-dark',
         title: 'Seed in the Dark',
+        taster: true,
         date: 'February 2026',
         preview: [
           'Feeling clueless, will there be light?',
@@ -527,6 +531,7 @@ export const sections: Section[] = [
       {
         id: 'the-search',
         title: 'The Search',
+        taster: true,
         date: 'December 2024',
         preview: [
           'I have been looking for someone,',
@@ -577,6 +582,7 @@ export const sections: Section[] = [
       {
         id: 'hearts-in-a-daze',
         title: 'Hearts in a Daze',
+        taster: true,
         date: 'February 2025',
         preview: [
           'Today, my heart drifts in a daze,',
@@ -601,6 +607,7 @@ export const sections: Section[] = [
       {
         id: 'the-fiery-sun',
         title: 'The Fiery Sun',
+        taster: true,
         date: 'December 2025',
         preview: [
           'Sky breathes the fiery sun,',

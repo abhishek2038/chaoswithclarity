@@ -123,8 +123,8 @@ import { sections, essays } from '../data/poems';
       <div class="section-head">
         <p class="section-num" aria-hidden="true">VII</p>
         <div class="section-label-row">
-          <span class="section-dot" style="background:var(--olive-accent);"></span>
-          <h2 class="section-label-text" style="color:var(--olive-accent);">Work with Abby</h2>
+          <span class="section-dot" style="background:var(--coral);"></span>
+          <h2 class="section-label-text" style="color:var(--coral);">Work with Abby</h2>
           <div class="section-line"></div>
         </div>
         <p class="section-subtitle">One-on-one guidance for those navigating inner work, creative expression, or simply trying to live more honestly.</p>
@@ -212,7 +212,7 @@ import { sections, essays } from '../data/poems';
   .header-rule {
     width: 3rem;
     height: 3px;
-    background: var(--olive-accent);
+    background: var(--coral);
     margin-bottom: 1.75rem;
   }
   .page-sub {
@@ -256,7 +256,7 @@ import { sections, essays } from '../data/poems';
     margin-right: auto;
   }
 
-  /* Per-section backgrounds — alternating sage / white */
+  /* Per-section backgrounds */
   #being-human                   { background: #f5ece8; }
   #the-inward-turn               { background: #faf6ef; }
   #pain-and-transformation       { background: #f0e8dc; }
@@ -273,7 +273,7 @@ import { sections, essays } from '../data/poems';
   #essays .essay-card { border-left: 3px solid #d4a04a; }
 
   /* Section divider line */
-  .section-label-row { border-bottom-color: #dce8e0; }
+  .section-label-row { border-bottom-color: var(--border); }
 
   /* ══ SECTION HEADERS ══════════════════════════════════════════ */
   .section-head { margin-bottom: 3rem; }
@@ -319,13 +319,6 @@ import { sections, essays } from '../data/poems';
     font-weight: 300;
     letter-spacing: 0.01em;
     font-style: italic;
-  }
-  .coming-badge {
-    font-size: 0.63rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-faint);
-    font-weight: 600;
   }
 
   /* ══ POEM CARDS ═══════════════════════════════════════════════ */
@@ -382,7 +375,7 @@ import { sections, essays } from '../data/poems';
     font-size: 0.97rem;
     line-height: 2.1;
     flex: 1;
-    border-left: 3px solid var(--prev-color, var(--olive-accent));
+    border-left: 3px solid var(--prev-color, var(--coral));
     padding-left: 1.3rem;
     position: relative;
   }
@@ -402,7 +395,7 @@ import { sections, essays } from '../data/poems';
     font-size: 0.63rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--cta, var(--olive-accent));
+    color: var(--cta, var(--coral));
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -468,7 +461,7 @@ import { sections, essays } from '../data/poems';
     font-size: 0.68rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--cta, var(--olive-accent));
+    color: var(--cta, var(--coral));
     font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
@@ -525,21 +518,13 @@ import { sections, essays } from '../data/poems';
     margin-top: 0.25rem;
     flex: 1;
   }
-  .essay-soon {
-    font-size: 0.63rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-faint);
-    font-weight: 600;
-    font-style: italic;
-  }
 
   /* ══ TRILOGY ══════════════════════════════════════════════════ */
   .card-series {
     font-size: 0.58rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--olive-accent);
+    color: var(--coral);
     font-weight: 700;
     opacity: 0.75;
     margin-bottom: -0.5rem;
@@ -595,7 +580,7 @@ import { sections, essays } from '../data/poems';
     content: '◆';
     position: absolute;
     left: 0;
-    color: var(--olive-accent);
+    color: var(--coral);
     font-size: 0.5rem;
     top: 0.7rem;
   }
@@ -645,7 +630,7 @@ import { sections, essays } from '../data/poems';
   }
   .form-field input:focus,
   .form-field textarea:focus {
-    border-color: var(--olive-accent);
+    border-color: var(--coral);
   }
   .form-field textarea {
     resize: vertical;
@@ -709,11 +694,6 @@ import { sections, essays } from '../data/poems';
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
-  .poem-grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
   .essay-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -724,13 +704,11 @@ import { sections, essays } from '../data/poems';
   @media (max-width: 960px) {
     .poem-grid-3 { grid-template-columns: 1fr 1fr; }
     .essay-grid  { grid-template-columns: 1fr; }
-    .poem-grid-2 { grid-template-columns: 1fr; }
     .work-abby-content { grid-template-columns: 1fr; }
     .br-d { display: none; }
   }
   @media (max-width: 580px) {
     .poem-grid-3 { grid-template-columns: 1fr; }
-    .poem-grid-2 { grid-template-columns: 1fr; }
     .writings-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
     .page-header { padding-left: 1.5rem; padding-right: 1.5rem; }
     .header-bg-word { display: none; }

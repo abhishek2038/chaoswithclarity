@@ -89,8 +89,8 @@ import Layout from '../layouts/Layout.astro';
     <!-- ══ FREE CHAPBOOKS ══════════════════════════════════════ -->
     <section class="shop-section">
       <div class="section-head">
-        <span class="section-dot" style="background:var(--olive-bright);"></span>
-        <p class="section-label" style="color:var(--olive-bright);">Free Chapbooks</p>
+        <span class="section-dot" style="background:var(--coral-dark);"></span>
+        <p class="section-label" style="color:var(--coral-dark);">Free Chapbooks</p>
         <p class="section-note">No email required. Just download and read.</p>
       </div>
 
@@ -124,11 +124,11 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Forest of Consciousness -->
         <div class="chapbook-card">
-          <div class="chapbook-accent" style="--accent:var(--olive-bright);"></div>
+          <div class="chapbook-accent" style="--accent:var(--coral-dark);"></div>
           <div class="chapbook-body">
             <div class="chapbook-top">
               <p class="product-tag">4 poems · Free</p>
-              <span class="free-badge" style="--badge-bg:var(--olive-bright);">FREE</span>
+              <span class="free-badge" style="--badge-bg:var(--coral-dark);">FREE</span>
             </div>
             <h3 class="chapbook-title">Forest of Consciousness</h3>
             <p class="chapbook-series">A Four-Part Series</p>
@@ -143,7 +143,7 @@ import Layout from '../layouts/Layout.astro';
               <span>III · Forest of Consciousness</span>
               <span>IV · The Journey</span>
             </div>
-            <a href="https://chaoswithclarity.gumroad.com/l/forest" target="_blank" rel="noopener" class="free-btn" style="--btn-color:var(--olive-bright);">
+            <a href="https://chaoswithclarity.gumroad.com/l/forest" target="_blank" rel="noopener" class="free-btn" style="--btn-color:var(--coral-dark);">
               Download Free →
             </a>
           </div>
@@ -302,7 +302,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="shop-cta-inner">
         <p class="shop-cta-label">Stay close</p>
         <p class="shop-cta-text">Want poems in your inbox before they become products?</p>
-        <a href="/join" class="buy-btn" style="--btn-bg:var(--olive-accent);">Get the Letters →</a>
+        <a href="/join" class="buy-btn" style="--btn-bg:var(--coral);">Get the Letters →</a>
       </div>
     </div>
 
@@ -379,16 +379,16 @@ import Layout from '../layouts/Layout.astro';
   .book-cover {
     width: 155px; background: var(--bg-card); padding: 2rem 1.5rem;
     display: flex; flex-direction: column; gap: 0.6rem;
-    border-left: 5px solid var(--olive-accent); min-height: 230px; justify-content: center;
+    border-left: 5px solid var(--coral); min-height: 230px; justify-content: center;
     position: relative; overflow: hidden;
     box-shadow: 0 8px 40px rgba(26,26,46,0.08), 0 2px 8px rgba(196,125,26,0.1);
   }
   .book-glow { position: absolute; top: -20px; left: -20px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(196,125,26,0.12) 0%, transparent 70%); pointer-events: none; }
-  .book-cover-label { font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--olive-accent); opacity: 0.6; }
+  .book-cover-label { font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--coral); opacity: 0.6; }
   .book-cover-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 800; color: var(--text); line-height: 1.1; letter-spacing: -0.01em; }
-  .book-cover-rule { width: 2rem; height: 2px; background: var(--olive-accent); }
-  .book-cover-sub { font-size: 0.65rem; color: var(--olive-accent); font-style: italic; }
-  .book-cover-author { font-size: 0.72rem; color: var(--olive-accent); margin-top: 0.5rem; }
+  .book-cover-rule { width: 2rem; height: 2px; background: var(--coral); }
+  .book-cover-sub { font-size: 0.65rem; color: var(--coral); font-style: italic; }
+  .book-cover-author { font-size: 0.72rem; color: var(--coral); margin-top: 0.5rem; }
   .book-cover-num { font-size: 0.55rem; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: auto; padding-top: 1rem; }
 
   /* ── CHAPBOOKS GRID ──────────────────────────────────────── */
@@ -436,10 +436,10 @@ import Layout from '../layouts/Layout.astro';
   .mock-card:nth-child(2) { top: 40px; left: 5%; z-index: 2; }
   .mock-card:nth-child(3) { top: 80px; left: 15%; z-index: 1; }
   .mock-card:hover { transform: rotate(0deg) scale(1.03); z-index: 10; }
-  .mock-accent { position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--olive-accent); }
+  .mock-accent { position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--coral); }
   .mock-title { font-family: 'Fraunces', serif; font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
   .mock-line { font-family: Georgia, serif; font-style: italic; font-size: 0.78rem; color: var(--text-muted); line-height: 1.7; }
-  .mock-author { font-size: 0.68rem; color: var(--olive-accent); margin-top: 0.6rem; }
+  .mock-author { font-size: 0.68rem; color: var(--coral); margin-top: 0.6rem; }
 
   .cards-title { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 800; color: var(--text); margin-bottom: 0.3rem; }
   .cards-subtitle { font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; color: var(--text-muted); margin-bottom: 1.25rem; }

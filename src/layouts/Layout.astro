@@ -55,28 +55,16 @@ const {
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* ── Forest + Earth palette ── */
+      /* ── Core palette ── */
       --green-deep:   #1a3a2a;
       --green-mid:    #2a5a3a;
-      --green-light:  #a8c8b0;
-
       --coral:        #e86850;
       --coral-dark:   #d05840;
       --gold:         #d4a04a;
       --gold-light:   #e8c170;
 
-      /* ── Rich accent colors ── */
-      --burgundy:     #6b1a2a;
-      --plum:         #5a2848;
-      --teal:         #1a5a5a;
-      --rust:         #b84a30;
-
-      /* ── Backgrounds: warm earth ── */
-      --bg:           #faf6ef;   /* warm cream */
-      --bg-sand:      #f0e8dc;   /* sand */
-      --bg-terra:     #e6d8c8;   /* terracotta tint */
-      --bg-rose:      #f5ece8;   /* blush rose */
-      --bg-sage:      #eaf0e8;   /* sage green tint */
+      /* ── Backgrounds ── */
+      --bg:           #faf6ef;
       --bg-card:      #ffffff;
       --bg-dark:      #1a3a2a;
       --bg-darker:    #142e22;
@@ -92,13 +80,7 @@ const {
       --border:       #ddd0c0;
       --border-dark:  #c8b8a0;
 
-      /* ── Legacy aliases ── */
-      --olive-accent: #e86850;
-      --olive-bright: #d05840;
-      --bg-alt:       #f0e8dc;
-      --text-dim-dark:#c8b8a0;
-
-      /* ── Section accents ── */
+      /* ── Section accents (used by poems.ts data) ── */
       --sec-human:    #e86850;
       --sec-inward:   #1a3a2a;
       --sec-awaken:   #2a8e6e;
@@ -151,13 +133,13 @@ const {
     }
     .nav-links a:hover { color: var(--text); }
     .nav-cta {
-      background: var(--green-deep) !important;
-      color: var(--text-on-dark) !important;
+      background: #e86850 !important;
+      color: #ffffff !important;
       padding: 0.55rem 1.3rem; font-weight: 600 !important;
       border-radius: 4px !important;
       transition: background 0.2s !important;
     }
-    .nav-cta:hover { background: var(--green-mid) !important; color: var(--text-on-dark) !important; }
+    .nav-cta:hover { background: #d05840 !important; color: #ffffff !important; }
 
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
@@ -248,9 +230,9 @@ const {
   <div id="poem-modal" role="dialog" aria-modal="true" aria-labelledby="poem-modal-title">
     <div id="poem-modal-inner">
       <button id="poem-modal-close" aria-label="Close">✕</button>
-      <p id="poem-modal-date" style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive-accent);margin-bottom:0.75rem;font-weight:600;"></p>
+      <p id="poem-modal-date" style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--coral);margin-bottom:0.75rem;font-weight:600;"></p>
       <h2 id="poem-modal-title" style="font-family:'Fraunces',serif;font-size:1.8rem;font-weight:700;color:var(--text);margin-bottom:1.75rem;"></h2>
-      <div id="poem-modal-body" style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.05rem;line-height:2.2;border-left:3px solid var(--olive-accent);padding-left:1.5rem;margin-bottom:1.75rem;white-space:pre-line;"></div>
+      <div id="poem-modal-body" style="font-family:'Fraunces',serif;font-style:italic;color:var(--text-muted);font-size:1.05rem;line-height:2.2;border-left:3px solid var(--coral);padding-left:1.5rem;margin-bottom:1.75rem;white-space:pre-line;"></div>
       <p id="poem-modal-reflection" style="font-size:0.87rem;color:var(--text-muted);line-height:1.9;border-top:1px solid var(--border);padding-top:1.25rem;display:none;"></p>
     </div>
   </div>

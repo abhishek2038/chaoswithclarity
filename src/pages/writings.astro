@@ -48,6 +48,33 @@ import { sections, essays } from '../data/poems';
         {/* ── FREE POEMS FIRST ── */}
         <div class="poem-grid-3">
           {section.poems.filter(p => p.taster).map((poem) => (
+            poem.previewOnly ? (
+              <a
+                href="/collection"
+                class={`poem-card anim-card preview-only-card${poem.series ? ' trilogy-card' : ''}`}
+                style={`--card-accent:${section.accent};`}
+              >
+                {poem.series && (
+                  <p class="card-series">
+                    {poem.series}{poem.seriesPart ? ` · ${poem.seriesPart}` : ''}
+                  </p>
+                )}
+                <span class="preview-badge">Preview</span>
+                <p class="card-date">{poem.date}</p>
+                <h3 class="card-title">
+                  {poem.title}
+                  {poem.subtitle && (
+                    <><br/><em class="card-subtitle">{poem.subtitle}</em></>
+                  )}
+                </h3>
+                <div class="card-preview" style={`--prev-color:${section.accent};`}>
+                  {poem.preview.map((line) => <p>{line}</p>)}
+                </div>
+                <span class="card-cta" style={`--cta:${section.accent};`}>
+                  Read in the collection <i class="ph ph-arrow-right cta-arrow"></i>
+                </span>
+              </a>
+            ) : (
               <article
                 class={`poem-card anim-card${poem.series ? ' trilogy-card' : ''}`}
                 style={`--card-accent:${section.accent};`}
@@ -77,6 +104,7 @@ import { sections, essays } from '../data/poems';
                   Read full poem <i class="ph ph-arrow-right cta-arrow"></i>
                 </span>
               </article>
+            )
           ))}
         </div>
 
@@ -233,8 +261,8 @@ import { sections, essays } from '../data/poems';
   /* large decorative word behind header */
   .header-bg-word {
     position: absolute;
-    bottom: -1.5rem;
-    right: -1rem;
+    bottom: 0;
+    right: 0;
     font-family: 'Fraunces', serif;
     font-size: clamp(6rem, 18vw, 16rem);
     font-weight: 800;
@@ -415,6 +443,24 @@ import { sections, essays } from '../data/poems';
   }
   .poem-card:hover .cta-arrow {
     transform: translateX(5px);
+  }
+
+  /* ══ PREVIEW-ONLY CARD ════════════════════════════════════════ */
+  .preview-only-card {
+    text-decoration: none;
+    color: inherit;
+  }
+  .preview-badge {
+    font-size: 0.56rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #5a2848;
+    background: #f0e0ec;
+    padding: 0.25rem 0.65rem;
+    border-radius: 3px;
+    align-self: flex-start;
+    margin-bottom: -0.5rem;
   }
 
   /* ══ FREE BADGE ══════════════════════════════════════════════ */
